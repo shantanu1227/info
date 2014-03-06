@@ -9,14 +9,14 @@
 <title>Vinfocity</title>
 </head>
 <body>
-<div class="wrapper">
-<div class="loginaccount">
-<div class="reglog">Login/Register</div>
-<div class="myaccount">My Account</div>
-</div>
+	<div class="wrapper">
+	<div class="loginaccount">
+	<div class="reglog">Login/Register</div>
+	<div class="myaccount">My Account</div>
+	</div>
 <div class="header">
-<div id="mono">Vinfocity</div>
-<div class="searchdiv">search here</div>
+	<div id="mono">Vinfocity</div>
+	<div class="searchdiv"><img src="<?php echo (IMG.'button_logo.jpg');?>">search here</img></div>
 </div>
 
 <div class="navigation">
