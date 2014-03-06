@@ -23,7 +23,13 @@
 <div class="navbar">
 <ul>
 <li><a>HOME</a></li>
-<li><a>FOOD</a></li>
+<li>FOOD
+<ul>
+<li><a>Subway</a></li>
+<li><a>Shivas</a></li>
+<li><a>Cool Point</a></li>
+</ul>
+</li>
 <li><a>PROVISION</a></li>
 <li><a>MEDICAL</a></li>
 <li><a>STATIONARY</a></li>
