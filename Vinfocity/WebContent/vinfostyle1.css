@@ -1,13 +1,20 @@
 @CHARSET "ISO-8859-1";
 
 body{
-	background-color:#C2D6FF;
+	background-color:#001F4C;
+	
 	
 }
 .wrapper{
 	width:80%;
 	float:left;
-	margin-left:10%;
+	margin-left:8%;
+	border-left-width: 3px;
+	border-right-width: 3px;
+	border-style: solid;
+	border-color: #C2D6FF;
+	background: #C2D6FF;
+
 }
 .header{
 	margin-top:10px;
@@ -20,7 +27,7 @@ body{
 	float:left;
 	margin-left:10%;
 	width:20%;
-	color:#0EBFE9;
+	color:black;
 	font-family:monofont;
 	font-size:80px;
 }
@@ -35,6 +42,16 @@ border-style:solid;
 	border-color:#6881B2;
 	border-width:2px;
 	border-radius: 8px;
+}
+.searchdiv:hover{
+	background-color: white;
+} 
+.searchdiv img{
+	height: 38px;
+	padding-top: 1px;
+	padding-left: 2px;
+	width: 10%;
+	border-radius: 5px;
 }
 
 @font-face
@@ -88,7 +105,7 @@ margin-top:15px;
 .navigation ul li:hover{
 	box-shadow: 5px 5px 20px #47476B;
 	background-color:#1a82f7;
-
+	font-weight: 900;
 	border-bottom-style:solid;
 	border-color:#6881B2;
 	border-width:1px;
@@ -141,7 +158,7 @@ margin-top:15px;
 }
 .trending{
 	background-color:#C2D6FF;
-	margin-top:5px;
+	margin-top:50px;
 	width:75%;
 	float:left;
 	height:310px;
@@ -149,10 +166,11 @@ margin-top:15px;
 .todaymenu{
 	height:310px;
 	overflow:scroll;
-	margin-top:5px;
+	margin-top:50px;
 	background-color:white;
 	margin-left:1%;
-	width:24%;
+	margin-right: 1%;
+	width:23%;
 	float:left;
 		}
 .todaymenuhead{
@@ -171,7 +189,9 @@ margin-top:15px;
 	background-color:#0EBFE9
 }
 .resthead{
-	padding:4px;
+	padding-top: 5px;
+	padding-left: 7px;
+	padding-bottom: 2px;
 	font-size:25px;
 	color:blue;
 	font-weight:bold;
@@ -180,24 +200,30 @@ margin-top:15px;
 	font-family:textfont;
 }
 .restmenu{
-	padding:4px;
+	padding-bottom: 15px;
+	padding-left: 8px;
 	font-size:18px;
 	color:white;
 	float:left;
 	width:100%;
 	font-family:textfont;}
+.menu {
+	float: left;
+	height: 350px;
+}
 }
 .trendobject{
-	margin: 10px;
+	margin: 900px;
 font-family: textfont;
 float: center;
 width: 46%;
-padding-top: 10px;
+padding-top: 100px;
+padding-left: 2000px;
 }
 .trendobject img{
 	float:left;
 	margin-right:5px;
-	margin-top: px;
+	margin-top:5px;
 	width:130px;
 	height:130px;
 }
