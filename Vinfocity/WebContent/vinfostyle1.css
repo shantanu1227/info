@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 body{
-	background-color:white;
+	background-color:#C2D6FF;
 	
 }
 .wrapper{
@@ -27,10 +27,14 @@ body{
 .searchdiv{
 	margin-top: 3%;
 float: left;
-width: 30%;
+width: 25%;
 margin-left: 40%;
 background-color: #0EBFE9;
-height: 20px;
+height: 40px;
+border-style:solid;
+	border-color:#6881B2;
+	border-width:2px;
+	border-radius: 8px;
 }
 
 @font-face
@@ -47,8 +51,23 @@ src: url(fonts/stewartsans.ttf);
 .navigation{
 	float:left;
 	width:100%;
-	background-color:#0EBFE9;
-	margin-top:15px;
+	
+	
+  /* fallback */
+ 	background-color: #1a82f7;
+   background-repeat: repeat-x;
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #2F2727, #1a82f7);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #2F2727, #1a82f7);
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #2F2727, #1a82f7);
+/* Opera 11.10+ */
+  background: -o-linear-gradient(top, #2F2727, #1a82f7);
+
+margin-top:15px;
 }
 .navigation ul{
 	width:100%;
@@ -61,24 +80,28 @@ src: url(fonts/stewartsans.ttf);
 	cursor:pointer;
 	padding:10px;
 	text-align:center;
+
 	width:8%;
 	float:left;
 	list-style:none;
 }
 .navigation ul li:hover{
-	
-	background-color:white;
+	box-shadow: 5px 5px 20px #47476B;
+	background-color:#1a82f7;
+
 	border-bottom-style:solid;
-	border-color:white;
+	border-color:#6881B2;
 	border-width:1px;
 }
 
 .navigation ul li a{
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-	color:rgb(81, 79, 126);
+	color:#B2D1FF;
 	cursor:pointer;
 	text-decoration:none;
-	font-size:13px;
+	font-size:15px;
+		
+
 }
 
 .navbar{
@@ -117,7 +140,7 @@ src: url(fonts/stewartsans.ttf);
 	width:100%;
 }
 .trending{
-	background-color:white;
+	background-color:#C2D6FF;
 	margin-top:5px;
 	width:75%;
 	float:left;
@@ -167,15 +190,21 @@ src: url(fonts/stewartsans.ttf);
 .trendobject{
 	margin: 10px;
 font-family: textfont;
-float: left;
+float: center;
 width: 46%;
 padding-top: 10px;
 }
 .trendobject img{
 	float:left;
 	margin-right:5px;
-	width:150px;
-	height:150px;
+	margin-top: px;
+	width:130px;
+	height:130px;
+}
+.offdes{
+	font-weight: 700;
+	color:#2F2727 ;
+	font-family:textfont;
 }
 .trendtext{
 	padding: 8px;
@@ -183,10 +212,10 @@ border-style: solid;
 border-radius: 5px;
 border-width: 1px;
 height: 135px;
-background-color: #0EBFE9;
+background-color: #1a82f7;
 float: left;
 width: 28%;
-color: white;
+color: #E6EBF0;
 font-family:textfont;
 	
 }
@@ -196,7 +225,10 @@ font-family:textfont;
 	color:white;
 }
 .trendshop{
-	margin-top:5px;
+
+	margin-top:2px;
+	margin-left: 10px;
+
 	float:left;
 	width:100%;
 	
@@ -234,4 +266,13 @@ font-family:textfont;
     -o-transform: rotate(90deg);
     white-space:nowrap;
 	 cursor:pointer;
+}
+.line{
+	margin-top: 80px;
+	color: #E0E7ED; 
+	
+	border-bottom-width: 1px;
+	border-bottom-color: #E4E5E5;
+	float:left;
+	width: 95%;
 }
