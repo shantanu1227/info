@@ -2,7 +2,7 @@
 
 body{
 	background-color:#FFFF66;
-	
+
 }
 .wrapper{
 	width:80%;
@@ -13,7 +13,7 @@ body{
 	margin-top:10px;
 	width:100%;
 	float:left;
-	
+
 }
 #mono{
 	text-align:center;
@@ -45,12 +45,17 @@ src: url(../fonts/stewartsans.ttf);
 }
 
 .navigation{
+	z-index:10;
+	position:absolute;
+	top:21%;
+	left:10.3%;
 	float:left;
-	width:100%;
-	background-color:#FE5A1D;
+	width:80%;
+	
 	margin-top:15px;
 }
 .navigation ul{
+	
 	width:100%;
 	margin:0;
 	padding-left: 0;
@@ -58,29 +63,51 @@ src: url(../fonts/stewartsans.ttf);
 	
 }
 .navigation ul li{
+	background-color:#FE5A1D;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	cursor:pointer;
-	padding:10px;
+	padding:0.95%;
 	text-align:center;
-	width:8%;
+	width:8.05%;
 	float:left;
 	list-style:none;
-}
-.navigation ul li:hover{
-	
-	background-color:#FFFF66;
-	border-bottom-style:solid;
-	border-color:white;
-	border-width:1px;
-}
-
-.navigation ul li a{
-	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	color:rgb(81, 79, 126);
 	cursor:pointer;
 	text-decoration:none;
 	font-size:13px;
 }
 
+
+.navbar ul ul{
+	margin-top:12%;
+	padding: 0px;
+margin-bottom: -13%;
+border-style: none;
+width: 100%;
+display: none;
+float: left;
+}
+.navbar ul ul li{
+margin-left: -12%;
+padding: 0px;
+padding-top: 7px;
+padding-bottom: 7px;
+width: 122%;
+float: left;
+}
+.navbar ul ul li a{
+	text-decoration:none;
+	color:rgb(81, 79, 126);
+		}
+.navbar ul li:hover > ul{
+	display:block;}
+
+.navbar ul li li:hover{
+background-color:#FEBF1D;
+}	
+.navigation ul li li a{
+padding:0px;
+}	
 .navbar{
 	width:100%;
 	float:left;
@@ -112,7 +139,7 @@ src: url(../fonts/stewartsans.ttf);
 	color:rgb(81, 79, 126);
 }
 .offers{
-	margin-top:1px;
+	margin-top:4.5%;
 	float:left;
 	width:100%;
 }
@@ -121,10 +148,10 @@ src: url(../fonts/stewartsans.ttf);
 	margin-top:5px;
 	width:75%;
 	float:left;
-	height:310px;
+	height:30%;
 }
 .todaymenu{
-	height:310px;
+	height:30%;
 	overflow:scroll;
 	margin-top:5px;
 	background-color:white;
@@ -140,7 +167,7 @@ src: url(../fonts/stewartsans.ttf);
 	font-size:40px;
 	color:#FE5A1D;
 	font-family:monofont;
-	
+
 }
 .restdetail{
 	float:left;
@@ -163,13 +190,13 @@ src: url(../fonts/stewartsans.ttf);
 	float:left;
 	width:100%;
 	font-family:textfont;}
-}
+
 .trendobject{
+margin-left:2.6% !important ;
 	margin: 10px;
 font-family: textfont;
 float: left;
 width: 46%;
-padding-top: 10px;
 }
 .trendobject img{
 	float:left;
@@ -185,10 +212,10 @@ border-width: 1px;
 height: 135px;
 background-color: #FE5A1D;
 float: left;
-width: 28%;
+width: 53%;
 color: white;
 font-family:textfont;
-	
+
 }
 .shopname{
 	margin-top:5px;
@@ -199,20 +226,25 @@ font-family:textfont;
 	margin-top:5px;
 	float:left;
 	width:100%;
-	
+
 }
 .trendshophead{
 	font-weight:bold;
 	float:left;
 	color:rgb(81, 79, 126);
-	
-	
+width:50%;
+
+}
+.trendshopname{
+padding:2px;
+float:left;
+width:47%;
 }
 .loginaccount{
 	float:left;
 	width:100%;
-	
-	
+
+
 }
 .feedback{
 	font-family:textfont;
