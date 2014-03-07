@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 body{
-	background-color:#FFFF66;
+	background-color:white;
 
 }
 .wrapper{
@@ -20,7 +20,7 @@ body{
 	float:left;
 	margin-left:10%;
 	width:20%;
-	color:#FE5A1D;
+	color:#0EBFE9;
 	font-family:monofont;
 	font-size:80px;
 }
@@ -63,7 +63,7 @@ src: url(../fonts/stewartsans.ttf);
 	
 }
 .navigation ul li{
-	background-color:#FE5A1D;
+	background-color:#0EBFE9;
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	cursor:pointer;
 	padding:0.95%;
@@ -165,14 +165,14 @@ padding:0px;
 	width:100%;
 	text-align:center;
 	font-size:40px;
-	color:#FE5A1D;
+	color:#0EBFE9;
 	font-family:monofont;
 
 }
 .restdetail{
 	float:left;
 	width:100%;
-	background-color:#FE5A1D
+	background-color:#0EBFE9
 }
 .resthead{
 	padding:4px;
@@ -210,7 +210,7 @@ border-style: solid;
 border-radius: 5px;
 border-width: 1px;
 height: 135px;
-background-color: #FE5A1D;
+background-color: #0EBFE9;
 float: left;
 width: 53%;
 color: white;
