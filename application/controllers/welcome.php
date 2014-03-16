@@ -27,6 +27,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('home1');
 	}
+	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
 	{
 		$this->load->view('kavya');
