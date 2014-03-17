@@ -166,7 +166,7 @@ body {
 	margin-right:auto;
 	float:left;
 	width:100%;
-	text-align:center;
+	text-align:left;
 	font-size:35px;
 	padding-top:10px;
 	font-family:textfont;
@@ -202,4 +202,115 @@ body {
     -moz-transform:rotate(90deg);
     -o-transform: rotate(90deg);
 	cursor:pointer;
+}
+
+.shopdetail{
+	background-color: #A60000;
+	margin-top: 1%;
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: white;
+	float: left;
+}
+
+.shoppic{
+	margin-left: 1%;
+	margin-top: 1%;
+	width: 45%;
+	height: 100%;
+	/*border-width: 2px;
+	border-style: solid;*/
+	float: left;
+}
+
+.details{
+	margin-top: 1%;
+	float: left;
+	width: 50%;
+	margin-left:2%;
+	/*border-width: 1px;
+	border-style: solid;*/ 
+}
+
+.timing{
+	margin-top: 1%;
+	margin-left: 1%;
+	float: left;
+	height: 30%;
+	width: 30%;
+	/*border-width: 1px;
+	border-style: solid;*/
+	font-size: 170%;
+	padding:1%;
+	text-align: center;
+}
+
+.status{
+	background-color:#A60000;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	margin-top: 1%;
+	margin-left: 10%;
+	float: right;
+	height: 10%;
+	width: 50%;
+	font-size: 150%;
+	/*border-width: 1px;
+	border-style: solid;*/
+	padding:1%;
+}
+
+.status img{
+	border-radius: 11px;
+	float: right;
+	height: 5%;
+	width: 50%;
+}
+
+.days{
+	margin-top: 15%;
+	margin-left: 7%;
+	/*border-width: 1px;
+	border-style: solid;*/
+}
+
+.days ul{
+	list-style-type: none;
+	margin-left: 8%;
+	padding: 0;
+}
+
+.days ul li{
+	background-color: green;
+	display: inline;
+	margin: 1%;
+	padding: 1%;
+	border-radius: 2px;
+	width: 10%;
+	font-size: 75%;
+	font-weight: bold;
+	/*border-width: 2px;
+	border-style: solid;*/
+
+}
+.contact
+{
+	margin-left:6%;
+	margin-top: 2%;
+	/*border-width: 1px;
+	border-style: solid;*/
+	
+}
+.owner{
+	font-size: 100%;
+	font-weight: bold;
+	text-decoration: underline;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+}
+.ownername{
+	font-size: 150%;
+	font-weight: bold;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 }
