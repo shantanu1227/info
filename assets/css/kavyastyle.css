@@ -53,7 +53,7 @@ src: url(../fonts/stewartsans.ttf);
 	margin-top:15px;
 }
 .navigation ul{
-	
+		
 	width:100%;
 	margin:0;
 	padding-left: 0;
@@ -73,6 +73,13 @@ src: url(../fonts/stewartsans.ttf);
 	cursor:pointer;
 	text-decoration:none;
 	font-size:13px;
+}
+.navigation a{
+color:rgb(81, 79, 126);
+text-transform:uppercase;
+font-size:13px;
+text-decoration:none;
+font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 }
 
 

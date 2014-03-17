@@ -42,6 +42,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('laundromart');
 	}
+	public function omega()
+	{
+		$this->load->view('omega');
+	}
 }
 
 /* End of file welcome.php */
