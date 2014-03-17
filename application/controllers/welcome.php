@@ -40,7 +40,7 @@ class Welcome extends CI_Controller {
 	/*Url=http://localhost/info/index.php/welcome/laundromart_pkj*/
 	public function laundromart()
 	{
-		$this->load->view('laundromart_pkj');
+		$this->load->view('laundromart');
 	}
 }
 
