@@ -30,12 +30,45 @@
 <li><a>Cool Point</a></li>
 </ul>
 </li>
-<li><a>PROVISION</a></li>
-<li><a>MEDICAL</a></li>
-<li><a>STATIONARY</a></li>
-<li><a>LAUNDRY</a></li>
-<li><a>PERIPHERALS</a></li>
-<li><a>PRINT/COPY</a></li>
+<li><a>PROVISION</a>
+<ul>
+<li><a>Kavya</a></li>
+
+</ul>
+</li>
+<li><a>MEDICAL</a>
+<ul>
+<li><a>Ravi Chemist</a></li>
+
+</ul>
+</li>
+<li><a>STATIONARY</a>
+<ul>
+<li><a>Oxford</a></li>
+<li><a>VS</a></li>
+<li><a>Crossword</a></li>
+
+</ul>
+</li>
+<li><a>LAUNDRY</a>
+<ul>
+<li><a>Laundromart</a></li>
+
+</ul>
+</li>
+<li><a>PERIPHERALS</a>
+<ul>
+<li><a>OM Infotech</a></li>
+<li><a>Club Laptop</a></li>
+</ul>
+</li>
+<li><a>PRINT/COPY</a>
+<ul>
+<li><a>Omega</a></li>
+<li><a>Apex</a></li>
+
+</ul>
+</li>
 <li><a>ABOUT US</a></li>
 <li><a>FAQS</a></li>
 </ul>
