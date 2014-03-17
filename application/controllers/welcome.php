@@ -32,6 +32,16 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('kavya');
 	}
+	/*Url=http://localhost/info/index.php/welcome/kavya_pkj*/
+	public function kavya_pkj()
+	{
+		$this->load->view('kavya_pkj');
+	}
+	/*Url=http://localhost/info/index.php/welcome/laundromart_pkj*/
+	public function laundromart()
+	{
+		$this->load->view('laundromart_pkj');
+	}
 }
 
 /* End of file welcome.php */
