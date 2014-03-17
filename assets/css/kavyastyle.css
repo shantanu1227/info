@@ -151,12 +151,14 @@ padding:10px;
 font-family:textfont;
 }
 .kavyashopproducts{
+
+border-radius:5px;
 margin-top:1%;
 float:left;
-width:100%;
-/*background-color:#3CB6D3; */
+width:100%; 
 }
 .kavyashopproductitem{
+
 float:left;
 width:32%;
 height:250px;
