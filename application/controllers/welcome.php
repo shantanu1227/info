@@ -32,7 +32,6 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('kavya');
 	}
-<<<<<<< HEAD
     public function koffee()
 	{
 		$this->load->view('koffee');
@@ -44,21 +43,6 @@ class Welcome extends CI_Controller {
 	public function medicine()
 	{
 		$this->load->view('medicine');
-=======
-	/*Url=http://localhost/info/index.php/welcome/kavya_pkj*/
-	public function kavya_pkj()
-	{
-		$this->load->view('kavya_pkj');
-	}
-	/*Url=http://localhost/info/index.php/welcome/laundromart_pkj*/
-	public function laundromart()
-	{
-		$this->load->view('laundromart');
-	}
-	public function omega()
-	{
-		$this->load->view('omega');
->>>>>>> 19516ca9607560c5d6c9b1aa3f233d4b2ac9dcb9
 	}
 }
 
