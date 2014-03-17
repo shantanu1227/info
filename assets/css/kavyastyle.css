@@ -1,4 +1,6 @@
 body{
+padding:0;
+margin:0;
 	background-color:white;
 
 }
@@ -8,19 +10,29 @@ body{
 	margin-left:10%;
 }
 .header{
-	margin-top:10px;
+
 	width:100%;
 	float:left;
 
 }
+.wraphead{
+float:left;
+width:100%;
+background-color:#361200;
+opacity:0.8;
+}
 #mono{
+margin-top:-1%;
+margin-bottom:5px;
+letter-spacing:4px;
 	text-align:center;
 	float:left;
 	margin-left:10%;
 	width:20%;
-	color:#0EBFE9;
+	color:white;
 	font-family:monofont;
-	font-size:80px;
+	font-size:55px;
+	font-weight:bold;
 }
 .searchdiv{
 	margin-top: 3%;
@@ -34,6 +46,11 @@ height: 20px;
 @font-face
 {
 font-family: monofont;
+src: url(../fonts/JandaCelebrationScript.ttf);
+}
+@font-face
+{
+font-family: submonofont;
 src: url(../fonts/mickey.ttf);
 }
 @font-face
@@ -43,14 +60,13 @@ src: url(../fonts/stewartsans.ttf);
 }
 
 .navigation{
-	z-index:10;
-	position:absolute;
-	top:21%;
-	left:10.3%;
-	float:left;
-	width:80%;
-	
-	margin-top:15px;
+	z-index: 10;
+position: absolute;
+top: 14.2%;
+left: 10%;
+float: left;
+width: 80%;
+margin-top: 17px;
 }
 .navigation ul{
 		
@@ -61,21 +77,24 @@ src: url(../fonts/stewartsans.ttf);
 	
 }
 .navigation ul li{
-	background-color:#0EBFE9;
+	background-color:#361200;
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	cursor:pointer;
 	padding:0.95%;
 	text-align:center;
-	width:8.05%;
+	width:8.1%;
 	float:left;
 	list-style:none;
-	color:rgb(81, 79, 126);
+	color:white;
 	cursor:pointer;
 	text-decoration:none;
 	font-size:13px;
 }
+.navigation li:hover{
+opacity:0.9;
+}
 .navigation a{
-color:rgb(81, 79, 126);
+color:white;
 text-transform:uppercase;
 font-size:13px;
 text-decoration:none;
@@ -102,7 +121,7 @@ float: left;
 }
 .navbar ul ul li a{
 	text-decoration:none;
-	color:rgb(81, 79, 126);
+	
 		}
 .navbar ul li:hover > ul{
 	display:block;}
@@ -119,29 +138,29 @@ padding:0px;
 }
 .reglog{
 	cursor:pointer;
-	padding:10px;
+	padding:0.7%;
 	font-size:12px;
-	margin-left:76%;
+	margin-left:78%;
 	float:left;
-	width:10%;
+	
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-	color:rgb(81, 79, 126);
+	color:white;
 }
 .reglog:hover{
-	color:white;
+	text-shadow: 0.5px 0.49px #ffffff;
 }
 .myaccount:hover{
-	color:white;
+	text-shadow: 0.5px 0.49px #ffffff;
 }
 .myaccount{
 	cursor:pointer;
-	padding:10px;
+	padding:0.7%;
 	font-size:12px;
-	margin-left:2px%;
+	margin-left:2px;
 	float:left;
-	width:10%;
+	
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-	color:rgb(81, 79, 126);
+	color:white;
 }
 .offers{
 	margin-top:2.5%;

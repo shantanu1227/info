@@ -1,12 +1,14 @@
 
 <div class="wrapper">
+<div class="wraphead">
 <div class="loginaccount">
 <div class="reglog">Login/Register</div>
 <div class="myaccount">My Account</div>
 </div>
 <div class="header">
 <div id="mono">Vinfocity</div>
-<div class="searchdiv">search here</div>
+
+</div>
 </div>
 
 <div class="navigation">
