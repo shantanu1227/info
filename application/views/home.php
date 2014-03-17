@@ -9,39 +9,7 @@
 <title>Vinfocity</title>
 </head>
 <body>
-<div class="wrapper">
-<div class="loginaccount">
-<div class="reglog">Login/Register</div>
-<div class="myaccount">My Account</div>
-</div>
-<div class="header">
-<div id="mono">Vinfocity</div>
-<div class="searchdiv">search here</div>
-</div>
-
-<div class="navigation">
-<div class="navbar">
-<ul>
-<li><a>HOME</a></li>
-<li>FOOD
-<ul>
-<li><a>Subway</a></li>
-<li><a>Shivas</a></li>
-<li><a>Cool Point</a></li>
-</ul>
-</li>
-<li><a>PROVISION</a></li>
-<li><a>MEDICAL</a></li>
-<li><a>STATIONARY</a></li>
-<li><a>LAUNDRY</a></li>
-<li><a>PERIPHERALS</a></li>
-<li><a>PRINT/COPY</a></li>
-<li><a>ABOUT US</a></li>
-<li><a>FAQS</a></li>
-</ul>
-</div>
-
-</div>
+<?php include 'header.php'; ?>
 <div class="offers">
 <div class="imgslide">
 <div id="slider">

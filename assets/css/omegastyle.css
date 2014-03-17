@@ -1,0 +1,258 @@
+@font-face{
+	font-family: monofont;
+	src: url(../fonts/JandaCelebrationScript.ttf);
+}
+@font-face{
+	font-family: textfont;
+	src: url(../fonts/stewartsans.ttf);
+}
+body { 
+	background: url(../img/web_back.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#fixed_head{
+	border: 1px solid black;
+	background-color:#361200;
+	text-align:left;
+	float:left;
+	width:100%;
+	height:100px;
+	padding:0;
+	opacity: 0.8;
+	position:fixed;
+	z-index:50;
+	top:0px;
+	margin-left:-10px;
+	margin-top:0px;
+	}
+.cname{
+	display: inline-block;
+	padding: 0px;
+	letter-spacing:4px;
+	font-family:monofont;
+	font-size:55px;
+	font-weight:bold;
+	color:white;
+	margin-left:100px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.loginaccount{
+	float:right;
+	display: inline-block;
+	}
+.reglog{
+	padding-left:10px;
+	float:left;
+	display: inline-block;
+	margin-right:20px;
+	cursor:pointer;
+	padding-top:10px;
+	font-size:12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+.reglog:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+}
+.myaccount:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+}
+.myaccount{
+	float:right;
+	display: inline-block;
+	margin-right:10px;
+	cursor:pointer;
+	padding-top:10px;
+	font-size:12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+
+.navigation{
+	border-top: 1px solid black;
+	position:fixed;
+	margin-left:-10px;
+	margin-top:93px;
+	display: inline-block;
+	clear:left;
+	z-index:40;
+	width:101%;
+}
+.navigation ul{
+	width:100%;
+	margin:0;
+	padding-left: 0;
+	float:left;
+}
+.navigation ul li{
+	background-color:#361200;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	cursor:pointer;
+	padding:0.95%;
+	text-align:center;
+	width:8.05%;
+	float:left;
+	list-style:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	text-decoration:none;
+	font-size:13px;
+}
+.navigation ul li:hover{
+	opacity:0.9;
+}
+.navbar ul ul{
+	margin-top:12%;
+	padding: 0px;
+	margin-bottom: -13%;
+	border-style: none;
+	width: 100%;
+	display: none;
+	float: left;
+}
+.navbar ul ul li{
+	margin-left: -12%;
+	padding: 0px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	width: 122%;
+	float: left;
+}
+.navbar ul ul li a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.navbar ul li:hover > ul{
+	display:block;
+}
+
+.navbar ul li li:hover{
+	background-color:#498FA0;
+	width:124%;
+}	
+.navigation ul li li a{
+	padding:0px;
+}	
+.navbar{
+	width:100%;
+	float:left;
+}
+
+.shopheading{
+	margin-top:10%;
+	float:left;
+	width:100%;
+	text-align:center;
+	font-size:30px;
+	padding:10px;
+	font-family:textfont;
+	font-weight:bold;
+}
+
+.offers{
+	margin-top:0.5%;
+	float:left;
+	width:100%;
+}
+
+
+
+/* ***************************actual styling by sahil*****************************/
+
+
+
+.printform{
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color: white;
+	margin-top: 1%;
+	padding-bottom: 10%;
+	float: left;
+	width: 100%;
+	height: 40%;
+	border-width: 2px;
+	border-style: solid;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #361200), color-stop(1, #b34332));
+	background:-moz-linear-gradient(top, #361200 80%, #b34332 100%);
+	background:-webkit-linear-gradient(top, #361200 80%, #b34332 100%);
+	background:-o-linear-gradient(top, #361200 80%, #b34332 100%);
+	background:-ms-linear-gradient(top, #361200 80%, #b34332 100%);
+	background:linear-gradient(to bottom, #361200 80%, #b34332 100%);
+	
+}
+
+.colorselection{
+	margin-top: 1%;
+	margin-left: 10%;
+	width: 25%;
+	float: left;
+	/*border-width: 2px;
+	border-style: solid;*/
+	
+}
+
+.pagenumber{
+
+	margin-top: 1%;
+	margin-left: 5%;
+	width: 20%;
+	float: left;
+	/*border-width: 2px;
+	border-style: solid;*/
+
+}
+
+.fileselection{
+	margin-top: 1%;
+	margin-left: 0%;
+	float: left;
+	/*border-width: 2px;
+	border-style: solid;*/
+}
+.numberinput{
+	margin-left: 5px;
+	width: 20px;
+}
+
+.uploadbutton {
+	-moz-box-shadow:inset -1px -1px 7px -1px #b54b3a;
+	-webkit-box-shadow:inset -1px -1px 7px -1px #b54b3a;
+	box-shadow:inset -1px -1px 7px -1px #b54b3a;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #361200), color-stop(1, #b34332));
+	background:-moz-linear-gradient(top, #361200 5%, #b34332 100%);
+	background:-webkit-linear-gradient(top, #361200 5%, #b34332 100%);
+	background:-o-linear-gradient(top, #361200 5%, #b34332 100%);
+	background:-ms-linear-gradient(top, #361200 5%, #b34332 100%);
+	background:linear-gradient(to bottom, #361200 5%, #b34332 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#361200', endColorstr='#b34332',GradientType=0);
+	background-color:#361200;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:2px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	font-size:15px;
+	padding:5px 25px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #7a2a1d;
+}
+.uploadbutton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b34332), color-stop(1, #361200));
+	background:-moz-linear-gradient(top, #b34332 5%, #361200 100%);
+	background:-webkit-linear-gradient(top, #b34332 5%, #361200 100%);
+	background:-o-linear-gradient(top, #b34332 5%, #361200 100%);
+	background:-ms-linear-gradient(top, #b34332 5%, #361200 100%);
+	background:linear-gradient(to bottom, #b34332 5%, #361200 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b34332', endColorstr='#361200',GradientType=0);
+	background-color:#b34332;
+}
+.uploadbutton:active {
+	position:relative;
+	top:1px;
+}

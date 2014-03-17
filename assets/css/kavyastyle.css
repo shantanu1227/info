@@ -53,7 +53,7 @@ src: url(../fonts/stewartsans.ttf);
 	margin-top:15px;
 }
 .navigation ul{
-	
+		
 	width:100%;
 	margin:0;
 	padding-left: 0;
@@ -73,6 +73,13 @@ src: url(../fonts/stewartsans.ttf);
 	cursor:pointer;
 	text-decoration:none;
 	font-size:13px;
+}
+.navigation a{
+color:rgb(81, 79, 126);
+text-transform:uppercase;
+font-size:13px;
+text-decoration:none;
+font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 }
 
 
@@ -151,12 +158,14 @@ padding:10px;
 font-family:textfont;
 }
 .kavyashopproducts{
+
+border-radius:5px;
 margin-top:1%;
 float:left;
-width:100%;
-/*background-color:#3CB6D3; */
+width:100%; 
 }
 .kavyashopproductitem{
+
 float:left;
 width:32%;
 height:250px;

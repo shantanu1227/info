@@ -1,68 +1,47 @@
 @CHARSET "ISO-8859-1";
 
 body{
-	background-color:#001F4C;
-	
-	
+	background-color:#FFFF66;
+
 }
 .wrapper{
 	width:80%;
 	float:left;
-	margin-left:8%;
-	border-left-width: 3px;
-	border-right-width: 3px;
-	border-style: solid;
-	border-color: #C2D6FF;
-	background: #C2D6FF;
-
+	margin-left:10%;
 }
 .header{
 	margin-top:10px;
 	width:100%;
 	float:left;
-	
+
 }
 #mono{
 	text-align:center;
 	float:left;
 	margin-left:10%;
 	width:20%;
-	color:black;
+	color:#FE5A1D;
 	font-family:monofont;
 	font-size:80px;
 }
 .searchdiv{
 	margin-top: 3%;
 float: left;
-width: 25%;
+width: 30%;
 margin-left: 40%;
-background-color: #0EBFE9;
-height: 40px;
-border-style:solid;
-	border-color:#6881B2;
-	border-width:2px;
-	border-radius: 8px;
-}
-.searchdiv:hover{
-	background-color: white;
-} 
-.searchdiv img{
-	height: 38px;
-	padding-top: 1px;
-	padding-left: 2px;
-	width: 10%;
-	border-radius: 5px;
+background-color: white;
+height: 20px;
 }
 
 @font-face
 {
 font-family: monofont;
-src: url(fonts/mickey.ttf);
+src: url(../fonts/mickey.ttf);
 }
 @font-face
 {
 font-family: textfont;
-src: url(fonts/stewartsans.ttf);
+src: url(../fonts/stewartsans.ttf);
 }
 
 .navigation{
@@ -74,25 +53,9 @@ src: url(fonts/stewartsans.ttf);
 	width:80%;
 	
 	margin-top:15px;
-	
-	
-  /* fallback */
- 	background-color: #1a82f7;
-   background-repeat: repeat-x;
-  /* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #2F2727, #1a82f7);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #2F2727, #1a82f7);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #2F2727, #1a82f7);
-/* Opera 11.10+ */
-  background: -o-linear-gradient(top, #2F2727, #1a82f7);
-
-margin-top:15px;
 }
 .navigation ul{
+	
 	width:100%;
 	margin:0;
 	padding-left: 0;
@@ -100,37 +63,20 @@ margin-top:15px;
 	
 }
 .navigation ul li{
-	cursor:pointer;
-	width:8%;
-	float:left;
-	list-style:none;
 	background-color:#FE5A1D;
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	cursor:pointer;
 	padding:0.95%;
 	text-align:center;
 	width:8.05%;
+	float:left;
+	list-style:none;
+	color:rgb(81, 79, 126);
+	cursor:pointer;
 	text-decoration:none;
 	font-size:13px;
 }
-}
-.navigation ul li:hover{
-	box-shadow: 5px 5px 20px #47476B;
-	background-color:#1a82f7;
-	font-weight: 900;
-	border-bottom-style:solid;
-	border-color:#6881B2;
-	border-width:1px;
-}
 
-.navigation ul li a{
-	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-	color:#B2D1FF;
-	cursor:pointer;
-	text-decoration:none;
-	font-size:15px;
-		
-
-}
 
 .navbar ul ul{
 	margin-top:12%;
@@ -162,7 +108,6 @@ background-color:#FEBF1D;
 .navigation ul li li a{
 padding:0px;
 }	
-
 .navbar{
 	width:100%;
 	float:left;
@@ -178,10 +123,10 @@ padding:0px;
 	color:rgb(81, 79, 126);
 }
 .reglog:hover{
-	color:blue;
+	color:white;
 }
 .myaccount:hover{
-	color:blue;
+	color:white;
 }
 .myaccount{
 	cursor:pointer;
@@ -194,25 +139,24 @@ padding:0px;
 	color:rgb(81, 79, 126);
 }
 .offers{
-	margin-top:1px;
+	margin-top:4.5%;
 	float:left;
 	width:100%;
 }
 .trending{
-	background-color:#C2D6FF;
-	margin-top:50px;
+	background-color:white;
+	margin-top:5px;
 	width:75%;
 	float:left;
-	height:310px;
+	height:30%;
 }
 .todaymenu{
-	height:310px;
+	height:30%;
 	overflow:scroll;
-	margin-top:50px;
+	margin-top:5px;
 	background-color:white;
 	margin-left:1%;
-	margin-right: 1%;
-	width:23%;
+	width:24%;
 	float:left;
 		}
 .todaymenuhead{
@@ -221,19 +165,17 @@ padding:0px;
 	width:100%;
 	text-align:center;
 	font-size:40px;
-	color:#0EBFE9;
+	color:#FE5A1D;
 	font-family:monofont;
-	
+
 }
 .restdetail{
 	float:left;
 	width:100%;
-	background-color:#0EBFE9
+	background-color:#FE5A1D
 }
 .resthead{
-	padding-top: 5px;
-	padding-left: 7px;
-	padding-bottom: 2px;
+	padding:4px;
 	font-size:25px;
 	color:blue;
 	font-weight:bold;
@@ -242,37 +184,25 @@ padding:0px;
 	font-family:textfont;
 }
 .restmenu{
-	padding-bottom: 15px;
-	padding-left: 8px;
+	padding:4px;
 	font-size:18px;
 	color:white;
 	float:left;
 	width:100%;
 	font-family:textfont;}
-.menu {
-	float: left;
-	height: 350px;
-}
-}
+
 .trendobject{
-	margin: 900px;
+margin-left:2.6% !important ;
+	margin: 10px;
 font-family: textfont;
-float: center;
+float: left;
 width: 46%;
-padding-top: 100px;
-padding-left: 2000px;
 }
 .trendobject img{
 	float:left;
 	margin-right:5px;
-	margin-top:5px;
-	width:130px;
-	height:130px;
-}
-.offdes{
-	font-weight: 700;
-	color:#2F2727 ;
-	font-family:textfont;
+	width:150px;
+	height:150px;
 }
 .trendtext{
 	padding: 8px;
@@ -280,12 +210,12 @@ border-style: solid;
 border-radius: 5px;
 border-width: 1px;
 height: 135px;
-background-color: #1a82f7;
+background-color: #FE5A1D;
 float: left;
-width: 28%;
-color: #E6EBF0;
+width: 53%;
+color: white;
 font-family:textfont;
-	
+
 }
 .shopname{
 	margin-top:5px;
@@ -293,26 +223,28 @@ font-family:textfont;
 	color:white;
 }
 .trendshop{
-
-	margin-top:2px;
-	margin-left: 10px;
-
+	margin-top:5px;
 	float:left;
 	width:100%;
-	
+
 }
 .trendshophead{
 	font-weight:bold;
 	float:left;
 	color:rgb(81, 79, 126);
-	
-	
+width:50%;
+
+}
+.trendshopname{
+padding:2px;
+float:left;
+width:47%;
 }
 .loginaccount{
 	float:left;
 	width:100%;
-	
-	
+
+
 }
 .feedback{
 	font-family:textfont;
@@ -334,13 +266,4 @@ font-family:textfont;
     -o-transform: rotate(90deg);
     white-space:nowrap;
 	 cursor:pointer;
-}
-.line{
-	margin-top: 80px;
-	color: #E0E7ED; 
-	
-	border-bottom-width: 1px;
-	border-bottom-color: #E4E5E5;
-	float:left;
-	width: 95%;
 }
