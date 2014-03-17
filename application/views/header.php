@@ -24,7 +24,7 @@
 </li>
 <li><a>PROVISION</a>
 <ul>
-<li><a href="welcome/kavya">Kavya</a></li>
+<li><?php echo anchor('/welcome/kavya', 'Kavya'); ?></li>
 
 </ul>
 </li>
