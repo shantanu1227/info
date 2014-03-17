@@ -52,6 +52,42 @@
 		</div>
 		
 		<div class="shopheading">Omega</div>
+		
+		<div class="shopdetail">
+			<div class="shoppic">
+				<img src="<?php echo(IMG.'infocity3.jpg');?>"></img>
+			</div>
+			<div class="details">
+				<div class="timing">
+				9AM-9PM
+				</div>
+
+				<div class="status">
+				Currently:
+				<img src="<?php echo(IMG.'open_button.png');?>"></img>
+				</div>
+
+				<div class="days">
+				<ul>
+				<li>Mo</li>
+				<li>Tu</li>
+				<li>We</li>
+				<li>Th</li>
+				<li>Fr</li>	
+				<li>Sa</li>
+				<li>Su</li>
+				</div>
+
+				<div class="contact">
+					<div class="owner">Owner</div>
+					<div class="ownername">			
+					Mr.Sahil.....
+					8460089916
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">

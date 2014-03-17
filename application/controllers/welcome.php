@@ -32,19 +32,37 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('kavya');
 	}
-	/*Url=http://localhost/info/index.php/welcome/kavya_pkj*/
-	public function kavya_pkj()
+    public function koffee()
 	{
-		$this->load->view('kavya_pkj');
+		$this->load->view('koffee');
 	}
-	/*Url=http://localhost/info/index.php/welcome/laundromart_pkj*/
-	public function laundromart()
+	public function bigbite()
+	{
+		$this->load->view('bigbite');
+	}
+	public function medicine()
+	{
+		$this->load->view('medicine');
+	}
+    public function laundromart()
 	{
 		$this->load->view('laundromart');
 	}
 	public function omega()
 	{
 		$this->load->view('omega');
+	}
+	public function apex()
+	{
+		$this->load->view('apex');
+	}
+	public function chatkazz()
+	{
+		$this->load->view('chatkazz');
+	}
+	public function qwitches()
+	{
+		$this->load->view('qwitches');
 	}
 }
 
