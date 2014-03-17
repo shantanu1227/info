@@ -26,6 +26,7 @@ body {
 	margin-right:auto;
 }
 #fixed_head{
+	/*box-shadow:-7px 7px 5px #888888;*/
 	border: 1px solid black;
 	background-color:#361200;
 	text-align:left;
@@ -86,13 +87,14 @@ body {
 }
 
 .navigation{
+	/*box-shadow:-7px 7px 5px #888888;*/
 	position:fixed;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:102px;
 	display: inline-block;
 	clear:left;
-	z-index:40;
+	z-index:60;
 	width:88.6%;
 }
 .navigation ul{
@@ -156,6 +158,7 @@ body {
 }
 
 .shopheading{
+	letter-spacing:4px;
 	color:#361200;
 	margin-top:140px;
 	margin-left:auto;
@@ -163,7 +166,7 @@ body {
 	float:left;
 	width:100%;
 	text-align:center;
-	font-size:30px;
+	font-size:35px;
 	padding-top:10px;
 	font-family:textfont;
 	font-weight:bold;
@@ -175,4 +178,27 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 	width:100%;
+}
+
+#feedback{
+	padding:8px;
+	font-family:textfont;
+	font-weight:bold;
+	font-size:18px;
+	color:white;
+	text-align:center;
+	border:1px solid #361200;
+	border-radius:5px;
+	box-shadow:7px 7px 5px #888888;
+	background-color:#361200;
+	height:16px;
+	position:fixed;
+	top:83%;
+	right:-3%;
+	width:90px;
+	writing-mode:tb-rl;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform: rotate(90deg);
+	cursor:pointer;
 }
