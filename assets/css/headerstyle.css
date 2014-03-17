@@ -1,0 +1,174 @@
+.kavyashopheading{
+margin-top:6%;
+float:left;
+width:100%;
+text-align:center;
+font-size:30px;
+padding:10px;
+font-family:textfont;
+}
+
+body{
+padding:0;
+margin:0;
+	background-color:white;
+
+}
+.wrapper{
+	width:80%;
+	float:left;
+	margin-left:10%;
+}
+.header{
+
+	width:100%;
+	float:left;
+
+}
+.wraphead{
+float:left;
+width:100%;
+background-color:#361200;
+opacity:0.8;
+}
+#mono{
+margin-top:-1%;
+margin-bottom:5px;
+letter-spacing:4px;
+	text-align:center;
+	float:left;
+	margin-left:10%;
+	width:20%;
+	color:white;
+	font-family:monofont;
+	font-size:55px;
+	font-weight:bold;
+}
+.searchdiv{
+	margin-top: 3%;
+float: left;
+width: 30%;
+margin-left: 40%;
+background-color: white;
+height: 20px;
+}
+
+@font-face
+{
+font-family: monofont;
+src: url(../fonts/JandaCelebrationScript.ttf);
+}
+@font-face
+{
+font-family: submonofont;
+src: url(../fonts/mickey.ttf);
+}
+@font-face
+{
+font-family: textfont;
+src: url(../fonts/stewartsans.ttf);
+}
+
+.navigation{
+	z-index: 10;
+position: absolute;
+top: 14.2%;
+left: 10%;
+float: left;
+width: 80%;
+margin-top: 17px;
+}
+.navigation ul{
+		
+	width:100%;
+	margin:0;
+	padding-left: 0;
+	float:left;
+	
+}
+.navigation ul li{
+	background-color:#361200;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	cursor:pointer;
+	padding:0.95%;
+	text-align:center;
+	width:8.1%;
+	float:left;
+	list-style:none;
+	color:white;
+	cursor:pointer;
+	text-decoration:none;
+	font-size:13px;
+}
+.navigation li:hover{
+opacity:0.9;
+}
+.navigation a{
+color:white;
+text-transform:uppercase;
+font-size:13px;
+text-decoration:none;
+font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+}
+
+
+.navbar ul ul{
+	margin-top:12%;
+	padding: 0px;
+margin-bottom: -13%;
+border-style: none;
+width: 100%;
+display: none;
+float: left;
+}
+.navbar ul ul li{
+margin-left: -12%;
+padding: 0px;
+padding-top: 7px;
+padding-bottom: 7px;
+width: 122%;
+float: left;
+}
+.navbar ul ul li a{
+	text-decoration:none;
+	
+		}
+.navbar ul li:hover > ul{
+	display:block;}
+
+.navbar ul li li:hover{
+background-color:#498FA0;
+}	
+.navigation ul li li a{
+padding:0px;
+}	
+.navbar{
+	width:100%;
+	float:left;
+}
+.reglog{
+	cursor:pointer;
+	padding:0.7%;
+	font-size:12px;
+	margin-left:78%;
+	float:left;
+	
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color:white;
+}
+.reglog:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+}
+.myaccount:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+}
+.myaccount{
+	cursor:pointer;
+	padding:0.7%;
+	font-size:12px;
+	margin-left:2px;
+	float:left;
+	
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color:white;
+}
