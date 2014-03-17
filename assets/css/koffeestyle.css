@@ -1,0 +1,193 @@
+
+/* 
+    Document   : koffeestyle
+    Created on : 16 Mar, 2014, 12:32:08 PM
+    Author     : Ria
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body{
+    background-color:white;
+
+}
+.wrapper{
+    width:80%;
+    float:left;
+    margin-left:10%;
+}
+.header{
+    margin-top:10px;
+    width:100%;
+    float:left;
+
+}
+#mono{
+    text-align:center;
+    float:left;
+    margin-left:10%;
+    width:20%;
+    color:#0EBFE9;
+    font-family:monofont;
+    font-size:80px;
+}
+.searchdiv{
+    margin-top: 3%;
+    float: left;
+    width: 30%;
+    margin-left: 40%;
+    background-color: white;
+    height: 20px;
+}
+
+@font-face
+{
+    font-family: monofont;
+    src: url(../fonts/mickey.ttf);
+}
+@font-face
+{
+    font-family: textfont;
+    src: url(../fonts/stewartsans.ttf);
+}
+
+.navigation{
+    z-index:10;
+    position:absolute;
+    top:21%;
+    left:10.3%;
+    float:left;
+    width:80%;
+
+    margin-top:15px;
+}
+.navigation ul{
+
+    width:100%;
+    margin:0;
+    padding-left: 0;
+    float:left;
+
+}
+.navigation ul li{
+    background-color:#0EBFE9;
+    font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+    cursor:pointer;
+    padding:0.95%;
+    text-align:center;
+    width:8.05%;
+    float:left;
+    list-style:none;
+    color:rgb(81, 79, 126);
+    cursor:pointer;
+    text-decoration:none;
+    font-size:13px;
+}
+
+
+.navbar ul ul{
+    margin-top:12%;
+    padding: 0px;
+    margin-bottom: -13%;
+    border-style: none;
+    width: 100%;
+    display: none;
+    float: left;
+}
+.navbar ul ul li{
+    margin-left: -12%;
+    padding: 0px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 122%;
+    float: left;
+}
+.navbar ul ul li a{
+    text-decoration:none;
+    color:rgb(81, 79, 126);
+}
+.navbar ul li:hover > ul{
+    display:block;}
+
+.navbar ul li li:hover{
+    background-color:#498FA0;
+}	
+.navigation ul li li a{
+    padding:0px;
+}	
+.navbar{
+    width:100%;
+    float:left;
+}
+.reglog{
+    cursor:pointer;
+    padding:10px;
+    font-size:12px;
+    margin-left:76%;
+    float:left;
+    width:10%;
+    font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+    color:rgb(81, 79, 126);
+}
+.reglog:hover{
+    color:white;
+}
+.myaccount:hover{
+    color:white;
+}
+.myaccount{
+    cursor:pointer;
+    padding:10px;
+    font-size:12px;
+    margin-left:2px%;
+    float:left;
+    width:10%;
+    font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+    color:rgb(81, 79, 126);
+}
+.koffeeshopheading{
+    margin-top:6%;
+    float:left;
+    width:100%;
+    text-align:center;
+    font-size:30px;
+    padding:10px;
+    font-family:textfont;
+}
+.offers{
+    margin-top:2.5%;
+    float:left;
+    width:100%;
+}
+.koffeeshopproducts{
+    margin-top:1%;
+    float:left;
+    width:100%;
+}
+.koffeeshopproductitem{
+    float:left;
+    width:32%;
+    height:250px;
+    padding:0.65%;
+
+
+}
+.koffeeshopproductitem img{
+    width:90%;
+    height:60%;
+    margin-left:5%;
+}
+.koffeeitemname{
+    font-family:textfont;
+    float:left;
+    width:100%;
+    padding:1%;
+    text-align:center;
+}
+.koffeeitemprice{
+    font-family:textfont;
+    padding:1%;
+    text-align:center;
+    float:left;
+    width:100%;
+}
