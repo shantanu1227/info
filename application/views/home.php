@@ -9,72 +9,7 @@
 <title>Vinfocity</title>
 </head>
 <body>
-<div class="wrapper">
-<div class="loginaccount">
-<div class="reglog">Login/Register</div>
-<div class="myaccount">My Account</div>
-</div>
-<div class="header">
-<div id="mono">Vinfocity</div>
-<div class="searchdiv">search here</div>
-</div>
-
-<div class="navigation">
-<div class="navbar">
-<ul>
-<li><a>HOME</a></li>
-<li>FOOD
-<ul>
-<li><a>Subway</a></li>
-<li><a>Shivas</a></li>
-<li><a>Cool Point</a></li>
-</ul>
-</li>
-<li><a>PROVISION</a>
-<ul>
-<li><a>Kavya</a></li>
-
-</ul>
-</li>
-<li><a>MEDICAL</a>
-<ul>
-<li><a>Ravi Chemist</a></li>
-
-</ul>
-</li>
-<li><a>STATIONARY</a>
-<ul>
-<li><a>Oxford</a></li>
-<li><a>VS</a></li>
-<li><a>Crossword</a></li>
-
-</ul>
-</li>
-<li><a>LAUNDRY</a>
-<ul>
-<li><a>Laundromart</a></li>
-
-</ul>
-</li>
-<li><a>PERIPHERALS</a>
-<ul>
-<li><a>OM Infotech</a></li>
-<li><a>Club Laptop</a></li>
-</ul>
-</li>
-<li><a>PRINT/COPY</a>
-<ul>
-<li><a>Omega</a></li>
-<li><a>Apex</a></li>
-
-</ul>
-</li>
-<li><a>ABOUT US</a></li>
-<li><a>FAQS</a></li>
-</ul>
-</div>
-
-</div>
+<?php include 'header.php'; ?>
 <div class="offers">
 <div class="imgslide">
 <div id="slider">
