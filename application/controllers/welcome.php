@@ -44,6 +44,26 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('medicine');
 	}
+    public function laundromart()
+	{
+		$this->load->view('laundromart');
+	}
+	public function omega()
+	{
+		$this->load->view('omega');
+	}
+	public function apex()
+	{
+		$this->load->view('apex');
+	}
+	public function chatkazz()
+	{
+		$this->load->view('chatkazz');
+	}
+	public function qwitches()
+	{
+		$this->load->view('qwitches');
+	}
 }
 
 /* End of file welcome.php */
