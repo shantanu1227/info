@@ -52,6 +52,11 @@ src: url(../fonts/JandaCelebrationScript.ttf);
 }
 @font-face
 {
+font-family: submonofont;
+src: url(../fonts/mickey.ttf);
+}
+@font-face
+{
 font-family: textfont;
 src: url(../fonts/stewartsans.ttf);
 }
@@ -118,7 +123,7 @@ float: left;
 }
 .navbar ul ul li a{
 	text-decoration:none;
-	color:rgb(81, 79, 126);
+	
 		}
 .navbar ul li:hover > ul{
 	display:block;}
@@ -188,7 +193,7 @@ padding:0px;
 	text-align:center;
 	font-size:40px;
 	color:white;
-	font-family:monofont;
+	font-family:submonofont;
 
 }
 .restdetail{
@@ -200,7 +205,7 @@ padding:0px;
 .resthead{
 	padding:4px;
 	font-size:25px;
-	color:blue;
+	color:#A55730;
 	font-weight:bold;
 	float:left;
 	width:100%;
@@ -255,7 +260,7 @@ font-family:textfont;
 .trendshophead{
 	font-weight:bold;
 	float:left;
-	color:rgb(81, 79, 126);
+	color:#A55730;
 width:50%;
 
 }
