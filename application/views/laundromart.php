@@ -10,47 +10,8 @@
 	</head>
 	
 	<body>
-		<div id="header">
-			<div id="fixed_head">
-				<div class="cname">Vinfocity</div>
-				<div class="loginaccount">
-					<div class="reglog">Login/Register</div>
-					<div class="myaccount">My Account</div>
-				</div>
-			</div>
-			<div class="navigation">
-				<div class="navbar">
-					<ul>
-						<li><a>HOME</a></li>
-						<li>FOOD
-						<ul>
-							<li><a>Subway</a></li>
-							<li><a>Shivas</a></li>
-							<li><a>Cool Point</a></li>
-						</ul>
-						</li>
-						<li>PROVISION
-						<ul>
-							<li><a>Kavya </a></li>
-						</ul>
-						</li>
-						<li><a>MEDICAL</a></li>
-						<li><a>STATIONARY</a></li>
-						<li>LAUNDRY
-						<ul>
-							<li><a>Laundromart</a></li>
-							<li><a>Wash Express</a></li>
-						</ul>
-						</li>
-						<li><a>PERIPHERALS</a></li>
-						<li><a>PRINT/COPY</a></li>
-						<li><a>ABOUT US</a></li>
-						<li><a>FAQS</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		
+	<div id="box">
+		<?php include 'header1.php'; ?>
 		<div class="shopheading">LAUNDROMART</div>
 		<div class="offers">
 			<div class="imgslide">
@@ -61,5 +22,6 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	</body>
 </html>

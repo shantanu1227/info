@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div id="wrapper">
 	<div id="fixed_head">
 		<div class="cname">Vinfocity</div>
 		<div class="loginaccount">
