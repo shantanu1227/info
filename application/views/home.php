@@ -9,7 +9,8 @@
 <title>Vinfocity</title>
 </head>
 <body>
-<?php include 'header.php'; ?>
+<div id="box">
+		<?php include 'header1.php'; ?>
 <div class="offers">
 <div class="imgslide">
 <div id="slider">
