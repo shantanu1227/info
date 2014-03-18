@@ -60,9 +60,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('chatkazz');
 	}
-	public function qwitches()
+	public function qwiches()
 	{
-		$this->load->view('qwitches');
+		$this->load->view('qwiches');
 	}
 	public function oxford()
 	{
