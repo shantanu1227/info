@@ -16,7 +16,7 @@
 						<li><?php echo anchor('/welcome/shivas', 'Shivas'); ?></li>
 						<li><?php echo anchor('/welcome/coolpoint', 'Cool Point'); ?></li>
 						<li><?php echo anchor('/welcome/qwiches', 'Qwiches'); ?></li>
-						<li><?php echo anchor('/welcome/chatkass', 'Chatkass'); ?></li>
+						<li><?php echo anchor('/welcome/chatkazz', 'Chatkazz'); ?></li>
 					</ul>
 				</li>
 				<li><a>PROVISION</a>
