@@ -34,7 +34,7 @@
 				</div></div>
 				<div class="status">
 					<div class="statustext">Status:</div>
-					<img src="<?php echo(IMG.'open_button.png');?>"></img>
+					<img src="<?php echo(IMG.'close_button.png');?>"></img>
 				</div>
 				<div class="contact">
 					<div class="owner">Owner</div>
