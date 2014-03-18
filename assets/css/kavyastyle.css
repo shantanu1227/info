@@ -162,9 +162,10 @@ color:white;
 }
 
 .shopheading{
+text-indent:-9999px;
 	text-shadow:2px 2px 5px #361200;
 	letter-spacing:4px;
-	color:#361200;
+	color:white;
 	margin-top:120px;
 	margin-left:auto;
 	margin-right:auto;
@@ -241,7 +242,7 @@ color:white;
 }
 
 .shopdetail{
-	background: url(../img/qwiches/bgimg.jpg) center center fixed;
+
 	margin-top: 0%;
 	margin-left:auto;
 	margin-right:auto;
@@ -254,8 +255,8 @@ color:white;
 
 .shoppic{
 	display:inline-block;
-	margin-left: 1%;
-	margin-top: 1%;
+	margin-left: 10%;
+	margin-top: 0%;
 	width: auto;
 	height: 100%;
 	/*border-width: 2px;
@@ -276,29 +277,27 @@ color:white;
 }
 
 .timing{
-	display:inline;
-	margin-top: 1%;
-	margin-left: 1%;	
-	margin-left: 1%;	
-	float: left;
-	height: 30%;
-	width: auto;
-	/*border-width: 1px;
-	border-style: solid;*/
-	font-size: 150%;
-	text-align: center;
+	display: inline;
+margin-top: 3.5%;
+margin-left: 1%;
+margin-left: 1%;
+float: left;
+height: 30%;
+width: auto;
+font-size: 100%;
+text-align: center;
 }
 
 .status{
-	display:inline;
-	background-color:#CC985F;
-	margin-top: 1%;
-	float:left;
-	clear:both;
-	height: 10%;
-	width: 45%;
-	font-size: 140%;
-	padding:1%;
+	display: inline;
+background-color: #CC985F;
+margin-top: 1%;
+float: left;
+clear: both;
+height: 10%;
+width: 15%;
+font-size: 140%;
+padding: 1%;
 }
 .statustext{
 	margin-right:10px;
@@ -307,11 +306,11 @@ color:white;
 	display:inline;	
 }
 .status img{
-	float:right;
-	display:inline;
-	border-radius: 11px;
-	height: 5%;
-	width: 45%;
+	float: left;
+display: inline;
+border-radius: 11px;
+height: 5%;
+width: 100%;
 }
 .dayswrap{
 	float:right;
@@ -335,23 +334,20 @@ color:white;
 
 .days ul li{
 	background-color: green;
-	display: inline;
-	padding: 2.5%;
-	border-radius: 2px;
-	font-size: 75%;
-	font-weight: bold;
-	/*border-width: 2px;
-	border-style: solid;*/
-
+display: inline;
+padding: 2.5%;
+border-radius: 5px;
+font-size: 75%;
+font-weight: bold;
+cursor: pointer;
 }
 .contact
 {
-	font-size: 120%;
-	float:right;
-	margin-right:6%;
-	margin-top: 2%;
-	/*border-width: 1px;
-	border-style: solid;	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;*/
+	font-size: 13px;
+float: right;
+margin-right: 1%;
+margin-top: 2%;
+font-family:textfont;
 	
 }
 .owner{
@@ -377,8 +373,8 @@ color:white;
     width:100%;
 }
 .shopproductitem{
-	border:1px solid #CC985F;
-	border-radius:5px;
+	/*border:1px solid #CC985F;
+	border-radius:5px; 
 	/*box-shadow:0px 0px 15px #CC985F;*/
     float:left;
     width:32%;

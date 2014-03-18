@@ -16,7 +16,7 @@
 		<div class="shopheading">KAVYA</div>
 		<div class="shopdetail">
 			<div class="shoppic">
-				<img src="<?php echo(IMG.'qwiches/qwiches_logo.png');?>"></img>
+				<img src="<?php echo(IMG.'kavya/kavya_logo.png');?>"></img>
 			</div>
 			<div class="details">
 				<div class="timing">9AM-9PM</div>
@@ -33,7 +33,7 @@
 					</ul>
 				</div></div>
 				<div class="status">
-					<div class="statustext">Status:</div>
+					
 					<img src="<?php echo(IMG.'close_button.png');?>"></img>
 				</div>
 				<div class="contact">
@@ -47,9 +47,9 @@
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">
-					<img src="<?php echo(IMG.'qwiches/qwiches_banner1.png');?>"></img>
-					<img src="<?php echo(IMG.'qwiches/qwiches_banner4.jpg');?>"></img>
-					<img src="<?php echo(IMG.'qwiches/qwiches_banner7.jpg');?>"></img>
+					<img src="<?php echo(IMG.'kavya/kavya_banner1.jpg');?>"></img>
+					<img src="<?php echo(IMG.'kavya/kavya_banner2.jpg');?>"></img>
+					<img src="<?php echo(IMG.'kavya/kavya_banner3.jpg');?>"></img>
 				</div>
 			</div>
 		</div>
