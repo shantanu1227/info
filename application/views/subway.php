@@ -7,20 +7,138 @@
     <script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 <script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
 <title>Subway</title>
-<script type="text/javascript" src="<?php echo (JS.'swfobject.js');?>"></script>
-<script language="javascript" type="text/javascript">
-                	swfobject.embedSWF("<?php echo (JS.'subwayOrder.swf');?>", "cell_1", "644", "365", "9.0.0");
-                </script>
+
 </head>
 <body>
 <?php include 'header.php'; ?>
 <div class="shopheading">
 SUBWAY
 </div>
+<div class="offers">
+<div class="imgslide">
+<div id="slider">
+<img src="<?php echo(IMG.'subway/subwayslider1.jpg');?>"></img>
+<img src="<?php echo(IMG.'subway/subwayslider2.jpg');?>"></img>
+<img src="<?php echo(IMG.'subway/subwayslider3.jpg');?>"></img>
 
-<div class="subwaymenu" id="cell_1">
- x
 </div>
+</div>
+</div>
+
+<div class="subwayshopproducts">
+<div class="subwayshopproductitem">
+<img width="100%" src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+<div class="subwayshopproductitem">
+<img width="100%" src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+<div class="subwayshopproductitem">
+<img src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+<div class="subwayshopproductitem">
+<img width="100%" src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+<div class="subwayshopproductitem">
+<img width="100%" src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+<div class="subwayshopproductitem">
+<img src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+<div class="subwayshopproductitem">
+<img width="100%" src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+<div class="subwayshopproductitem">
+<img width="100%" src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+<div class="subwayshopproductitem">
+<img src="<?php echo(IMG.'subway/subwayproduct1.jpg');?>"></img>
+<div class="subwayitemname">
+Sub Egg & Cheese
+</div>
+<div class="subwayitemprice">
+Rs.50
+</div>
+<div class="subwayitembrand">
+ 
+</div>
+</div>
+</div>
+
+
+
+
 
 
 

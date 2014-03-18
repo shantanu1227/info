@@ -1,7 +1,49 @@
 @import url("headerstyle.css");
+.offers{
+	margin-top:2.5%;
+	float:left;
+	width:100%;
+}
 
-.subwaymenu{
+.subwayshopproducts{
+
+border-radius:5px;
+margin-top:1%;
+float:left;
+width:100%; 
+}
+.subwayshopproductitem{
+
+float:left;
+width:32%;
+height:250px;
+padding:0.65%;
+
+
+}
+.subwayshopproductitem img{
+width:90%;
+height:60%;
+margin-left:5%;
+}
+.subwayitemname{
+font-family:textfont;
 float:left;
 width:100%;
-margin-top:20px;
+padding:1%;
+text-align:center;
+}
+.subwayitemprice{
+font-family:textfont;
+padding:1%;
+text-align:center;
+float:left;
+width:100%;
+}
+.subwayitembrand{
+font-family:textfont;
+padding:1%;
+text-align:center;
+float:left;
+width:100%;
 }
