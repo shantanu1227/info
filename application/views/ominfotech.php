@@ -56,7 +56,7 @@
 		<div class="menuhead"><i>Products</i></div>
 		<div class="shopproducts">
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -83,7 +83,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -101,7 +101,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -119,7 +119,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -128,7 +128,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -137,7 +137,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -146,7 +146,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -155,7 +155,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -164,7 +164,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -173,7 +173,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -182,7 +182,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -191,7 +191,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -200,7 +200,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
@@ -209,7 +209,7 @@
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'ominfotech/lanwire.jpg'); ?>"></img>
 				<div class="itemname">
 					Masala Maggi
 				</div>
