@@ -52,6 +52,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('omega');
 	}
+	public function subway()
+	{
+		$this->load->view('subway');
+	}
 	public function apex()
 	{
 		$this->load->view('apex');

@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php include 'header.php'; ?>
-<div class="kavyashopheading">
+<div class="shopheading">
 KAVYA
 </div>
 <div class="offers">
