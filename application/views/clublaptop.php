@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<title>Oxford Stationery</title>
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'oxfordstyle.css');?>">
+		<title>Kavya</title>
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'clublaptopstyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
@@ -13,10 +13,10 @@
 	<body>
 	<div id="box">
 		<?php include 'header1.php'; ?>
-		<div class="shopheading">OXFORD STATIONERY</div>
+		<div class="shopheading">Club Laptops</div>
 		<div class="shopdetail">
 			<div class="shoppic">
-				<img src="<?php echo(IMG.'oxford/oxford.jpg');?>" width="100%"></img>
+				<img src="<?php echo(IMG.'clublaptop/club_logo');?>"></img>
 			</div>
 			<div class="details">
 				<div class="timing">9AM-9PM</div>
@@ -33,7 +33,7 @@
 					</ul>
 				</div></div>
 				<div class="status">
-					<div class="statustext">Status:</div>
+					
 					<img src="<?php echo(IMG.'open_button.png');?>"></img>
 				</div>
 				<div class="contact">
@@ -47,196 +47,214 @@
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">
-				
-					<img  height="200%" , src="<?php echo(IMG.'oxford/sliderimage3.jpeg');?>"></img>
-					<img src="<?php echo(IMG.'oxford/sliderimage4.jpg');?>"></img>
-					<img src="<?php echo(IMG.'oxford/sliderimage7.jpeg');?>"></img>
-					<img src="<?php echo(IMG.'oxford/sliderimage6.gif');?>"></img>
+					<img src="<?php echo(IMG.'clublaptop/club_banner1.jpg');?>"></img>
+					<img src="<?php echo(IMG.'clublaptop/club_banner2.jpg');?>"></img>
+					
 				</div>
 			</div>
 		</div>
+		<div class="menuhead"><i>Products</i></div>
 		<div class="shopproducts">
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/camlin80.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Camlin Long Notebook 80 pages
+					Masala Maggi
 				</div>
 				<div class="itemprice">
 					Rs.50
 				</div>
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/camlin160.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Camlin Long Notebook 160 pages
+					Masala Maggi
 				</div>
 				<div class="itemprice">
 					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img width="100" src="<?php echo(IMG.'oxford/classmate100.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Classmate Long Notebook 100 pages
+					Masala Maggi
 				</div>
 				<div class="itemprice">
 					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/classmate156.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Classmate Long Notebook 156 pages
+					Masala Maggi
 				</div>
 				<div class="itemprice">
 					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/classmate160.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Classmate Long Notebook 160 pages
+					Masala Maggi
 				</div>
 				<div class="itemprice">
 					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/classmate172.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Classmate Long Notebook 172 pages
+					Masala Maggi
 				</div>
 				<div class="itemprice">
 					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/classmate228.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Classmate Long Notebook 228 pages
+					Masala Maggi
 				</div>
 				<div class="itemprice">
 					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/flair_jackpot.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Flair Jackpot Ballpen
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-						Rs.5
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/cello_butterflow.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Cello Butterflow Ballpen
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.10
+					Rs.50
 				</div>
-				<
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/flair_max.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Cello Butterflow Ballpen
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.5
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/flair_max.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Cello Butterflow Ballpen
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.5
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/Natraj_pencil_set.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Natraj Pencil Set
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.35
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/flair_mechanicalpencil.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Flair Mechanical Pencil 
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.10
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/fevistick.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Fevistick 15grams
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.35
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/casio_calculator.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Casio Scientific Calculator
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.600
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/Scotch_tape.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Scotch transperant Tape
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.24
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/cdmarker_blue.jpeg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Camlin Permanent Marker Blue
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.75
+					Rs.50
 				</div>
-				
 			</div>
 			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/cdmarker_black.jpg');?>"></img>
+				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Camlin CD Marker Black
+					Masala Maggi
 				</div>
 				<div class="itemprice">
-					Rs.75
+					Rs.50
 				</div>
-				
+			</div>
+			<div class="shopproductitem">
+				<img width="100%" src="<?php echo(IMG . 'bigbite/spicy_paneer_burger.jpg'); ?>"></img>
+				<div class="itemname">
+					Spicy paneer burger
+				</div>
+				<div class="itemprice">
+					Rs.50
+				</div>
+			</div>
+			<div class="shopproductitem">
+				<img width="100%" src="<?php echo(IMG . 'bigbite/french_fries.jpg'); ?>"></img>
+				<div class="itemname">
+					French fries
+				</div>
+				<div class="itemprice">
+					Rs.40
+				</div>
+			</div>
+			<div class="shopproductitem">
+				<img width="100%" src="<?php echo(IMG . 'bigbite/veg_frankie.jpg'); ?>"></img>
+				<div class="itemname">
+					Veg frankie
+				</div>
+				<div class="itemprice">
+					Rs.40
+				</div>
+			</div>
+			<div class="shopproductitem">
+				<img width="100%" src="<?php echo(IMG . 'bigbite/cheese_frankie.jpg'); ?>"></img>
+				<div class="itemname">
+					Veg cheese frankie
+				</div>
+				<div class="itemprice">
+					Rs.50
+				</div>
 			</div>
 		</div>
-		<div id="feedback">Feedback</div>
+	</div>
+	<div id="feedback">Feedback</div>
 	</body>
 </html>
-

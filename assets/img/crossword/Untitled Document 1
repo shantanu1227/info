@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'kavyastyle.css');?>">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
+    <script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
+<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
+<title>Kavya</title>
+</head>
+<body>
+<div class="wrapper">
+<div class="loginaccount">
+<div class="reglog">Login/Register</div>
+<div class="myaccount">My Account</div>
+</div>
+<div class="header">
+<div id="mono">Vinfocity</div>
+<div class="searchdiv">search here</div>
+</div>
+
+<div class="navigation">
+<div class="navbar">
+<ul>
+<li><a>HOME</a></li>
+<li>FOOD
+<ul>
+<li><a>Subway</a></li>
+<li><a>Shivas</a></li>
+<li><a>Cool Point</a></li>
+</ul>
+</li>
+<li><a>PROVISION</a></li>
+<li><a>MEDICAL</a></li>
+<li><a>STATIONARY</a></li>
+<li><a>LAUNDRY</a></li>
+<li><a>PERIPHERALS</a></li>
+<li><a>PRINT/COPY</a></li>
+<li><a>ABOUT US</a></li>
+<li><a>FAQS</a></li>
+</ul>
+</div>
+
+</div>
+<div class="kavyashopheading">
+KAVYA
+</div>
+<div class="offers">
+<div class="imgslide">
+<div id="slider">
+<img src="<?php echo(IMG.'infocity1.jpg');?>"></img>
+<img src="<?php echo(IMG.'infocity2.jpg');?>"></img>
+<img src="<?php echo(IMG.'infocity3.jpg');?>"></img>
+
+</div>
+</div>
+</div>
+<div class="kavyashopproducts">
+<div class="kavyashopproductitem">
+<img width="100%" src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+<div class="kavyashopproductitem">
+<img width="100%" src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+<div class="kavyashopproductitem">
+<img src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+<div class="kavyashopproductitem">
+<img width="100%" src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+<div class="kavyashopproductitem">
+<img width="100%" src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+<div class="kavyashopproductitem">
+<img src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+<div class="kavyashopproductitem">
+<img width="100%" src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+<div class="kavyashopproductitem">
+<img width="100%" src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+<div class="kavyashopproductitem">
+<img src="<?php echo(IMG.'kavya/kavyaproduct1.jpg');?>"></img>
+<div class="kavyaitemname">
+Maggi Masala
+</div>
+<div class="kavyaitemprice">
+Rs.50
+</div>
+<div class="kavyaitembrand">
+Maggi
+</div>
+</div>
+</div>
+
+</div>
