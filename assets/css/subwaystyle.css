@@ -334,14 +334,12 @@ width: 100%;
 
 .days ul li{
 	background-color: green;
-	display: inline;
-	padding: 2.5%;
-	border-radius: 2px;
-	font-size: 75%;
-	font-weight: bold;
-	/*border-width: 2px;
-	border-style: solid;*/
-
+display: inline;
+padding: 2.5%;
+border-radius: 5px;
+font-size: 75%;
+font-weight: bold;
+cursor: pointer;
 }
 .contact
 {
