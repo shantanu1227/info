@@ -72,6 +72,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('oxford');
 	}
+	public function crossword()
+	{
+		$this->load->view('crossword');
+	}
 }
 
 /* End of file welcome.php */
