@@ -7,37 +7,51 @@
 	src: url(../fonts/stewartsans.ttf);
 }
 body { 
-	background: url(../img/web_back.jpg) no-repeat center center fixed; 
+	padding:0;
+	margin:0;
+	/*background: url(../img/web_back.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover;*/
+}
+#box{
+	width:85%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.imgslide{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
 }
 #fixed_head{
+	/*box-shadow:-7px 7px 5px #888888;*/
 	border: 1px solid black;
 	background-color:#361200;
 	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
 	float:left;
-	width:100%;
-	height:100px;
+	width:85%;
+	height:83px;
 	padding:0;
 	opacity: 0.8;
 	position:fixed;
 	z-index:50;
 	top:0px;
-	margin-left:-10px;
 	margin-top:0px;
-	}
+}
 .cname{
 	display: inline-block;
 	padding: 0px;
-	letter-spacing:4px;
+	letter-spacing:5px;
 	font-family:monofont;
-	font-size:55px;
+	font-size:50px;
 	font-weight:bold;
 	color:white;
 	margin-left:100px;
-	margin-top:10px;
+	margin-top:2px;
 	margin-bottom:10px;
 }
 .loginaccount{
@@ -73,14 +87,15 @@ body {
 }
 
 .navigation{
-	border-top: 1px solid black;
+	/*box-shadow:-7px 7px 5px #888888;*/
 	position:fixed;
-	margin-left:-10px;
-	margin-top:93px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:85px;
 	display: inline-block;
 	clear:left;
-	z-index:40;
-	width:101%;
+	z-index:60;
+	width:85.6%;
 }
 .navigation ul{
 	width:100%;
@@ -101,6 +116,10 @@ body {
 	cursor:pointer;
 	text-decoration:none;
 	font-size:13px;
+}
+.navigation ul li a{
+text-decoration:none;
+color:white;
 }
 .navigation ul li:hover{
 	opacity:0.9;
@@ -143,82 +162,166 @@ body {
 }
 
 .shopheading{
-	margin-top:10%;
+text-indent:-9999px;
+	text-shadow:2px 2px 5px #361200;
+	letter-spacing:4px;
+	color:white;
+	margin-top:120px;
+	margin-left:auto;
+	margin-right:auto;
 	float:left;
 	width:100%;
 	text-align:left;
-	font-size:30px;
-	padding-top: 2%;
-	padding-left: 15%;
+	font-size:35px;
+	padding-top:10px;
 	font-family:textfont;
 	font-weight:bold;
 }
+.offerhead{
+	text-shadow:2px 2px 5px #361200;
+	letter-spacing:2px;
+	color:#361200;
+	margin-top:5px;
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+	width:100%;
+	text-align:left;
+	font-size:25px;
+	padding:5px;
+	padding-left:0;
+	font-family:textfont;
+	font-weight:bold;
+}
+.menuhead{
+	text-shadow:2px 2px 5px #361200;
+	letter-spacing:2px;
+	color:#361200;
+	margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+	width:100%;
+	text-align:left;
+	font-size:25px;
+	padding-top:0px;
+	font-family:textfont;
+	font-weight:bold;
+}
+
+.offers{
+	clear:left;
+	margin-top:0.5%;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+
+
+#feedback{
+	padding:8px;
+	font-family:textfont;
+	font-weight:bold;
+	font-size:18px;
+	color:white;
+	text-align:center;
+	border:1px solid #361200;
+	border-radius:5px;
+	box-shadow:7px 7px 5px #888888;
+	background-color:#361200;
+	height:16px;
+	position:fixed;
+	top:55%;
+	right:-3%;
+	width:90px;
+	writing-mode:tb-rl;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform: rotate(90deg);
+	cursor:pointer;
+}
+
 .shopdetail{
-	background-color: #E2DCDA;
-	opacity: 0.8;
-	margin-top: 1%;
-	margin-left: 15%;
-	width: 70%;
+
+	margin-top: 0%;
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
 	border-width: 1px;
 	border-style: solid;
 	border-color: white;
 	float: left;
 }
 
-.shoppic
-{margin-left: 1%;
-	margin-top: 1%;
-	width: 45%;
+.shoppic{
+	display:inline-block;
+	margin-left: 10%;
+	margin-top: 0%;
+	width: auto;
 	height: 100%;
 	/*border-width: 2px;
 	border-style: solid;*/
-float: left;
+	float: left;
 }
 
 .details{
-	margin-top: 1%;
-	float: left;
-	width: 50%;
-	margin-left:2%;
-	/*border-width: 1px;
-	border-style: solid;*/ 
+	font-weight:bold;
+	font-family:textfont;
+	background-color:#CC985F;
+	margin:0.5%;
+	float: right;
+	width: 40%;
+	border:1px solid #CC985F;
+	border-radius:5px;
+	box-shadow:0px 0px 15px #CC985F; 
 }
 
 .timing{
-	margin-top: 1%;
-	margin-left: 1%;
-	float: left;
-	height: 30%;
-	width: 30%;
-	/*border-width: 1px;
-	border-style: solid;*/
-	font-size: 170%;
-	padding:1%;
-	text-align: center;
+	display: inline;
+margin-top: 3.5%;
+margin-left: 1%;
+margin-left: 1%;
+float: left;
+height: 30%;
+width: auto;
+font-size: 100%;
+text-align: center;
 }
 
 .status{
-	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-	margin-top: 1%;
-	margin-left: 10%;
-	float: right;
-	height: 10%;
-	width: 50%;
-	font-size: 150%;
-	/*border-width: 1px;
-	border-style: solid;*/
-	padding:1%;
+	display: inline;
+background-color: #CC985F;
+margin-top: 1%;
+float: left;
+clear: both;
+height: 10%;
+width: 15%;
+font-size: 140%;
+padding: 1%;
 }
-
+.statustext{
+	margin-right:10px;
+	float:left;
+	width:50%;
+	display:inline;	
+}
 .status img{
-	float: right;
-	height: 5%;
-	width: 50%;
+	float: left;
+display: inline;
+border-radius: 11px;
+height: 5%;
+width: 100%;
 }
-
+.dayswrap{
+	float:right;
+	display:inline;
+	height: 30%;
+	width:50%;
+}
 .days{
-	margin-top: 15%;
-	margin-left: 7%;
+	display:inline;
+	margin:auto;
+	width:auto;
 	/*border-width: 1px;
 	border-style: solid;*/
 }
@@ -231,44 +334,38 @@ float: left;
 
 .days ul li{
 	background-color: green;
-	display: inline;
-	margin: 1%;
-	padding: 1%;
-	border-radius: 2px;
-	width: 10%;
-	font-size: 75%;
-	font-weight: bold;
-	/*border-width: 2px;
-	border-style: solid;*/
-
+display: inline;
+padding: 2.5%;
+border-radius: 5px;
+font-size: 75%;
+font-weight: bold;
+cursor: pointer;
 }
 .contact
 {
-	margin-left:6%;
-	margin-top: 2%;
-	/*border-width: 1px;
-	border-style: solid;*/
+	font-size: 13px;
+float: right;
+margin-right: 1%;
+margin-top: 2%;
+font-family:textfont;
 	
 }
 .owner{
-	font-size: 100%;
+	float:left;
 	font-weight: bold;
 	text-decoration: underline;
-	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+
 }
 .ownername{
-	font-size: 150%;
+	font-size: 90%;
 	font-weight: bold;
-font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-}
-.offers{
-	margin-left: 15%;
-	margin-top:10px;
-	float:left;
-	width:70%;
-	font-weight: 1px;
-}
 
+}
+.ownernum{
+	font-size: 90%;
+	font-weight: bold;
+	letter-spacing:1px;
+}
 
 
 /* ***************************actual styling by sahil*****************************/
@@ -278,20 +375,21 @@ font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 .printform{
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	color: white;
-	margin-left: 15%;
+	box-shadow: 5px 5px 3px black;
+	margin-left: 0%;
 	margin-top: 1px;
 	padding-bottom: 10%;
 	float: left;
-	width: 70%;
+	width: 100%;
 	height: 40%;
-	border-width: 2px;
-	border-style: solid;
+	border-width: 1px;
+
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #361200), color-stop(1, #b34332));
-	background:-moz-linear-gradient(top, #361200 80%, #b34332 100%);
-	background:-webkit-linear-gradient(top, #361200 80%, #b34332 100%);
-	background:-o-linear-gradient(top, #361200 80%, #b34332 100%);
-	background:-ms-linear-gradient(top, #361200 80%, #b34332 100%);
-	background:linear-gradient(to bottom, #361200 80%, #b34332 100%);
+	background:-moz-linear-gradient(top, #361200 10%, #b34332 100%);
+	background:-webkit-linear-gradient(top, #361200 10%, #b34332 100%);
+	background:-o-linear-gradient(top, #361200 10%, #b34332 100%);
+	background:-ms-linear-gradient(top, #361200 10%, #b34332 100%);
+	background:linear-gradient(to bottom, #361200 10%, #b34332 100%);
 	
 }
 
