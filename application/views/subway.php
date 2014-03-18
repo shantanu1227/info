@@ -43,7 +43,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="offerhead">What's cool today?</div>
+		<div class="offerhead">How to order -></div>
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">
