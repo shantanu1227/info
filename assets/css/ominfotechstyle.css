@@ -1,0 +1,404 @@
+@font-face{
+	font-family: monofont;
+	src: url(../fonts/JandaCelebrationScript.ttf);
+}
+@font-face{
+	font-family: textfont;
+	src: url(../fonts/stewartsans.ttf);
+}
+body { 
+	padding:0;
+	margin:0;
+	/*background: url(../img/web_back.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+}
+#box{
+	width:85%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.imgslide{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#fixed_head{
+	/*box-shadow:-7px 7px 5px #888888;*/
+	border: 1px solid black;
+	background-color:#361200;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+	width:85%;
+	height:83px;
+	padding:0;
+	opacity: 0.8;
+	position:fixed;
+	z-index:50;
+	top:0px;
+	margin-top:0px;
+}
+.cname{
+	display: inline-block;
+	padding: 0px;
+	letter-spacing:5px;
+	font-family:monofont;
+	font-size:50px;
+	font-weight:bold;
+	color:white;
+	margin-left:100px;
+	margin-top:2px;
+	margin-bottom:10px;
+}
+.loginaccount{
+	float:right;
+	display: inline-block;
+	}
+.reglog{
+	padding-left:10px;
+	float:left;
+	display: inline-block;
+	margin-right:20px;
+	cursor:pointer;
+	padding-top:10px;
+	font-size:12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+.reglog:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+}
+.myaccount:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+}
+.myaccount{
+	float:right;
+	display: inline-block;
+	margin-right:10px;
+	cursor:pointer;
+	padding-top:10px;
+	font-size:12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+
+.navigation{
+	/*box-shadow:-7px 7px 5px #888888;*/
+	position:fixed;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:85px;
+	display: inline-block;
+	clear:left;
+	z-index:60;
+	width:85.6%;
+}
+.navigation ul{
+	width:100%;
+	margin:0;
+	padding-left: 0;
+	float:left;
+}
+.navigation ul li{
+	background-color:#361200;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	cursor:pointer;
+	padding:0.95%;
+	text-align:center;
+	width:8.05%;
+	float:left;
+	list-style:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	text-decoration:none;
+	font-size:13px;
+}
+.navigation ul li a{
+text-decoration:none;
+color:white;
+}
+.navigation ul li:hover{
+	opacity:0.9;
+}
+.navbar ul ul{
+	margin-top:12%;
+	padding: 0px;
+	margin-bottom: -13%;
+	border-style: none;
+	width: 100%;
+	display: none;
+	float: left;
+}
+.navbar ul ul li{
+	margin-left: -12%;
+	padding: 0px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	width: 122%;
+	float: left;
+}
+.navbar ul ul li a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.navbar ul li:hover > ul{
+	display:block;
+}
+
+.navbar ul li li:hover{
+	background-color:#498FA0;
+	width:124%;
+}	
+.navigation ul li li a{
+	padding:0px;
+}	
+.navbar{
+	width:100%;
+	float:left;
+}
+
+.shopheading{
+text-indent:-9999px;
+	text-shadow:2px 2px 5px #361200;
+	letter-spacing:4px;
+	color:white;
+	margin-top:120px;
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+	width:100%;
+	text-align:left;
+	font-size:35px;
+	padding-top:10px;
+	font-family:textfont;
+	font-weight:bold;
+}
+
+.offerhead{
+	text-shadow:2px 2px 5px #361200;
+	letter-spacing:2px;
+	color:#361200;
+	margin-top:5px;
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+	width:100%;
+	text-align:left;
+	font-size:25px;
+	padding:5px;
+	padding-left:0;
+	font-family:textfont;
+	font-weight:bold;
+}
+.menuhead{
+	text-shadow:2px 2px 5px #361200;
+	letter-spacing:2px;
+	color:#361200;
+	margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+	width:100%;
+	text-align:left;
+	font-size:25px;
+	padding-top:0px;
+	font-family:textfont;
+	font-weight:bold;
+}
+
+.offers{
+	clear:left;
+	margin-top:0.5%;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+
+#feedback{
+	padding:8px;
+	font-family:textfont;
+	font-weight:bold;
+	font-size:18px;
+	color:white;
+	text-align:center;
+	border:1px solid #361200;
+	border-radius:5px;
+	box-shadow:7px 7px 5px #888888;
+	background-color:#361200;
+	height:16px;
+	position:fixed;
+	top:55%;
+	right:-3%;
+	width:90px;
+	writing-mode:tb-rl;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform: rotate(90deg);
+	cursor:pointer;
+}
+
+.shopdetail{
+
+	margin-top: 0%;
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: white;
+	float: left;
+}
+
+.shoppic{
+	display:inline-block;
+	margin-left: 10%;
+	margin-top: 0%;
+	width: auto;
+	height: 100%;
+	/*border-width: 2px;
+	border-style: solid;*/
+	float: left;
+}
+
+.details{
+	font-weight:bold;
+	font-family:textfont;
+	background-color:#CC985F;
+	margin:0.5%;
+	float: right;
+	width: 40%;
+	border:1px solid #CC985F;
+	border-radius:5px;
+	box-shadow:0px 0px 15px #CC985F; 
+}
+
+.timing{
+	display: inline;
+margin-top: 3.5%;
+margin-left: 1%;
+margin-left: 1%;
+float: left;
+height: 30%;
+width: auto;
+font-size: 100%;
+text-align: center;
+}
+
+.status{
+	display: inline;
+background-color: #CC985F;
+margin-top: 1%;
+float: left;
+clear: both;
+height: 10%;
+width: 15%;
+font-size: 140%;
+padding: 1%;
+}
+.statustext{
+	margin-right:10px;
+	float:left;
+	width:50%;
+	display:inline;	
+}
+.status img{
+	float: left;
+display: inline;
+border-radius: 11px;
+height: 5%;
+width: 100%;
+}
+.dayswrap{
+	float:right;
+	display:inline;
+	height: 30%;
+	width:50%;
+}
+.days{
+	display:inline;
+	margin:auto;
+	width:auto;
+	/*border-width: 1px;
+	border-style: solid;*/
+}
+
+.days ul{
+	list-style-type: none;
+	margin-left: 8%;
+	padding: 0;
+}
+
+.days ul li{
+	background-color: green;
+display: inline;
+padding: 2.5%;
+border-radius: 5px;
+font-size: 75%;
+font-weight: bold;
+cursor: pointer;
+}
+.contact
+{
+	font-size: 13px;
+float: right;
+margin-right: 1%;
+margin-top: 2%;
+font-family:textfont;
+	
+}
+.owner{
+	float:left;
+	font-weight: bold;
+	text-decoration: underline;
+
+}
+.ownername{
+	font-size: 90%;
+	font-weight: bold;
+
+}
+.ownernum{
+	font-size: 90%;
+	font-weight: bold;
+	letter-spacing:1px;
+}
+
+.shopproducts{
+    margin-top:1%;
+    float:left;
+    width:100%;
+}
+.shopproductitem{
+	/*border:1px solid #CC985F;
+	border-radius:5px; 
+	/*box-shadow:0px 0px 15px #CC985F;*/
+    float:left;
+    width:32%;
+    height:250px;
+    padding:0.45%;
+
+
+}
+.shopproductitem img{
+    width:90%;
+    height:60%;
+    margin-left:5%;
+}
+.itemname{
+    font-family:textfont;
+    float:left;
+    width:100%;
+    padding:1%;
+    text-align:center;
+}
+.itemprice{
+    font-family:textfont;
+    padding:1%;
+    text-align:center;
+    float:left;
+    width:100%;
+}
