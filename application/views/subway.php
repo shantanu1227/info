@@ -58,7 +58,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -67,7 +67,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -76,7 +76,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -85,7 +85,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -94,7 +94,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -103,7 +103,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -112,7 +112,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -121,7 +121,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -130,7 +130,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -139,7 +139,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -148,7 +148,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -157,7 +157,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -166,7 +166,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -175,7 +175,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -184,7 +184,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -193,7 +193,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -202,7 +202,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50
@@ -211,7 +211,7 @@
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'subway/subwayproduct1.jpg'); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					Egg & Cheese
 				</div>
 				<div class="itemprice">
 					Rs.50

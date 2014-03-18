@@ -11,6 +11,19 @@
 	</head>
 	
 	<body>
+		<script>
+				$(document).ready(function(){
+				$("#uploadbutton").click(function(){
+				$("#uploadform").fadeIn(1000);
+				$("#box").css("opacity","0.2");
+								$(document).keyup(function(e) {
+  if (e.keyCode == 27 ) {
+	  $("#uploadform").fadeOut(10);
+					$("#box").css('opacity',1);
+   }			}); 
+				}); 
+				});
+	    </script>
 	<div id="box">
 		<?php include 'header1.php'; ?>
 		<div class="shopheading">Omega</div>
@@ -62,7 +75,13 @@
 		</div>
 		
 		<div class="printform">
-			<form>
+		<button id="uploadbutton" type="button">upload</button>
+			
+			
+		</div>
+		</div>
+		<div id="uploadform">
+		<form>
 			<div class="colorselection">
 			Choose the colour quality of your pages<br>
 			<input type="radio" name="colour" value="colour"> COLOUR<br>
@@ -78,11 +97,11 @@
 			<div class="fileselection">
 			<input type="file" value="file">
 			
-			<button class="uploadbutton" type="button">upload</button>
+			
 			</div>
 		
 			</form>
-			
 		</div>
+		
 	</body>
 </html>

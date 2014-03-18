@@ -26,7 +26,7 @@
 				</li>
 				<li><a>MEDICAL</a>
 					<ul>
-						<li><?php echo anchor('/welcome/ravi', 'Ravi Chemist'); ?></li>
+						<li><?php echo anchor('/welcome/medicine', 'Ravi Chemist'); ?></li>
 					</ul>
 				</li>
 				<li><a>STATIONARY</a>
