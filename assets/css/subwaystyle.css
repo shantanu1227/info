@@ -277,29 +277,27 @@ text-indent:-9999px;
 }
 
 .timing{
-	display:inline;
-	margin-top: 1%;
-	margin-left: 1%;	
-	margin-left: 1%;	
-	float: left;
-	height: 30%;
-	width: auto;
-	/*border-width: 1px;
-	border-style: solid;*/
-	font-size: 150%;
-	text-align: center;
+	display: inline;
+margin-top: 3.5%;
+margin-left: 1%;
+margin-left: 1%;
+float: left;
+height: 30%;
+width: auto;
+font-size: 100%;
+text-align: center;
 }
 
 .status{
-	display:inline;
-	background-color:#CC985F;
-	margin-top: 1%;
-	float:left;
-	clear:both;
-	height: 10%;
-	width: 45%;
-	font-size: 140%;
-	padding:1%;
+	display: inline;
+background-color: #CC985F;
+margin-top: 1%;
+float: left;
+clear: both;
+height: 10%;
+width: 15%;
+font-size: 140%;
+padding: 1%;
 }
 .statustext{
 	margin-right:10px;
@@ -308,11 +306,11 @@ text-indent:-9999px;
 	display:inline;	
 }
 .status img{
-	float:right;
-	display:inline;
-	border-radius: 11px;
-	height: 5%;
-	width: 45%;
+	float: left;
+display: inline;
+border-radius: 11px;
+height: 5%;
+width: 100%;
 }
 .dayswrap{
 	float:right;
@@ -347,12 +345,11 @@ text-indent:-9999px;
 }
 .contact
 {
-	font-size: 120%;
-	float:right;
-	margin-right:6%;
-	margin-top: 2%;
-	/*border-width: 1px;
-	border-style: solid;	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;*/
+	font-size: 13px;
+float: right;
+margin-right: 1%;
+margin-top: 2%;
+font-family:textfont;
 	
 }
 .owner{

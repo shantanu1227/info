@@ -33,7 +33,7 @@
 					</ul>
 				</div></div>
 				<div class="status">
-					<div class="statustext">Status:</div>
+					
 					<img src="<?php echo(IMG.'open_button.png');?>"></img>
 				</div>
 				<div class="contact">
