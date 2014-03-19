@@ -1,6 +1,6 @@
 info
 ====
 
-Virtual Infocity Sen Project
+Virtual Infocity (Sen Project)
 
 HAVE A LOOK AT WIKI PAGES
