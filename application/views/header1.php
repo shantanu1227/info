@@ -18,6 +18,7 @@
 						<li><?php echo anchor('/welcome/qwiches', 'Qwiches'); ?></li>
 						<li><?php echo anchor('/welcome/chatkazz', 'Chatkazz'); ?></li>
 						<li><?php echo anchor('/welcome/koffee', 'Koffee++'); ?></li>
+						<li><?php echo anchor('/welcome/bigbite', 'Bigbite'); ?></li>
 					</ul>
 				</li>
 				<li><a>PROVISION</a>

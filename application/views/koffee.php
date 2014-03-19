@@ -13,42 +13,41 @@ and open the template in the editor.
         <script type='text/javascript' src="<?php echo(JS.'jquery-1.7.1.min.js'); ?>"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="loginaccount">
-                <div class="reglog">Login/Register</div>
-                <div class="myaccount">My Account</div>
-            </div>
-            <div class="header">
-                <div id="mono">Vinfocity</div>
-                <div class="searchdiv">search here</div>
-            </div>
-
-            <div class="navigation">
-                <div class="navbar">
-                    <ul>
-                        <li><a>HOME</a></li>
-                        <li>FOOD
-                            <ul>
-                                <li><a>Subway</a></li>
-                                <li><a>Shivas</a></li>
-                                <li><a>Cool Point</a></li>
-                            </ul>
-                        </li>
-                        <li><a>PROVISION</a></li>
-                        <li><a>MEDICAL</a></li>
-                        <li><a>STATIONARY</a></li>
-                        <li><a>LAUNDRY</a></li>
-                        <li><a>PERIPHERALS</a></li>
-                        <li><a>PRINT/COPY</a></li>
-                        <li><a>ABOUT US</a></li>
-                        <li><a>FAQS</a></li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="koffeeshopheading">
+	<div id="box">
+        <?php include 'header1.php'; ?>
+            <div class="shopheading">
                 KEN'S KOFFEE++
             </div>
+			<div class="shopdetail">
+			<div class="shoppic">
+				<img src="<?php echo(IMG.'koffee/rsz_koffee_logo.jpg');?>"></img>
+			</div>
+			<div class="details">
+				<div class="timing">9AM-9PM</div>
+				<div class="dayswrap">
+				<div class="days">
+					<ul>
+						<li>Mo</li>
+						<li>Tu</li>
+						<li>We</li>
+						<li>Th</li>
+						<li>Fr</li>	
+						<li>Sa</li>
+						<li>Su</li>
+					</ul>
+				</div></div>
+				<div class="status">
+
+					<img src="<?php echo(IMG.'open_button.png');?>"></img>
+				</div>
+				<div class="contact">
+					<div class="owner">Owner</div>
+					<div class="ownername">Mr.Sahil</div>
+					<div class="ownernum">8460089916</div>
+				</div>
+			</div>
+		</div>
+		<div class="offerhead">What's cool today?</div>
             <div class="offers">
                 <div class="imgslide">
                     <div id="slider">
@@ -58,234 +57,234 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
-            <div class="koffeeshopproducts">
-                <div class="koffeeshopproductitem">
+			<div class="menuhead"><i>Carte de menu..</i></div>
+            <div class="shopproducts">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG.'koffee/tea.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Tea
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.20(Small) Rs.40(Medium)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/cardamom_tea.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Cardamom Tea
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.20(Small) Rs.40(Medium)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/ginger_tea.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Ginger Tea
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.20(Small) Rs.40(Medium)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/diet_tea.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Diet Tea
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.30(Small) Rs.50(Medium)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/green_tea.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Green Tea
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.30(Small)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/coffee.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Hot Coffee
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.20(Small) Rs.40(Medium)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/diet_coffee.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Diet Coffee
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.30(Small) Rs.50(Medium)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/black_coffee.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Black Coffee
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.30(Small) Rs.50(Medium)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/iced_tea.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Iced Tea
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.60(Large)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/cold_coffee.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Cold Coffee
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.60(Large)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/juice.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Fresh Juice
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.50(Medium)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/samosa.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Samosa
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.20(2 pcs)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/poha.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Poha
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.20
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/cutlet.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Cutlet
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.20(2 pcs)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/thepla.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Thepla
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.50(5 pcs)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/aalu_paratha.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Aalu Paratha
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.80(3 pcs)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/gulab_jamun.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Gulab Jamun
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.30(3 pcs)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/sprouts.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Sprouts
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.50(100gms)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/puri.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Puri
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.50(100gms)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/shakkarpara.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Shakkarpara
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.50(100gms)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/chocolate.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Homemade chocolates
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.15(1 pc)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/cookie.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Homemade Cookies
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.25(1 pc)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/muffin.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Muffin
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.50(1 pc)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/cornflakes.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Cornflakes
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.80(50gms + 1 medium cup milk)
                     </div>
                 </div>
-                <div class="koffeeshopproductitem">
+                <div class="shopproductitem">
                     <img width="100%" src="<?php echo(IMG . 'koffee/muesli.jpg'); ?>"></img>
-                    <div class="koffeeitemname">
+                    <div class="itemname">
                         Muesli
                     </div>
-                    <div class="koffeeitemprice">
+                    <div class="itemprice">
                         Rs.100(50gms + 1 medium cup milk)
                     </div>
                 </div>
             </div>
-
         </div>
     </body>
 </html>

@@ -15,6 +15,7 @@ body {
 	-o-background-size: cover;
 	background-size: cover;*/
 }
+
 #box{
 	width:85%;
 	margin-left:auto;
@@ -70,10 +71,10 @@ body {
 	color:#FFFFFF;
 }
 .reglog:hover{
-	text-shadow: 0.5px 0.49px #ffffff;
+	text-shadow: 0.7px 0.49px #ffffff;
 }
 .myaccount:hover{
-	text-shadow: 0.5px 0.49px #ffffff;
+	text-shadow: 0.7px 0.49px #ffffff;
 }
 .myaccount{
 	float:right;
@@ -117,6 +118,10 @@ body {
 	text-decoration:none;
 	font-size:13px;
 }
+.navigation ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
 .navigation ul li:hover{
 	opacity:0.9;
 }
@@ -158,6 +163,7 @@ body {
 }
 
 .shopheading{
+	text-indent:-9999px;
 	text-shadow:2px 2px 5px #361200;
 	letter-spacing:4px;
 	color:#361200;
@@ -174,6 +180,7 @@ body {
 }
 
 .offerhead{
+	z-index:450;
 	text-shadow:2px 2px 5px #361200;
 	letter-spacing:2px;
 	color:#361200;
@@ -237,11 +244,13 @@ body {
 }
 
 .shopdetail{
+	box-shadow:0px 0px 15px #361200; 
 	background: url(../img/qwiches/bgimg.jpg) center center fixed;
 	margin-top: 0%;
 	margin-left:auto;
 	margin-right:auto;
 	width: 100%;
+	height:50%;
 	border-width: 1px;
 	border-style: solid;
 	border-color: white;
@@ -251,11 +260,8 @@ body {
 .shoppic{
 	display:inline-block;
 	margin-left: 1%;
-	margin-top: 1%;
+	margin-top: 2.5%;
 	width: auto;
-	height: 100%;
-	/*border-width: 2px;
-	border-style: solid;*/
 	float: left;
 }
 
@@ -303,7 +309,7 @@ body {
 	display:inline;	
 }
 .status img{
-	float:right;
+	float:left;
 	display:inline;
 	border-radius: 11px;
 	height: 5%;
@@ -368,9 +374,11 @@ body {
 }
 
 .shopproducts{
+	font-weight:bold;
+	letter-spacing:0.5px;
     margin-top:1%;
     float:left;
-    width:100%;
+    width:100.9%;
 }
 .shopproductitem{
 	border:1px solid #CC985F;
