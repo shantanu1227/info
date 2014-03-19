@@ -40,7 +40,7 @@
 				</li>
 				<li><a>LAUNDRY</a>
 					<ul>
-						<li><?php echo anchor('/welcome/laundromart', 'Laundromart'); ?></li>
+						<li><?php echo anchor('/welcome/washexpress', 'Washexpress'); ?></li>
 					</ul>
 				</li>
 				<li><a>TECH</a>

@@ -44,9 +44,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('medicine');
 	}
-    public function laundromart()
+    public function washexpress()
 	{
-		$this->load->view('laundromart');
+		$this->load->view('washexpress');
 	}
 	public function omega()
 	{
