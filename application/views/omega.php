@@ -12,16 +12,21 @@
 	
 	<body>
 		<script>
-				$(document).ready(function(){
-				$("#uploadbutton").click(function(){
-				$("#uploadform").fadeIn(1000);
-				$("#box").css("opacity","0.2");
-								$(document).keyup(function(e) {
-  if (e.keyCode == 27 ) {
-	  $("#uploadform").fadeOut(10);
-					$("#box").css('opacity',1);
-   }			}); 
-				}); 
+				$(document).ready(function()
+				{
+					$("#uploadbutton").click(function()
+					{
+						$("#uploadform").fadeIn(1000);
+						$("#box").css("opacity","0.2");
+						$(document).keyup(function(e) 
+						{
+  						if (e.keyCode == 27 ) 
+  							{
+	  						$("#uploadform").fadeOut(10);
+							$("#box").css('opacity',1);
+   							}			
+   						}); 
+					}); 
 				});
 	    </script>
 	<div id="box">
@@ -75,7 +80,14 @@
 		</div>
 		
 		<div class="printform">
-		<button id="uploadbutton" type="button">upload</button>
+		<div class =" information">
+		Please choose a file that you want to get printed!
+		The current rates are:<br>
+		->Black Re1/pg<br>
+		->colour Re2/pg
+		</div>
+
+		<button id="uploadbutton" type="button">Upload a file</button>
 			
 			
 		</div>
@@ -96,7 +108,6 @@
 
 			<div class="fileselection">
 			<input type="file" value="file">
-			
 			
 			</div>
 		
