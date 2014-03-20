@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2014 at 03:11 AM
+-- Generation Time: Mar 21, 2014 at 11:36 AM
 -- Server version: 5.5.34-0ubuntu0.13.04.1
 -- PHP Version: 5.4.9-4ubuntu2.4
 
@@ -245,6 +245,7 @@ CREATE TABLE IF NOT EXISTS `transaction` (
 CREATE TABLE IF NOT EXISTS `users` (
   `userId` int(11) NOT NULL AUTO_INCREMENT,
   `userName` varchar(100) NOT NULL,
+  `fullName` text NOT NULL,
   `email` text NOT NULL,
   `password` text NOT NULL,
   `authToken` text NOT NULL,

@@ -121,5 +121,10 @@
 		else{
 			return -2;
 		}
-	}	
+	}
+
+	public function logout()
+    {
+        $this->session->sess_destroy();
+    }	
 }

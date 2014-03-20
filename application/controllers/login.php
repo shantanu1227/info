@@ -14,6 +14,12 @@ class Login extends CI_Controller {
 			$this->load->view('test', $data, FALSE);
 		}
 	}
+	public function logout()
+	{
+		$this->load->model('model_users');
+		$this->model_users->logout();
+		redirect('/', 'refresh');
+	}
 
 }
 
