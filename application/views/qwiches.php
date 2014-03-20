@@ -33,7 +33,7 @@
 					</ul>
 				</div></div>
 				<div class="status">
-					<div class="statustext">Status:</div>
+
 					<img src="<?php echo(IMG.'open_button.png');?>"></img>
 				</div>
 				<div class="contact">
@@ -48,8 +48,8 @@
 			<div class="imgslide">
 				<div id="slider">
 					<img src="<?php echo(IMG.'qwiches/qwiches_banner1.png');?>"></img>
-					<img src="<?php echo(IMG.'qwiches/qwiches_banner4.jpg');?>"></img>
-					<img src="<?php echo(IMG.'qwiches/qwiches_banner7.jpg');?>"></img>
+					<img src="<?php echo(IMG.'qwiches/rsz_qwiches_banner4.jpg');?>"></img>
+					<img src="<?php echo(IMG.'qwiches/rsz_qwiches_banner7.jpg');?>"></img>
 				</div>
 			</div>
 		</div>
