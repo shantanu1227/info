@@ -30,7 +30,9 @@ class Welcome extends CI_Controller {
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
 	{
-		$this->load->view('kavya');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getkavyaproducts() );
+		$this->load->view('kavya', $data, FALSE);
 	}
     public function koffee()
 	{

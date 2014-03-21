@@ -1,0 +1,11 @@
+/*Insert Queries*/
+
+INSERT INTO `Virtual_Infocity`.`storetype` (`typeId`, `type`) VALUES ('1', 'Provision');
+
+INSERT INTO `Virtual_Infocity`.`stores` (`shopId`, `typeId`, `name`, `address`, `contactNo`, `userName`, `password`, `emailId`, `imageIcon`) VALUES (1, '1', 'Kavya', '1st Block Info', '9988442233', 'store_kavya', SHA1('kavya'), 'kavya@kavya.com', 'kavya/kavya_logo.png');
+
+INSERT INTO `Virtual_Infocity`.`shoptimings` (`shopId`, `openingTime`, `closingTime`, `holidays`, `currentStatus`) VALUES ('1', '9AM', '11PM', 'Open', 'Open');
+
+INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`,`productImage`, `inStock`) VALUES ('1', 'Maggi 150 gram', '20', '1','kavya/kavyaproduct1.jpg' ,'true');
+
+INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES ('2', '7 up 500 ml', '32', '1', 'kavya/kavyaproduct2.jpg', 'true');

@@ -26,14 +26,14 @@
 			if($this->check_user_exist($username)){
 				return -1;
 			}
-
+			$name=$this->input->post('name',TRUE);
 			$emailaddress=$username.'@daiict.ac.in';
 			$password=$this->input->post('password');
 			$phone=$this->input->post('phone',TRUE);
 			$address=$this->input->post('address',TRUE);
 			$generated_token=md5(rand(0,7));
 			$hashed_password=$this->encrypt->sha1($password);
-			$data=array('userName' => $username, 'password' =>$hashed_password,
+			$data=array('userName' => $username, 'name' => $name,'password' =>$hashed_password,
 						 'email' => $emailaddress,'address' => $address, 'mobileNo' => $phone ,'authToken'=> $generated_token );		
 
 			$this->load->library('email');

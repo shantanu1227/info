@@ -55,15 +55,22 @@
 		</div>
 		<div class="menuhead"><i>Products</i></div>
 		<div class="shopproducts">
+		<?php
+		foreach ($output as $product) {
+		?>
+
 			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
+				<img width="100%" src="<?php echo(IMG . $product->productImage); ?>"></img>
 				<div class="itemname">
-					Masala Maggi
+					<?php echo $product->productName; ?>
 				</div>
 				<div class="itemprice">
-					Rs.50
+					<?php echo "Rs.".$product->price; ?>
 				</div>
 			</div>
+		<?php
+		}
+		?>	
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG . 'kavya/kavyaproduct1.jpg'); ?>"></img>
 				<div class="itemname">

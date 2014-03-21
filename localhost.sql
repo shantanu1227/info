@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2014 at 11:36 AM
+-- Generation Time: Mar 21, 2014 at 01:20 PM
 -- Server version: 5.5.34-0ubuntu0.13.04.1
 -- PHP Version: 5.4.9-4ubuntu2.4
 
@@ -90,9 +90,10 @@ CREATE TABLE IF NOT EXISTS `products` (
   `productName` text NOT NULL,
   `price` int(100) NOT NULL,
   `shopId` int(100) NOT NULL,
+  `productImage` text NOT NULL,
   `inStock` text NOT NULL,
   PRIMARY KEY (`productId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -135,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `shoptimings` (
   `holidays` text NOT NULL,
   `currentStatus` text NOT NULL,
   PRIMARY KEY (`shopId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -160,13 +161,13 @@ CREATE TABLE IF NOT EXISTS `stores` (
   `typeId` int(11) NOT NULL,
   `name` text NOT NULL,
   `address` text NOT NULL,
-  `contactNo` int(11) NOT NULL,
+  `contactNo` text NOT NULL,
   `userName` text NOT NULL,
   `password` text NOT NULL,
   `emailId` text NOT NULL,
   `imageIcon` text NOT NULL,
   PRIMARY KEY (`shopId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -176,10 +177,9 @@ CREATE TABLE IF NOT EXISTS `stores` (
 
 CREATE TABLE IF NOT EXISTS `storetype` (
   `typeId` int(100) NOT NULL AUTO_INCREMENT,
-  `shopId` int(100) NOT NULL,
   `type` text NOT NULL,
   PRIMARY KEY (`typeId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
