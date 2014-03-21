@@ -33,7 +33,7 @@
 			$address=$this->input->post('address',TRUE);
 			$generated_token=md5(rand(0,7));
 			$hashed_password=$this->encrypt->sha1($password);
-			$data=array('userName' => $username, 'name' => $name,'password' =>$hashed_password,
+			$data=array('userName' => $username, 'fullName' => $name,'password' =>$hashed_password,
 						 'email' => $emailaddress,'address' => $address, 'mobileNo' => $phone ,'authToken'=> $generated_token );		
 
 			$this->load->library('email');
