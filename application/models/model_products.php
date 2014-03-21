@@ -2,8 +2,8 @@
 
 class Model_products extends CI_Model {
 
-	public function getkavyaproducts(){
-		$this->db->where('name', 'Kavya');
+	public function getproducts($storeName){
+		$this->db->where('name', $storeName);
 		$query=$this->db->get('stores', 1);
 		$row = $query->row();
 		$storeid = $row->shopId;

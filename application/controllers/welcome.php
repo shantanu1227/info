@@ -31,7 +31,7 @@ class Welcome extends CI_Controller {
 	public function kavya()
 	{
 		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getkavyaproducts() );
+		$data= array('output' => $this->model_products->getproducts('kavya') );
 		$this->load->view('kavya', $data, FALSE);
 	}
     public function koffee()
