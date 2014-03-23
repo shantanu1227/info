@@ -30,7 +30,9 @@ class Welcome extends CI_Controller {
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
 	{
-		$this->load->view('kavya');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('kavya') );
+		$this->load->view('kavya', $data, FALSE);
 	}
     public function koffee()
 	{
@@ -44,9 +46,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('medicine');
 	}
-    public function laundromart()
+    public function washexpress()
 	{
-		$this->load->view('laundromart');
+		$this->load->view('washexpress');
 	}
 	public function omega()
 	{

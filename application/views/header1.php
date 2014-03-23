@@ -17,6 +17,8 @@
 						<li><?php echo anchor('/welcome/coolpoint', 'Cool Point'); ?></li>
 						<li><?php echo anchor('/welcome/qwiches', 'Qwiches'); ?></li>
 						<li><?php echo anchor('/welcome/chatkazz', 'Chatkazz'); ?></li>
+						<li><?php echo anchor('/welcome/koffee', 'Koffee++'); ?></li>
+						<li><?php echo anchor('/welcome/bigbite', 'Bigbite'); ?></li>
 					</ul>
 				</li>
 				<li><a>PROVISION</a>
@@ -38,7 +40,7 @@
 				</li>
 				<li><a>LAUNDRY</a>
 					<ul>
-						<li><?php echo anchor('/welcome/laundromart', 'Laundromart'); ?></li>
+						<li><?php echo anchor('/welcome/washexpress', 'Washexpress'); ?></li>
 					</ul>
 				</li>
 				<li><a>TECH</a>

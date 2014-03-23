@@ -164,16 +164,11 @@ body {
 
 .shopheading{
 	text-indent:-9999px;
-	text-shadow:2px 2px 5px #361200;
-	letter-spacing:4px;
-	color:#361200;
 	margin-top:120px;
 	margin-left:auto;
 	margin-right:auto;
 	float:left;
 	width:100%;
-	text-align:left;
-	font-size:35px;
 	padding-top:10px;
 	font-family:textfont;
 	font-weight:bold;
@@ -244,8 +239,8 @@ body {
 }
 
 .shopdetail{
-	box-shadow:0px 0px 15px #361200; 
-	background: url(../img/qwiches/bgimg.jpg) center center fixed;
+	box-shadow:0px 0px 15px #FFF3C8; 
+	background-color:#C8E7F2;
 	margin-top: 0%;
 	margin-left:auto;
 	margin-right:auto;
@@ -259,8 +254,8 @@ body {
 
 .shoppic{
 	display:inline-block;
-	margin-left: 1%;
-	margin-top: 2.5%;
+	margin: 1%;
+	margin-left:1.5%;
 	width: auto;
 	float: left;
 }
@@ -268,13 +263,13 @@ body {
 .details{
 	font-weight:bold;
 	font-family:textfont;
-	background-color:#CC985F;
-	margin:0.5%;
+	background-color:#5AB7D9;
+	margin:2.9%;
 	float: right;
 	width: 40%;
-	border:1px solid #CC985F;
+	border:1px solid #5AB7D9;
 	border-radius:5px;
-	box-shadow:0px 0px 15px #CC985F; 
+	box-shadow:0px 0px 15px #5AB7D9; 
 }
 
 .timing{
@@ -293,7 +288,7 @@ body {
 
 .status{
 	display:inline;
-	background-color:#CC985F;
+	background-color:#5AB7D9;
 	margin-top: 1%;
 	float:left;
 	clear:both;
@@ -302,12 +297,8 @@ body {
 	font-size: 140%;
 	padding:1%;
 }
-.statustext{
-	margin-right:10px;
-	float:left;
-	width:50%;
-	display:inline;	
-}
+
+
 .status img{
 	float:left;
 	display:inline;

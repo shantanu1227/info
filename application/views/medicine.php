@@ -39,42 +39,42 @@ and open the template in the editor.
         </script>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="loginaccount">
-                <div class="reglog">Login/Register</div>
-                <div class="myaccount">My Account</div>
-            </div>
-            <div class="header">
-                <div id="mono">Vinfocity</div>
-                <div class="searchdiv">search here</div>
-            </div>
-
-            <div class="navigation">
-                <div class="navbar">
-                    <ul>
-                        <li><a>HOME</a></li>
-                        <li>FOOD
-                            <ul>
-                                <li><a>Subway</a></li>
-                                <li><a>Shivas</a></li>
-                                <li><a>Cool Point</a></li>
-                            </ul>
-                        </li>
-                        <li><a>PROVISION</a></li>
-                        <li><a>MEDICAL</a></li>
-                        <li><a>STATIONARY</a></li>
-                        <li><a>LAUNDRY</a></li>
-                        <li><a>PERIPHERALS</a></li>
-                        <li><a>PRINT/COPY</a></li>
-                        <li><a>ABOUT US</a></li>
-                        <li><a>FAQS</a></li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="medicineshopheading">
+	<div id="box">
+        <?php include 'header1.php'; ?>
+            <div class="shopheading">
                 MEDICINE
             </div>
+			<div class="shopdetail">
+			<div class="shoppic">
+				<img src="<?php echo(IMG.'medicine/medicine_logo.jpg');?>"></img>
+			</div>
+			<div class="details">
+				<div class="timing">9AM-9PM</div>
+				<div class="dayswrap">
+				<div class="days">
+					<ul>
+						<li>Mo</li>
+						<li>Tu</li>
+						<li>We</li>
+						<li>Th</li>
+						<li>Fr</li>	
+						<li>Sa</li>
+						<li>Su</li>
+					</ul>
+				</div></div>
+				<div class="status">
+
+					<img src="<?php echo(IMG.'open_button.png');?>"></img>
+				</div>
+				<div class="contact">
+					<div class="owner">Owner</div>
+					<div class="ownername">Mr.Sahil</div>
+					<div class="ownernum">8460089916</div>
+				</div>
+			</div>
+		</div>
+		<div class="offerhead">Stay healthy!</div>
+          
             <div class="offers">
                 <div class="imgslide">
                     <div id="slider">
@@ -84,7 +84,8 @@ and open the template in the editor.
                     </div>
                 </div>
             </div>
-            <div class="medicineshopproducts">
+                <div class="menuhead"><i>Order here..</i></div>
+            <div class="shopproducts">
                 <table id="medicinelist" border="1">
                     <tr>
                         <td>MEDICINE</td>
