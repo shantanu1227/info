@@ -6,6 +6,60 @@ INSERT INTO `Virtual_Infocity`.`stores` (`shopId`, `typeId`, `name`, `address`, 
 
 INSERT INTO `Virtual_Infocity`.`shoptimings` (`shopId`, `openingTime`, `closingTime`, `holidays`, `currentStatus`) VALUES ('1', '9AM', '11PM', 'Open', 'Open');
 
-INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`,`productImage`, `inStock`) VALUES ('1', 'Maggi 150 gram', '20', '1','kavya/kavyaproduct1.jpg' ,'true');
+/*delivery man*/
+INSERT INTO `Virtual_Infocity`.`delivery_man` (`userId`, `userName`, `password`, `name`, `mobileNo`, `creditLeft`) VALUES (1, 'ravikishan', SHA1('12345'), 'Ravi Kishan', '9988442231', '100');
 
-INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES ('2', '7 up 500 ml', '32', '1', 'kavya/kavyaproduct2.jpg', 'true');
+INSERT INTO `Virtual_Infocity`.`delivery_man` (`userId`, `userName`, `password`, `name`, `mobileNo`, `creditLeft`) VALUES (2, 'ramu', SHA1('23452'), 'Ramu', '9988442232', '200');
+
+INSERT INTO `Virtual_Infocity`.`delivery_man` (`userId`, `userName`, `password`, `name`, `mobileNo`, `creditLeft`) VALUES (3, 'kishan', SHA1('34512'), 'Kishan', '9988442233', '300');
+
+INSERT INTO `Virtual_Infocity`.`delivery_man` (`userId`, `userName`, `password`, `name`, `mobileNo`, `creditLeft`) VALUES (4, 'babu', SHA1('45123'), 'Babu', '9988442234', '400');
+
+/*laundry*/
+INSERT INTO `Virtual_Infocity`.`laundry` (`userId`, `shopId`, `billNo`, `billingAmount`) VALUES (1,3, 301,50);
+INSERT INTO `Virtual_Infocity`.`laundry` (`userId`, `shopId`, `billNo`, `billingAmount`) VALUES (2,3, 302,60);
+INSERT INTO `Virtual_Infocity`.`laundry` (`userId`, `shopId`, `billNo`, `billingAmount`) VALUES (3,3, 303,70);
+INSERT INTO `Virtual_Infocity`.`laundry` (`userId`, `shopId`, `billNo`, `billingAmount`) VALUES (4,3, 304,80);
+
+/*offers*/
+INSERT INTO `Virtual_Infocity`.`offers` (`shopId`, `offerId`, `offerName`, `offerImageUrl`) VALUES (1, 1,'one burger free on three pizzas', 'kavya/kavyaoffer1.jpg');
+
+INSERT INTO `Virtual_Infocity`.`offers` (`shopId`, `offerId`, `offerName`, `offerImageUrl`) VALUES (2, 2,'two burger free on four pizzas', 'subway/subwayoffer1.jpg');
+
+INSERT INTO `Virtual_Infocity`.`offers` (`shopId`, `offerId`, `offerName`, `offerImageUrl`) VALUES (2, 3,'one pizza free on three burgers', 'subway/subwayoffer2.jpg');
+
+INSERT INTO `Virtual_Infocity`.`offers` (`shopId`, `offerId`, `offerName`, `offerImageUrl`) VALUES (1, 4,'one pepsi free on three veg-puffs', 'kavya/kavyaoffer2.jpg');
+
+/*productsfeedback*/
+INSERT INTO `Virtual_Infocity`.`productfeedback` (`productId`, `userId`, `comment`, `rating`) VALUES (1,1,'Great Product',4);
+INSERT INTO `Virtual_Infocity`.`productfeedback` (`productId`, `userId`, `comment`, `rating`) VALUES (2,2,'Average Product',3);
+INSERT INTO `Virtual_Infocity`.`productfeedback` (`productId`, `userId`, `comment`, `rating`) VALUES (3,1,'Not good Product',2);
+INSERT INTO `Virtual_Infocity`.`productfeedback` (`productId`, `userId`, `comment`, `rating`) VALUES (2,3,'Poor Product',1);
+
+/*products*/
+INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES (1, 'Burger' ,50, 1,'kavya/burger.jpg', 'TRUE' );
+INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES (2, 'Pizza' ,70, 2,'subway/pizza.jpg', 'TRUE' );
+INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES (3, 'Notebooks' ,30, 4,'oxford/book.jpg', 'FALSE' );
+INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES (4, 'Pen' ,20, 4,'oxford/burger.jpg', 'TRUE' );
+
+INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`,`productImage`, `inStock`) VALUES ('5', 'Maggi 150 gram', '20', '1','kavya/kavyaproduct1.jpg' ,'FALSE');
+
+INSERT INTO `Virtual_Infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES ('6', '7 up 500 ml', '32', '1', 'kavya/kavyaproduct2.jpg', 'TRUE');
+
+/*recharge*/
+INSERT INTO `Virtual_Infocity`.`recharge` (`shopId`, `transactionId`, `userId`, `rechargeMobileNumber`) VALUES (1, 1,1 ,'9727198981');
+INSERT INTO `Virtual_Infocity`.`recharge` (`shopId`, `transactionId`, `userId`, `rechargeMobileNumber`) VALUES (2, 2,2 ,'9727198983');
+INSERT INTO `Virtual_Infocity`.`recharge` (`shopId`, `transactionId`, `userId`, `rechargeMobileNumber`) VALUES (3, 3,3 ,'9727198984');
+INSERT INTO `Virtual_Infocity`.`recharge` (`shopId`, `transactionId`, `userId`, `rechargeMobileNumber`) VALUES (4, 4,4 ,'9727198985');
+
+/*shopfeedback*/
+INSERT INTO `Virtual_Infocity`.`shopfeedback` (`shopId`, `userId`, `comment`, `rating`) VALUES (1,1,'Great Shop',4);
+INSERT INTO `Virtual_Infocity`.`shopfeedback` (`shopId`, `userId`, `comment`, `rating`) VALUES (2,2,'Average Shop',3);
+INSERT INTO `Virtual_Infocity`.`shopfeedback` (`shopId`, `userId`, `comment`, `rating`) VALUES (3,1,'Not good Shop',2);
+INSERT INTO `Virtual_Infocity`.`shopfeedback` (`shopId`, `userId`, `comment`, `rating`) VALUES (2,3,'Poor Shop',1);
+
+/*shoptimings*/
+INSERT INTO `Virtual_Infocity`.`shoptimings` (`shopId`, `openingTime`, `closingTIme`, `holidays`, `currentStatus`) VALUES (1,'9:00 AM','10:00 PM','OPEN','OPEN');
+INSERT INTO `Virtual_Infocity`.`shoptimings` (`shopId`, `openingTime`, `closingTIme`, `holidays`, `currentStatus`) VALUES (2,'10:00 AM','9:00 PM','CLOSE','OPEN');
+INSERT INTO `Virtual_Infocity`.`shoptimings` (`shopId`, `openingTime`, `closingTIme`, `holidays`, `currentStatus`) VALUES (3,'9:30 AM','10:00 PM','OPEN','CLOSE');
+INSERT INTO `Virtual_Infocity`.`shoptimings` (`shopId`, `openingTime`, `closingTIme`, `holidays`, `currentStatus`) VALUES (4,'8:30 AM','10:30 PM','CLOSE','CLOSE');
