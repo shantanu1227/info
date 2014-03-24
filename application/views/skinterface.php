@@ -47,7 +47,7 @@
 Add a product
 </div>
 <div class="addproductform">
-<?php echo form_open_multipart('upload/do_upload');?>
+<?php echo form_open_multipart('shop/addProducts');?>
 
 <div class="productinput"><input type="text" name="productname" placeholder="Product name"><br></div>
 <div class="productinput"><input type="text" name="productprice" placeholder="Product price"><br></div>

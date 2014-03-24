@@ -11,6 +11,13 @@ class Model_products extends CI_Model {
 		return $this->db->get('products')->result();
 	}
 
+	public function addproducts($productName,$productImage,$productPrice,$shopId){
+		$data = array('productName' => $productName, 'price' => $productPrice, 
+			'productImage' =>$productImage, 'inStock' => 'TRUE','shopId' => $shopId);
+		$this->db->insert('products', $data);	
+	}
+
+
 }
 
 /* End of file model_products.php */
