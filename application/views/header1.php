@@ -2,9 +2,11 @@
 	<div id="fixed_head">
 		<div class="cname">Vinfocity</div>
 		<div class="loginaccount">
-			<div class="reglog">Login/Register</div>
 			<div class="myaccount">My Account</div>
+			<div class="reglog">Login/Register</div>
+						<div class="mycartbut">Cart (0)</div>
 		</div>
+		
 	</div>
 	<div class="navigation">
 		<div class="navbar">

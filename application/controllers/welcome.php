@@ -34,6 +34,13 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('kavya') );
 		$this->load->view('kavya', $data, FALSE);
 	}
+	public function skinterface()
+	{
+		$this->load->helper(array('form'));
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('kavya') );
+		$this->load->view('skinterface', $data, FALSE);
+	}
     public function koffee()
 	{
 		$this->load->view('koffee');

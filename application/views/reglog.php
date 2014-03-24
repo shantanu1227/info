@@ -5,7 +5,7 @@
 <div class="loginhead">LOGIN</div>
 <form  id="loginform" action=""  method="post">
 
-<div class="forminput"><input type="text" name="emailid" placeholder="Email ID"><br></div>
+<div class="forminput"><input type="text" name="username" placeholder="Username"><br></div>
 <div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
 <input type="submit" value="Login" />
 </form>
@@ -19,8 +19,12 @@ x
 <div class="registerhead">REGISTER</div>
 <form  id="registerform" action=""  method="post">
 
-<div class="forminput"><input type="text" name="emailid" placeholder="Email ID"><br></div>
+<div class="forminput"><input type="text" name="username" placeholder="Username"><br></div>
+<div class="forminput"><input type="text" name="fullname" placeholder="Full Name"><br></div>
 <div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
+<div class="forminput"><input type="text" name="roomno" placeholder="Room Number"><br></div>
+<div class="forminput"><input type="text" name="mobileno" placeholder="Mobile Number"><br></div>
+
 <input type="submit" value="Register" />
 </form>
 </div>
