@@ -87,6 +87,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('ominfotech');
 	}
 	
+	
 }
 
 /* End of file welcome.php */
