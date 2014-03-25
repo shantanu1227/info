@@ -51,7 +51,7 @@ margin:0;
 	}
 .reglog{
 	padding-left:10px;
-	float:left;
+	float:right;
 	display: inline-block;
 	margin-right:20px;
 	cursor:pointer;
@@ -298,3 +298,63 @@ width:47%;
     -o-transform: rotate(90deg);
 	cursor:pointer;
 }
+
+.shophead{
+width:100%;
+font-size:30px;
+font-family:textfont;
+padding:2%;
+background:#802E05;
+color:white;
+}
+.addproductform{
+display:none;
+position:absolute;
+top:30%;
+height:150px;
+left:25%;
+width:50%;
+background:#361200;
+color:white;
+}
+.addproduct{
+padding:1%;
+cursor:pointer;
+float:left;
+width:auto;
+border-style:solid;
+border-width:1px;
+background:#802E05;
+color:white;
+}
+.producttable{
+float:left;
+width:100%;
+}
+.mycartbut{
+text-indent: 25px;
+background-image: url(../img/mycart.png);
+background-repeat: no-repeat;
+background-position: center left;
+float: right;
+width: 30%;
+cursor: pointer;
+font-size: 12px;
+font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+color: #FFFFFF;
+margin-top: 5%;
+}
+
+.mycartbut:hover{
+	text-shadow: 0.5px 0.49px #ffffff;}
+	
+.subwayextraform{
+position:fixed;
+top:30%;
+left:20%;
+width:30%;
+height:450px;
+display:none;
+background:#802E05;
+color:white;
+}	

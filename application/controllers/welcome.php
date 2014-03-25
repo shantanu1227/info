@@ -34,6 +34,13 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('kavya') );
 		$this->load->view('kavya', $data, FALSE);
 	}
+	public function skinterface()
+	{
+		$this->load->helper(array('form'));
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('kavya') );
+		$this->load->view('skinterface', $data, FALSE);
+	}
     public function koffee()
 	{
 		$this->load->view('koffee');
@@ -55,8 +62,9 @@ class Welcome extends CI_Controller {
 		$this->load->view('omega');
 	}
 	public function subway()
-	{
-		$this->load->view('subway');
+	{	$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('subway') );
+		$this->load->view('subway', $data, FALSE);
 	}
 	public function apex()
 	{
