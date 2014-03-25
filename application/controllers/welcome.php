@@ -94,7 +94,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('ominfotech');
 	}
-	
+	public function vstationery()
+	{
+		$this->load->view('vstationery');
+	}
 	
 }
 
