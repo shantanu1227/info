@@ -64,6 +64,7 @@ class Welcome extends CI_Controller {
 	public function subway()
 	{	$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('subway') );
+		$this->load->helper('form');
 		$this->load->view('subway', $data, FALSE);
 	}
 	public function apex()
