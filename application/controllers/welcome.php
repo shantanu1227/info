@@ -102,6 +102,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('aboutus');
 	}
+	public function vstationery()
+	{
+		$this->load->view('vstationery');
+	}
 }
 
 /* End of file welcome.php */
