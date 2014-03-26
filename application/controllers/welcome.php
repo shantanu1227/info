@@ -94,7 +94,14 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('ominfotech');
 	}
-	
+	public function faq()
+	{
+		$this->load->view('faq');
+	}
+	public function aboutus()
+	{
+		$this->load->view('aboutus');
+	}
 }
 
 /* End of file welcome.php */
