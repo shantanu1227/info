@@ -104,6 +104,8 @@ and open the template in the editor.
                 <input type="submit" id="orderoption" value="Order">
             </div>
         </div>
+        
+		<div id="feedback">Feedback</div>
     </body>
 </html>
 
