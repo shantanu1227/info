@@ -11,16 +11,20 @@ class Register extends CI_Controller {
 	{
 		$this->load->model('model_users');
 		$a=$this->model_users->add_user();
-		$data= array('output' => $a );
-		$this->load->view('test', $data, FALSE);
-
+		if($a>0)
+			$this->load->view('home');
+		else{
+			echo $a;
+		}
 	}
 
 	public function confirm_email(){
 		$this->load->model('model_users');
 		$a=$this->model_users->update_confirmation();
 		if($a>0){
-			$this->load->view('home');
+			redirect('/', 'refresh');
+		}else{
+			echo $a;
 		}
 	}
 

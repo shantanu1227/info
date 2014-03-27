@@ -3,8 +3,13 @@
 		<div class="cname">Vinfocity</div>
 		<div class="loginaccount">
 			<div class="myaccount">My Account</div>
+			<?php if($this->session->userdata('userName') == ""){?>
 			<div class="reglog">Login/Register</div>
 			<div class="mycartbut">Cart (0)</div>
+			<?php }else{
+				echo "<div class='reglog'>".anchor('/login/logout', 'Logout('.$this->session->userdata('userName').')')."</div>";
+			}?>
+
 		</div>
 		
 	</div>
