@@ -3,8 +3,13 @@
 		<div class="cname">Vinfocity</div>
 		<div class="loginaccount">
 			<div class="myaccount">My Account</div>
+			<?php if($this->session->userdata('userName') == ""){?>
 			<div class="reglog">Login/Register</div>
-						<div class="mycartbut">Cart (0)</div>
+			<div class="mycartbut">Cart (0)</div>
+			<?php }else{
+				echo "<div class='reglog'>".anchor('/login/logout', 'Logout('.$this->session->userdata('userName').')')."</div>";
+			}?>
+
 		</div>
 		
 	</div>
@@ -57,8 +62,8 @@
 						<li><?php echo anchor('/welcome/apex', 'Apex'); ?></li>
 					</ul>
 				</li>
-				<li><a>ABOUT US</a></li>
-				<li><a>FAQS</a></li>
+				<a href="http://localhost:8000/info/welcome/aboutus"><li>ABOUT US</li></a>
+				<a href="http://localhost:8000/info/welcome/faq"><li>FAQs</li></a>
 			</ul>
 		</div>
 	</div>
