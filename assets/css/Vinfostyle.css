@@ -348,13 +348,3 @@ margin-top: 5%;
 .mycartbut:hover{
 	text-shadow: 0.5px 0.49px #ffffff;}
 	
-.subwayextraform{
-position:fixed;
-top:30%;
-left:20%;
-width:30%;
-height:450px;
-display:none;
-background:#802E05;
-color:white;
-}	
