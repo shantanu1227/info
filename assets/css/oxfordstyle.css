@@ -408,3 +408,46 @@ body {
     float:left;
     width:100%;
 }
+
+#feedbackform{
+	position:fixed;
+	background-color:#361200;
+	color: white;
+	z-index:65;
+	-webkit-box-shadow: 6px 7px 52px 5px rgba(5,5,5,1);
+	-moz-box-shadow: 6px 7px 52px 5px rgba(5,5,5,1);
+	box-shadow: 6px 7px 52px 5px rgba(5,5,5,1);
+	position:absolute;
+	top:30%;
+	
+	margin-top: 25%;
+	width:50%;
+	height:400px;
+	border-style:solid;
+	border-width:0px;
+	border-radius:10px;
+	left:25%;
+}
+
+#feedbacktext{
+	margin-top: 5%;
+	margin-left:22%;
+}
+
+#emailtext{
+	margin-top:2%;
+	margin-left:22%;
+}
+
+#submit{
+	margin-top:5%;
+	margin-left:45%;
+	height:7px;
+	width:20px;
+}
+#fhead{
+	margin-left:40%;
+	margin-top:5%;
+	font-weight:bold;
+	font-size:25px;
+}

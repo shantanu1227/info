@@ -57,8 +57,8 @@
 						<li><?php echo anchor('/welcome/apex', 'Apex'); ?></li>
 					</ul>
 				</li>
-				<li><a>ABOUT US</a></li>
-				<li><a>FAQS</a></li>
+				<li><?php echo anchor('/welcome/aboutus', 'About Us'); ?></li>
+				<li><?php echo anchor('/welcome/faq', 'FAQ'); ?></li>
 			</ul>
 		</div>
 	</div>
