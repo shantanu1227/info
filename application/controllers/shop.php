@@ -39,7 +39,6 @@ class Shop extends CI_Controller {
 			redirect('/welcome/skinterface', 'refresh');
 		}
 	}
-
 }
 
 /* End of file shop.php */

@@ -81,7 +81,9 @@ class Welcome extends CI_Controller {
 	}
 	public function qwiches()
 	{
-		$this->load->view('qwiches');
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('qwiches'));
+		$this->load->view('qwiches', $dataTiming, FALSE);
 	}
 	public function oxford()
 	{
