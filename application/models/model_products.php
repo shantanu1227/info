@@ -11,13 +11,31 @@ class Model_products extends CI_Model {
 		return $this->db->get('products')->result();
 	}
 
-	public function addproducts($productName,$productImage,$productPrice,$shopId){
+	public function addproducts($productName,$productImage,$productPrice,$shopId) {
 		$data = array('productName' => $productName, 'price' => $productPrice, 
 			'productImage' =>$productImage, 'inStock' => 'TRUE','shopId' => $shopId);
 		$this->db->insert('products', $data);	
 	}
 
+	public function getThali() {
+		date_default_timezone_set('Indian/Christmas');
+		$currentDate=date("d-m-Y");
+		$this->db->where('date',$currentDate);
+		$this->db->join('stores','stores.shopId=thali.shopId');
+		$this->db->from('thali');
+		$results = $this->db->get();
+		return $results->result();
+		//print_r($results); #$results;
+	}
 
+	public function getOffers() {
+		$this->db->join('stores','offers.shopId=stores.shopId');
+		$this->db->from('offers');
+		$results = $this->db->get();
+		#print_r ($results->result());#->result();
+		return $results->result();
+		#return $this->db->get('offers')->results();
+	}
 }
 
 /* End of file model_products.php */
