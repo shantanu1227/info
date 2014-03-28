@@ -143,12 +143,7 @@
 						<li><?php echo anchor('/welcome/kavya', 'Kavya'); ?></li>
 					</ul>
 				</li>
-				<li><a>MEDICAL</a>
-					<ul>
-						<li><?php echo anchor('/welcome/medicine', 'Ravi Chemist'); ?></li>
-					</ul>
-				</li>
-				<li><a>STATIONARY</a>
+				<li><a>STATIONERY</a>
 					<ul>
 						<li><?php echo anchor('/welcome/oxford', 'Oxford'); ?></li>
 						<li><?php echo anchor('/welcome/vs', 'VS'); ?></li>
