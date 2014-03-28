@@ -26,11 +26,6 @@ class Welcome extends CI_Controller {
 		#print_r($dataOffer);
 		$this->load->view('home', $dataThali+$dataOffer);	
 	}
-	/*Url=http://localhost/info/index.php/welcome/home1*/
-	public function home1()
-	{
-		$this->load->view('home1');
-	}
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
 	{
@@ -47,23 +42,33 @@ class Welcome extends CI_Controller {
 	}
     public function koffee()
 	{
-		$this->load->view('koffee');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('koffee') );
+		$this->load->view('koffee', $data, FALSE);
 	}
 	public function bigbite()
 	{
-		$this->load->view('bigbite');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('bigbite') );
+		$this->load->view('bigbite', $data, FALSE);
 	}
 	public function medicine()
 	{
-		$this->load->view('medicine');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('medicine') );
+		$this->load->view('medicine', $data, FALSE);
 	}
     public function washexpress()
 	{
-		$this->load->view('washexpress');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('washexpress') );
+		$this->load->view('washexpress', $data, FALSE);
 	}
 	public function omega()
 	{
-		$this->load->view('omega');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('omega') );
+		$this->load->view('omega', $data, FALSE);
 	}
 	public function subway()
 	{	$this->load->model('model_products');		
@@ -73,31 +78,45 @@ class Welcome extends CI_Controller {
 	}
 	public function apex()
 	{
-		$this->load->view('apex');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('apex') );
+		$this->load->view('apex', $data, FALSE);
 	}
 	public function chatkazz()
 	{
-		$this->load->view('chatkazz');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('chatkazz') );
+		$this->load->view('chatkazz', $data, FALSE);
 	}
 	public function qwiches()
 	{
-		$this->load->view('qwiches');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('qwiches') );
+		$this->load->view('qwiches', $data, FALSE);
 	}
 	public function oxford()
 	{
-		$this->load->view('oxford');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('oxford') );
+		$this->load->view('oxford', $data, FALSE);
 	}
 	public function crossword()
 	{
-		$this->load->view('crossword');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('crossword') );
+		$this->load->view('crossword', $data, FALSE);
 	}
 	public function clublaptop()
 	{
-		$this->load->view('clublaptop');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('clublaptop') );
+		$this->load->view('clublaptop', $data, FALSE);
 	}
 	public function ominfotech()
 	{
-		$this->load->view('ominfotech');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('ominfotech') );
+		$this->load->view('ominfotech', $data, FALSE);
 	}
 	public function faq()
 	{
@@ -109,15 +128,19 @@ class Welcome extends CI_Controller {
 	}
 	public function vstationery()
 	{
-		$this->load->view('vstationery');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('vstationery') );
+		$this->load->view('vstationery', $data, FALSE);
 	}
 	public function myaccount()
 	{
-		$this->load->view("myaccount");
+		$this->load->view('myaccount');
 	}
 	public function admin()
 	{
-		$this->load->view("admin");
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('admin') );
+		$this->load->view('admin', $data, FALSE);
 	}
 }
 

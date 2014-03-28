@@ -581,14 +581,12 @@ left:25%;
 	padding-right: 6%;
 }
 .popupboxes{
-
 	display:block;
 	width:100%;
 	height:400px;
 	-webkit-box-shadow: 6px 7px 52px 5px rgba(5,5,5,1);
 	-moz-box-shadow: 6px 7px 52px 5px rgba(5,5,5,1);
 	box-shadow: 6px 7px 52px 5px rgba(5,5,5,1);
-
 }
 
 .conf_butt{
