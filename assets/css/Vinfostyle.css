@@ -6,7 +6,7 @@ body{
 	background-color:white;
 }
 #box{
-	width:85%;
+	width:1147px;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -49,6 +49,7 @@ body{
 	display: inline-block;
 	}
 .reglog{
+	text-decoration:none;
 	padding-left:10px;
 	float:right;
 	display: inline-block;
@@ -66,6 +67,7 @@ body{
 	text-shadow: 0.5px 0.49px #ffffff;
 }
 .myaccount{
+	text-decoration:none;
 	float:right;
 	display: inline-block;
 	margin-right:10px;
@@ -347,3 +349,47 @@ margin-top: 5%;
 .mycartbut:hover{
 	text-shadow: 0.5px 0.49px #ffffff;}
 	
+.carttable{
+float:left;
+width:100%;
+margin-top:20%;
+}	
+.carttable th{
+font-family:textfont;
+color:white;
+background:#361200;
+}
+.carttable td{
+text-align:center;
+font-family:textfont;
+color:white;
+background:#361200;
+opacity:0.8;
+}
+.updatecartbut{
+float:left;
+text-align:center;
+width:50%;
+
+}
+.emptycartbut{
+margin-top:1%;
+font-family:textfont;
+float:left;
+text-align:center;
+width:50%;
+
+}
+.emptycartbut a{
+font-weight:bold;
+text-decoration:none;
+}
+.emptycartbut a:hover{
+color:#361200;
+}
+.updateempty{
+
+float:left;
+width:100%;
+margin-top:2%;
+}

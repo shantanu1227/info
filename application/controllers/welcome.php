@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
 	public function kavya()
 	{
 		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts('kavya') );
+		$data= array('output' => $this->model_products->getproducts("Kavya") );
 		$this->load->view('kavya', $data, FALSE);
 	}
 	public function skinterface()
@@ -48,6 +48,15 @@ class Welcome extends CI_Controller {
     public function koffee()
 	{
 		$this->load->view('koffee');
+	}
+	public function cart_index()
+	{
+		$data = array('content' => $this->cart->contents());
+		$this->load->view('cart_index',$data);
+	}
+	public function cart()
+	{
+		$this->load->view('cart_show');
 	}
 	public function bigbite()
 	{
