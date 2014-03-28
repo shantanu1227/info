@@ -49,6 +49,7 @@ body{
 	display: inline-block;
 	}
 .reglog{
+	text-decoration:none;
 	padding-left:10px;
 	float:right;
 	display: inline-block;
@@ -66,6 +67,7 @@ body{
 	text-shadow: 0.5px 0.49px #ffffff;
 }
 .myaccount{
+	text-decoration:none;
 	float:right;
 	display: inline-block;
 	margin-right:10px;
