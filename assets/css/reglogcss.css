@@ -84,3 +84,8 @@ label.error,div.error{
 input.error{
 	border:2px solid #FF0000;
 }
+
+.mycartbut a{
+text-decoration:none;
+color:white;
+}
