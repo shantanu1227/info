@@ -20,8 +20,11 @@ class Welcome extends CI_Controller {
 	/*URL=http://localhost/info/index.php*/
 	public function index()
 	{
-		//$data  = array('session_userName' => $this->session->userdata('userName'));
-		$this->load->view('home');
+		$this->load->model('model_products');
+		$dataThali= array('outputThalis' => $this->model_products->getThali());	
+		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+		#print_r($dataOffer);
+		$this->load->view('home', $dataThali+$dataOffer);	
 	}
 	/*Url=http://localhost/info/index.php/welcome/home1*/
 	public function home1()
@@ -111,6 +114,10 @@ class Welcome extends CI_Controller {
 	public function myaccount()
 	{
 		$this->load->view("myaccount");
+	}
+	public function admin()
+	{
+		$this->load->view("admin");
 	}
 }
 
