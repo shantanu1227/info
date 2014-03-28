@@ -67,8 +67,15 @@
 				<div class="itemprice">
 					<?php echo "Rs.".$product->price; ?>
 				</div>
-			</div>
 		<?php
+		 echo form_open('cart/addtocart');
+		 echo form_input('qty', '1', 'maxlength="1"');
+		 echo form_hidden('name', $product->productName);
+		 echo form_hidden('price', $product->price);
+		 echo form_hidden('productid', $product->productId);
+		 echo form_submit('add', 'Add'); 
+		 echo form_close();
+		 echo "</div>";
 		}
 		?>	
 			

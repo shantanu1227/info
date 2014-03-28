@@ -154,16 +154,16 @@
 			
 			</div>
 			<div class="addtosubcomment">
-			<TEXTAREA name="comments" rows="3" cols="40" value="">
+			<TEXTAREA name="comments" rows="3" cols="40">
 			
 			
 			</TEXTAREA>
 			</div>
 			<div class="subaddtocart">
-			<div class="subaddtocartbut">Add to Cart</div>
+			<div > <input class="subaddtocartbut"type="submit" value="add"></div>
 			
 			</div>
-			<input type="submit" value="add">
+			
 			<?php echo form_close();?>
 			</div>
 			

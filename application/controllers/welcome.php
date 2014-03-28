@@ -20,8 +20,8 @@ class Welcome extends CI_Controller {
 	/*URL=http://localhost/info/index.php*/
 	public function index()
 	{
-		//$data  = array('session_userName' => $this->session->userdata('userName'));
-		$this->load->view('home');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('home',$errormsg);
 	}
 	/*Url=http://localhost/info/index.php/welcome/home1*/
 	public function home1()
@@ -31,8 +31,9 @@ class Welcome extends CI_Controller {
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
 	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts('kavya') );
+		$data= array('output' => $this->model_products->getproducts('kavya') )+$errormsg;
 		$this->load->view('kavya', $data, FALSE);
 	}
 	public function skinterface()
@@ -43,70 +44,111 @@ class Welcome extends CI_Controller {
 		$this->load->view('skinterface', $data, FALSE);
 	}
     public function koffee()
-	{
-		$this->load->view('koffee');
+	{	
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('koffee',$errormsg);
 	}
 	public function bigbite()
 	{
-		$this->load->view('bigbite');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('bigbite',$errormsg);
 	}
 	public function medicine()
 	{
-		$this->load->view('medicine');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('medicine',$errormsg);
 	}
     public function washexpress()
 	{
-		$this->load->view('washexpress');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('washexpress',$errormsg);
 	}
 	public function omega()
 	{
-		$this->load->view('omega');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('omega',$errormsg);
 	}
 	public function subway()
-	{	$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts('subway') );
+	{	$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('subway') )+$errormsg;
 		$this->load->helper('form');
 		$this->load->view('subway', $data, FALSE);
 	}
 	public function apex()
 	{
-		$this->load->view('apex');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('apex',$errormsg);
 	}
 	public function chatkazz()
 	{
-		$this->load->view('chatkazz');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('chatkazz',$errormsg);
 	}
 	public function qwiches()
 	{
-		$this->load->view('qwiches');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('qwiches',$errormsg);
 	}
 	public function oxford()
 	{
-		$this->load->view('oxford');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('oxford',$errormsg);
 	}
 	public function crossword()
 	{
-		$this->load->view('crossword');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('crossword',$errormsg);
 	}
 	public function clublaptop()
 	{
-		$this->load->view('clublaptop');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('clublaptop',$errormsg);
 	}
 	public function ominfotech()
 	{
-		$this->load->view('ominfotech');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('ominfotech',$errormsg);
 	}
 	public function faq()
 	{
-		$this->load->view('faq');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('faq',$errormsg);
 	}
 	public function aboutus()
 	{
-		$this->load->view('aboutus');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('aboutus',$errormsg);
 	}
 	public function vstationery()
 	{
-		$this->load->view('vstationery');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('vstationery',$errormsg);
+	}
+	public function myaccount()
+	{//#b10coc //00bb3c
+		$this->load->model('model_users');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$userdetails=$this->model_users->getuserdetails();
+		if(is_object($userdetails)){
+			$this->load->model('model_transaction');
+			$transaction=$this->model_transaction->getusertransaction($userdetails->userId);
+			$data=array('output' => $userdetails,'transactions'=>$transactions)+$errormsg;
+			$this->load->view('myaccount', $data);
+		}
+		else{
+		if($userdetails == -1){
+			$errorMessage = "Please Log In ";
+			$errormsg['errorMessage']=$errorMessage;
+			$errormsg['errorClose'] = "X";
+			$this->load->view("home",$errormsg);
+		}if ($userdetails == -2) {
+			$errorMessage = "Incorrect Session ";
+			$errormsg['errorMessage']=$errorMessage;
+			$errormsg['errorClose'] = "X";
+			$this->load->view("home",$errormsg);
+		}
+	}
 	}
 }
 
