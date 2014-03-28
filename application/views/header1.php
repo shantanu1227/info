@@ -9,7 +9,7 @@
 				echo "<div class='reglog'>".anchor('/login/logout', 'Logout('.$this->session->userdata('userName').')')."</div>";
 			}?>
 
-						<div class="mycartbut">Cart (0)</div>
+						<div class="mycartbut">Cart (<?php $this->cart->total_items();?>)</div>
 		</div>
 		
 	</div>
