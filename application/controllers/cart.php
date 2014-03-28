@@ -66,6 +66,35 @@ class Cart extends CI_Controller {
 	{
 		$this->cart->destroy();
 	}
+	
+	public function addXeroxFile(){
+
+		$productName = $this->input->post('productname',TRUE);
+		$productPrice = $this->input->post('productprice',TRUE);
+		$shopId = 1;
+
+		$directoryName = "/photocopyDocuments"."/";
+		$config['upload_path'] = "./assets/img".$directoryName;
+
+		$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img';
+		$config['max_size']	= '50000';
+		$currcolour = $this->input->post('colour',TRUE);
+		$currfrom = $this->input->post('from',TRUE);
+		$currto = $this->input->post('to',TRUE);
+		
+
+		$this->load->library('upload', $config);
+
+		if ( ! $this->upload->do_upload())
+		{
+			print_r($this->upload->display_errors());
+			print_r($config['upload_path']);
+		}
+		else
+		{
+		
+		
+		}
 
 }
 
