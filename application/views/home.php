@@ -8,7 +8,11 @@
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
 		<title>Vinfocity</title>
-		<!--script-->
+		<!--script>
+			$(document).ready(function(){
+				alert("Width of div: " + $("#fixed_head").width());
+			});
+		</script-->
 		
 	</head>
 <body>
