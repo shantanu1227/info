@@ -12,21 +12,43 @@
 	
 	<body>
 		<script>
+
+		/*var colo=document.choice.from;
+		document.write(colo);*/
+
 				$(document).ready(function()
 				{
-					$("#uploadbutton").click(function()
+					$(".uploadbutton").click(function()
 					{
-						$("#uploadform").fadeIn(1000);
+						$(".uploadform").fadeIn(1000);
+
 						$("#box").css("opacity","0.2");
 						$(document).keyup(function(e) 
 						{
   						if (e.keyCode == 27 ) 
   							{
-	  						$("#uploadform").fadeOut(10);
+	  						$(".uploadform").fadeOut(10);
 							$("#box").css('opacity',1);
    							}			
    						}); 
 					}); 
+				
+						
+					$(".uploadbutton1").click(function() 
+					{
+						$(".popupboxes").fadeOut(10);
+						/*$(".uploadform").fadeOut(10);*/
+						$(".confirm").fadeIn(1000);
+						$("#box").css("opacity","0.2");
+						$(document).keyup(function(e) 
+						{
+  						if (e.keyCode == 27 ) 
+  							{
+	  						$(".uploadform").fadeOut(10);
+							$("#box").css('opacity',1);
+   							}			
+   						});
+					});
 				});
 	    </script>
 	<div id="box">
@@ -35,7 +57,7 @@
 		
 		<div class="shopdetail">
 			<div class="shoppic">
-				<img src="<?php echo(IMG.'infocity3.jpg');?>"></img>
+				<img src="<?php echo(IMG.'omega/omega_logo.jpg');?>"></img>
 			</div>
 			<div class="details">
 				<div class="timing">
@@ -72,9 +94,9 @@
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">
-					<img src="<?php echo(IMG.'kavya/kavya_banner1.jpg');?>"></img>
-					<img src="<?php echo(IMG.'kavya/kavya_banner2.jpg');?>"></img>
-					<img src="<?php echo(IMG.'kavya/kavya_banner3.jpg');?>"></img>
+					<img src="<?php echo(IMG.'omega/oemgaslider1.jpg');?>"></img>
+					<img src="<?php echo(IMG.'omega/omegaslider2.jpg');?>"></img>
+					<img src="<?php echo(IMG.'oemga/omegaslider3.jpg');?>"></img>
 				</div>
 			</div>
 		</div>
@@ -87,32 +109,49 @@
 		->colour Re2/pg
 		</div>
 
-		<button id="uploadbutton" type="button">Upload a file</button>
+		<button class="uploadbutton" type="button">Upload a file</button>
 			
 			
 		</div>
 		</div>
-		<div id="uploadform">
-		<form>
-			<div class="colorselection">
-			Choose the colour quality of your pages<br>
-			<input type="radio" name="colour" value="colour"> COLOUR<br>
-			<input type="radio" name="colour" value="black"> BLACK
-			</div>
+		<div class="uploadform">
+			<div class="popupboxes">
+			<form class="choice">
+				<div class="colorselection">
+				Choose the colour quality of your pages<br>
+				<input type="radio" name="colour" > COLOUR<br>
+				<input type="radio" name="colour" > BLACK
+				</div>
 
-			<div class="pagenumber">
-			Pages in your document<br>
-			from:<input type="input" name="from" class="numberinput">
-			to:<input type="input" name="to" class="numberinput">
-			</div>
+				<div class="pagenumber">
+				Pages in your document<br>
+				from:<input type="input" name="from" class="numberinput">
+				to:<input type="input" name="to" class="numberinput">
+				</div>
 
-			<div class="fileselection">
-			<input type="file" value="file">
-			
-			</div>
-		
+
+				<div class="fileselection">
+				<input type="file" value="file">
+				
+				</div>
+
+				<div class="sumbit">
+					<button class="uploadbutton1" type="button">Sumbit</button>
+				</div>
 			</form>
+
+			</div>
+				<div class="confirm">
+				<div class="confirm_msg">
+					The cost would be directly deducted from your Credit balance. Press Confirm to continue or escape to abort!
+				</div>
+				<div class="conf_butt">
+					<button type="button"> Confirm!</button>		
+				</div>
+				</div>
+		
 		</div>
+
 		
 	</body>
 </html>
