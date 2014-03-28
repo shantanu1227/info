@@ -112,6 +112,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view("myaccount");
 	}
+	
 }
 
 /* End of file welcome.php */

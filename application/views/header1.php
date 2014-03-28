@@ -62,12 +62,11 @@
 						<li><?php echo anchor('/welcome/apex', 'Apex'); ?></li>
 					</ul>
 				</li>
-<<<<<<< HEAD
-				<li><?php echo anchor('/welcome/aboutus', 'About Us'); ?></li>
+
+				<li><?php echo anchor('/welcome/aboutus', 'ABOUT US'); ?></li>
 				<li><?php echo anchor('/welcome/faq', 'FAQ'); ?></li>
 
-				<li>ABOUT US</li
-				<li>FAQs</li>
+				
 
 			</ul>
 		</div>

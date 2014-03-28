@@ -5,9 +5,11 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'vstationerystyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
+		
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
+		
 	</head>
 	
 	<body>
@@ -236,7 +238,9 @@
 				
 			</div>
 		</div>
+			
 		<div id="feedback">Feedback</div>
+		
 	</body>
 </html>
 
