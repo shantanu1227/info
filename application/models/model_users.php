@@ -26,7 +26,7 @@
 			if($this->check_user_exist($username)){
 				return -1;
 			}
-			$name=$this->input->post('name',TRUE);
+			$name=$this->input->post('fullname',TRUE);
 			$emailaddress=$username.'@daiict.ac.in';
 			$password=$this->input->post('password');
 			$phone=$this->input->post('phone',TRUE);
@@ -36,9 +36,18 @@
 			$data=array('userName' => $username, 'fullName' => $name,'password' =>$hashed_password,
 						 'email' => $emailaddress,'address' => $address, 'mobileNo' => $phone ,'authToken'=> $generated_token );		
 
-			$this->load->library('email');
-			
-			$this->email->from('vinfo@gmail.com', 'VinFocity');
+			$config = Array(
+				'protocol' => 'smtp',
+				'smtp_host' => 'ssl://smtp.googlemail.com',
+				'smtp_port' => 465,
+				'smtp_user' => ' virtualinfocity@gmail.com',
+				'smtp_pass' => ' virtualinfocity@daiict',
+				'mailtype'  => 'html', 
+				'charset'   => 'iso-8859-1'
+				);
+			$this->load->library('email',$config);
+			$this->email->set_newline("\r\n");
+			$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
 			$this->email->to($emailaddress);
 		
 			$this->email->subject('Register Email Address');
@@ -56,7 +65,7 @@
 				}
 			}
 			else
-			{
+			{ 
 				return -3; //Error Sending Email
 			}
 		}	

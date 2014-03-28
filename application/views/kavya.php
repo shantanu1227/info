@@ -69,6 +69,12 @@
 				</div>
 			</div>
 		<?php
+		echo form_open('cart/add_cart_item');
+		<label>Quantity</label>
+		echo form_input('quantity', '1', 'maxlength="2"');
+		 echo form_hidden('product_id', $product->productID);
+		 echo form_submit('add', 'Add'); 
+		 echo form_close();
 		}
 		?>	
 			

@@ -20,6 +20,7 @@ class Welcome extends CI_Controller {
 	/*URL=http://localhost/info/index.php*/
 	public function index()
 	{
+		//$data  = array('session_userName' => $this->session->userdata('userName'));
 		$this->load->view('home');
 	}
 	/*Url=http://localhost/info/index.php/welcome/home1*/
@@ -64,6 +65,7 @@ class Welcome extends CI_Controller {
 	public function subway()
 	{	$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('subway') );
+		$this->load->helper('form');
 		$this->load->view('subway', $data, FALSE);
 	}
 	public function apex()
@@ -105,6 +107,10 @@ class Welcome extends CI_Controller {
 	public function vstationery()
 	{
 		$this->load->view('vstationery');
+	}
+	public function myaccount()
+	{
+		$this->load->view("myaccount");
 	}
 }
 
