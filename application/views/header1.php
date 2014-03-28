@@ -1,4 +1,8 @@
 <div id="wrapper">
+	<div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:#B10C0C;color:#FFFFFF;
+								  line-height:200%;font-size:30px;text-align:center;z-index:1000;margin-left:-7.5%;">
+		<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;"></div>
+	</div>
 	<div id="fixed_head">
 		<div class="cname">Vinfocity</div>
 		<div class="loginaccount">
@@ -68,3 +72,10 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">  
+	$(function() {  
+		$('#closebutton').click(function() {  
+			$('#errorDisplay').remove();  
+		});  
+	});  
+</script>  
