@@ -163,6 +163,17 @@ class Welcome extends CI_Controller {
 				$data= array('output' => $this->model_products->getproducts('vstationery') );
 				$this->load->view('vstationery', $data+$errormsg, FALSE);
 			}
+			public function feedback()
+			{	
+				$this->load->model('model_admin');
+				$this->load->model('model_products');
+				$this->model_admin->insertFeedback();
+				$errormsg  = array('errorMessage'=>'Thank You For Your FeedBack','errorClose'=>'X','errorColor'=>'#B10COC');
+				$dataThali= array('outputThalis' => $this->model_products->getThali());	
+				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				
+			}
 			public function myaccount()
 			{
 		$this->load->model('model_users');

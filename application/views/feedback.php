@@ -1,10 +1,10 @@
 <div id = "feedbackopen">
 <div class="feedcontainer">
 	<?php $attributes = array('id' => 'feedbackform');
-		echo form_open('feedback/index', $attributes);
+		echo form_open('welcome/feedback', $attributes);
 	?>
 	<div id = "fhead">We need your Feedbacks!</div>
-	<div id = "feedbacktext">Feedback<br>
+	<div id = "feedbacktext" name="comment">Feedback<br>
 		<textarea rows="6" cols="50"></textarea>
 	</div>			
 	<div id = "submit"><br>			
