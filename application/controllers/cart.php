@@ -139,7 +139,8 @@ class Cart extends CI_Controller {
 		$this->load->model('model_transaction');
 		$this->load->model('model_users');
 		$total_amount=0;
-
+		$mailproductname="";
+	
 		foreach ($this->cart->contents() as $items) {
 			$total_amount=$total_amount+$items['price'];
 		}
@@ -152,12 +153,35 @@ class Cart extends CI_Controller {
 				if ($this->cart->has_options($items['rowid']) == FALSE){
 					$this->model_transaction->addtransaction($userId,$items['id'],$items['qty'],$items['price'],
 						$slot,$delivery_date,$ordertime,'');
+					$mailproductname=$mailproductname.$items['name']." From Shop ".$this->model_transaction->getstoreName($items['id']). " Qty ".$items['qty']." Price ".$items['price']."<br>";
 				}
 				else{
-					$this->model_transaction->addtransaction($userId,$items['productid'],$items['qty'],$items['price'],
+					$this->model_transaction->addtransaction($userId,$items['id'],$items['qty'],$items['price'],
 						$slot,$delivery_date,$ordertime,$items['options']);
+					$mailproductname=$mailproductname.$items['name']." From Shop ".$this->model_transaction->getstoreName($items['id']). " Qty ".$items['qty']." Price ".$items['price']." <br> ";
 				}
 			}
+
+
+			$config = Array(
+				'protocol' => 'smtp',
+				'smtp_host' => 'ssl://smtp.googlemail.com',
+				'smtp_port' => 465,
+				'smtp_user' => ' virtualinfocity@gmail.com',
+				'smtp_pass' => ' virtualinfocity@daiict',
+				'mailtype'  => 'html', 
+				'charset'   => 'iso-8859-1'
+				);
+			$this->load->library('email',$config);
+			$this->email->set_newline("\r\n");
+			$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
+			$this->email->to("punit9462@gmail.com");
+		
+			$this->email->subject('New Order');
+			$this->email->message('New order of '.$this->session->userdata('userName').'<br>'.$mailproductname);
+			$this->email->send();
+
+
 			$this->cart->destroy();
 			$errormsg  = array('errorMessage'=>'Your Transaction Is complete','errorClose'=>'X','errorColor'=>'#OOBB3C');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
