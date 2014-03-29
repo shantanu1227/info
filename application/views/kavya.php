@@ -3,6 +3,9 @@
 	<head>
 		<title>Kavya</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'kavyastyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
@@ -63,35 +66,8 @@
 			</div>
 		</div>
 		<div class="menuhead"><i>Products</i></div>
-		<div class="shopproducts">
-		<?php
-		foreach ($output as $product) {
-		?>
-
-			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG . $product->productImage); ?>"></img>
-				<div class="itemname">
-					<?php echo $product->productName; ?>
-				</div>
-				<div class="itemprice">
-					<?php echo "Rs.".$product->price; ?>
-				</div>
-		<?php
-		 echo form_open('cart/addtocart');
-		 echo form_input('qty', '1', 'maxlength="1"');
-		 echo form_hidden('name', $product->productName);
-		 echo form_hidden('price', $product->price);
-		 echo form_hidden('productid', $product->productId);
-		 echo form_submit('add', 'Add'); 
-		 echo form_close();
-		 echo "</div>";
-		}
-		?>	
-			
-		</div>
-	</div>
-	<div id="feedback">Feedback</div>
-		
+					<?php include 'dynamicproduct.php'; ?>
 	<?php include 'reglog.php'; ?>
+
 	</body>
 </html>

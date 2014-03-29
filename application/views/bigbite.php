@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>Big Bite</title>
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <link rel='stylesheet' type="text/css" href="<?php echo(CSS . 'bigbitestyle.css'); ?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'js-image-slider.css'); ?>">
         <script type='text/javascript' src="<?php echo(JS . 'js-image-slider.js'); ?>"></script>
         <script type='text/javascript' src="<?php echo(JS . 'jquery-1.7.1.min.js'); ?>"></script>
@@ -160,7 +161,8 @@
                 </div>
             </div>
 			<div class="menuhead"><i>Carte de menu..</i></div>
-
+				<?php include 'dynamicproduct.php'; ?>	
                 <?php include 'reglog.php'; ?>
+				
     </body>
 </html>

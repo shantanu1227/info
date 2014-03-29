@@ -113,6 +113,7 @@ class Cart extends CI_Controller {
 		
 		
 		}
+	}
 
 	public function checkout()
 	{
@@ -146,6 +147,7 @@ class Cart extends CI_Controller {
 	}
 
 }
+
 
 /* End of file cart.php */
 /* Location: ./application/controllers/cart.php */
