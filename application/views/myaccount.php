@@ -80,36 +80,25 @@
 		<div >
 		 <button id="uploadbutton" type="button">My Past Transactions</button>
 		<div id="trans_table">
-		<table><tr>
+		<table>
+		
+		<tr>
 			  <th id="left">TransactionID</th>
 			  <th>ProdcutID</th>		
 			  <th>Quantity</th>
 			  <th>price</th>
 			  <th>Delivery Date</th>
 			  </tr>
-			
+		<?php foreach ($transactions as $transaction) {
+		?>	
 			<tr>
-			  <td id="left">255421</td>
-			  <td>12</td>		
-			  <td>5</td>
-			  <td>rs 10</td>
-			  <td>2/2/2014</td>
-			  </tr>
-			  <tr>
-			  <td id="left">255421</td>
-			  <td>12</td>		
-			  <td>5</td>
-			  <td>rs 10</td>
-			  <td>2/2/2014</td>
-			  </tr>
-			  <tr>
-			  <td id="left">255421</td>
-			  <td>12</td>		
-			  <td>5</td>
-			  <td>rs 10</td>
-			  <td>2/2/2014</td>
-			  </tr>
-			  </table>
+			  <td id="left"><?php echo $transaction->transctionId;?></td>
+			  <td><?php echo $transaction->productName;?></td>		
+			  <td><?php echo $transaction->quantity;?></td>
+			  <td><?php echo $transaction->price;?></td>
+			</tr>
+			  
+			 </table>
 			</div>
 		</div>
 	</div>
