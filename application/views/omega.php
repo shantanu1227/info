@@ -49,6 +49,23 @@
    							}			
    						});
 					});
+
+					$(".conf_butt_func").click(function() 
+					{
+						
+						$("#box").css("opacity","1");
+						$(".confirm").fadeOut(10);
+						$(".popupboxes").fadeIn(1000);
+						$(".uploadform").fadeOut(10);
+						$(document).keyup(function(e) 
+						{
+  						if (e.keyCode == 27 ) 
+  							{
+	  						$(".uploadform").fadeOut(10);
+							$("#box").css('opacity',1);
+   							}			
+   						});
+					});
 				});
 	    </script>
 	<div id="box">
@@ -94,9 +111,9 @@
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">
-					<img src="<?php echo(IMG.'omega/oemgaslider1.jpg');?>"></img>
+					<img src="<?php echo(IMG.'omega/omegaslider1.jpg');?>"></img>
 					<img src="<?php echo(IMG.'omega/omegaslider2.jpg');?>"></img>
-					<img src="<?php echo(IMG.'oemga/omegaslider3.jpg');?>"></img>
+					<img src="<?php echo(IMG.'omega/omegaslider3.jpg');?>"></img>
 				</div>
 			</div>
 		</div>
@@ -146,7 +163,7 @@
 					The cost would be directly deducted from your Credit balance. Press Confirm to continue or escape to abort!
 				</div>
 				<div class="conf_butt">
-					<button type="button"> Confirm!</button>		
+					<button class="conf_butt_func" type="button"> Confirm!</button>		
 				</div>
 				</div>
 		
