@@ -2,13 +2,121 @@
 <html>
 	<head>
 		<title>V Stationery</title>
+		
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'vstationerystyle.css');?>">
+		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
+		 <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+          <!-- jQuery Form Validation code -->
+	  <script>
+	  
+	  // When the browser is ready...
+	  $(function() {
+	  
+		// Setup form validation on the #register-form element
+		$.validator.addMethod(
+			"regex",
+			function(value, element, regexp) {
+				var re = new RegExp(regexp);
+				return re.test(value);
+			},
+			"Please check your input."
+		);
+
+		$("#registerform").validate({
+			errorElement: "div",
+			// Specify the validation rules
+			rules: {
+				fullname: "required",
+				username: {
+					required: true,
+					number: true,
+					range: [201001001, 201499999]
+				},
+				password: {
+					required: true,
+					minlength: 5
+				},
+				roomno: {
+					required: true,
+					regex: '^[A-H]{1}-[1-3]{1}[0-2]{1}[0-9]{1}$'
+					},
+				mobileno: {
+					required: true,
+					minlength: 10
+				},
+			},
+			
+			// Specify the validation error messages
+			messages: {
+				fullname: "",
+				username: {
+					required:'',
+					maxlength: "Please enter a your DA-IICT ID.",
+					minlength: "Please enter a your DA-IICT ID.",
+					range: "Please enter a your DA-IICT ID."
+				},
+				password: {
+					required:'',
+					minlength: "Password must be at least 5 characters long."
+				},
+				roomno: {
+					required:'',
+					regex: "Please enter a valid roomno."
+					},
+				mobileno: {
+					required:'',
+					minlength: "Please enter a valid mobile number."
+					},
+			},
+			
+			submitHandler: function(form) {
+				form.submit();
+			}
+		});
+		$("#loginform").validate({
+			errorElement: "div",
+			// Specify the validation rules
+			rules: {
+				username: {
+					required: true,
+					number: true,
+					range: [201001001, 201499999]
+				},
+				password: {
+					required: true,
+					minlength: 5
+				}
+			},
+			
+			// Specify the validation error messages
+			messages: {
+				username: {
+					required:'',
+					maxlength: "Please enter a your DA-IICT ID.",
+					minlength: "Please enter a your DA-IICT ID.",
+					range: "Please enter a your DA-IICT ID."
+				},
+				password: {
+					required:'',
+					minlength: "Password must be at least 5 characters long."
+				}
+			},
+			
+			submitHandler: function(form) {
+				form.submit();
+			}
+		});
+
+	  });
+	  
+	  </script>
+    
 		
 	</head>
 	
@@ -18,7 +126,7 @@
 		<div class="shopheading">V STATIONERY</div>
 		<div class="shopdetail">
 			<div class="shoppic">
-				<img src="<?php echo(IMG.'oxford/oxford.jpg');?>" width="100%"></img>
+				<img src="<?php echo(IMG.'VStationery/v_Stationery.png');?>" width="100%"></img>
 			</div>
 			<div class="details">
 				<div class="timing">9AM-9PM</div>
@@ -240,6 +348,7 @@
 		</div>
 			
 		<div id="feedback">Feedback</div>
+		<?php include 'reglog.php'; ?>
 		
 	</body>
 </html>
