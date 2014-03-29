@@ -70,11 +70,14 @@ class Cart extends CI_Controller {
 				);
 			$this->cart->update($data);
 		}
+		redirect('welcome/cart','refresh');
 	}
 
 	public function emptycart()
 	{
 		$this->cart->destroy();
+		redirect('welcome/','refresh');
+
 	}
 	
 	public function addXeroxFile(){
