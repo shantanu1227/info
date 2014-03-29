@@ -8,10 +8,10 @@ class Cart extends CI_Controller {
 	}
 	public function addtocart()
 	{
-		$id=$this->input->post('productid');
-		$qty=$this->input->post('qty');
-		$price=$this->input->post('price');
-		$name = $this->input->post('name');
+		$id=$this->input->post('product_id');
+		$qty=$this->input->post('quantity');
+		$price=$this->input->post('product_price');
+		$name = $this->input->post('product_name');
 		$data = array(
                'id'      => $id,
                'qty'     => $qty,
@@ -20,6 +20,19 @@ class Cart extends CI_Controller {
                );
 		$this->cart->insert($data);
 	}
+	function add_cart_item(){
+     
+    if($this->cart_model->validate_add_cart_item() == TRUE){
+         
+        // Check if user has javascript enabled
+        if($this->input->post('ajax') != '1'){
+            redirect('cart'); // If javascript is not enabled, reload the page with new data
+        }else{
+            echo 'true'; // If javascript is enabled, return true, so the cart gets updated
+        }
+    }
+     
+								}
 	public function addsubwaytocart()
 	{
 		$id=$this->input->post('productid');
@@ -57,9 +70,7 @@ class Cart extends CI_Controller {
 
 		$item = $this->input->post('rowid');
 		$qty = $this->input->post('qty');
-
-
-		for($i=0;$i<$total;$i++)
+		for($i=0; $i <count($item);$i++)
 		{
 			$data = array(
 				'rowid' => $item[$i],
@@ -73,6 +84,35 @@ class Cart extends CI_Controller {
 	{
 		$this->cart->destroy();
 	}
+	
+	public function addXeroxFile(){
+
+		$productName = $this->input->post('productname',TRUE);
+		$productPrice = $this->input->post('productprice',TRUE);
+		$shopId = 1;
+
+		$directoryName = "/photocopyDocuments"."/";
+		$config['upload_path'] = "./assets/img".$directoryName;
+
+		$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img';
+		$config['max_size']	= '50000';
+		$currcolour = $this->input->post('colour',TRUE);
+		$currfrom = $this->input->post('from',TRUE);
+		$currto = $this->input->post('to',TRUE);
+		
+
+		$this->load->library('upload', $config);
+
+		if ( ! $this->upload->do_upload())
+		{
+			print_r($this->upload->display_errors());
+			print_r($config['upload_path']);
+		}
+		else
+		{
+		
+		
+		}
 
 	public function checkout()
 	{

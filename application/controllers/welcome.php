@@ -21,7 +21,11 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('home',$errormsg);
+		$this->load->model('model_products');
+		$dataThali= array('outputThalis' => $this->model_products->getThali());	
+		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+		#print_r($dataOffer);
+		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 	}
 	/*Url=http://localhost/info/index.php/welcome/home1*/
 	public function home1()
@@ -47,6 +51,15 @@ class Welcome extends CI_Controller {
 	{	
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('koffee',$errormsg);
+	}
+	public function cart_index()
+	{
+		$data = array('content' => $this->cart->contents());
+		$this->load->view('cart_index',$data);
+	}
+	public function cart()
+	{
+		$this->load->view('cart_show');
 	}
 	public function bigbite()
 	{
@@ -149,6 +162,10 @@ class Welcome extends CI_Controller {
 			$this->load->view("home",$errormsg);
 		}
 	}
+	}
+	public function admin()
+	{
+		$this->load->view("admin");
 	}
 }
 
