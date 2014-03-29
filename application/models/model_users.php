@@ -118,6 +118,7 @@
                     'userId' => $rows->userId,
                     'userName' => $rows->userName,
                     'userEmail' => $rows->email,
+                    'userMobile' => $rows->mobileNo,
                     'loggedIn' => TRUE,
                 );         
             	$this->session->set_userdata($newdata);

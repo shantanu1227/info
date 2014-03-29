@@ -178,7 +178,7 @@ class Cart extends CI_Controller {
 			$this->email->to("punit9462@gmail.com");
 		
 			$this->email->subject('New Order');
-			$this->email->message('New order of '.$this->session->userdata('userName').'<br>'.$mailproductname);
+			$this->email->message('New order of '.$this->session->userdata('userName').'Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$mailproductname);
 			$this->email->send();
 
 
