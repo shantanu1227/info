@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<title>Qwiches</title>
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'qwichesstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
@@ -18,24 +19,34 @@
 			<div class="shoppic">
 				<img src="<?php echo(IMG.'qwiches/qwiches_logo.png');?>"></img>
 			</div>
+			<?php foreach ($outputTimings as $tuple) { ?>
+			
 			<div class="details">
-				<div class="timing">9AM-9PM</div>
+				<div class="timing"> <?php echo $tuple->openingTime." - ".$tuple->closingTime; ?> </div>
 				<div class="dayswrap">
 				<div class="days">
 					<ul>
+						<?php if($tuple->holidays=="OPEN") {?>
+						<li>Su</li>
+						<?php } ?>
+
 						<li>Mo</li>
 						<li>Tu</li>
 						<li>We</li>
 						<li>Th</li>
 						<li>Fr</li>	
 						<li>Sa</li>
-						<li>Su</li>
 					</ul>
 				</div></div>
 				<div class="status">
-
+					<?php if($tuple->currentStatus=="OPEN") { ?>
 					<img src="<?php echo(IMG.'open_button.png');?>"></img>
+					<?php }
+					else { ?>
+					<img src="<?php echo(IMG.'close_button.png');?>"></img>
+					<?php }} ?>
 				</div>
+
 				<div class="contact">
 					<div class="owner">Owner</div>
 					<div class="ownername">Mr.Sahil</div>
