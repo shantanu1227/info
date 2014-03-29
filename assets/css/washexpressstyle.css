@@ -153,7 +153,7 @@ body {
 	display: inline-block;
 	clear:left;
 	z-index:60;
-	width:85.6%;
+	width:95.1%;
 }
 .navigation ul{
 	width:100%;
@@ -175,9 +175,9 @@ body {
 	text-decoration:none;
 	font-size:13px;
 }
-.navigation ul li a {
-    text-decoration: none;
-    color: #FFF;
+.navigation ul li a{
+text-decoration:none;
+color:white;
 }
 .navigation ul li:hover{
 	opacity:0.9;
@@ -218,6 +218,7 @@ body {
 	width:100%;
 	float:left;
 }
+
 
 .shopheading{
 	text-indent:-9999px;

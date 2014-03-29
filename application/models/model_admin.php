@@ -16,7 +16,7 @@ class Model_admin extends CI_Model {
 	public function insertFeedback()
 	{
 		$comment=$this->input->post('comment',TRUE);
-		$data=array('comment'=>$comment);
+		$data=array('commment'=>$comment);
 		$this->db->insert('sitefeedback',$data);
 	}
 }

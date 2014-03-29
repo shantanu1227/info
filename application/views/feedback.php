@@ -4,8 +4,8 @@
 		echo form_open('welcome/feedback', $attributes);
 	?>
 	<div id = "fhead">We need your Feedbacks!</div>
-	<div id = "feedbacktext" name="comment">Feedback<br>
-		<textarea rows="6" cols="50"></textarea>
+	<div id = "feedbacktext" >Feedback<br>
+		<textarea rows="6" cols="50" name="comment"></textarea>
 	</div>			
 	<div id = "submit"><br>			
 		<input type = "submit" value="Submit">
