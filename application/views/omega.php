@@ -60,35 +60,40 @@
 			<div class="shoppic">
 				<img src="<?php echo(IMG.'omega/omega_logo.jpg');?>"></img>
 			</div>
+			<?php foreach ($outputTimings as $tuple) { ?>
+			
 			<div class="details">
-				<div class="timing">
-					9AM-9PM
-				</div>
-
-				<div class="status">
-					Currently:
-					<img src="<?php echo(IMG.'open_button.png');?>"></img>
-				</div>
-
+				<div class="timing"> <?php echo $tuple->openingTime." - ".$tuple->closingTime; ?> </div>
 				<div class="dayswrap">
-					<div class="days">
-						<ul>
-							<li>Mo</li>
-							<li>Tu</li>
-							<li>We</li>
-							<li>Th</li>
-							<li>Fr</li>	
-							<li>Sa</li>
-							<li>Su</li>
-						</ul>
-					</div></div>
+				<div class="days">
+					<ul>
+						<?php if($tuple->holidays=="OPEN") {?>
+						<li>Su</li>
+						<?php } ?>
 
-					<div class="contact">
-						<div class="owner">Owner</div>
-						<div class="ownername">Mr.Sahil</div>
-						<div class="ownernum">8460089916</div>
-					</div>
+						<li>Mo</li>
+						<li>Tu</li>
+						<li>We</li>
+						<li>Th</li>
+						<li>Fr</li>	
+						<li>Sa</li>
+					</ul>
+				</div></div>
+				<div class="status">
+					<?php if($tuple->currentStatus=="OPEN") { ?>
+					<img src="<?php echo(IMG.'open_button.png');?>"></img>
+					<?php }
+					else { ?>
+					<img src="<?php echo(IMG.'close_button.png');?>"></img>
+					<?php }} ?>
 				</div>
+
+				<div class="contact">
+					<div class="owner">Owner</div>
+					<div class="ownername">Mr.Sahil</div>
+					<div class="ownernum">8460089916</div>
+				</div>
+			</div>
 			</div>
 
 			<div class="offerhead">What's cool today?</div>
@@ -101,7 +106,7 @@
 					</div>
 				</div>
 			</div>
-
+i
 			<div class="printform">
 				<div class =" information">
 					Please choose a file that you want to get printed!
