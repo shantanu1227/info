@@ -136,4 +136,24 @@
     {
         $this->session->sess_destroy();
     }	
+
+    public function getuserdetails()
+    {
+    	/*Error -1 UserNot Logged In*/
+    	/*Error -2 Session Incorrtect*/
+    	$userId = $this->session->userdata('userId');
+    	if($userId == '')
+    	{
+    		return -1;
+    	}
+    	$this->db->where('userId', $userId, FALSE);
+    	$query = $this->db->get('users',1);
+    	if($query->num_rows()>0){
+    		return $query->row();
+    	}
+    	else{
+    		return -2;
+    	}
+
+    }
 }

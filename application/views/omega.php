@@ -3,6 +3,7 @@
 	<head>
 		<title>Omega</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'omegastyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
@@ -133,7 +134,7 @@
 		</div>
 		<div class="uploadform">
 			<div class="popupboxes">
-			<form class="choice">
+				<?php echo form_open_multipart('cart/addXeroxFile');?>
 				<div class="colorselection">
 				Choose the colour quality of your pages<br>
 				<input type="radio" name="colour" > COLOUR<br>
@@ -142,13 +143,13 @@
 
 				<div class="pagenumber">
 				Pages in your document<br>
-				from:<input type="input" name="from" class="numberinput">
-				to:<input type="input" name="to" class="numberinput">
+				from:<input type="input" name="from" required class="numberinput">
+				to:<input type="input" name="to" required class="numberinput">
 				</div>
 
 
 				<div class="fileselection">
-				<input type="file" value="file">
+				<input type="file" name="userfile" required value="file">
 				
 				</div>
 

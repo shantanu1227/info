@@ -58,16 +58,16 @@ body {
 	float:right;
 	display: inline-block;
 	}
-.reglog{
-	padding-left:10px;
-	float:left;
-	display: inline-block;
-	margin-right:20px;
-	cursor:pointer;
-	padding-top:10px;
-	font-size:12px;
-	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-	color:#FFFFFF;
+.reglog {
+padding-left: 10px;
+float: right;
+display: inline-block;
+margin-right: 20px;
+cursor: pointer;
+padding-top: 10px;
+font-size: 12px;
+font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+color: #FFFFFF;
 }
 .reglog:hover{
 	text-shadow: 0.5px 0.49px #ffffff;
@@ -76,6 +76,7 @@ body {
 	text-shadow: 0.5px 0.49px #ffffff;
 }
 .myaccount{
+	
 	float:right;
 	display: inline-block;
 	margin-right:10px;
@@ -84,6 +85,7 @@ body {
 	font-size:12px;
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
+
 }
 
 .navigation{
@@ -402,3 +404,21 @@ font-family:textfont;
     float:left;
     width:100%;
 }
+.mycartbut{
+text-indent: 25px;
+background-image: url(../img/mycart.png);
+background-repeat: no-repeat;
+background-position: center left;
+float: right;
+width: 30%;
+cursor: pointer;
+font-size: 12px;
+font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+color: #FFFFFF;
+margin-top: 5%;
+}
+
+.mycartbut:hover{
+	text-shadow: 0.5px 0.49px #ffffff;}
+	
+

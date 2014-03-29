@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'chatkazzstyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
 	</head>
@@ -262,6 +264,9 @@
 		</script-->
 	</div>
 	<div id="feedback">Feedback</div>
+	<?php include 'dynamicproduct.php'; ?>
 	<?php include 'reglog.php'; ?>	
+	
+				
 	</body>
 </html>

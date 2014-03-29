@@ -34,7 +34,7 @@
 				foreach ($outputOffers as $product) {
 					?>	
 				<div class="trendobject">		
-					<img src="<?php $product->offerImageUrl; ?>"></img>
+					<img src="<?php echo (IMG.$product->offerImageUrl); ?>"></img>
 					<div class="trendtext">
 						<div class="offdes"><?php echo $product->offerName ?></div>
 						<div class="trendshop"> 
@@ -63,6 +63,6 @@
 			<div class="footer">
 
 			</div>
-			<?php include 'reglog.php'; ?>
+			<?php include 'regloghome.php'; ?>
 		</body>
 		</html>

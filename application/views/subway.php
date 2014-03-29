@@ -3,6 +3,8 @@
 	<head>
 		<title>subway</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'subwaystyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
@@ -78,27 +80,9 @@
 			</div>
 		</div>
 		<div class="menuhead"><i>Products</i></div>
-		<div class="shopproducts">
-		<?php
-		foreach ($output as $product) {
-		?>
-
-			<div class="shopproductitem" id="<?php echo $product->productId; ?>" >
-				<img width="100%" src="<?php echo(IMG . $product->productImage); ?>"></img>
-				<div class="itemname">
-					<?php echo $product->productName; ?>
-				</div>
-				<div class="itemprice">
-					<?php echo "Rs.".$product->price; ?>
-				</div>
-			</div>
-		<?php
-		}
-		?>	
-			
-		</div>
-	</div>
-	<div id="feedback">Feedback</div>
+		<?php include 'dynamicproductsubway.php'; ?>
+		<?php include 'reglog.php'; ?>
+		
 	<div id="subwayextraform">
 			<div id="subwayextraformfetch">
 			
