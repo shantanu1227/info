@@ -10,9 +10,17 @@
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
+		<script src="<?php echo (JS.'core.js');?>" type="text/javascript"></script>
 	</head>
 	
 	<body>
+	<script>
+	$(document).ready(function(){
+				$(".reloadonadd").click(function(){
+				updatecart(location.href);
+				});
+				});
+			</script>	
 	<script>
 				$(document).ready(function(){
 				$(".shopproductitem").click(function(){

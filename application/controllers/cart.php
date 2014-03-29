@@ -123,12 +123,12 @@ class Cart extends CI_Controller {
 		$this->load->model('model_products');
 		$userId=$this->session->userdata('userId');
 		if($userId == ''){
-			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'#B10COC');
+			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 		}elseif($this->cart->total_items()<=0){
-			$errormsg  = array('errorMessage'=>'There are no items in Your Cart','errorClose'=>'X','errorColor'=>'#B10COC');
+			$errormsg  = array('errorMessage'=>'There are no items in Your Cart','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
@@ -159,12 +159,12 @@ class Cart extends CI_Controller {
 				}
 			}
 			$this->cart->destroy();
-			$errormsg  = array('errorMessage'=>'Your Transaction Is complete','errorClose'=>'X','errorColor'=>'#OOBB3C');
+			$errormsg  = array('errorMessage'=>'Your Transaction Is complete','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 		}else{
-			$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'#B10COC');
+			$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	

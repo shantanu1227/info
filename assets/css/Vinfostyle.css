@@ -397,7 +397,7 @@ margin-top:2%;
 margin-top: 6%;
 float: left;
 width: auto;
-margin-left: 71.5%;
+margin-left: 41%;
 font-family: textfont;
 color: white;
 padding: 1%;
@@ -405,7 +405,7 @@ border-style: solid;
 border-width: 1px;
 border-radius: 3px;
 background: #361200;
-cursor:pointer;
+cursor: pointer;
 
 }
 .checkoutbutton:hover{
@@ -415,4 +415,12 @@ opacity:0.8;
 .checkoutbutton a{
 text-decoration:none;
 color:white;
+}
+
+.orderslots{
+margin-left: 20.5%;
+margin-top: 7%;
+float: left;
+width: 10%;
+
 }

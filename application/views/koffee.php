@@ -14,6 +14,9 @@ and open the template in the editor.
         <script type='text/javascript' src="<?php echo(JS.'js-image-slider.js'); ?>"></script>
         <script type='text/javascript' src="<?php echo(JS.'jquery-1.7.1.min.js'); ?>"></script>
 	  <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+	  <script src="<?php echo (JS.'core.js');?>" type="text/javascript"></script>
+	
+			
           <!-- jQuery Form Validation code -->
 	  <script>
 	  
@@ -120,6 +123,13 @@ and open the template in the editor.
 	  </script>
     </head>
     <body>
+	<script>
+	$(document).ready(function(){
+				$(".reloadonadd").click(function(){
+				updatecart(location.href);
+				});
+				});
+	</script>
 	<div id="box">
         <?php include 'header1.php'; ?>
             <div class="shopheading">

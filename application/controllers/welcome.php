@@ -45,12 +45,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->model('model_products');		
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$data= array('output' => $this->model_products->getproducts('Koffee++') );
+		$data= array('output' => $this->model_products->getproducts('Koffee') );
 		$this->load->view('koffee',$errormsg+$data);
 
-		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts('koffee') );
-		$this->load->view('koffee', $data, FALSE);
 	}
 	public function cart_index()
 	{
