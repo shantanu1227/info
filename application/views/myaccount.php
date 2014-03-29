@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>My account</title>
-		<link rel="stylesheet" type="text/css" href="myaccountstyle.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'myaccountstyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -34,13 +34,13 @@
 	
 	<div class="wrapper">
 		<div class="deta">
-			<div class="fullname">Sahil goel</div>
+			<div class="fullname"><?php echo $output->fullName;?></div>
 			<div class="userinfo">
 				<div class="data_name">
 				Username
 				</div>
 				<div class="data">
-					201101085
+					<?php echo $output->userName;?>
 				</div>
 			</div>		
 			<div class="userinfo">
@@ -48,7 +48,7 @@
 				Credits
 				</div>
 				<div class="data">
-					#500
+					#  <?php echo $output->creditAmount;?>
 				</div>
 			</div>
 			<div class="userinfo">
@@ -56,7 +56,7 @@
 				Mobile
 				</div>
 				<div class="data">
-					8460089916
+					<?php echo $output->mobileNo;?>
 				</div>
 			</div>
 			
@@ -65,7 +65,7 @@
 				Email
 				</div>
 				<div class="data">
-					201101085@daiict.ac.in
+					<?php echo $output->email;?>
 				</div>
 			</div>
 			<div class="userinfo">
@@ -73,7 +73,7 @@
 				Address
 				</div>
 				<div class="data">
-				B 101, mens Hor	
+					<?php echo $output->address;?>	
 				</div>
 			</div>
 		</div>

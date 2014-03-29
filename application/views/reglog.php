@@ -1,4 +1,4 @@
-</div>
+	</div>
 	<div id="feedback">Feedback</div>
 <div id="reglogopen">
 	<div class="vinfologin">

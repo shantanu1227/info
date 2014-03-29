@@ -18,8 +18,9 @@ class Cart extends CI_Controller {
                'price'   => $price,
                'name'    => $name 
                );
-		$this->cart->insert($data); 
+		$this->cart->insert($data);
 	}
+
 	function add_cart_item(){
      
     if($this->cart_model->validate_add_cart_item() == TRUE){
@@ -43,15 +44,23 @@ class Cart extends CI_Controller {
 		$size = $this->input->post('size');
 		$veggies = $this->input->post('veggie');
 		$sausages = $this->input->post('extra');
-		$comments = $this->input->post('comments');
+		$comments = $this->input->post('comments',TRUE);
 		$data = array(
                'id'      => $id,
                'qty'     => $qty,
                'price'   => $price,
                'name'    => $name,
-               'options' =>  array('bread'=>$bread,'size'=>$size, 'veggies' => $veggies ,
-               				'sausages'=>$sausages,'comments'=>$comments)
-					);
+               'options' =>  array(
+               				'bread'=>$bread,
+               				'size'=>$size ,
+               				'veggies' => $veggies ,
+               				'sauce'=>$sausages,
+               				'additionalComment'=>$comments,
+               				'price'=>$price,
+               				'$quantity'=>$qty,
+               				'sub'=>$name
+               				)
+            );
 		$this->cart->insert($data);	
 
 	}
@@ -82,8 +91,10 @@ class Cart extends CI_Controller {
 	
 	public function addXeroxFile(){
 
-		$productName = $this->input->post('productname',TRUE);
-		$productPrice = $this->input->post('productprice',TRUE);
+		$colour = $this->input->post('colour',TRUE);
+		$from = $this->input->post('from',TRUE);
+		$to = $this->input->post('to',TRUE);
+
 		$shopId = 1;
 
 		$directoryName = "/photocopyDocuments"."/";
@@ -91,9 +102,6 @@ class Cart extends CI_Controller {
 
 		$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img';
 		$config['max_size']	= '50000';
-		$currcolour = $this->input->post('colour',TRUE);
-		$currfrom = $this->input->post('from',TRUE);
-		$currto = $this->input->post('to',TRUE);
 		
 
 		$this->load->library('upload', $config);
@@ -108,9 +116,41 @@ class Cart extends CI_Controller {
 		
 		
 		}
+	}
+
+	public function checkout()
+	{
+		$userId=$this->session->userdata('userId');
+		$slot=$this->input->post('slotId');
+		$delivery_date=$this->input->post('deliverydate');
+		$ordertime = time();
+		$this->load->model('model_transaction');
+		$this->load->model('model_users');
+		$total_amount=0;
+
+		foreach ($this->cart->contents() as $items) {
+			$total_amount=$total_amount+$items['price'];
+		}
+		$total_amount=$total_amount*0.15;
+		
+		if($this->model_users->getuserdetails()->creditAmount > $total_amount){
+
+			foreach ($this->cart->contents() as $items){
+
+				if ($this->cart->has_options($items['rowid']) == FALSE){
+					$this->model_transaction->addtransaction($userId,$items['productid'],$items['qty'],$items['price'],
+						$slot,$delivery_date,$time,'');
+				}
+				else{
+					$this->model_transaction->addtransaction($userId,$items['productid'],$items['qty'],$items['price'],
+						$slot,$delivery_date,$time,$items['options']);
+				}
+			}
+		}
+	}
 
 }
-}
+
 
 /* End of file cart.php */
 /* Location: ./application/controllers/cart.php */

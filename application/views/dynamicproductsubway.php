@@ -12,11 +12,10 @@
 					<?php echo "Rs.".$product->price; ?>
 				</div>
 				<?php
-		echo form_open('cart/addtocart'); ?>
+		echo form_open('cart/addsubwaytocart'); ?>
 		
 		  
 		  
-			</div>
 				</div>
 		<?php
 		}
