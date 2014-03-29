@@ -110,7 +110,7 @@ body {
 	cursor:pointer;
 	padding:0.95%;
 	text-align:center;
-	width:8.05%;
+	width:9.16%;
 	float:left;
 	list-style:none;
 	color:#FFFFFF;
@@ -118,6 +118,7 @@ body {
 	text-decoration:none;
 	font-size:13px;
 }
+
 .navigation ul li a {
     text-decoration: none;
     color: #FFF;
@@ -152,12 +153,110 @@ body {
 
 .navbar ul li li:hover{
 	background-color:#498FA0;
-	width:124%;
+	width:121%;
 }	
 .navigation ul li li a{
 	padding:0px;
 }	
 .navbar{
+	width:100%;
+	float:left;
+}
+@media all and (max-width: 1500px) and (min-width: 700px) {
+	.navigationtemp{
+		display: none;
+	}
+	.navigationtemp ul{
+		display: none;
+	}
+	.navigationtemp ul li{
+		display: none;
+	}
+}
+/*@media all and (max-width: 700px) {
+	.navigation{
+		display:none;
+	}
+	.navigation ul{
+		display:none;
+	}
+	.navigation ul li{
+		display:none;
+	}
+}
+/*-----------------SMALLER NAVIGATION BAR-------------------*/
+.navigationtemp{
+	/*box-shadow:-7px 7px 5px #888888;*/
+	position:fixed;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:85px;
+	display: inline-block;
+	clear:left;
+	z-index:60;
+	width:85.6%;
+}
+.navigationtemp ul{
+	width:100%;
+	margin:0;
+	padding-left: 0;
+	float:left;
+}
+
+.navigationtemp ul li{
+	background-color:#361200;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	cursor:pointer;
+	padding:0.95%;
+	text-align:center;
+	width:12.33%;
+	float:left;
+	list-style:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	text-decoration:none;
+	font-size:10px;
+}
+.navigationtemp ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+.navigationtemp ul li:hover{
+	opacity:0.9;
+}
+.navbartemp ul ul{
+	margin-top:12%;
+	padding: 0px;
+	margin-bottom: -13%;
+	border-style: none;
+	width: 100%;
+	display: none;
+	float: left;
+}
+.navbartemp ul ul li{
+	margin-left: -12%;
+	padding: 0px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	width: 122%;
+	float: left;
+}
+.navbartemp ul ul li a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.navbartemp ul li:hover > ul{
+	display:block;
+}
+
+.navbartemp ul li li:hover{
+	background-color:#498FA0;
+	width:124%;
+}	
+.navigationtemp ul li li a{
+	padding:0px;
+}	
+.navbartemp{
 	width:100%;
 	float:left;
 }

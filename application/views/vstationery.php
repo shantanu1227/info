@@ -4,10 +4,19 @@
 		<title>V Stationery</title>
 		
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'vstationerystyle.css');?>">
+<<<<<<< HEAD
 		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		
+=======
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
+		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
+>>>>>>> f7ad6d4e762a46052fe2a57926921cc587ccf4e5
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
@@ -165,6 +174,7 @@
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="shopproducts">
 			<div class="shopproductitem">
 				<img width="100%" src="<?php echo(IMG.'oxford/camlin80.jpeg');?>"></img>
@@ -350,6 +360,10 @@
 		<div id="feedback">Feedback</div>
 		<?php include 'reglog.php'; ?>
 		
+=======
+		<?php include 'dynamicproduct.php'; ?>
+		<?php include 'reglog.php'; ?>
+>>>>>>> f7ad6d4e762a46052fe2a57926921cc587ccf4e5
 	</body>
 </html>
 
