@@ -116,7 +116,7 @@
 		</div>
 		<div class="uploadform">
 			<div class="popupboxes">
-			<form class="choice">
+				<?php echo form_open_multipart('cart/addXeroxFile');?>
 				<div class="colorselection">
 				Choose the colour quality of your pages<br>
 				<input type="radio" name="colour" > COLOUR<br>
@@ -125,13 +125,13 @@
 
 				<div class="pagenumber">
 				Pages in your document<br>
-				from:<input type="input" name="from" class="numberinput">
-				to:<input type="input" name="to" class="numberinput">
+				from:<input type="input" name="from" required class="numberinput">
+				to:<input type="input" name="to" required class="numberinput">
 				</div>
 
 
 				<div class="fileselection">
-				<input type="file" value="file">
+				<input type="file" name="userfile" required value="file">
 				
 				</div>
 

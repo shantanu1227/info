@@ -24,8 +24,9 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_products');
 		$dataThali= array('outputThalis' => $this->model_products->getThali());	
 		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+		$data= array('output' => $this->model_products->getproducts('kavya') )+$errormsg;
 		#print_r($dataOffer);
-		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		$this->load->view('home', $dataThali+$dataOffer+$data);	
 	}
 	/*Url=http://localhost/info/index.php/welcome/home1*/
 	public function home1()
@@ -102,6 +103,9 @@ class Welcome extends CI_Controller {
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('qwiches',$errormsg);
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('qwiches'));
+		$this->load->view('qwiches', $dataTiming, FALSE);
 	}
 	public function oxford()
 	{

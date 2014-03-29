@@ -20,6 +20,7 @@ class Cart extends CI_Controller {
                );
 		$this->cart->insert($data);
 	}
+
 	function add_cart_item(){
      
     if($this->cart_model->validate_add_cart_item() == TRUE){
@@ -87,8 +88,10 @@ class Cart extends CI_Controller {
 	
 	public function addXeroxFile(){
 
-		$productName = $this->input->post('productname',TRUE);
-		$productPrice = $this->input->post('productprice',TRUE);
+		$colour = $this->input->post('colour',TRUE);
+		$from = $this->input->post('from',TRUE);
+		$to = $this->input->post('to',TRUE);
+
 		$shopId = 1;
 
 		$directoryName = "/photocopyDocuments"."/";
@@ -96,9 +99,6 @@ class Cart extends CI_Controller {
 
 		$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img';
 		$config['max_size']	= '50000';
-		$currcolour = $this->input->post('colour',TRUE);
-		$currfrom = $this->input->post('from',TRUE);
-		$currto = $this->input->post('to',TRUE);
 		
 
 		$this->load->library('upload', $config);
