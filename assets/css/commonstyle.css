@@ -94,7 +94,7 @@ body {
 	display: inline-block;
 	clear:left;
 	z-index:60;
-	width:85.6%;
+	width:95.1%;
 }
 .navigation ul{
 	width:100%;
@@ -108,7 +108,7 @@ body {
 	cursor:pointer;
 	padding:0.95%;
 	text-align:center;
-	width:9.16%;
+	width:8.05%;
 	float:left;
 	list-style:none;
 	color:#FFFFFF;
@@ -116,10 +116,9 @@ body {
 	text-decoration:none;
 	font-size:13px;
 }
-
-.navigation ul li a {
-    text-decoration: none;
-    color: #FFF;
+.navigation ul li a{
+text-decoration:none;
+color:white;
 }
 .navigation ul li:hover{
 	opacity:0.9;
@@ -151,7 +150,7 @@ body {
 
 .navbar ul li li:hover{
 	background-color:#498FA0;
-	width:121%;
+	width:124%;
 }	
 .navigation ul li li a{
 	padding:0px;

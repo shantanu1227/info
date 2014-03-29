@@ -13,4 +13,10 @@ class Model_admin extends CI_Model {
 		$this->db->where('userId', $userId);
 		$this->db->update('users');
     }
+	public function insertFeedback()
+	{
+		$comment=$this->input->post('comment',TRUE);
+		$data=array('commment'=>$comment);
+		$this->db->insert('sitefeedback',$data);
+	}
 }

@@ -1,0 +1,39 @@
+#feedbackopen{
+	color:white;
+	background:#91634C;
+	border:2px solid #361200;
+	border-radius:10px;
+	display:none;
+	position:fixed;
+	width:40%;
+	height:50%;
+	top:20%;
+	left:30%;
+	right:auto;
+}
+.feedcontainer{
+	float: left;
+	width: 100%;
+	padding: 1%;
+	margin-top: 0%;
+}
+#feedbacktext{
+	margin-top:5%;
+	font-family:textfont;
+	font-weight:bold;
+	text-align:center;
+}
+#submit{
+	margin-left:45%;
+	margin-top:5%;
+	height:7px;
+	width:20px;
+}
+#fhead{
+	font-family:textfont;
+	font-weight:bold;
+	text-align:center;
+	margin-top:5%;
+	font-weight:bold;
+	font-size:25px;
+}

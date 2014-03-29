@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'washexpressstyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
@@ -77,6 +78,22 @@
 				</div>
 			</div>
 		</div>
+		<div class="slipinfo">
+			<div class="sliphead">Bill Details</div>
+			<?php $attributes = array('id' => 'billdetailsform');
+			echo form_open('billdetails/user', $attributes);
+			?>
+				<div class="forminput"><input type="text" name="billno" placeholder="Bill Number'"><br></div>
+				<div class="forminput"><input type="text" name="billdate" placeholder="Date of Bill"><br></div>
+				<div class="forminput"><input type="text" name="weight" placeholder="Weight"><br></div>
+				<div class="forminput"><input type="text" name="slotno" placeholder="Slot Number"><br></div>
+				<div id="billimage"><input type="file" name="userfile" required value="file" /></div>
+				<div id = "submit"><input type="submit" value="Submit" /></div>
+			<?php echo form_close();?>
+		</div>
+	</div>
 	<div id="feedback">Feedback</div>
+	<?php include 'reglog.php'; ?>
+	<?php include 'feedback.php'; ?>
 	</body>
 </html>

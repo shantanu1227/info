@@ -238,7 +238,7 @@ body {
 }
 
 .shopdetail{
-	background: rgb(4,17,108) center center fixed;
+	background: #000000 center center fixed;
 	margin-top: 0%;
 	margin-left:auto;
 	margin-right:auto;
@@ -285,7 +285,7 @@ body {
 	border-style: solid;*/
 	font-size: 150%;
 	text-align: center;
-	color:rgb(4,17,108);
+	color:#000000;
 }
 
 .status{
@@ -304,7 +304,8 @@ body {
 	margin-right:10px;
 	float:left;
 	width:50%;
-	display:inline;	
+	display:inline;
+	color:#000000;	
 }
 .status img{
 	float:right;
@@ -350,7 +351,7 @@ body {
 	float:right;
 	margin-right:6%;
 	margin-top: 2%;
-	color:rgb(4,17,108);
+	color:#000000;
 	/*border-width: 1px;
 	border-style: solid;	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;*/
 	
@@ -359,7 +360,7 @@ body {
 	float:left;
 	font-weight: bold;
 	text-decoration: underline;
-	color:rgb(4,17,108);
+	color:#000000;
 
 }
 .ownername{

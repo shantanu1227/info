@@ -124,7 +124,7 @@
 	
 
 	</div>
-</div>
+	</div>
 <div class="navigation">
 	<div class="navbar">
 		<ul>
@@ -133,8 +133,6 @@
 				<ul>
 				<?php $attr = array('style'=>'display:block');?>
 					<li><?php echo anchor('/welcome/subway', 'Subway',$attr); ?></li>
-					<li><?php echo anchor('/welcome/shivas', 'Shivas',$attr); ?></li>
-					<li><?php echo anchor('/welcome/coolpoint', 'Cool Point',$attr); ?></li>
 					<li><?php echo anchor('/welcome/qwiches', 'Qwiches',$attr); ?></li>
 					<li><?php echo anchor('/welcome/chatkazz', 'Chatkazz',$attr); ?></li>
 					<li><?php echo anchor('/welcome/koffee', 'Koffee++',$attr); ?></li>
@@ -171,6 +169,7 @@
 			<li><?php echo anchor('/welcome/aboutus', 'ABOUT US',$attr); ?></li>
 			<li><?php echo anchor('/welcome/faq', 'FAQs',$attr); ?></li>
 		</ul>
+
 	</div>
 </div>
 </div>

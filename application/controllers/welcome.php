@@ -179,8 +179,19 @@ class Welcome extends CI_Controller {
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('vstationery'));
 		$this->load->view('vstationery', $data+$errormsg+$dataTiming, FALSE);
 			}
+			public function feedback()
+			{	
+				$this->load->model('model_admin');
+				$this->load->model('model_products');
+				$this->model_admin->insertFeedback();
+				$errormsg  = array('errorMessage'=>'Thank You For Your FeedBack','errorClose'=>'X','errorColor'=>'#B10COC');
+				$dataThali= array('outputThalis' => $this->model_products->getThali());	
+				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				
+			}
 			public function myaccount()
-	{//#b10coc //00bb3c
+			{
 		$this->load->model('model_users');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$userdetails=$this->model_users->getuserdetails();
@@ -204,10 +215,14 @@ class Welcome extends CI_Controller {
 			}
 		}
 	}
+
+	
+
 	public function admin()
 	{
 		$this->load->view('admin');
 	}
+
 }
 
 /* End of file welcome.php */
