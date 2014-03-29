@@ -66,8 +66,6 @@
  
 <p class="updateempty"> <div class="updatecartbut"><?php echo form_submit('', 'Update your Cart');?></div> <div class="emptycartbut"> <?php echo anchor('cart/emptycart', 'Empty Cart');?> </div> </p>
 
-<?php } ?>
-<div class="checkoutbutton">
-<?php echo anchor('cart/checkout', 'Checkout');?>  </div>
+<?php echo anchor('cart/checkout', 'Checkout',array('class'=>'checkoutbutton'));} ?>
 </div>
 </body>

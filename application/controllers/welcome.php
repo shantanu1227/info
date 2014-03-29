@@ -24,8 +24,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_products');
 		$dataThali= array('outputThalis' => $this->model_products->getThali());	
 		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-		$data= array('output' => $this->model_products->getproducts('kavya') )+$errormsg;
-		$this->load->view('home', $dataThali+$dataOffer+$data);	
+		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 	}
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
@@ -43,9 +42,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('skinterface', $data, FALSE);
 	}
 	public function koffee()
-	{	
+	{
+		$this->load->model('model_products');		
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('koffee',$errormsg);
+		$data= array('output' => $this->model_products->getproducts('Koffee++') );
+		$this->load->view('koffee',$errormsg+$data);
 
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('koffee') );
@@ -169,7 +170,7 @@ class Welcome extends CI_Controller {
 		$userdetails=$this->model_users->getuserdetails();
 		if(is_object($userdetails)){
 			$this->load->model('model_transaction');
-			$transaction=$this->model_transaction->getusertransaction($userdetails->userId);
+			$transactions=$this->model_transaction->getusertransaction($userdetails->userId);
 			$data=array('output' => $userdetails,'transactions'=>$transactions)+$errormsg;
 			$this->load->view('myaccount', $data);
 		}
