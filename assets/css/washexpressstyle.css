@@ -1,3 +1,60 @@
+.forminput{
+	float: left;
+	height: 40px;
+	width: 80%;
+	margin-left: 10%;
+}
+.forminput input{
+	height: 20px;
+	width: 98%;
+	padding: 1%;
+}
+.forminput{
+	position:relative;
+	float: left;
+	height: 45px;
+	width: 80%;
+	margin-left: 10%;
+}
+.forminput input{
+	border-radius:5px;
+	border:1px solid #000000;
+}
+label.error,div.error{
+	font-size:12px;
+	padding:0;
+	margin-top:0px;
+    font-weight:bold;
+    color:#FFFFFF;
+}
+input.error{
+	border:2px solid #FF0000;
+}
+
+.slipinfo{
+	background-color:#361200;
+	float: left;
+	text-align: center;
+	width:90%;
+	padding: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.sliphead{
+	font-family:textfont;
+	font-size:50px;
+	font-weight: bold;
+	color:#FFFFFF;
+}
+#submit{
+	margin-left:45%;
+	margin-top:5%;
+	height:7px;
+	width:20px;
+}
+#billimage{
+	margin-left:0%;
+}
 @font-face{
 	font-family: monofont;
 	src: url(../fonts/JandaCelebrationScript.ttf);
