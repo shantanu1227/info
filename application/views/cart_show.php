@@ -17,7 +17,13 @@
 	</head>
 	
 	<body>
-		
+	<script>
+		$(document).ready(function(){
+				$(".updatecartbut").click(function(){
+				updatecartajax(location.href);
+				});
+				});
+			</script>	
 	<div id="box">
 <?php include 'header1.php'; ?>	
 <?php echo form_open('cart/updatecart'); ?>
@@ -58,9 +64,8 @@
     
 </table>
  
-<p class="updateempty"> <div class="updatecartbut"><?php echo form_submit('cart/updatecart', 'Update your Cart');?></div> <div class="emptycartbut"> <?php echo anchor('cart/emptycart', 'Empty Cart');?> </div> </p>
+<p class="updateempty"> <div class="updatecartbut"><?php echo form_submit('', 'Update your Cart');?></div> <div class="emptycartbut"> <?php echo anchor('cart/emptycart', 'Empty Cart');?> </div> </p>
 
-<?php } ?>
-
+<?php echo anchor('cart/checkout', 'Checkout',array('class'=>'checkoutbutton'));} ?>
 </div>
 </body>

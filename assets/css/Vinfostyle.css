@@ -87,7 +87,7 @@ body{
 	display: inline-block;
 	clear:left;
 	z-index:60;
-	width:85.6%;
+	width:95.1%;
 }
 .navigation ul{
 	width:100%;
@@ -392,4 +392,27 @@ color:#361200;
 float:left;
 width:100%;
 margin-top:2%;
+}
+.checkoutbutton{
+margin-top: 6%;
+float: left;
+width: auto;
+margin-left: 71.5%;
+font-family: textfont;
+color: white;
+padding: 1%;
+border-style: solid;
+border-width: 1px;
+border-radius: 3px;
+background: #361200;
+cursor:pointer;
+
+}
+.checkoutbutton:hover{
+background:#361200;
+opacity:0.8;
+}
+.checkoutbutton a{
+text-decoration:none;
+color:white;
 }

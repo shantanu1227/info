@@ -20,12 +20,14 @@ class Model_transaction extends CI_Model {
 		
 		$transaction_id=$this->db->insert_id();
 
-
-		$this->db->where('userId',$userId, FALSE);
-		$amountToDeduct = $price + $price*0.15;
-		$data2= array('creditAmount','creditAmount'-$amountToDeduct);
-		$this->db->update('users', $data2);
-
+		$this->db->where('userId',$userId);
+		$query=$this->db->get('users',1);
+		$result=$query->row();
+		$amountToDeduct = ($price*$quantity)*1.15;
+		$final_amount=$result->creditAmount-$amountToDeduct;
+		$data2 = array('creditAmount'=>$final_amount);
+		$this->db->where('userId',$userId);
+		$query=$this->db->update('users', $data2);
 		if($othershops != '' ){
 			$storeid=$this->getstoreid("Subway");
 			$otherdetails= array('transactionId'=>$transactionId,'shopId'=>$storeid,'userId'=>$userId);

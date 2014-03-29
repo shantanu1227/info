@@ -79,11 +79,14 @@ class Cart extends CI_Controller {
 				);
 			$this->cart->update($data);
 		}
+		redirect('welcome/cart','refresh');
 	}
 
 	public function emptycart()
 	{
 		$this->cart->destroy();
+		redirect('welcome/','refresh');
+
 	}
 	
 	public function addXeroxFile(){
@@ -117,7 +120,19 @@ class Cart extends CI_Controller {
 
 	public function checkout()
 	{
+		$this->load->model('model_products');
 		$userId=$this->session->userdata('userId');
+		if($userId == ''){
+			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'#B10COC');
+			$dataThali= array('outputThalis' => $this->model_products->getThali());	
+			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		}elseif($this->cart->total_items()<=0){
+			$errormsg  = array('errorMessage'=>'There are no items in Your Cart','errorClose'=>'X','errorColor'=>'#B10COC');
+			$dataThali= array('outputThalis' => $this->model_products->getThali());	
+			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		}else{
 		$slot=$this->input->post('slotId');
 		$delivery_date=$this->input->post('deliverydate');
 		$ordertime = time();
@@ -135,14 +150,25 @@ class Cart extends CI_Controller {
 			foreach ($this->cart->contents() as $items){
 
 				if ($this->cart->has_options($items['rowid']) == FALSE){
-					$this->model_transaction->addtransaction($userId,$items['productid'],$items['qty'],$items['price'],
-						$slot,$delivery_date,$time,'');
+					$this->model_transaction->addtransaction($userId,$items['id'],$items['qty'],$items['price'],
+						$slot,$delivery_date,$ordertime,'');
 				}
 				else{
 					$this->model_transaction->addtransaction($userId,$items['productid'],$items['qty'],$items['price'],
-						$slot,$delivery_date,$time,$items['options']);
+						$slot,$delivery_date,$ordertime,$items['options']);
 				}
 			}
+			$this->cart->destroy();
+			$errormsg  = array('errorMessage'=>'Your Transaction Is complete','errorClose'=>'X','errorColor'=>'#OOBB3C');
+			$dataThali= array('outputThalis' => $this->model_products->getThali());	
+			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		}else{
+			$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'#B10COC');
+			$dataThali= array('outputThalis' => $this->model_products->getThali());	
+			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		}
 		}
 	}
 

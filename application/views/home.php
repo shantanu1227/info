@@ -63,6 +63,6 @@
 			<div class="footer">
 
 			</div>
-			<?php include 'reglog.php'; ?>
+			<?php include 'regloghome.php'; ?>
 		</body>
 		</html>
