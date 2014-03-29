@@ -264,6 +264,9 @@
 		</script-->
 	</div>
 	<div id="feedback">Feedback</div>
+	<?php include 'dynamicproduct.php'; ?>
 	<?php include 'reglog.php'; ?>	
+	
+				
 	</body>
 </html>

@@ -56,6 +56,7 @@
 				</div>
 			</div>
 		</div>
+		<?php include 'dynamicproduct.php'; ?>
 		<?php include 'reglog.php'; ?>
 	</body>
 </html>

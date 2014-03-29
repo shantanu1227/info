@@ -166,6 +166,7 @@ and open the template in the editor.
             </div>
 			<div class="menuhead"><i>Carte de menu..</i></div>
             <?php include 'reglog.php'; ?>
+			<?php include 'dynamicproduct.php'; ?>
                 
     </body>
 </html>

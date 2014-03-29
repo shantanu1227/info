@@ -160,7 +160,8 @@
                 </div>
             </div>
 			<div class="menuhead"><i>Carte de menu..</i></div>
-
+				<?php include 'dynamicproduct.php'; ?>	
                 <?php include 'reglog.php'; ?>
+				
     </body>
 </html>

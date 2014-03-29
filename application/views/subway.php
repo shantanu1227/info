@@ -79,7 +79,9 @@
 			</div>
 		</div>
 		<div class="menuhead"><i>Products</i></div>
+		<?php include 'dynamicproductsubway.php'; ?>
 		<?php include 'reglog.php'; ?>
+		
 	<div id="subwayextraform">
 			<div id="subwayextraformfetch">
 			
