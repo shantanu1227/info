@@ -164,7 +164,7 @@ class Welcome extends CI_Controller {
 				$this->load->view('vstationery', $data+$errormsg, FALSE);
 			}
 			public function myaccount()
-	{//#b10coc //00bb3c
+			{
 		$this->load->model('model_users');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$userdetails=$this->model_users->getuserdetails();
@@ -188,10 +188,14 @@ class Welcome extends CI_Controller {
 			}
 		}
 	}
+
+	
+
 	public function admin()
 	{
 		$this->load->view('admin');
 	}
+
 }
 
 /* End of file welcome.php */
