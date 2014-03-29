@@ -115,7 +115,7 @@
 			<div class="myaccount">My Account</div>
 			<?php if($this->session->userdata('userName') == ""){?>
 			<div class="reglog">Login/Register</div>
-			<div class="mycartbut">Cart (0)</div>
+			<div class="mycartbut"><?php echo anchor('welcome/cart', 'Cart ('.$this->cart->total_items().')'); ?></div>
 			<?php }else{
 				echo "<div class='reglog'>".anchor('/login/logout', 'Logout('.$this->session->userdata('userName').')')."</div>";
 			}?>
