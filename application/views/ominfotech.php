@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'ominfotechstyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
@@ -60,6 +61,9 @@
 		<div class="menuhead"><i>Products</i></div>
 		<?php include 'dynamicproduct.php'; ?>
 		<?php include 'reglog.php'; ?>
+		</div>
+		<div id="feedback">Feedback</div>
+		<?php include 'feedback.php'; ?>
 		
 	</body>
 </html>

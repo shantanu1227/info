@@ -2,21 +2,14 @@
 <html>
 	<head>
 		<title>V Stationery</title>
-		
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'vstationerystyle.css');?>">
-<<<<<<< HEAD
-		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
-		
-=======
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
->>>>>>> f7ad6d4e762a46052fe2a57926921cc587ccf4e5
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
@@ -174,196 +167,10 @@
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
-		<div class="shopproducts">
-			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/camlin80.jpeg');?>"></img>
-				<div class="itemname">
-					Camlin Long Notebook 80 pages
-				</div>
-				<div class="itemprice">
-					Rs.50
-				</div>
-			</div>
-			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/camlin160.jpeg');?>"></img>
-				<div class="itemname">
-					Camlin Long Notebook 160 pages
-				</div>
-				<div class="itemprice">
-					Rs.50
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img width="100" src="<?php echo(IMG.'oxford/classmate100.jpeg');?>"></img>
-				<div class="itemname">
-					Classmate Long Notebook 100 pages
-				</div>
-				<div class="itemprice">
-					Rs.50
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/classmate156.jpeg');?>"></img>
-				<div class="itemname">
-					Classmate Long Notebook 156 pages
-				</div>
-				<div class="itemprice">
-					Rs.50
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/classmate160.jpeg');?>"></img>
-				<div class="itemname">
-					Classmate Long Notebook 160 pages
-				</div>
-				<div class="itemprice">
-					Rs.50
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/classmate172.jpeg');?>"></img>
-				<div class="itemname">
-					Classmate Long Notebook 172 pages
-				</div>
-				<div class="itemprice">
-					Rs.50
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/classmate228.jpeg');?>"></img>
-				<div class="itemname">
-					Classmate Long Notebook 228 pages
-				</div>
-				<div class="itemprice">
-					Rs.50
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img width="100%" src="<?php echo(IMG.'oxford/flair_jackpot.jpeg');?>"></img>
-				<div class="itemname">
-					Flair Jackpot Ballpen
-				</div>
-				<div class="itemprice">
-						Rs.5
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/cello_butterflow.jpeg');?>"></img>
-				<div class="itemname">
-					Cello Butterflow Ballpen
-				</div>
-				<div class="itemprice">
-					Rs.10
-				</div>
-				<
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/flair_max.jpeg');?>"></img>
-				<div class="itemname">
-					Cello Butterflow Ballpen
-				</div>
-				<div class="itemprice">
-					Rs.5
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/flair_max.jpeg');?>"></img>
-				<div class="itemname">
-					Cello Butterflow Ballpen
-				</div>
-				<div class="itemprice">
-					Rs.5
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/Natraj_pencil_set.jpeg');?>"></img>
-				<div class="itemname">
-					Natraj Pencil Set
-				</div>
-				<div class="itemprice">
-					Rs.35
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/flair_mechanicalpencil.jpeg');?>"></img>
-				<div class="itemname">
-					Flair Mechanical Pencil 
-				</div>
-				<div class="itemprice">
-					Rs.10
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/fevistick.jpeg');?>"></img>
-				<div class="itemname">
-					Fevistick 15grams
-				</div>
-				<div class="itemprice">
-					Rs.35
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/casio_calculator.jpeg');?>"></img>
-				<div class="itemname">
-					Casio Scientific Calculator
-				</div>
-				<div class="itemprice">
-					Rs.600
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/Scotch_tape.jpeg');?>"></img>
-				<div class="itemname">
-					Scotch transperant Tape
-				</div>
-				<div class="itemprice">
-					Rs.24
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/cdmarker_blue.jpeg');?>"></img>
-				<div class="itemname">
-					Camlin Permanent Marker Blue
-				</div>
-				<div class="itemprice">
-					Rs.75
-				</div>
-				
-			</div>
-			<div class="shopproductitem">
-				<img src="<?php echo(IMG.'oxford/cdmarker_black.jpg');?>"></img>
-				<div class="itemname">
-					Camlin CD Marker Black
-				</div>
-				<div class="itemprice">
-					Rs.75
-				</div>
-				
-			</div>
-		</div>
-			
-		<div id="feedback">Feedback</div>
-		<?php include 'reglog.php'; ?>
-		
-=======
 		<?php include 'dynamicproduct.php'; ?>
 		<?php include 'reglog.php'; ?>
->>>>>>> f7ad6d4e762a46052fe2a57926921cc587ccf4e5
+		<div id="feedback">Feedback</div>
+		<?php include 'feedback.php'; ?>
 	</body>
 </html>
 
