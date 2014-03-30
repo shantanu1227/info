@@ -52,24 +52,34 @@
 			<div class="shoppic">
 				<img src="<?php echo(IMG.'subway/subway_logo.jpg');?>"></img>
 			</div>
+			<?php foreach ($outputTimings as $tuple) { ?>
+			
 			<div class="details">
-				<div class="timing">9AM-9PM</div>
+				<div class="timing"> <?php echo $tuple->openingTime." - ".$tuple->closingTime; ?> </div>
 				<div class="dayswrap">
 				<div class="days">
 					<ul>
+						<?php if($tuple->holidays=="OPEN") {?>
+						<li>Su</li>
+						<?php } ?>
+
 						<li>Mo</li>
 						<li>Tu</li>
 						<li>We</li>
 						<li>Th</li>
 						<li>Fr</li>	
 						<li>Sa</li>
-						<li>Su</li>
 					</ul>
 				</div></div>
 				<div class="status">
-					
+					<?php if($tuple->currentStatus=="OPEN") { ?>
 					<img src="<?php echo(IMG.'open_button.png');?>"></img>
+					<?php }
+					else { ?>
+					<img src="<?php echo(IMG.'close_button.png');?>"></img>
+					<?php }} ?>
 				</div>
+
 				<div class="contact">
 					<div class="owner">Owner</div>
 					<div class="ownername">Mr.Sahil</div>
@@ -90,7 +100,7 @@
 		<div class="menuhead"><i>Products</i></div>
 		<?php include 'dynamicproductsubway.php'; ?>
 		<?php include 'reglog.php'; ?>
-		
+		</div>
 	<div id="subwayextraform">
 			<div id="subwayextraformfetch">
 			

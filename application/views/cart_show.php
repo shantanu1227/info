@@ -73,6 +73,9 @@
   <option value="3">12:00-14:00</option>
   <option value="4">14:00-16:00</option>
   <option value="5">16:00-18:00</option>
+  <option value="5">18:00-20:00</option>
+  <option value="5">20:00-22:00</option>
+  
 </select>
 
 <?php echo anchor('cart/checkout', 'Checkout',array('class'=>'checkoutbutton'));} ?>

@@ -49,6 +49,15 @@ class Model_transaction extends CI_Model {
 		$this->db->join('products','products.productId=transaction.transactionId');
 		return $this->db->get()->result();
 	}
+	public function getstoreName($productId)
+	{
+		$this->db->where('productId',$productId);
+		$this->db->from('products');
+		$this->db->join('stores', 'stores.shopId = products.shopId');
+		$this->db->limit(1);
+		$query = $this->db->get();
+		return $query->row()->name;
+	}
 
 
 

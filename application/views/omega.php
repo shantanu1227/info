@@ -145,7 +145,7 @@
 				</div>
 
 				<div class="sumbit">
-					<button class="uploadbutton1" type="button">Sumbit</button>
+					<button class="uploadbutton1" type="button">Submit</button>
 				</div>
 			</form>
 
