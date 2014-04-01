@@ -29,8 +29,7 @@ class Model_transaction extends CI_Model {
 		$this->db->where('userId',$userId);
 		$query=$this->db->update('users', $data2);
 		if($othershops != '' ){
-			$storeid=$this->getstoreid("Subway");
-			$otherdetails= array('transactionId'=>$transaction_id,'shopId'=>$storeid,'userId'=>$userId);
+			$otherdetails= array('transactionId'=>$transaction_id);
 			if($othershops['size'] == 1){
 				$othershops['size'] ='6-inch';
 			}else{
@@ -55,6 +54,12 @@ class Model_transaction extends CI_Model {
 		$this->db->join('products','products.productId=transaction.productId');
 		return $this->db->get()->result();
 	}
+
+	public function deleteTransaction($transactionId)
+	{
+		$this->db->where('transactionId',$transactionId);
+	}
+
 	public function getstoreName($productId)
 	{
 		$this->db->where('productId',$productId);

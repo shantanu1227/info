@@ -60,8 +60,6 @@ class Cart extends CI_Controller {
 				'veggies' => $veggies ,
 				'sauce'=>$sausages,
 				'additionalComment'=>$comments,
-				'price'=>$price,
-				'quantity'=>$qty,
 				'sub'=>$name
 				)
 			);
