@@ -11,9 +11,17 @@
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
+		<script src="<?php echo (JS.'core.js');?>" type="text/javascript"></script>
 	</head>
 	
 	<body>
+	<script>
+	$(document).ready(function(){
+				$(".reloadonadd").click(function(){
+				updatecart(location.href);
+				});
+				});
+	</script>	
 		<script>
 
 		/*var colo=document.choice.from;
@@ -43,23 +51,6 @@
 						/*$(".uploadform").fadeOut(10);*/
 						$(".confirm").fadeIn(1000);
 						$("#box").css("opacity","0.2");
-						$(document).keyup(function(e) 
-						{
-  						if (e.keyCode == 27 ) 
-  							{
-	  						$(".uploadform").fadeOut(10);
-							$("#box").css('opacity',1);
-   							}			
-   						});
-					});
-
-					$(".conf_butt_func").click(function() 
-					{
-						
-						$("#box").css("opacity","1");
-						$(".confirm").fadeOut(10);
-						$(".popupboxes").fadeIn(1000);
-						$(".uploadform").fadeOut(10);
 						$(document).keyup(function(e) 
 						{
   						if (e.keyCode == 27 ) 
@@ -114,9 +105,9 @@
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">
-					<img src="<?php echo(IMG.'omega/omegaslider1.jpg');?>"></img>
+					<img src="<?php echo(IMG.'omega/oemgaslider1.jpg');?>"></img>
 					<img src="<?php echo(IMG.'omega/omegaslider2.jpg');?>"></img>
-					<img src="<?php echo(IMG.'omega/omegaslider3.jpg');?>"></img>
+					<img src="<?php echo(IMG.'oemga/omegaslider3.jpg');?>"></img>
 				</div>
 			</div>
 		</div>
@@ -156,7 +147,7 @@
 				</div>
 
 				<div class="sumbit">
-					<button class="uploadbutton1" type="button">Sumbit</button>
+					<button class="uploadbutton1" type="button">Submit</button>
 				</div>
 			</form>
 
@@ -166,7 +157,7 @@
 					The cost would be directly deducted from your Credit balance. Press Confirm to continue or escape to abort!
 				</div>
 				<div class="conf_butt">
-					<button class="conf_butt_func" type="button"> Confirm!</button>		
+					<button type="button"> Confirm!</button>		
 				</div>
 				</div>
 		

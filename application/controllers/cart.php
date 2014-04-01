@@ -123,12 +123,12 @@ class Cart extends CI_Controller {
 		$this->load->model('model_products');
 		$userId=$this->session->userdata('userId');
 		if($userId == ''){
-			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'#B10COC');
+			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 		}elseif($this->cart->total_items()<=0){
-			$errormsg  = array('errorMessage'=>'There are no items in Your Cart','errorClose'=>'X','errorColor'=>'#B10COC');
+			$errormsg  = array('errorMessage'=>'There are no items in Your Cart','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
@@ -139,7 +139,8 @@ class Cart extends CI_Controller {
 		$this->load->model('model_transaction');
 		$this->load->model('model_users');
 		$total_amount=0;
-
+		$mailproductname="";
+	
 		foreach ($this->cart->contents() as $items) {
 			$total_amount=$total_amount+$items['price'];
 		}
@@ -152,19 +153,42 @@ class Cart extends CI_Controller {
 				if ($this->cart->has_options($items['rowid']) == FALSE){
 					$this->model_transaction->addtransaction($userId,$items['id'],$items['qty'],$items['price'],
 						$slot,$delivery_date,$ordertime,'');
+					$mailproductname=$mailproductname.$items['name']." From Shop ".$this->model_transaction->getstoreName($items['id']). " Qty ".$items['qty']." Price ".$items['price']."<br>";
 				}
 				else{
-					$this->model_transaction->addtransaction($userId,$items['productid'],$items['qty'],$items['price'],
+					$this->model_transaction->addtransaction($userId,$items['id'],$items['qty'],$items['price'],
 						$slot,$delivery_date,$ordertime,$items['options']);
+					$mailproductname=$mailproductname.$items['name']." From Shop ".$this->model_transaction->getstoreName($items['id']). " Qty ".$items['qty']." Price ".$items['price']." <br> ";
 				}
 			}
+
+
+			$config = Array(
+				'protocol' => 'smtp',
+				'smtp_host' => 'ssl://smtp.googlemail.com',
+				'smtp_port' => 465,
+				'smtp_user' => ' virtualinfocity@gmail.com',
+				'smtp_pass' => ' virtualinfocity@daiict',
+				'mailtype'  => 'html', 
+				'charset'   => 'iso-8859-1'
+				);
+			$this->load->library('email',$config);
+			$this->email->set_newline("\r\n");
+			$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
+			$this->email->to("punit9462@gmail.com");
+		
+			$this->email->subject('New Order');
+			$this->email->message('New order of '.$this->session->userdata('userName').'Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$mailproductname);
+			$this->email->send();
+
+
 			$this->cart->destroy();
-			$errormsg  = array('errorMessage'=>'Your Transaction Is complete','errorClose'=>'X','errorColor'=>'#OOBB3C');
+			$errormsg  = array('errorMessage'=>'Your Transaction Is complete','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 		}else{
-			$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'#B10COC');
+			$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	

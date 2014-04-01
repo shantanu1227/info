@@ -13,9 +13,17 @@
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
+		<script src="<?php echo (JS.'core.js');?>" type="text/javascript"></script>
 	</head>
 	
 	<body>
+	<script>
+	$(document).ready(function(){
+				$(".reloadonadd").click(function(){
+				updatecart(location.href);
+				});
+				});
+	</script>
 	<div id="box">
 		<?php include 'header1.php'; ?>
 		<div class="shopheading">Om Infotech</div>
@@ -23,38 +31,38 @@
 			<div class="shoppic">
 				<img src="<?php echo(IMG.'ominfotech/ominfotech.png');?>"></img>
 			</div>
+			<?php foreach ($outputTimings as $tuple) { ?>
+			
 			<div class="details">
-				<div class="timing">9AM-9PM</div>
+				<div class="timing"> <?php echo $tuple->openingTime." - ".$tuple->closingTime; ?> </div>
 				<div class="dayswrap">
 				<div class="days">
 					<ul>
+						<?php if($tuple->holidays=="OPEN") {?>
+						<li>Su</li>
+						<?php } ?>
+
 						<li>Mo</li>
 						<li>Tu</li>
 						<li>We</li>
 						<li>Th</li>
 						<li>Fr</li>	
 						<li>Sa</li>
-						<li>Su</li>
 					</ul>
 				</div></div>
 				<div class="status">
-					
+					<?php if($tuple->currentStatus=="OPEN") { ?>
+					<img src="<?php echo(IMG.'open_button.png');?>"></img>
+					<?php }
+					else { ?>
 					<img src="<?php echo(IMG.'close_button.png');?>"></img>
+					<?php }} ?>
 				</div>
+
 				<div class="contact">
 					<div class="owner">Owner</div>
 					<div class="ownername">Mr.Sahil</div>
 					<div class="ownernum">8460089916</div>
-				</div>
-			</div>
-		</div>
-		<div class="offerhead">What's cool today?</div>
-		<div class="offers">
-			<div class="imgslide">
-				<div id="slider">
-					<img src="<?php echo(IMG.'ominfotech/banner1.png');?>"></img>
-					<img src="<?php echo(IMG.'ominfotech/banner2.png');?>"></img>
-					
 				</div>
 			</div>
 		</div>

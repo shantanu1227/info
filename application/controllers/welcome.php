@@ -31,8 +31,10 @@ class Welcome extends CI_Controller {
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts('kavya') )+$errormsg;
-		$this->load->view('kavya', $data, FALSE);
+		$data= array('output' => $this->model_products->getproducts('kavya') );
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('kavya'));
+		$this->load->view('kavya', $data+$errormsg+$dataTiming, FALSE);
 	}
 	public function skinterface()
 	{
@@ -43,14 +45,12 @@ class Welcome extends CI_Controller {
 	}
 	public function koffee()
 	{
-		$this->load->model('model_products');		
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$data= array('output' => $this->model_products->getproducts('Koffee++') );
-		$this->load->view('koffee',$errormsg+$data);
-
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('koffee') );
-		$this->load->view('koffee', $data, FALSE);
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('koffee'));
+		$this->load->view('koffee', $data+$errormsg+$dataTiming, FALSE);
 	}
 	public function cart_index()
 	{
@@ -68,17 +68,16 @@ class Welcome extends CI_Controller {
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('bigbite') );
-		$this->load->view('bigbite', $data+$errormsg, FALSE);
-	}
-	public function medicine()
-	{
-		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('medicine',$errormsg);
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('bigbite'));
+		$this->load->view('bigbite', $data+$errormsg+$dataTiming, FALSE);
 	}
 	public function washexpress()
 	{
+		$this->load->model('model_shop');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('washexpress',$errormsg);
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
+		$this->load->view('washexpress', $errormsg+$dataTiming, FALSE);
 	}
 	public function omega()
 	{
@@ -92,7 +91,9 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('subway') )+$errormsg;
 		$this->load->helper('form');
-		$this->load->view('subway', $data, FALSE);
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('subway'));
+		$this->load->view('subway', $data+$dataTiming, FALSE);
 	}
 	public function apex()
 	{
@@ -104,7 +105,9 @@ class Welcome extends CI_Controller {
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('chatkazz') );
-		$this->load->view('chatkazz', $data+$errormsg, FALSE);	
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('chatkazz'));
+		$this->load->view('chatkazz', $data+$errormsg+$dataTiming, FALSE);	
 	}
 	public function qwiches()
 	{
@@ -120,30 +123,38 @@ class Welcome extends CI_Controller {
 		public function oxford()
 		{
 			$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-			$this->load->model('model_products');		
-			$data= array('output' => $this->model_products->getproducts('oxford') );
-			$this->load->view('oxford',$errormsg+$data);
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('oxford') );
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('oxford'));
+		$this->load->view('oxford', $data+$errormsg+$dataTiming, FALSE);
 		}
 		public function clublaptop()
 		{
 			$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-			$this->load->model('model_products');		
-			$data= array('output' => $this->model_products->getproducts('clublaptop') );
-			$this->load->view('clublaptop', $data+$errormsg, FALSE);	
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('clublaptop') );
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('clublaptop'));
+		$this->load->view('clublaptop', $data+$errormsg+$dataTiming, FALSE);	
 		}
 			public function ominfotech()
 			{
 				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-				$this->load->model('model_products');		
-				$data= array('output' => $this->model_products->getproducts('ominfotech') );
-				$this->load->view('ominfotech', $data+$errormsg, FALSE);
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('ominfotech') );
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('ominfotech'));
+		$this->load->view('ominfotech', $data+$errormsg+$dataTiming, FALSE);
 			}
 			public function crossword()
 			{
-				$this->load->model('model_products');	
-				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');	
-				$data= array('output' => $this->model_products->getproducts('crossword') );
-				$this->load->view('crossword', $data+$errormsg, FALSE);
+				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('crossword') );
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('crossword'));
+		$this->load->view('crossword', $data+$errormsg+$dataTiming, FALSE);
 			}
 
 			public function faq()
@@ -159,16 +170,18 @@ class Welcome extends CI_Controller {
 			public function vstationery()
 			{
 				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-				$this->load->model('model_products');		
-				$data= array('output' => $this->model_products->getproducts('vstationery') );
-				$this->load->view('vstationery', $data+$errormsg, FALSE);
+		$this->load->model('model_products');		
+		$data= array('output' => $this->model_products->getproducts('vstationery') );
+		$this->load->model('model_shop');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('vstationery'));
+		$this->load->view('vstationery', $data+$errormsg+$dataTiming, FALSE);
 			}
 			public function feedback()
 			{	
 				$this->load->model('model_admin');
 				$this->load->model('model_products');
 				$this->model_admin->insertFeedback();
-				$errormsg  = array('errorMessage'=>'Thank You For Your FeedBack','errorClose'=>'X','errorColor'=>'#B10COC');
+				$errormsg  = array('errorMessage'=>'Thank You For Your FeedBack','errorClose'=>'X','errorColor'=>'#00BB0C');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	

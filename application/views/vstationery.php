@@ -13,6 +13,9 @@
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
+<<<<<<< HEAD
+		<script src="<?php echo (JS.'core.js');?>" type="text/javascript"></script>
+=======
 		 <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
           <!-- jQuery Form Validation code -->
 	  <script>
@@ -120,9 +123,17 @@
 	  </script>
     
 		
+>>>>>>> 649d118e604e8c14d7ef92cb88c231952edb39dc
 	</head>
 	
 	<body>
+	<script>
+	$(document).ready(function(){
+				$(".reloadonadd").click(function(){
+				updatecart(location.href);
+				});
+				});
+			</script>	
 	<div id="box">
 		<?php include 'header1.php'; ?>
 		<div class="shopheading">V STATIONERY</div>
@@ -130,24 +141,34 @@
 			<div class="shoppic">
 				<img src="<?php echo(IMG.'VStationery/v_Stationery.png');?>" width="100%"></img>
 			</div>
+			<?php foreach ($outputTimings as $tuple) { ?>
+			
 			<div class="details">
-				<div class="timing">9AM-9PM</div>
+				<div class="timing"> <?php echo $tuple->openingTime." - ".$tuple->closingTime; ?> </div>
 				<div class="dayswrap">
 				<div class="days">
 					<ul>
+						<?php if($tuple->holidays=="OPEN") {?>
+						<li>Su</li>
+						<?php } ?>
+
 						<li>Mo</li>
 						<li>Tu</li>
 						<li>We</li>
 						<li>Th</li>
 						<li>Fr</li>	
 						<li>Sa</li>
-						<li>Su</li>
 					</ul>
 				</div></div>
 				<div class="status">
-					<div class="statustext">Status:</div>
+					<?php if($tuple->currentStatus=="OPEN") { ?>
 					<img src="<?php echo(IMG.'open_button.png');?>"></img>
+					<?php }
+					else { ?>
+					<img src="<?php echo(IMG.'close_button.png');?>"></img>
+					<?php }} ?>
 				</div>
+
 				<div class="contact">
 					<div class="owner">Owner</div>
 					<div class="ownername">Mr.Sahil</div>
