@@ -59,9 +59,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('cart_index',$data+$errormsg);
 	}
 	public function cart()
-	{
+	{	$this->load->model('model_transaction');
+		$slots = array('slots'=>$this->model_transaction->getSlots());
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('cart_show',$errormsg);
+		$this->load->view('cart_show',$errormsg+$slots);
 	}
 	public function bigbite()
 	{

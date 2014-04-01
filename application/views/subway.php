@@ -29,9 +29,10 @@
 				var subproductimg = $(this).find('img').first().attr('src');
 				var subproductname = $(this).find('div').first().text();
 				var subproductprice = $(this).find('div').last().text();
-				$('#formproductname').val(subproductname);
+				var trimprice =  parseInt(subproductprice.match(/[0-9]+/)[0], 10);
+				$('#formproductname').val(subproductname.trim());
 				$('#formproductid').val(subproductid);
-				$('#formproductprice').val(subproductprice);
+				$('#formproductprice').val(trimprice);
 				
  				 document.getElementById('subwayextraformfetch').innerHTML = '<div class="subextraname">'+subproductname+'</div>';
 				$('#subwayextraformfetch').append('<div class="subextraimg"> <img src="'+subproductimg+'"></div>');
@@ -127,33 +128,33 @@
 			<div class="addtosub">
 			<div><b>Choose bread size:</b></div>
 			
-			<input type="radio" name="size" value="6-inch" >6-inch</br>
-			<input type="radio" name="size" value="Footlong" >Footlong</br>
+			<input type="radio" name="size" value="1" >6-inch</br>
+			<input type="radio" name="size" value="2" >Footlong</br>
 			
 			</div>
 			<div class="addtosub">
 			<div><b>Add veggies to your SUB </b></div>
 			
-			<input type="checkbox" name="veggie" value="Lettuce" >Lettuce</br>
-			<input type="checkbox" name="veggie" value="Tomatoes" >Tomatoes</br>
-			<input type="checkbox" name="veggie" value="Cucumbers" >Cucumbers</br>
-			<input type="checkbox" name="veggie" value="Pickles" >Pickles</br>
-			<input type="checkbox" name="veggie" value="Peppers" >Peppers</br>
-			<input type="checkbox" name="veggie" value="Onions" >Onions</br>
-			<input type="checkbox" name="veggie" value="Red Olives" >Red Olives</br>
-			<input type="checkbox" name="veggie" value="Jalapenos" >Jalapenos</br>
+			<input type="checkbox" name="veggie[]" value="Lettuce" >Lettuce</br>
+			<input type="checkbox" name="veggie[]" value="Tomatoes" >Tomatoes</br>
+			<input type="checkbox" name="veggie[]" value="Cucumbers" >Cucumbers</br>
+			<input type="checkbox" name="veggie[]" value="Pickles" >Pickles</br>
+			<input type="checkbox" name="veggie[]" value="Peppers" >Peppers</br>
+			<input type="checkbox" name="veggie[]" value="Onions" >Onions</br>
+			<input type="checkbox" name="veggie[]" value="Red Olives" >Red Olives</br>
+			<input type="checkbox" name="veggie[]" value="Jalapenos" >Jalapenos</br>
 			
 			</div>
 			<div class="addtosub">
 			<div><b>Add saucages to your SUB</b></div>
 			
-			<input type="checkbox" name="extra" value="Mayo" >Mayo</br>
-			<input type="checkbox" name="extra" value="Hot Sauce" >Hot Sauce</br>
-			<input type="checkbox" name="extra" value="Yellow Mustard" >Yellow Mustard</br>
-			<input type="checkbox" name="extra" value="Honey Mustard" >Honey Mustard</br>
-			<input type="checkbox" name="extra" value="Italian Dressing" >Italian Dressing</br>
-			<input type="checkbox" name="extra" value="BBQ Sauce" >BBQ Sauce</br>
-			<input type="checkbox" name="extra" value="Sweet Onion Sauce" >Sweet Onion Sauce</br>
+			<input type="checkbox" name="extra[]" value="Mayo" >Mayo</br>
+			<input type="checkbox" name="extra[]" value="Hot Sauce" >Hot Sauce</br>
+			<input type="checkbox" name="extra[]" value="Yellow Mustard" >Yellow Mustard</br>
+			<input type="checkbox" name="extra[]" value="Honey Mustard" >Honey Mustard</br>
+			<input type="checkbox" name="extra[]" value="Italian Dressing" >Italian Dressing</br>
+			<input type="checkbox" name="extra[]" value="BBQ Sauce" >BBQ Sauce</br>
+			<input type="checkbox" name="extra[]" value="Sweet Onion Sauce" >Sweet Onion Sauce</br>
 			
 			</div>
 			<div class="addtosubcomment">
