@@ -30,7 +30,12 @@ class Model_transaction extends CI_Model {
 		$query=$this->db->update('users', $data2);
 		if($othershops != '' ){
 			$storeid=$this->getstoreid("Subway");
-			$otherdetails= array('transactionId'=>$transactionId,'shopId'=>$storeid,'userId'=>$userId);
+			$otherdetails= array('transactionId'=>$transaction_id,'shopId'=>$storeid,'userId'=>$userId);
+			if($othershops['size'] == 1){
+				$othershops['size'] ='6-inch';
+			}else{
+				$othershops['size'] = 'footlong';
+			}
 			$data3 = $othershops+$otherdetails;
 			$this->addsubwaytransaction($data3);
 		}
@@ -44,9 +49,10 @@ class Model_transaction extends CI_Model {
 
 	public function getusertransaction($userId)
 	{
+		$this->db->select('*,transaction.price', FALSE);
 		$this->db->where('userId',$userId);
 		$this->db->from('transaction');
-		$this->db->join('products','products.productId=transaction.transactionId');
+		$this->db->join('products','products.productId=transaction.productId');
 		return $this->db->get()->result();
 	}
 	public function getstoreName($productId)

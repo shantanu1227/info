@@ -3,7 +3,7 @@
 		foreach ($output as $product) {
 		?>
 
-			<div class="shopproductitem">
+			<div class="shopproductitem" id="<?php echo($product->productId); ?>">
 				<img width="100%" src="<?php echo(IMG . $product->productImage); ?>"></img>
 				<div class="itemname">
 					<?php echo $product->productName; ?>
