@@ -10,10 +10,20 @@ class Login extends CI_Controller
 		if($a>0){
 			redirect('/', 'refresh');
 		}
-		else{
-			$data= array('output' => $a );
-			$this->load->view('test', $data, FALSE);
-		}
+		else if($a == -1){
+					$errormsg  = array('errorMessage'=>'Please Confirm Your Email id','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+					$this->load->model('model_products');
+					$dataThali= array('outputThalis' => $this->model_products->getThali());	
+					$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+					$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+					}
+		else if($a == -2){
+					$errormsg  = array('errorMessage'=>'Incorrect Username or Password','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+					$this->load->model('model_products');
+					$dataThali= array('outputThalis' => $this->model_products->getThali());	
+					$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+					$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+					}			
 	}
 	public function logout()
 	{
