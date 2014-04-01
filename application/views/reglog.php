@@ -1,4 +1,8 @@
 <div id="reglogopen">
+	<div id="closebuttonrl">
+		<div id="closebuttonrl"><img src="<?php echo(IMG.'closebutton.png');?>" style="max-width:30px;
+    max-height:30px;"></img></div>
+	</div>
 	<div class="vinfologin">
 		<div class="reglogleft">
 			<div class="loginhead">LOGIN</div>
@@ -44,5 +48,9 @@
 			}); 
 		}); 
 	});
+	$(document).on('click','#closebuttonrl',function(){
+		$("#reglogopen").fadeOut(100);
+		$("#box").css('opacity',1);
+    });
 </script>
 		

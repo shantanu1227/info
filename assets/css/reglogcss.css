@@ -15,7 +15,11 @@
 	float:left;
 	width:49%;
 	height:400px;
-
+}
+#closebuttonrl{
+	height:auto;
+	width:auto;
+	float:right;
 }
 .reglogline{
 	margin-top:50px;
