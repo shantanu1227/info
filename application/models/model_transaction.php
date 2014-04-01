@@ -64,8 +64,18 @@ class Model_transaction extends CI_Model {
 		$query = $this->db->get();
 		return $query->row()->name;
 	}
-
-
+	public function getSlots()
+	{
+		date_default_timezone_set('Asia/Kolkata');
+		$time = date("H:i");
+		$this->db->where('starttimings >',$time);
+		return $this->db->get('slots')->result();
+		
+	}	
+	public function getallSlots()
+	{
+		return $this->db->get('slots');
+	}
 
 }
 

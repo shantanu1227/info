@@ -68,14 +68,10 @@
 
 
 <select class="orderslots" name="slotid" >
-  <option value="1">8:00-10:00</option>
-  <option value="2">10:00-12:00</option>
-  <option value="3">12:00-14:00</option>
-  <option value="4">14:00-16:00</option>
-  <option value="5">16:00-18:00</option>
-  <option value="5">18:00-20:00</option>
-  <option value="5">20:00-22:00</option>
-  
+  <?php foreach ($slots as $slot) {?>
+  <option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
+  <?php
+  }?>
 </select>
 
 <?php echo anchor('cart/checkout', 'Checkout',array('class'=>'checkoutbutton'));} ?>
