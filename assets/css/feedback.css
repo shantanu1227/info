@@ -18,10 +18,9 @@
 	margin-top: 0%;
 }
 #closebutton{
-	height:10px;
-	width:10px;
-	right:0%;
-	top:0%;
+	height:auto;
+	width:auto;
+	float:right;
 }
 #feedbacktext{
 	margin-top:5%;

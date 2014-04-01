@@ -191,7 +191,7 @@ class Welcome extends CI_Controller {
 			public function myaccount()
 			{
 		$this->load->model('model_users');
-		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'rgb(214, 38, 38)');
 		$userdetails=$this->model_users->getuserdetails();
 		if(is_object($userdetails)){
 			$this->load->model('model_transaction');
@@ -204,12 +204,18 @@ class Welcome extends CI_Controller {
 				$errorMessage = "Please Log In ";
 				$errormsg['errorMessage']=$errorMessage;
 				$errormsg['errorClose'] = "X";
-				$this->load->view("home",$errormsg);
+			$this->load->model('model_products');
+		$dataThali= array('outputThalis' => $this->model_products->getThali());	
+		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 			}if ($userdetails == -2) {
 				$errorMessage = "Incorrect Session ";
 				$errormsg['errorMessage']=$errorMessage;
 				$errormsg['errorClose'] = "X";
-				$this->load->view("home",$errormsg);
+				$this->load->model('model_products');
+				$dataThali= array('outputThalis' => $this->model_products->getThali());	
+				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 			}
 		}
 	}

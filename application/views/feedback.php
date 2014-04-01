@@ -1,7 +1,6 @@
 <div id = "feedbackopen">
-	<div id="closebutton">
-		<img src="<?php echo(IMG.'closebutton.png');?>"></img>
-	</div>
+	<div id="closebutton"><img src="<?php echo(IMG.'closebutton.png');?>" style="max-width:30px;
+    max-height:30px;"></img></div>
 	<div class="feedcontainer">
 		<?php $attributes = array('id' => 'feedbackform');
 			echo form_open('welcome/feedback', $attributes);
