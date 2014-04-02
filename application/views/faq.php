@@ -10,6 +10,7 @@ and open the template in the editor.
         <link rel='stylesheet' type="text/css" href="<?php echo(CSS . 'faqstyle.css'); ?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'js-image-slider.css'); ?>">
         <script type='text/javascript' src="<?php echo(JS . 'js-image-slider.js'); ?>"></script>
         <script type='text/javascript' src="<?php echo(JS . 'jquery-1.7.1.min.js'); ?>"></script>
@@ -154,6 +155,7 @@ and open the template in the editor.
         </div>
         
 		<div id="feedback">Feedback</div>
+		<?php include 'feedback.php'; ?>
                 <?php include 'reglog.php'; ?>
     </body>
 </html>

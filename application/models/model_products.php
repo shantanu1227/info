@@ -18,7 +18,7 @@ class Model_products extends CI_Model {
 	}
 
 	public function getThali() {
-		date_default_timezone_set('Indian/Christmas');
+		date_default_timezone_set('Asia/Kolkata');
 		$currentDate=date("d-m-Y");
 		$this->db->where('date',$currentDate);
 		$this->db->join('stores','stores.shopId=thali.shopId');

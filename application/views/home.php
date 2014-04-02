@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'Vinfostyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
@@ -59,7 +61,8 @@
 
 
 			</div>
-			<div class="feedback">FEEDBACK</div>
+			<div id="feedback">Feedback</div>
+		<?php include 'feedback.php'; ?>
 			<div class="footer">
 
 			</div>

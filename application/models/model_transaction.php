@@ -29,8 +29,12 @@ class Model_transaction extends CI_Model {
 		$this->db->where('userId',$userId);
 		$query=$this->db->update('users', $data2);
 		if($othershops != '' ){
-			$storeid=$this->getstoreid("Subway");
-			$otherdetails= array('transactionId'=>$transactionId,'shopId'=>$storeid,'userId'=>$userId);
+			$otherdetails= array('transactionId'=>$transaction_id);
+			if($othershops['size'] == 1){
+				$othershops['size'] ='6-inch';
+			}else{
+				$othershops['size'] = 'footlong';
+			}
 			$data3 = $othershops+$otherdetails;
 			$this->addsubwaytransaction($data3);
 		}
@@ -44,11 +48,18 @@ class Model_transaction extends CI_Model {
 
 	public function getusertransaction($userId)
 	{
+		$this->db->select('*,transaction.price', FALSE);
 		$this->db->where('userId',$userId);
 		$this->db->from('transaction');
-		$this->db->join('products','products.productId=transaction.transactionId');
+		$this->db->join('products','products.productId=transaction.productId');
 		return $this->db->get()->result();
 	}
+
+	public function deleteTransaction($transactionId)
+	{
+		$this->db->where('transactionId',$transactionId);
+	}
+
 	public function getstoreName($productId)
 	{
 		$this->db->where('productId',$productId);
@@ -58,8 +69,18 @@ class Model_transaction extends CI_Model {
 		$query = $this->db->get();
 		return $query->row()->name;
 	}
-
-
+	public function getSlots()
+	{
+		date_default_timezone_set('Asia/Kolkata');
+		$time = date("H:i");
+		$this->db->where('starttimings >',$time);
+		return $this->db->get('slots')->result();
+		
+	}	
+	public function getallSlots()
+	{
+		return $this->db->get('slots');
+	}
 
 }
 

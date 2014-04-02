@@ -45,8 +45,10 @@ body{
 	margin-bottom:10px;
 }
 .loginaccount{
+	right:8%;
 	float:right;
 	display: inline-block;
+	position:fixed;
 	}
 .reglog{
 	text-decoration:none;
@@ -61,10 +63,10 @@ body{
 	color:#FFFFFF;
 }
 .reglog:hover{
-	text-shadow: 0.5px 0.49px #ffffff;
+	text-shadow: 0.7px 0.49px #ffffff;
 }
 .myaccount:hover{
-	text-shadow: 0.5px 0.49px #ffffff;
+	text-shadow: 0.7px 0.49px #ffffff;
 }
 .myaccount{
 	text-decoration:none;
@@ -277,7 +279,7 @@ float:left;
 width:47%;
 }
 
-.feedback{
+#feedback{
 	padding:8px;
 	font-family:textfont;
 	font-weight:bold;

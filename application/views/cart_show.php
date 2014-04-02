@@ -30,10 +30,10 @@
 <table class="carttable" border="1px" width="100%" cellpadding="0" cellspacing="0">
     
         <tr >
-            <th >Qty</td>
-            <th >Item Description</td>
-            <th >Item Price</td>
-            <th >Sub-Total</td>
+            <th >Qty</th>
+            <th >Item Description</th>
+            <th >Item Price</th>
+            <th >Sub-Total</th>
         </tr>
     
     
@@ -63,21 +63,31 @@
         </tr>
     
 </table>
- 
+
 <p class="updateempty"> <div class="updatecartbut"><?php echo form_submit('', 'Update your Cart');?></div> <div class="emptycartbut"> <?php echo anchor('cart/emptycart', 'Empty Cart');?> </div> </p>
+<?php echo form_close();?>
 
 
-<select class="orderslots" name="slotid" >
-  <option value="1">8:00-10:00</option>
-  <option value="2">10:00-12:00</option>
-  <option value="3">12:00-14:00</option>
-  <option value="4">14:00-16:00</option>
-  <option value="5">16:00-18:00</option>
-  <option value="5">18:00-20:00</option>
-  <option value="5">20:00-22:00</option>
-  
+<?php echo form_open('/cart/checkout'); ?>
+<select class="orderslots" name="slotId" >
+  <?php foreach ($slots as $slot) {?>
+  <option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
+  <?php
+  }?>
 </select>
+<!-- KOI YAHA DATE DALO -->
+<?php 
 
-<?php echo anchor('cart/checkout', 'Checkout',array('class'=>'checkoutbutton'));} ?>
+$submit = array(
+          'name'=> 'checkout',
+          'id'  => 'checkout',
+          'class' => 'checkoutbutton',
+          'value' => 'Checkout',
+          'type'  => 'submit'       
+        );
+echo form_input($submit);
+echo form_close();
+}?>
 </div>
 </body>
+</html>
