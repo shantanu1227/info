@@ -118,7 +118,7 @@
 			<div class="addtosub">
 			<div><b>Choose your bread:</b></div>
 			
-			<input type="radio" name="bread" value="Regular" >Regular</br>
+			<input type="radio" name="bread" value="Regular" checked="checked" autocomplete="on">Regular</br>
 			<input type="radio" name="bread" value="9-grain-wheat" >9-grain-wheat</br>
 			<input type="radio" name="bread" value="Italian" >Italian</br>
 			<input type="radio" name="bread" value="Monterey Cheddar" >Monterey Cheddar</br>
@@ -128,7 +128,7 @@
 			<div class="addtosub">
 			<div><b>Choose bread size:</b></div>
 			
-			<input type="radio" name="size" value="1" >6-inch</br>
+			<input type="radio" name="size" value="1" checked="checked" autocomplete="off">6-inch</br>
 			<input type="radio" name="size" value="2" >Footlong</br>
 			
 			</div>
@@ -158,10 +158,7 @@
 			
 			</div>
 			<div class="addtosubcomment">
-			<TEXTAREA name="comments" rows="3" cols="40">
-			
-			
-			</TEXTAREA>
+			<TEXTAREA name="comments" rows="3" cols="40"></TEXTAREA>
 			</div>
 			<div class="subaddtocart">
 			<div > <input class="subaddtocartbut"type="submit" value="add"></div>
