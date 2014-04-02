@@ -45,7 +45,7 @@
 				<li>
 					<div class="icons">Stay Connected!</br>
 						<img class="google_icon" src="<?php echo(IMG.'social_icons/google_dark.png');?>"></img>
-						<img class="facebook_icon" src="<?php echo(IMG.'social_icons/facebook_dark.png');?>"></img>
+						<a href="https://www.facebook.com/Vinfocity" target="_blank"><img class="facebook_icon" src="<?php echo(IMG.'social_icons/facebook_dark.png');?>"></img></a>
 						<img class="twitter_icon" src="<?php echo(IMG.'social_icons/twitter02_dark.png');?>"></img>
 						<img class="yahoo_icon" src="<?php echo(IMG.'social_icons/yahoo_dark.png');?>"></img>
 					</div>
