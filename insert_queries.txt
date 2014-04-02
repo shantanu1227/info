@@ -69,6 +69,37 @@ INSERT INTO `Virtual_Infocity`.`thali` (`shopId`, `lunch`, `dinner`, `date`) VAL
 INSERT INTO `Virtual_Infocity`.`thali` (`shopId`, `lunch`, `dinner`, `date`) VALUES (1, 'bhindi and paratha','kadi and chawal', '28-03-2014');
 INSERT INTO `Virtual_Infocity`.`thali` (`shopId`, `lunch`, `dinner`, `date`) VALUES (3, 'dal and chawal','burger', '29-03-2014');
 
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO `virtual_infocity`.`stores` (
+`shopId` ,
+`typeId` ,
+`name` ,
+`address` ,
+`contactNo` ,
+`userName` ,
+`password` ,
+`emailId` ,
+`imageIcon`
+)
+VALUES (
+'15' , '4', 'omega', '2nd Block,Infocity', '9878174124', 'store_omega', SHA1( 'qwerty' ) , 'apex@apex.com', 'omega/omega_icon'
+);
+
+INSERT INTO `virtual_infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES (NULL, 'xerox', '1', '15', 'omega/omega_logo', 'TRUE');
+
+INSERT INTO `virtual_infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES ('168', 'laundry', '170', '14', 'washexpress/washexpress_logo.jpg', 'TRUE');
+
 INSERT INTO `virtual_infocity`.`admin` (`username`, `password`, `name`) VALUES ('admin1',' SHA1('admin1111')','Shantanu Dhoot');
 INSERT INTO `virtual_infocity`.`admin` (`username`, `password`, `name`) VALUES ('admin2',' SHA1('admin2222')','Rishabh Jain');
 INSERT INTO `virtual_infocity`.`admin` (`username`, `password`, `name`) VALUES ('admin3',' SHA1('admin3333')','Pratik Gupta');

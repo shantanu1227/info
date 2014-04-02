@@ -310,9 +310,30 @@ padding:2%;
 background:#802E05;
 color:white;
 }
+.shoploginhead{
+margin-top:11.8%;
+width:56%;
+float:left;
+margin-left:20%;
+font-size:30px;
+font-family:textfont;
+padding:2%;
+background:#802E05;
+color:white;
+}
 .addproductform{
 display:none;
-position:absolute;
+position:fixed;
+top:30%;
+height:150px;
+left:25%;
+width:50%;
+background:#361200;
+color:white;
+}
+.editproductform{
+display:none;
+position:fixed;
 top:30%;
 height:150px;
 left:25%;
@@ -329,6 +350,17 @@ border-style:solid;
 border-width:1px;
 background:#802E05;
 color:white;
+font-family:textfont;
+}
+.editproduct{
+text-align:center;
+padding:1%;
+cursor:pointer;
+border-style:solid;
+border-width:1px;
+background:#802E05;
+color:white;
+font-family:textfont;
 }
 .producttable{
 float:left;
@@ -336,20 +368,33 @@ width:100%;
 }
 .mycartbut{
 text-indent: 25px;
-background-image: url(../img/mycart.png);
+background-size: 22px 22px;
+background-image: url(../img/icon_cart.png);
 background-repeat: no-repeat;
-background-position: center left;
-float: right;
-width: 30%;
+background-position:10px;
+float: left;
+padding: 5px;
+padding-left: 8px;
+width: 40%;
+height: 120%;
 cursor: pointer;
 font-size: 12px;
 font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 color: #FFFFFF;
 margin-top: 5%;
+
+border-color: white;
+border-width: 1px;
+
+border-style: solid;
 }
 
 .mycartbut:hover{
-	text-shadow: 0.5px 0.49px #ffffff;}
+	text-shadow: 0.5px 0.49px #ffffff;
+background-size: 25px 25px;
+border-width: 2px;
+border-color: #585858;
+}
 	
 .carttable{
 float:left;
@@ -375,19 +420,35 @@ width:50%;
 
 }
 .emptycartbut{
-margin-top:1%;
+	margin-left: 20%;
+
+margin-top:0%;
 font-family:textfont;
 float:left;
 text-align:center;
-width:50%;
+width:15%;
+border-width: 1px;
+border-style: solid;
+background-color:#D8D8D8; 
+background:linear-gradient(to bottom, #FAFAFA 30%, #E6E6E6 100%);
+padding: 0.2%;
 
 }
+.emptycartbut:hover{
+color:black;
+background:linear-gradient(to bottom, #E6E6E6 30%,  #FAFAFA 100%);
+
+}
+
 .emptycartbut a{
+	color: black;
 font-weight:bold;
 text-decoration:none;
 }
 .emptycartbut a:hover{
-color:#361200;
+color:black;
+background:linear-gradient(to bottom, #E6E6E6 30%,  #FAFAFA 100%);
+
 }
 .updateempty{
 
@@ -425,4 +486,49 @@ margin-top: 7%;
 float: left;
 width: 10%;
 
+}
+.sklogindiv{
+margin-top:0%;
+float:left;
+width:60%;
+margin-left:20%;
+background:#361200;
+}
+.skforminput{
+margin-top: 2%;
+position: relative;
+float: left;
+height: 45px;
+width: 80%;
+margin-left: 10%;
+}
+
+.skforminput input{
+height:35px;
+width: 100%;
+border-radius: 5px;
+margin-left: 0%;
+border: 1px solid #000000;
+}
+
+.skforminputsubmit{
+margin-left:10%;
+margin-top:1%;
+float:left;
+width:90%;
+
+}
+#yesimagechange{
+display:none;
+float:right;
+}
+
+#askimagechange{
+float:right;
+width:auto;
+padding:2%;
+cursor:pointer;
+}
+.getimagelink{
+display:none;
 }

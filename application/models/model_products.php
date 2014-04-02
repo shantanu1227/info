@@ -36,6 +36,27 @@ class Model_products extends CI_Model {
 		return $results->result();
 		#return $this->db->get('offers')->results();
 	}
+	
+	public function editproducts($productName,$productImage,
+			$productPrice,$shopId, $productId, $productInStock) {
+	if($productImage == ""){
+	$data = array('productName' => $productName, 'price' => $productPrice, 'inStock' => $productInStock,'shopId' => $shopId);
+	$this->db->where('productId', $productId);
+	$this->db->update('products', $data); 
+							
+	}
+	else{
+			$data = array('productName' => $productName, 'price' => $productPrice, 
+			'productImage' =>$productImage, 'inStock' => $productInStock,'shopId' => $shopId);
+	$this->db->where('productId', $productId);
+	$this->db->update('products', $data); 
+	}
+	}
+	
+	
+							
+	
+	
 }
 
 /* End of file model_products.php */

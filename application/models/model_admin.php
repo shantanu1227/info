@@ -52,6 +52,16 @@ class Model_admin extends CI_Model {
 	return;
 	}
 
+	public function changeDeliveryguypass($userId,$pass) {
+	$this->db->where('userId', $userId);
+	$changedelpass_data = $this->db->get('delivery_man')->result();
+	//print_r($data[0]->creditAmount);
+	$changedelpass_data[0]->password = $this->encrypt->sha1($pass);
+	$this->db->where('userId', $userId);
+	$this->db->update('delivery_man', $changedelpass_data[0]); 
+	return;
+	}
+
 	public function insertFeedback()
 	{
 		$comment=$this->input->post('comment',TRUE);

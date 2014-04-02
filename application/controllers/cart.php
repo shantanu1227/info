@@ -91,33 +91,88 @@ class Cart extends CI_Controller {
 
 	}
 
-	public function addXeroxFile(){
+	public function addXeroxFile()
+	{
 
-		$colour = $this->input->post('colour',TRUE);
-		$from = $this->input->post('from',TRUE);
-		$to = $this->input->post('to',TRUE);
-
-		$shopId = 1;
+		$color = $this->input->post('colour',TRUE);
+		$startpage = $this->input->post('from',TRUE);
+		$endpage = $this->input->post('to',TRUE);
+		$quantity = 1;
+		$price = $endpage-$startpage+1;
+		$slot = 1;
+		$ordertime = time();
+		$deliverydate = $this->input->post('deliverydate');
 
 		$directoryName = "/photocopyDocuments"."/";
 		$config['upload_path'] = "./assets/img".$directoryName;
 
 		$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img';
-		$config['max_size']	= '50000';
-
+		$config['max_size']	= '4096';
+		$config['encrypt_name'] = TRUE;
 
 		$this->load->library('upload', $config);
 
 		if ( ! $this->upload->do_upload())
 		{
 			print_r($this->upload->display_errors());
-			print_r($config['upload_path']);
 		}
 		else
 		{
-
-
+			if($color=="2"){
+				$price=$price*2;
+				$color="color";
+			}else{
+				$color="bw";
+			}
+			$uploaddata=$this->upload->data();
+			$data1=array('fileName'=>$uploaddata['file_name'],'startpage'=>$startpage,
+				'endpage'=>$endpage,'color'=>$color);
+			$this->load->model('model_transaction');
+			$userId=$this->session->userdata('userId');
+			$this->model_transaction->addxerox($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
+			$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
+			$this->load->view('omega',$errormsg);
 		}
+	}
+
+	public function addLaundry()
+	{
+		$billNo = $this->input->post('billno');
+		$price = $this->input->post('billAmount');
+
+		$quantity=1;
+		$slot=1;
+		$deliverydate = $this->input->post('deliverydate');
+		$ordertime = time();
+
+
+		$directoryName = "/laundryImages"."/";
+		$config['upload_path'] = "./assets/img".$directoryName;
+
+		$config['allowed_types'] = 'jpg|png|jpeg';
+		$config['max_size']	= '4096';
+		$config['encrypt_name'] = TRUE;
+
+		$this->load->library('upload', $config);
+
+		if ( ! $this->upload->do_upload())
+		{
+			print_r($this->upload->display_errors());
+		}
+		else
+		{
+			$uploaddata=$this->upload->data();
+			$data1=array('billImage'=>$uploaddata['file_name'],'billNo'=>$billNo);
+			$this->load->model('model_transaction');
+			$userId=$this->session->userdata('userId');
+			$this->model_transaction->addlaundry($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
+			$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
+			$this->load->model('model_shop');
+			$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
+			$this->load->view('washexpress',$errormsg+$dataTiming);
+			header( "refresh:3;url=".URL."welcome/washexpress" );		
+		}
+
 	}
 
 	public function checkout()
