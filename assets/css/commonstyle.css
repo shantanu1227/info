@@ -25,19 +25,7 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
-.mycartbut{
-text-indent: 25px;
-background-image: url(../img/mycart.png);
-background-repeat: no-repeat;
-background-position: center left;
-float: right;
-width: 30%;
-cursor: pointer;
-font-size: 12px;
-font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-color: #FFFFFF;
-margin-top: 5%;
-}
+
 #fixed_head{
 	/*box-shadow:-7px 7px 5px #888888;*/
 	border: 1px solid black;
@@ -54,6 +42,33 @@ margin-top: 5%;
 	z-index:50;
 	top:0px;
 	margin-top:0px;
+}
+.mycartbut{
+	text-indent: 25px;
+	background-size: 22px 22px;
+	background-image: url(../img/icon_cart.png);
+	background-repeat: no-repeat;
+	background-position:10px;
+	float: right;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	margin-top: 40px;
+	margin-right:29px;
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	position:relative;
+}
+
+.mycartbut:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+	background-size: 25px 25px;
+	border-width: 2px;
+	border-color: #585858;
 }
 .cname{
 	display: inline-block;
