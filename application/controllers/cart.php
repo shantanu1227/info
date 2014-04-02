@@ -96,6 +96,7 @@ class Cart extends CI_Controller {
 
 		$userId=$this->session->userdata('userId');
 		if($userId == ''){
+			$this->load->model('model_products');
 			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
@@ -161,6 +162,7 @@ class Cart extends CI_Controller {
 
 		$userId=$this->session->userdata('userId');
 		if($userId == ''){
+			$this->load->model('model_products');
 			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
