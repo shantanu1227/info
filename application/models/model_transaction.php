@@ -45,6 +45,62 @@ class Model_transaction extends CI_Model {
 	{
 		$this->db->insert('subway', $data);
 	}
+	
+	public function addxerox($userId,$quantity,$price,$slot,$deliveryDate,$orderTime,$xeroxarray)
+	{
+		$this->db->where('products.productName', 'xerox');
+		$this->db->where('stores.name','omega');
+		$this->db->join('stores', 'stores.shopId = products.shopId');
+		$this->db->from('products');
+		$query = $this->db->get();
+
+		$productId=$query->row()->productId;
+
+		$data = array('userId'=>$userId,'productId'=>$productId,'quantity' =>$quantity ,'price' => $price,
+			'deliverySlot'=>$slot,'deliveryDate'=>$deliveryDate,'orderTimeStamp'=>$orderTime);
+		$this->db->insert('transaction', $data);
+		
+		$transaction_id=$this->db->insert_id();
+		$data2 = array('transactionId'=>$transaction_id)+$xeroxarray;
+		$this->db->insert('xerox',$data2);
+
+		$this->db->where('userId',$userId);
+		$query=$this->db->get('users',1);
+		$result=$query->row();
+		$amountToDeduct = ($price*$quantity)*1.15;
+		$final_amount=$result->creditAmount-$amountToDeduct;
+		$data2 = array('creditAmount'=>$final_amount);
+		$this->db->where('userId',$userId);
+		$query=$this->db->update('users', $data2);
+	}
+
+	public function addlaundry($userId,$quantity,$price,$slot,$deliveryDate,$orderTime,$laundryarray)
+	{
+		$this->db->where('products.productName', 'laundry');
+		$this->db->where('stores.name','washexpress');
+		$this->db->join('stores', 'stores.shopId = products.shopId');
+		$this->db->from('products');
+		$query = $this->db->get();
+
+		$productId=$query->row()->productId;
+
+		$data = array('userId'=>$userId,'productId'=>$productId,'quantity' =>$quantity ,'price' => $price,
+			'deliverySlot'=>$slot,'deliveryDate'=>$deliveryDate,'orderTimeStamp'=>$orderTime);
+		$this->db->insert('transaction', $data);
+		
+		$transaction_id=$this->db->insert_id();
+		$data2 = array('transactionId'=>$transaction_id)+$laundryarray;
+		$this->db->insert('laundry',$data2);
+
+		$this->db->where('userId',$userId);
+		$query=$this->db->get('users',1);
+		$result=$query->row();
+		$amountToDeduct = ($price*$quantity)*1.15;
+		$final_amount=$result->creditAmount-$amountToDeduct;
+		$data2 = array('creditAmount'=>$final_amount);
+		$this->db->where('userId',$userId);
+		$query=$this->db->update('users', $data2);
+	}
 
 	public function getusertransaction($userId)
 	{
