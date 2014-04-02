@@ -308,6 +308,17 @@ padding:2%;
 background:#802E05;
 color:white;
 }
+.shoploginhead{
+margin-top:11.8%;
+width:56%;
+float:left;
+margin-left:20%;
+font-size:30px;
+font-family:textfont;
+padding:2%;
+background:#802E05;
+color:white;
+}
 .addproductform{
 display:none;
 position:fixed;
@@ -444,4 +455,49 @@ margin-top: 7%;
 float: left;
 width: 10%;
 
+}
+.sklogindiv{
+margin-top:0%;
+float:left;
+width:60%;
+margin-left:20%;
+background:#361200;
+}
+.skforminput{
+margin-top: 2%;
+position: relative;
+float: left;
+height: 45px;
+width: 80%;
+margin-left: 10%;
+}
+
+.skforminput input{
+height:35px;
+width: 100%;
+border-radius: 5px;
+margin-left: 0%;
+border: 1px solid #000000;
+}
+
+.skforminputsubmit{
+margin-left:10%;
+margin-top:1%;
+float:left;
+width:90%;
+
+}
+#yesimagechange{
+display:none;
+float:right;
+}
+
+#askimagechange{
+float:right;
+width:auto;
+padding:2%;
+cursor:pointer;
+}
+.getimagelink{
+display:none;
 }
