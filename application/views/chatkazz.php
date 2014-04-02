@@ -77,15 +77,12 @@
 			</div>
 		</div>
 		<div class="menuhead"><i>Carte de menu..</i></div>
-		<div class="shopproducts">
-			
-		</div>
 		<!--script>
 			var result = $("#slider").height();
 			//alert(result);
 		</script-->
+		<?php include 'dynamicproduct.php'; ?>
 	</div>
-	<?php include 'dynamicproduct.php'; ?>
 	<?php include 'reglog.php'; ?>
 	<div id="feedback">Feedback</div>
 	<?php include 'feedback.php'; ?>
