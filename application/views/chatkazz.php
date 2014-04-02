@@ -17,10 +17,10 @@
 	<body>
 	<script>
 	$(document).ready(function(){
-				$(".reloadonadd").click(function(){
-				updatecart(location.href);
-				});
-				});
+		$(".reloadonadd").click(function(){
+			updatecart(location.href);
+		});
+	});	
 	</script>		
 	<div id="box">
 		<?php include 'header1.php'; ?>
@@ -86,11 +86,8 @@
 		</script-->
 	</div>
 	<?php include 'dynamicproduct.php'; ?>
-	<?php include 'reglog.php'; ?>	
-	
+	<?php include 'reglog.php'; ?>
 	<div id="feedback">Feedback</div>
-		<?php include 'feedback.php'; ?>
-	
-				
+	<?php include 'feedback.php'; ?>
 	</body>
 </html>

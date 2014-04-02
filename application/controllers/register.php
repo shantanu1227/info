@@ -59,7 +59,7 @@ class Register extends CI_Controller {
 				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 				}
 		else if($a == -2){
-				$errormsg  = array('errorMessage'=>'Invalid Credentials.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+				$errormsg  = array('errorMessage'=>'Your account is no longer available. Please, contact the admin.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());

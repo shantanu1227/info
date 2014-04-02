@@ -25,6 +25,19 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
+.mycartbut{
+text-indent: 25px;
+background-image: url(../img/mycart.png);
+background-repeat: no-repeat;
+background-position: center left;
+float: right;
+width: 30%;
+cursor: pointer;
+font-size: 12px;
+font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+color: #FFFFFF;
+margin-top: 5%;
+}
 #fixed_head{
 	/*box-shadow:-7px 7px 5px #888888;*/
 	border: 1px solid black;
@@ -55,12 +68,15 @@ body {
 	margin-bottom:10px;
 }
 .loginaccount{
+	right:8%;
 	float:right;
 	display: inline-block;
+	position:fixed;
 	}
 .reglog{
+	text-decoration:none;
 	padding-left:10px;
-	float:left;
+	float:right;
 	display: inline-block;
 	margin-right:20px;
 	cursor:pointer;
@@ -76,6 +92,7 @@ body {
 	text-shadow: 0.7px 0.49px #ffffff;
 }
 .myaccount{
+	text-decoration:none;
 	float:right;
 	display: inline-block;
 	margin-right:10px;
