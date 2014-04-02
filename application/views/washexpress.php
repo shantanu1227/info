@@ -79,17 +79,22 @@
 			</div>
 		</div>
 		<div class="slipinfo">
+		<?php if($this->session->userdata('userName')!=''){?>
 			<div class="sliphead">Bill Details</div>
 			<?php $attributes = array('id' => 'billdetailsform');
-			echo form_open('billdetails/user', $attributes);
+			echo form_open_multipart('cart/addLaundry', $attributes);
 			?>
 				<div class="forminput"><input type="text" name="billno" placeholder="Bill Number'"><br></div>
-				<div class="forminput"><input type="text" name="billdate" placeholder="Date of Bill"><br></div>
-				<div class="forminput"><input type="text" name="weight" placeholder="Weight"><br></div>
+				<div class="forminput"><input type="text" name="billAmount" placeholder="Price"><br></div>
 				<div class="forminput"><input type="text" name="slotno" placeholder="Slot Number"><br></div>
-				<div id="billimage"><input type="file" name="userfile" required value="file" /></div>
+				<div id="billimage"><input type="file" name="userfile" required /></div>
 				<div id = "submit"><input type="submit" value="Submit" /></div>
 			<?php echo form_close();?>
+			<?php 
+				}
+				else {
+					echo "Please Login To add Laundry Details";
+				}?>
 		</div>
 	</div>
 	<div id="feedback">Feedback</div>

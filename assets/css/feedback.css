@@ -17,6 +17,11 @@
 	padding: 1%;
 	margin-top: 0%;
 }
+#closebutton{
+	height:auto;
+	width:auto;
+	float:right;
+}
 #feedbacktext{
 	margin-top:5%;
 	font-family:textfont;

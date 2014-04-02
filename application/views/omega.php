@@ -4,6 +4,8 @@
 		<title>Omega</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'omegastyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
@@ -58,6 +60,10 @@
    							}			
    						});
 					});
+					$(".conf_butt").click(function()
+					{
+						$("#uploadform").submit();
+					});
 				});
 	    </script>
 	<div id="box">
@@ -103,7 +109,7 @@
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">
-					<img src="<?php echo(IMG.'omega/oemgaslider1.jpg');?>"></img>
+					<img src="<?php echo(IMG.'omega/omegaslider1.jpg');?>"></img>
 					<img src="<?php echo(IMG.'omega/omegaslider2.jpg');?>"></img>
 					<img src="<?php echo(IMG.'oemga/omegaslider3.jpg');?>"></img>
 				</div>
@@ -117,19 +123,28 @@
 		->Black Re1/pg<br>
 		->colour Re2/pg
 		</div>
-
+		<?php 
+		if($this->session->userdata('userName')!= ''){?>
 		<button class="uploadbutton" type="button">Upload a file</button>
-			
+			<?php 
+		}else{
+				echo "Please Login to add file for Photocopying";
+				}
+			?> 
+		
 			
 		</div>
 		</div>
 		<div class="uploadform">
 			<div class="popupboxes">
-				<?php echo form_open_multipart('cart/addXeroxFile');?>
+				<?php 
+				if($this->session->userdata('userName')!= ''){
+				$attributes = array("id"=>"uploadform");
+				echo form_open_multipart('cart/addXeroxFile',$attributes);?>
 				<div class="colorselection">
 				Choose the colour quality of your pages<br>
-				<input type="radio" name="colour" > COLOUR<br>
-				<input type="radio" name="colour" > BLACK
+				<input type="radio" name="colour" value ="1"> COLOUR<br>
+				<input type="radio" name="colour" value ="2" > BLACK
 				</div>
 
 				<div class="pagenumber">
@@ -148,7 +163,11 @@
 					<button class="uploadbutton1" type="button">Submit</button>
 				</div>
 			</form>
-
+			<?php 
+			}else{
+				echo "Login to add file to xerox";
+			}
+			?>
 			</div>
 				<div class="confirm">
 				<div class="confirm_msg">
@@ -160,6 +179,9 @@
 				</div>
 		
 		</div>
+		<div id="feedback">Feedback</div>
+		<?php include 'reglog.php'; ?>
+		<?php include 'feedback.php'; ?>
 
 		
 	</body>

@@ -4,8 +4,8 @@
 		<title>Oxford Stationery</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'oxfordstyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
-
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">		
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">	
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
@@ -183,10 +183,11 @@
 				</div>
 			</div>
 		</div>
-
 		<?php include 'dynamicproduct.php'; ?>
+		</div>
 		<?php include 'reglog.php'; ?>
-		
+		<div id="feedback">Feedback</div>
+		<?php include 'feedback.php'; ?>
 	</body>
 </html>
 
