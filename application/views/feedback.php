@@ -19,11 +19,11 @@
 	$(document).ready(function(){
 		$("#feedback").click(function(){
 			$("#feedbackopen").fadeIn(1000);
-			$("#box").css("opacity","0.2");
+			$("#box").css("visibility","hidden");
 			$(document).keyup(function(e) {
 				if (e.keyCode == 27 ) {
 					$("#feedbackopen").fadeOut(10);
-					$("#box").css('opacity',1);
+					$("#box").css("visibility","visible");
 				}		
 			}); 
 		});
@@ -43,9 +43,10 @@
 		}
 	});	
 	$(document).on('click','#closebutton',function(){
-		$("#feedbackopen").fadeOut(100);
+		$("#feedbackopen").fadeOut(500);
 		$("#box").css('opacity',1);
+		$("#box").css("visibility","visible");
     });
-});	
+});
 </script>
 		

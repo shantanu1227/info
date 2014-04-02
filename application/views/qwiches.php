@@ -75,6 +75,7 @@
 		</div>
 		<div class="menuhead"><i>Carte de menu..</i></div>
 		<?php include 'dynamicproduct.php'; ?>
+		</div>
 		<div id="feedback">Feedback</div>
 		<?php include 'feedback.php'; ?>
 	<?php include 'reglog.php'; ?>
