@@ -98,7 +98,7 @@ VALUES (
 
 INSERT INTO `virtual_infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES (NULL, 'xerox', '1', '15', 'omega/omega_logo', 'TRUE');
 
-INSERT INTO `virtual_infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES ('168', 'laundry', '170', '14', 'washexpress/washexpress_logo.jpg', 'TRUE');
+INSERT INTO `virtual_infocity`.`products` (`productId`, `productName`, `price`, `shopId`, `productImage`, `inStock`) VALUES (NULL, 'laundry', '170', '14', 'washexpress/washexpress_logo.jpg', 'TRUE');
 
 INSERT INTO `virtual_infocity`.`admin` (`username`, `password`, `name`) VALUES ('admin1',' SHA1('admin1111')','Shantanu Dhoot');
 INSERT INTO `virtual_infocity`.`admin` (`username`, `password`, `name`) VALUES ('admin2',' SHA1('admin2222')','Rishabh Jain');
