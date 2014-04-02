@@ -112,7 +112,7 @@ class Cart extends CI_Controller {
 		$deliverydate = $this->input->post('deliverydate');
 
 
-		$$this->load->model('model_users');
+		$this->load->model('model_users');
 		$current_amount = $this->model_users->getuserdetails()->creditAmount;
 		if($current_amount > ($quantity*$price*1.15)){
 
