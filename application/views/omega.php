@@ -149,7 +149,7 @@
 
 				<div class="pagenumber">
 				Pages in your document<br>
-				from:<input type="input" name="from" required class="numberinput">
+				from:<input type="input" name="from" required class="numberinput"></br></br>
 				to:<input type="input" name="to" required class="numberinput">
 				</div>
 
@@ -158,6 +158,31 @@
 				<input type="file" name="userfile" required value="file">
 				
 				</div>
+				<div class="copies">
+					Select the number of copies:-
+					<select>
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					  <option value="6">6</option>
+					  <option value="7">7</option>
+					  <option value="8">8</option>
+					  <option value="9">9</option>
+					  <option value="10">10</option>
+					  
+
+					
+				</select>
+				</div>
+				<div class="slots">
+					Select the time slot
+					<select>
+						
+					</select>
+				</div>
+				
 
 				<div class="sumbit">
 					<button class="uploadbutton1" type="button">Submit</button>

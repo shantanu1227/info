@@ -121,7 +121,8 @@
 			echo anchor('/welcome/myaccount', 'My Account', array('class' => 'myaccount'));
 		}?>
 	</div>
-	<div class="mycartbut"><?php echo anchor('/welcome/cart' ,'Cart ('.$this->cart->total_items().')');?></div>
+	<?php $attr = array('style'=>'display:block;padding:8px');?>
+	<div class="mycartbut"><?php echo anchor('/welcome/cart' ,'Cart ('.$this->cart->total_items().')', $attr);?></div>
 	</div>
 <div class="navigation">
 	<div class="navbar">
