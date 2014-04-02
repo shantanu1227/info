@@ -64,6 +64,11 @@ class Welcome extends CI_Controller {
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('cart_show',$errormsg+$slots);
 	}
+	public function skloginpage()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('skloginpage',$errormsg);
+	}
 	public function bigbite()
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
