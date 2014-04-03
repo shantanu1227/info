@@ -411,30 +411,46 @@ font-family:textfont;
 .colorselection{
 	margin-top: 10%;
 	margin-left: 10%;
-	width: 25%;
+	width: 68%;
 	float: left;
 	/*border-width: 2px;
 	border-style: solid;*/
 	
 }
-
+.login_error{
+	color: black;
+	margin-left: 30%;
+	margin-top: 10%;
+	font-size: 130%;
+	background-color: red;
+	text-align: center;
+	width: 40%;
+	border-radius: 5px;
+	border-color: black;
+	border-width: 4px;
+}
 .pagenumber{
 	float:left;
-	margin-top: 10%;
-	margin-left: 5%;
+	margin-top: 3%;
+	margin-left: 10%;
 	
-	width: 20%;
+	width: 84%;
 	float: left;
 	/*border-width: 2px;
 	border-style: solid;*/
 
+}
+.tab{
+	margin-top: -4%;
+padding-left: 50%;
+float: left;
 }
 
 .copies{
-float:left;
-margin-top: 10%;
-margin-left: 10%;
-margin-right: 33%;
+float: left;
+margin-top: 3%;
+margin-left: -39%;
+margin-right: 0%;
 	/*border-color: orange;
 	border-width: 2px;
 	border-style: solid;*/
@@ -452,8 +468,8 @@ margin-right: 33%;
 
 .fileselection{
 	margin-top: 10%;
-	margin-left: 5%;
-	float: left;
+margin-left: 13%;
+float: left;
 	/*border-width: 2px;
 	border-style: solid;*/
 }
