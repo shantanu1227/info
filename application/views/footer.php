@@ -10,34 +10,35 @@
 				<dt class="headings1">Popular Shops</dt>
 					<ul>
 						<li>
-							<dd class="subheadings">Subway</dd>
-							<dd class="subheadings">Qwiches</dd>
-							<dd class="subheadings">Chatkazz</dd>
-							<dd class="subheadings">Koffee++</dd>
-							<dd class="subheadings">Bigbite</dd>
+						
+							<dd class="subheadings"><?php echo anchor('/welcome/subway', 'Subway'); ?></dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/qwiches', 'Qwiches'); ?></dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/chatkazz', 'Chatkazz'); ?></</dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/koffee', 'Koffee++'); ?></dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/bigbite', 'Bigbite'); ?></dd>
 						</li>
 						<li>
-							<dd class="subheadings">Kavya</dd>
-							<dd class="subheadings">Oxford</dd>
-							<dd class="subheadings">Washexpress</dd>
-							<dd class="subheadings">OmInfotech</dd>
-							<dd class="subheadings">Clublaptop</dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/kavya', 'Kavya'); ?></dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/oxford', 'Oxford'); ?></dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/washexpress', 'Washexpress'); ?></dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/ominfotech', 'OMInfotech'); ?></dd>
+							<dd class="subheadings"><?php echo anchor('/welcome/clublaptop', 'ClubLaptop'); ?></dd>
 						</li>
 					</ul>
 				</li>
 
 				<li>
-					<dt class="headings1">Account</dt>
-					<dd class="subheadings">My account</dd>
+					<dt class="headings1">Account</dt></br>
+					<dd class="subheadings"><?php echo anchor('/welcome/myaccount', 'MyAccount'); ?></dd>
 					<dd class="subheadings">Login</dd>
 					<dd class="subheadings">Sign up</dd>
-					<dd class="subheadings">My cart</dd>					
+					<dd class="subheadings"><?php echo anchor('/welcome/cart' ,'Cart');?></dd>				
 				</li>
 
 				<li>
 					<dt class="headings1"> Virtual Infocity</dt>
-					<dd class="subheadings">About Us</dd>
-					<dd class="subheadings">FAQ</dd>
+					<dd class="subheadings"><?php echo anchor('/welcome/aboutus', 'ABOUT US',$attr); ?></dd>
+					<dd class="subheadings"><?php echo anchor('/welcome/faq', 'FAQs',$attr); ?></dd>
 					<dd class="subheadings">Privacy</dd>
 					<dd class="subheadings">Terms & Conditions</dd>
 				</li>
