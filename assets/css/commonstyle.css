@@ -202,7 +202,7 @@ color:white;
 		display: none;
 	}
 }
-/*@media all and (max-width: 700px) {
+@media all and (max-width: 700px) {
 	.navigation{
 		display:none;
 	}
@@ -231,14 +231,13 @@ color:white;
 	padding-left: 0;
 	float:left;
 }
-
 .navigationtemp ul li{
 	background-color:#361200;
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	cursor:pointer;
 	padding:0.95%;
 	text-align:center;
-	width:12.33%;
+	width:8.05%;
 	float:left;
 	list-style:none;
 	color:#FFFFFF;
