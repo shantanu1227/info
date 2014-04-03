@@ -30,4 +30,15 @@ class Model_shop extends CI_Model {
 		#$this->db->where('shopId', $storeid);
 		#return $this->db->get('shoptimings')->result();
     }
+
+    public function getShopNumber ($storeName) {
+		$this->db->where('name', $storeName);
+		$query=$this->db->get('stores', 1);
+		$row = $query->row();
+		#print_r($row);
+		$storeid = $row->shopId;
+	
+		$this->db->where('shopId',$storeid);
+		return $this->db->get('stores')->result();
+	 }
 }
