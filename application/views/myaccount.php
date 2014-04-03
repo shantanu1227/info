@@ -108,7 +108,7 @@
 				  <td><?php echo $transaction->price;?></td>
 				  <td><?php
 					 $hidden = array('transactionId' =>$transaction->transactionId);
-				  echo form_open('cart/deletetransaction',$hidden);
+				  echo form_open('cart/deletetransaction','',$hidden);
 				  echo form_submit('deletetransaction', 'Delete Transaction');
 				  echo form_close();
 				  ?></td>
