@@ -38,6 +38,33 @@ class Shop extends CI_Controller {
 			redirect('/welcome/skinterface', 'refresh');
 		}
 	}
+	public function addOffers(){
+		
+		$offerName = $this->input->post('offername',TRUE);
+		$shopId = 1;
+		$config['upload_path'] = "./assets/img";
+
+		$config['allowed_types'] = 'jpg|png';
+		$config['max_size']	= '50000';
+		//$config['max_width']  = '1024';
+		//$config['max_height']  = '768';
+
+		$this->load->library('upload', $config);
+
+		if ( ! $this->upload->do_upload())
+		{
+			print_r($this->upload->display_errors());
+			print_r($config['upload_path']);
+		}
+		else
+		{
+			$this->load->model('model_products');
+			$output = $this->upload->data();
+			$offerImage = $output['file_name'];
+			$this->model_products->addoffers($offerName,$offerImage,$shopId);
+			redirect('/welcome/skinterface', 'refresh');
+		}
+	}
 
 
 public function editProducts(){

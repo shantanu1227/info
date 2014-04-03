@@ -20,6 +20,17 @@
    }			}); 
 				}); 
 				});
+				$(document).ready(function(){
+				$(".addofferbut").click(function(){
+				$(".addoffertohome").fadeIn(1000);
+				
+								$(document).keyup(function(e) {
+  if (e.keyCode == 27 ) {
+	  $(".addoffertohome").fadeOut(10);
+					
+   }			}); 
+				}); 
+				});
 				
 				$(document).ready(function(){
 				$(".editproduct").click(function(){
@@ -91,6 +102,9 @@
 <div class="addproduct">
 Add a product
 </div>
+<div class="addofferbut">
+Add an Offer
+</div>
 <div class="addproductform">
 <?php echo form_open_multipart('shop/addProducts/');?>
 
@@ -113,6 +127,15 @@ Add a product
 <input type="hidden" id="changeimage" name = "changeimage" value="false">
 <input type="hidden" name="productid" id="productid" value="">
 <div><?php echo form_submit('', 'Update Product');?></div>
+</form>
+</div>
+<div class="addoffertohome">
+<?php echo form_open_multipart('shop/addOffers/');?>
+
+<div class="productinput"><input type="text" name="offername" placeholder="Offer name"><br></div>
+
+<div class="productinput"><input type="file" name="userfile" placeholder="Offer image"><br></div>
+<div><?php echo form_submit('', 'Update this Offer');?></div>
 </form>
 </div>
 
