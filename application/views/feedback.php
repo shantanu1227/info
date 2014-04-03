@@ -20,10 +20,12 @@
 		$("#feedback").click(function(){
 			$("#feedbackopen").fadeIn(1000);
 			$("#box").css("visibility","hidden");
+			$("body").css("background","url(<?php echo(IMG.'web_back.jpg' );?>) no-repeat center center fixed");
 			$(document).keyup(function(e) {
 				if (e.keyCode == 27 ) {
-					$("#feedbackopen").fadeOut(10);
+					$("#feedbackopen").fadeOut(500);
 					$("#box").css("visibility","visible");
+					$("body").css("background","none");
 				}		
 			}); 
 		});
@@ -44,8 +46,8 @@
 	});	
 	$(document).on('click','#closebutton',function(){
 		$("#feedbackopen").fadeOut(500);
-		$("#box").css('opacity',1);
 		$("#box").css("visibility","visible");
+		$("body").css("background","none");
     });
 });
 </script>
