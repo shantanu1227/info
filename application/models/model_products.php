@@ -41,25 +41,31 @@ class Model_products extends CI_Model {
 		return $results->result();
 		#return $this->db->get('offers')->results();
 	}
+	public function createCaptcha()
+	{
+		$options = array('img_path'=>'./assets/captcha/','img_url'=>URL.'assets/captcha/','img_width'=>'150','img_height'=>'40','expiration'=>7200);
+		$cap = create_captcha($options);
+		$image = $cap['image'];
+		$this->session->set_userdata('captchaword', $cap['word']);
+		return $image;
+	}
 	
 	public function editproducts($productName,$productImage,
-			$productPrice,$shopId, $productId, $productInStock) {
-	if($productImage == ""){
-	$data = array('productName' => $productName, 'price' => $productPrice, 'inStock' => $productInStock,'shopId' => $shopId);
-	$this->db->where('productId', $productId);
-	$this->db->update('products', $data); 
-							
-	}
-	else{
+		$productPrice,$shopId, $productId, $productInStock) {
+		if($productImage == ""){
+			$data = array('productName' => $productName, 'price' => $productPrice, 'inStock' => $productInStock,'shopId' => $shopId);
+			$this->db->where('productId', $productId);
+			$this->db->update('products', $data); 
+			
+		}
+		else{
 			$data = array('productName' => $productName, 'price' => $productPrice, 
-			'productImage' =>$productImage, 'inStock' => $productInStock,'shopId' => $shopId);
-	$this->db->where('productId', $productId);
-	$this->db->update('products', $data); 
-	}
+				'productImage' =>$productImage, 'inStock' => $productInStock,'shopId' => $shopId);
+			$this->db->where('productId', $productId);
+			$this->db->update('products', $data); 
+		}
 	}
 	
-	
-							
 	
 	
 }

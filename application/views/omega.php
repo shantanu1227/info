@@ -60,6 +60,10 @@
    							}			
    						});
 					});
+					$(".conf_butt").click(function()
+					{
+						$("#uploadform").submit();
+					});
 				});
 	    </script>
 	<div id="box">
@@ -105,7 +109,7 @@
 		<div class="offers">
 			<div class="imgslide">
 				<div id="slider">
-					<img src="<?php echo(IMG.'omega/oemgaslider1.jpg');?>"></img>
+					<img src="<?php echo(IMG.'omega/omegaslider1.jpg');?>"></img>
 					<img src="<?php echo(IMG.'omega/omegaslider2.jpg');?>"></img>
 					<img src="<?php echo(IMG.'oemga/omegaslider3.jpg');?>"></img>
 				</div>
@@ -119,25 +123,34 @@
 		->Black Re1/pg<br>
 		->colour Re2/pg
 		</div>
-
+		<?php 
+		if($this->session->userdata('userName')!= ''){?>
 		<button class="uploadbutton" type="button">Upload a file</button>
-			
+			<?php 
+		}else{?>
+				<div class="login_error"> Please Login to add file for Photocopying </div>
+				<?php }
+			?> 
+		
 			
 		</div>
 		</div>
 		<div class="uploadform">
 			<div class="popupboxes">
-				<?php echo form_open_multipart('cart/addXeroxFile');?>
+				<?php 
+				if($this->session->userdata('userName')!= ''){
+				$attributes = array("id"=>"uploadform");
+				echo form_open_multipart('cart/addXeroxFile',$attributes);?>
 				<div class="colorselection">
-				Choose the colour quality of your pages<br>
-				<input type="radio" name="colour" > COLOUR<br>
-				<input type="radio" name="colour" > BLACK
+				Choose the colour quality of your pages
+				<input type="radio" name="colour" value ="1"> COLOUR
+				<input type="radio" name="colour" value ="2" > BLACK
 				</div>
 
 				<div class="pagenumber">
-				Pages in your document<br>
+				Pages in your document
 				from:<input type="input" name="from" required class="numberinput">
-				to:<input type="input" name="to" required class="numberinput">
+				to:<input type="input" name="to" required class="numberinput" >
 				</div>
 
 
@@ -145,12 +158,41 @@
 				<input type="file" name="userfile" required value="file">
 				
 				</div>
+				<div class="copies">
+					Select the number of copies:-
+					<select>
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					  <option value="6">6</option>
+					  <option value="7">7</option>
+					  <option value="8">8</option>
+					  <option value="9">9</option>
+					  <option value="10">10</option>
+					  
+
+					
+				</select>
+				</div>
+				<div class="slots">
+					Select the time slot
+					<select>
+						
+					</select>
+				</div>
+				
 
 				<div class="sumbit">
 					<button class="uploadbutton1" type="button">Submit</button>
 				</div>
 			</form>
-
+			<?php 
+			}else{
+				echo "Login to add file to xerox";
+			}
+			?>
 			</div>
 				<div class="confirm">
 				<div class="confirm_msg">

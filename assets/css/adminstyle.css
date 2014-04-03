@@ -13,18 +13,62 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 }
+
 #box{
+    margin-left: 4%;
+    margin-top: 3%;
+}
+#box1{
+        display: inline-block;
 	font-family:monofont;
 	color:white;
 	background:#91634C;
 	border:2px solid #361200;
 	border-radius:10px;
-	position:fixed;
-	width:50%;
+	width:23%;
 	height:60%;
-	top:21%;
+	/*padding-top: 3.5%;
+	/*left:25%;
+	right:auto;*/
+}
+#box2{
+        display: inline-block;
+	font-family:monofont;
+	color:white;
+	background:#91634C;
+	border:2px solid #361200;
+	border-radius:10px;
+	width:23%;
+	height:60%;
+	/*top:21%;
 	left:25%;
-	right:auto;
+	right:auto;*/
+}
+#box3{
+        display: inline-block;
+	font-family:monofont;
+	color:white;
+	background:#91634C;
+	border:2px solid #361200;
+	border-radius:10px;
+	width:23%;
+	height:60%;
+	/*top:21%;
+	left:25%;
+	right:auto;*/
+}
+#box4{
+        display: inline-block;
+	font-family:monofont;
+	color:white;
+	background:#91634C;
+	border:2px solid #361200;
+	border-radius:10px;
+	width:23%;
+	height:60%;
+	/*top:21%;
+	left:25%;
+	right:auto;*/
 }
 #cname{
 	background-color:#91634C;
@@ -40,15 +84,15 @@ body {
 	margin-bottom:10px;
 	border-radius: 10px;
 }
-#recwrapper{
+wrapper{
 	float:left;
 	width:100%;
 	height:auto;
 }
-.rechargehead{
+.heading{
 	font-weight:bold;
 	font-family:monofont;
-	margin-top: 3%;
+	margin-top: 5%;
 	font-family: textfont;
 	float: left;
 	width: 100%;
@@ -63,7 +107,25 @@ body {
 	padding: 1%;
 	margin-top: auto;
 }
+#deleteuserform{
+	margin-top:26%;
+	height:50%;
+	width:100%;
+	float:left;
+}
 #rechargeform{
+	margin-top:10%;
+	height:50%;
+	width:100%;
+	float:left;
+}
+#deductform{
+	margin-top:10%;
+	height:50%;
+	width:100%;
+	float:left;
+}
+#passwordform{
 	margin-top:10%;
 	height:50%;
 	width:100%;

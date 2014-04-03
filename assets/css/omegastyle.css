@@ -411,32 +411,70 @@ font-family:textfont;
 .colorselection{
 	margin-top: 10%;
 	margin-left: 10%;
-	width: 25%;
+	width: 68%;
 	float: left;
 	/*border-width: 2px;
 	border-style: solid;*/
 	
 }
-
-.pagenumber{
-
+.login_error{
+	color: black;
+	margin-left: 30%;
 	margin-top: 10%;
-	margin-left: 5%;
-	width: 20%;
+	font-size: 130%;
+	background-color: red;
+	text-align: center;
+	width: 40%;
+	border-radius: 5px;
+	border-color: black;
+	border-width: 4px;
+}
+.pagenumber{
+	float:left;
+	margin-top: 3%;
+	margin-left: 10%;
+	
+	width: 84%;
 	float: left;
 	/*border-width: 2px;
 	border-style: solid;*/
+
+}
+.tab{
+	margin-top: -4%;
+padding-left: 50%;
+float: left;
+}
+
+.copies{
+float: left;
+margin-top: 3%;
+margin-left: -39%;
+margin-right: 0%;
+	/*border-color: orange;
+	border-width: 2px;
+	border-style: solid;*/
+}
+.slots{
+	float:left;
+	/*border-color: orange;
+	border-width: 2px;
+	border-style: solid;*/
+	margin-top:5%;
+	 margin-left: 10%;
+margin-right: 33%;
 
 }
 
 .fileselection{
 	margin-top: 10%;
-	margin-left: 0%;
-	float: left;
+margin-left: 13%;
+float: left;
 	/*border-width: 2px;
 	border-style: solid;*/
 }
 .numberinput{
+	margin-top: 3px;
 	margin-left: 5px;
 	width: 20px;
 }
@@ -511,6 +549,8 @@ font-family:textfont;
 	padding:5px 25px;
 	text-decoration:none;
 	text-shadow:0px 0px 0px #7a2a1d;
+	border-style: solid;
+	border-color: orange;
 }
 .uploadbutton1:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b34332), color-stop(1, #361200));
@@ -536,7 +576,7 @@ top:5%;
 display:none;
 margin-top: 2%;
 width:50%;
-height:400px;
+height:65%;
 border-style:solid;
 border-width:0px;
 border-radius:10px;
@@ -547,8 +587,8 @@ left:25%;
 
 
 .sumbit{
-	margin-right: 30%;
-	margin-top: 10%;
+	margin-right: 20%;
+	margin-top: -5%;
 	float: left;
 	/*border-width: 2px;
 	border-style: solid;*/

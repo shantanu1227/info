@@ -29,11 +29,13 @@ class Login extends CI_Controller
 	{
 		$this->load->model('model_users');
 		$this->model_users->logout();
-		header("cache-Control: no-store, no-cache, must-revalidate");
-		header("cache-Control: post-check=0, pre-check=0", false);
-		header("Pragma: no-cache");
-		header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+		$this->load->library('output');
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
 		redirect('/', 'refresh');
+		$this->model_users->logout();
+
+
 	}
 
 }

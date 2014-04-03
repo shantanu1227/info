@@ -1,0 +1,99 @@
+@font-face{
+	font-family: monofont;
+	src: url(../fonts/JandaCelebrationScript.ttf);
+}
+@font-face{
+	font-family: textfont;
+	src: url(../fonts/stewartsans.ttf);
+}
+body { 
+	padding:0;
+	margin:0;
+	/*background: url(../img/web_back.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+}
+.footer{
+	border:0px;
+	border-top:5px;
+	border-color: #361200;
+	border-style: solid;
+	border-opacity:1.0;
+	width: 100%;
+	height: 30%;
+	margin-top: 3.5%;
+	float: left;
+	background-color: #361200;
+	padding-left: 0%;
+	opacity:0.9; 
+	z-index: 100;
+	/*-webkit-box-shadow: inset 0px 4px 39px 8px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 4px 39px 8px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 4px 39px 8px rgba(0,0,0,0.75);*/
+}
+
+/*.shade{ 
+	border-color:orange;
+	width: 100%;
+	border:0px;
+	border-top:0px;
+	border-top-style: solid;
+	z-index: -40;
+}*/
+
+.footer ul{
+	/*float: left;*/
+	float: left;
+
+	list-style-type: none; 
+}
+.footer li{
+	margin-left: 35px;
+	float: left;
+	display: inline;
+}
+
+.columns{
+	float: left;
+	color: #BDBDBD;
+	width: 100%;
+	height: 100%;
+	border-color: orange;
+	border-style: solid;
+	border:3px;
+	background-color: #361200;
+	margin-left: 0%;	
+}
+ .headings1{
+	float: left;
+	/*float: left;*/
+	font-size: 150%;	
+	padding-top: 0%;
+	margin-left: 25%;
+	border:0px;
+	border-bottom: 2px;
+	border-style: solid;
+	border-color: #151515;
+}
+
+ .subheadings{
+	font-size: 80%;
+	padding: 2px;
+	margin-left: 30%;
+ }
+
+ .icons{
+	margin-top: 10%;
+	margin-left: 30%;
+	float:left;
+	width: 110%;
+	/*
+	border-style:solid;
+	border-width: 2px;
+	border-color: white;*/
+ }
+ .icons img {
+	padding-top: 5%;
+ }

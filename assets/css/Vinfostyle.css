@@ -16,7 +16,6 @@ body{
 	margin-right:auto;
 }
 #fixed_head{
-	/*box-shadow:-7px 7px 5px #888888;*/
 	border: 1px solid black;
 	background-color:#361200;
 	text-align:left;
@@ -79,9 +78,7 @@ body{
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	color:#FFFFFF;
 }
-
 .navigation{
-	/*box-shadow:-7px 7px 5px #888888;*/
 	position:fixed;
 	margin-left:auto;
 	margin-right:auto;
@@ -112,8 +109,8 @@ body{
 	font-size:13px;
 }
 .navigation ul li a{
-text-decoration:none;
-color:white;
+	text-decoration:none;
+	color:white;
 }
 .navigation ul li:hover{
 	opacity:0.9;
@@ -142,7 +139,6 @@ color:white;
 .navbar ul li:hover > ul{
 	display:block;
 }
-
 .navbar ul li li:hover{
 	background-color:#498FA0;
 	width:124%;
@@ -154,8 +150,102 @@ color:white;
 	width:100%;
 	float:left;
 }
+@media all and (max-width: 1500px) and (min-width: 700px) {
+	.navigationtemp{
+		display: none;
+	}
+	.navigationtemp ul{
+		display: none;
+	}
+	.navigationtemp ul li{
+		display: none;
+	}
+}
+@media all and (max-width: 700px) {
+	.navigation{
+		display:none;
+	}
+	.navigation ul{
+		display:none;
+	}
+	.navigation ul li{
+		display:none;
+	}
+}
+/*-----------------SMALLER NAVIGATION BAR-------------------*/
+.navigationtemp{
+	position:fixed;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:85px;
+	display: inline-block;
+	clear:left;
+	z-index:60;
+	width:85.6%;
+}
+.navigationtemp ul{
+	width:100%;
+	margin:0;
+	padding-left: 0;
+	float:left;
+}
+.navigationtemp ul li{
+	background-color:#361200;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	cursor:pointer;
+	padding:0.95%;
+	text-align:center;
+	width:8.05%;
+	float:left;
+	list-style:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	text-decoration:none;
+	font-size:10px;
+}
+.navigationtemp ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+.navigationtemp ul li:hover{
+	opacity:0.9;
+}
+.navbartemp ul ul{
+	margin-top:12%;
+	padding: 0px;
+	margin-bottom: -13%;
+	border-style: none;
+	width: 100%;
+	display: none;
+	float: left;
+}
+.navbartemp ul ul li{
+	margin-left: -12%;
+	padding: 0px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	width: 122%;
+	float: left;
+}
+.navbartemp ul ul li a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.navbartemp ul li:hover > ul{
+	display:block;
+}
 
-
+.navbartemp ul li li:hover{
+	background-color:#498FA0;
+	width:124%;
+}	
+.navigationtemp ul li li a{
+	padding:0px;
+}	
+.navbartemp{
+	width:100%;
+	float:left;
+}
 @font-face
 {
 font-family: monofont;
@@ -171,8 +261,6 @@ src: url(../fonts/mickey.ttf);
 font-family: textfont;
 src: url(../fonts/stewartsans.ttf);
 }
-
-
 .offers{
 	margin-top:12%;
 	float:left;
@@ -229,11 +317,11 @@ src: url(../fonts/stewartsans.ttf);
 	font-family:textfont;}
 
 .trendobject{
-margin-left:2.6% !important ;
+	margin-left:2.6% !important ;
 	margin: 10px;
-font-family: textfont;
-float: left;
-width: 46%;
+	font-family: textfont;
+	float: left;
+	width: 46%;
 }
 .trendobject img{
 	float:left;
@@ -243,17 +331,16 @@ width: 46%;
 }
 .trendtext{
 	padding: 8px;
-border-style: solid;
-border-radius: 5px;
-border-width: 1px;
-height: 135px;
-background-color: #361200;
-float: left;
-opacity:0.8;
-width: 53%;
-color: white;
-font-family:textfont;
-
+	border-style: solid;
+	border-radius: 5px;
+	border-width: 1px;
+	height: 135px;
+	background-color: #361200;
+	float: left;
+	opacity:0.8;
+	width: 53%;
+	color: white;
+	font-family:textfont;
 }
 .shopname{
 	margin-top:5px;
@@ -264,21 +351,18 @@ font-family:textfont;
 	margin-top:5px;
 	float:left;
 	width:100%;
-
 }
 .trendshophead{
 	font-weight:bold;
 	float:left;
 	color:#A55730;
-width:50%;
-
+	width:50%;
 }
 .trendshopname{
-padding:2px;
-float:left;
-width:47%;
+	padding:2px;
+	float:left;
+	width:47%;
 }
-
 #feedback{
 	padding:8px;
 	font-family:textfont;
@@ -301,35 +385,34 @@ width:47%;
     -o-transform: rotate(90deg);
 	cursor:pointer;
 }
-
 .shophead{
-width:100%;
-font-size:30px;
-font-family:textfont;
-padding:2%;
-background:#802E05;
-color:white;
+	width:100%;
+	font-size:30px;
+	font-family:textfont;
+	padding:2%;
+	background:#802E05;
+	color:white;
 }
 .shoploginhead{
-margin-top:11.8%;
-width:56%;
-float:left;
-margin-left:20%;
-font-size:30px;
-font-family:textfont;
-padding:2%;
-background:#802E05;
-color:white;
+	margin-top:11.8%;
+	width:56%;
+	float:left;
+	margin-left:20%;
+	font-size:30px;
+	font-family:textfont;
+	padding:2%;
+	background:#802E05;
+	color:white;
 }
 .addproductform{
-display:none;
-position:fixed;
-top:30%;
-height:150px;
-left:25%;
-width:50%;
-background:#361200;
-color:white;
+	display:none;
+	position:fixed;
+	top:30%;
+	height:150px;
+	left:25%;
+	width:50%;
+	background:#361200;
+	color:white;
 }
 .addoffertohome{
 display:none;
@@ -342,25 +425,25 @@ background:#361200;
 color:white;
 }
 .editproductform{
-display:none;
-position:fixed;
-top:30%;
-height:150px;
-left:25%;
-width:50%;
-background:#361200;
-color:white;
+	display:none;
+	position:fixed;
+	top:30%;
+	height:150px;
+	left:25%;
+	width:50%;
+	background:#361200;
+	color:white;
 }
 .addproduct{
-padding:1%;
-cursor:pointer;
-float:left;
-width:auto;
-border-style:solid;
-border-width:1px;
-background:#802E05;
-color:white;
-font-family:textfont;
+	padding:1%;
+	cursor:pointer;
+	float:left;
+	width:auto;
+	border-style:solid;
+	border-width:1px;
+	background:#802E05;
+	color:white;
+	font-family:textfont;
 }
 .addofferbut{
 padding:1%;
@@ -374,86 +457,127 @@ color:white;
 font-family:textfont;
 }
 .editproduct{
-text-align:center;
-padding:1%;
-cursor:pointer;
-border-style:solid;
-border-width:1px;
-background:#802E05;
-color:white;
-font-family:textfont;
+	text-align:center;
+	padding:1%;
+	cursor:pointer;
+	border-style:solid;
+	border-width:1px;
+	background:#802E05;
+	color:white;
+	font-family:textfont;
 }
 .producttable{
-float:left;
-width:100%;
+	float:left;
+	width:100%;
 }
 .mycartbut{
-text-indent: 25px;
-background-image: url(../img/mycart.png);
-background-repeat: no-repeat;
-background-position: center left;
-float: right;
-width: 30%;
-cursor: pointer;
-font-size: 12px;
-font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-color: #FFFFFF;
-margin-top: 5%;
+	text-indent: 25px;
+	background-size: 22px 22px;
+	background-image: url(../img/icon_cart.png);
+	background-repeat: no-repeat;
+	background-position:10px;
+	float: right;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	margin-top: 40px;
+	margin-right:29px;
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	position:relative;
 }
-
 .mycartbut:hover{
-	text-shadow: 0.5px 0.49px #ffffff;}
-	
+	text-shadow: 0.5px 0.49px #ffffff;
+	background-size: 25px 25px;
+	border-width: 2px;
+	border-color: #585858;
+}
 .carttable{
-float:left;
-width:100%;
-margin-top:20%;
+	float:left;
+	width:100%;
+	margin-top:20%;
 }	
 .carttable th{
-font-family:textfont;
-color:white;
-background:#361200;
+	font-family:textfont;
+	color:white;
+	background:#361200;
 }
 .carttable td{
-text-align:center;
-font-family:textfont;
-color:white;
-background:#361200;
-opacity:0.8;
+	text-align:center;
+	font-family:textfont;
+	color:white;
+	background:#361200;
+	opacity:0.8;
+}
+input[type="submit"]{
+	text-align:center;
+    font-family: textfont;
+    font-size: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 .updatecartbut{
-float:left;
-text-align:center;
-width:50%;
-
+    display: inline-block;
+	text-align:center;
+	width:50%;
+	margin-bottom: 1%;
+	margin-left: 30%;
 }
 .emptycartbut{
-margin-top:1%;
-font-family:textfont;
-float:left;
-text-align:center;
-width:50%;
-
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-left: 30%;
+    margin-top:1%;
+    color: white;
+    -webkit-appearance: button;
+	font-family:textfont;
+	text-align:center;
+	width:15%;
+	border-width: 1px;
+	border-style: solid;
+	background-color:#D8D8D8; 
+	background:linear-gradient(to bottom, #FAFAFA 30%, #E6E6E6 100%);
+	padding: 0.2%;
 }
+.emptycartbut:hover{
+	color:black;
+	background:linear-gradient(to bottom, #E6E6E6 30%,  #FAFAFA 100%);
+}
+
 .emptycartbut a{
-font-weight:bold;
-text-decoration:none;
+	color: black;
+	font-weight:bold;
+	text-decoration:none;
 }
 .emptycartbut a:hover{
-color:#361200;
+	color:black;
+	background:linear-gradient(to bottom, #E6E6E6 30%,  #FAFAFA 100%);
 }
 .updateempty{
-
-float:left;
-width:100%;
-margin-top:2%;
+    display: inline-block;
+    float: left;
+    padding-top: 8%;
 }
-.checkoutbutton{
-margin-top: 6%;
-float: left;
+.chck{
+	text-align:center;
+    display: inline-block;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 1%;
+    font-family:textfont;
+    /*background:#361200;
+    color: white;*/
+}
+/*.checkoutbutton{
+margin-top: 1%;
+float: right;
 width: auto;
-margin-left: 41%;
-font-family: textfont;
+/*margin-left: 41%;*/
+/*font-family: textfont;
 color: white;
 padding: 1%;
 border-style: solid;
@@ -466,61 +590,177 @@ cursor: pointer;
 .checkoutbutton:hover{
 background:#361200;
 opacity:0.8;
+}*/
+.chck a{
+	text-decoration:none;
+    -webkit-appearance: button;
+    padding: 1%;
+    padding-left: 26%;
+    padding-right: 26%;
+    color: black;
 }
-.checkoutbutton a{
-text-decoration:none;
-color:white;
+.chck a:link{
+   color: black;
 }
-
+.chck a:visited{
+    color: black;
+}
 .orderslots{
-margin-left: 20.5%;
-margin-top: 7%;
-float: left;
-width: 10%;
-
+	margin-left: 20.5%;
+	margin-top: 7%;
+	float: left;
+	width: 10%;
 }
+#tabs{
+    padding-right: 8%;
+    padding-top: 5%;
+    display: inline-block;
+    float: right;
+}
+#tabs ul {
+	padding: 20px;
+	margin: 0px;
+	margin-left: 10px;
+	list-style-type: none;
+}
+#tabs ul li {
+	display: inline-block;
+	clear: none;
+	float: left;
+	height: 24px;
+	color:blue;
+}
+#tabs ul li a {
+	position: relative;
+	margin-top: 16px;
+	display: block;
+	margin-left: 96px;
+	line-height: 24px;
+	padding-left: 10px;
+	background: #f6f6f6;
+	z-index: 9999;
+	border: 1px solid #ccc;
+	border-bottom: 0px;
+	width: 130px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: textfont;
+	font-size: 120%;
+}
+
+#tabs ul li a:hover {
+	text-decoration: underline; 
+}
+#tabs ul li a[tabindex]:focus{
+    background: #361200;
+    color: white;
+}
+
+#tabs #content_area { 
+	padding: 0 15px;
+	clear:both;
+	overflow:hidden;
+	line-height:19px;
+	position: relative;
+	top: 20px;
+	z-index: 5;
+	height: 150px;
+	overflow: hidden;
+}
+
+#content_area{
+	padding-left:20px;
+}
+label {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;  
+    margin-right: 15px;  
+    font-size: 13px;  
+} 
+
+input[type=radio] {  
+    display: none;  
+}  
+
+label:before {  
+	content: "";  
+	display: inline-block;  
+	width: 16px;  
+	height: 16px;  
+	margin-right: 10px;  
+	position: absolute;  
+	left: 0;  
+	bottombottom: 1px;  
+	background-color: #aaa;  
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+}  
+.radio label:before {  
+	border-radius: 8px;  
+}  
+
+input[type=radio]:checked + label:before {  
+	content: "\2022";  
+	color: #f3f3f3;  
+	font-size: 30px;  
+	text-align: center;  
+	line-height: 18px;  
+} 
+
+.radio{
+	margin-top: 2%;
+}
+    
+#li_tab1, #li_tab2{
+	display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    font-size: 13px;  
+} 
 .sklogindiv{
-margin-top:0%;
-float:left;
-width:60%;
-margin-left:20%;
-background:#361200;
+	margin-top:0%;
+	float:left;
+	width:60%;
+	margin-left:20%;
+	background:#361200;
 }
 .skforminput{
-margin-top: 2%;
-position: relative;
-float: left;
-height: 45px;
-width: 80%;
-margin-left: 10%;
+	margin-top: 2%;
+	position: relative;
+	float: left;
+	height: 45px;
+	width: 80%;
+	margin-left: 10%;
 }
 
 .skforminput input{
-height:35px;
-width: 100%;
-border-radius: 5px;
-margin-left: 0%;
-border: 1px solid #000000;
+	height:35px;
+	width: 100%;
+	border-radius: 5px;
+	margin-left: 0%;
+	border: 1px solid #000000;
 }
 
 .skforminputsubmit{
-margin-left:10%;
-margin-top:1%;
-float:left;
-width:90%;
-
+	margin-left:10%;
+	margin-top:1%;
+	float:left;
+	width:90%;
 }
+
 #yesimagechange{
-display:none;
-float:right;
+	display:none;
+	float:right;
 }
 
 #askimagechange{
-float:right;
-width:auto;
-padding:2%;
-cursor:pointer;
+	float:right;
+	width:auto;
+	padding:2%;
+	cursor:pointer;
 }
 .getimagelink{
-display:none;
+	display:none;
 }

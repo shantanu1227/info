@@ -135,7 +135,14 @@
 
 	public function logout()
     {
-        $this->session->sess_destroy();
+        $newdata = array(
+                    'userId' =>'',
+                    'userName' => '',
+                    'userEmail' => '',
+                    'userMobile' => '',
+                    'loggedIn' => FALSE,
+                );         
+        $this->session->unset_userdata($newdata);
     }	
 
     public function getuserdetails()

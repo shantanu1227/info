@@ -21,15 +21,15 @@ class Cart extends CI_Controller {
 		$contents = $this->cart->contents();
 		foreach ($contents as $items) {
 			if($items['id']==$id){
-			 	if ($this->cart->has_options($items['rowid']) == FALSE){
-			 			$data = array(
-								'rowid' => $items['rowid'],
-								'qty'   => $qty+$items['qty']
-								);
-						$this->cart->update($data);
-						return ;
-			 		}
-			 }
+				if ($this->cart->has_options($items['rowid']) == FALSE){
+					$data = array(
+						'rowid' => $items['rowid'],
+						'qty'   => $qty+$items['qty']
+						);
+					$this->cart->update($data);
+					return ;
+				}
+			}
 		}
 		$this->cart->insert($data);
 	}
@@ -91,33 +91,130 @@ class Cart extends CI_Controller {
 
 	}
 
-	public function addXeroxFile(){
+	public function addXeroxFile()
+	{
 
-		$colour = $this->input->post('colour',TRUE);
-		$from = $this->input->post('from',TRUE);
-		$to = $this->input->post('to',TRUE);
+		$userId=$this->session->userdata('userId');
+		if($userId == ''){
+			$this->load->model('model_products');
+			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+			$dataThali= array('outputThalis' => $this->model_products->getThali());	
+			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		}else{
+			$color = $this->input->post('colour',TRUE);
+			$startpage = $this->input->post('from',TRUE);
+			$endpage = $this->input->post('to',TRUE);
+			$quantity = 1;
+			$price = $endpage-$startpage+1;
+			$slot = 1;
+			$ordertime = time();
+			$deliverydate = $this->input->post('deliverydate');
 
-		$shopId = 1;
 
-		$directoryName = "/photocopyDocuments"."/";
-		$config['upload_path'] = "./assets/img".$directoryName;
+			$this->load->model('model_users');
+			$current_amount = $this->model_users->getuserdetails()->creditAmount;
+			if($current_amount > ($quantity*$price*1.15)){
 
-		$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img';
-		$config['max_size']	= '50000';
+				$directoryName = "/photocopyDocuments"."/";
+				$config['upload_path'] = "./assets/img".$directoryName;
 
+				$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img';
+				$config['max_size']	= '4096';
+				$config['encrypt_name'] = TRUE;
 
-		$this->load->library('upload', $config);
+				$this->load->library('upload', $config);
 
-		if ( ! $this->upload->do_upload())
-		{
-			print_r($this->upload->display_errors());
-			print_r($config['upload_path']);
+				if ( ! $this->upload->do_upload())
+				{
+					print_r($this->upload->display_errors());
+				}
+				else
+				{
+					if($color=="1"){
+						$price=$price*2;
+						$color="color";
+					}else{
+						$color="bw";
+					}
+					$uploaddata=$this->upload->data();
+					$data1=array('fileName'=>$uploaddata['file_name'],'startpage'=>$startpage,
+						'endpage'=>$endpage,'color'=>$color);
+					$this->load->model('model_transaction');
+					$userId=$this->session->userdata('userId');
+					$this->model_transaction->addxerox($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
+					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
+					$this->load->view('omega',$errormsg);
+					header( "refresh:3;url=".URL."welcome/omega" );		
+
+				}
+			}else{
+				$this->load->model('model_shop');
+				$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
+				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+				$this->load->view('omega',$errormsg+$dataTiming);
+
+			}
 		}
-		else
-		{
+	}
 
+	public function addLaundry()
+	{
 
+		$userId=$this->session->userdata('userId');
+		if($userId == ''){
+			$this->load->model('model_products');
+			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+			$dataThali= array('outputThalis' => $this->model_products->getThali());	
+			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		}else{
+			$billNo = $this->input->post('billno');
+			$price = $this->input->post('billAmount');
+
+			$quantity=1;
+			$slot=1;
+			$deliverydate = $this->input->post('deliverydate');
+			$ordertime = time();
+
+			$this->load->model('model_users');
+			$current_amount = $this->model_users->getuserdetails()->creditAmount;
+			if($current_amount > ($quantity*$price*1.15)){
+
+				$directoryName = "/laundryImages"."/";
+				$config['upload_path'] = "./assets/img".$directoryName;
+
+				$config['allowed_types'] = 'jpg|png|jpeg';
+				$config['max_size']	= '4096';
+				$config['encrypt_name'] = TRUE;
+
+				$this->load->library('upload', $config);
+
+				if ( ! $this->upload->do_upload())
+				{
+					print_r($this->upload->display_errors());
+				}
+				else
+				{
+					$uploaddata=$this->upload->data();
+					$data1=array('billImage'=>$uploaddata['file_name'],'billNo'=>$billNo);
+					$this->load->model('model_transaction');
+					$userId=$this->session->userdata('userId');
+					$this->model_transaction->addlaundry($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
+					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
+					$this->load->model('model_shop');
+					$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
+					$this->load->view('washexpress',$errormsg+$dataTiming);
+					header( "refresh:3;url=".URL."welcome/washexpress" );		
+				}
+			}else{
+				$this->load->model('model_shop');
+				$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
+				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+				$this->load->view('washexpress',$errormsg+$dataTiming);
+			}
 		}
+
 	}
 
 	public function checkout()

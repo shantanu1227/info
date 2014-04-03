@@ -25,19 +25,7 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
-.mycartbut{
-text-indent: 25px;
-background-image: url(../img/mycart.png);
-background-repeat: no-repeat;
-background-position: center left;
-float: right;
-width: 30%;
-cursor: pointer;
-font-size: 12px;
-font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
-color: #FFFFFF;
-margin-top: 5%;
-}
+
 #fixed_head{
 	/*box-shadow:-7px 7px 5px #888888;*/
 	border: 1px solid black;
@@ -54,6 +42,33 @@ margin-top: 5%;
 	z-index:50;
 	top:0px;
 	margin-top:0px;
+}
+.mycartbut{
+	text-indent: 25px;
+	background-size: 22px 22px;
+	background-image: url(../img/icon_cart.png);
+	background-repeat: no-repeat;
+	background-position:10px;
+	float: right;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	margin-top: 40px;
+	margin-right:29px;
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	position:relative;
+}
+
+.mycartbut:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+	background-size: 25px 25px;
+	border-width: 2px;
+	border-color: #585858;
 }
 .cname{
 	display: inline-block;
@@ -187,7 +202,7 @@ color:white;
 		display: none;
 	}
 }
-/*@media all and (max-width: 700px) {
+@media all and (max-width: 700px) {
 	.navigation{
 		display:none;
 	}
@@ -216,14 +231,13 @@ color:white;
 	padding-left: 0;
 	float:left;
 }
-
 .navigationtemp ul li{
 	background-color:#361200;
 	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
 	cursor:pointer;
 	padding:0.95%;
 	text-align:center;
-	width:12.33%;
+	width:8.05%;
 	float:left;
 	list-style:none;
 	color:#FFFFFF;
@@ -355,3 +369,41 @@ color:white;
     -o-transform: rotate(90deg);
 	cursor:pointer;
 }
+.shopproducts{
+	font-weight:bold;
+	letter-spacing:0.5px;
+    margin-top:1%;
+    float:left;
+    width:100.9%;
+}
+.shopproductitem{
+	border:1px solid #CC985F;
+	border-radius:5px;
+	/*box-shadow:0px 0px 15px #CC985F;*/
+    float:left;
+    width:32%;
+    height:250px;
+    padding:0.45%;
+
+
+}
+.shopproductitem img{
+    width:90%;
+    height:60%;
+    margin-left:5%;
+}
+.itemname{
+    font-family:textfont;
+    float:left;
+    width:100%;
+    padding:1%;
+    text-align:center;
+}
+.itemprice{
+    font-family:textfont;
+    padding:1%;
+    text-align:center;
+    float:left;
+    width:100%;
+}
+

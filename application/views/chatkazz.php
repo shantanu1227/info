@@ -58,10 +58,12 @@
 				</div>
 
 				<div class="contact">
-					<div class="owner">Owner</div>
-					<div class="ownername">Mr.Sahil</div>
-					<div class="ownernum">8460089916</div>
+					<div class="owner">Contact Number</div>
+					<?php foreach ($outputNumber as $val) { ?>
+					<div class="ownernum"> <?php echo $val->contactNo ?> </div>
+					<?php } ?>
 				</div>
+				
 			</div>
 		</div>
 		<div class="offerhead">What's cool today?</div>
@@ -77,15 +79,12 @@
 			</div>
 		</div>
 		<div class="menuhead"><i>Carte de menu..</i></div>
-		<div class="shopproducts">
-			
-		</div>
 		<!--script>
 			var result = $("#slider").height();
 			//alert(result);
 		</script-->
+		<?php include 'dynamicproduct.php'; ?>
 	</div>
-	<?php include 'dynamicproduct.php'; ?>
 	<?php include 'reglog.php'; ?>
 	<div id="feedback">Feedback</div>
 	<?php include 'feedback.php'; ?>
