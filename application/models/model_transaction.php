@@ -23,7 +23,7 @@ class Model_transaction extends CI_Model {
 		$this->db->where('userId',$userId);
 		$query=$this->db->get('users',1);
 		$result=$query->row();
-		$amountToDeduct = ($price*$quantity)*1.15;
+		$amountToDeduct = ($price*$quantity)*TAX;
 		$final_amount=$result->creditAmount-$amountToDeduct;
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
@@ -67,7 +67,7 @@ class Model_transaction extends CI_Model {
 		$this->db->where('userId',$userId);
 		$query=$this->db->get('users',1);
 		$result=$query->row();
-		$amountToDeduct = ($price*$quantity)*1.15;
+		$amountToDeduct = ($price*$quantity)*TAX;
 		$final_amount=$result->creditAmount-$amountToDeduct;
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
@@ -95,7 +95,7 @@ class Model_transaction extends CI_Model {
 		$this->db->where('userId',$userId);
 		$query=$this->db->get('users',1);
 		$result=$query->row();
-		$amountToDeduct = ($price*$quantity)*1.15;
+		$amountToDeduct = ($price*$quantity)*TAX;
 		$final_amount=$result->creditAmount-$amountToDeduct;
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
@@ -133,7 +133,7 @@ class Model_transaction extends CI_Model {
 				$mean = ($slotstart+$slotend)/2;
 				$mean = date("H:i",$mean);
 				if($currentTime < $mean){
-					$amount = ($row->quantity*$row->price)*1.15;
+					$amount = ($row->quantity*$row->price)*TAX;
 					$tables = array('subway', 'xerox', 'laundry','transaction');
 					$this->db->where('transactionId', $transactionId);
 					$this->db->delete($tables);
