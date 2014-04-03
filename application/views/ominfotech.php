@@ -60,10 +60,12 @@
 				</div>
 
 				<div class="contact">
-					<div class="owner">Owner</div>
-					<div class="ownername">Mr.Sahil</div>
-					<div class="ownernum">8460089916</div>
+					<div class="owner">Contact Number</div>
+					<?php foreach ($outputNumber as $val) { ?>
+					<div class="ownernum"> <?php echo $val->contactNo ?> </div>
+					<?php } ?>
 				</div>
+				
 			</div>
 		</div>
 		<div class="menuhead"><i>Products</i></div>

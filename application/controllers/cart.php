@@ -131,7 +131,7 @@ class Cart extends CI_Controller {
 				}
 				else
 				{
-					if($color=="2"){
+					if($color=="1"){
 						$price=$price*2;
 						$color="color";
 					}else{

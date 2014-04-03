@@ -150,6 +150,7 @@
                                         <li>Su</li>
                                     <?php } ?>
 
+<<<<<<< HEAD
                                     <li>Mo</li>
                                     <li>Tu</li>
                                     <li>We</li>
@@ -179,6 +180,18 @@
                 </div>
             </div>
             <div class="offerhead">What's cool today?</div>
+=======
+				<div class="contact">
+					<div class="owner">Contact Number</div>
+					<?php foreach ($outputNumber as $val) { ?>
+					<div class="ownernum"> <?php echo $val->contactNo ?> </div>
+					<?php } ?>
+				</div>
+				
+			</div>
+		</div>
+		<div class="offerhead">What's cool today?</div>
+>>>>>>> ae2b8880b1c611976c97dfed01d7509224f3f152
             <div class="offers">
                 <div class="imgslide">
                     <div id="slider">
