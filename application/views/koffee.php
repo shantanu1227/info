@@ -7,10 +7,10 @@
     <head>
         <title>Koffee++</title>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<<<<<<< HEAD
         <link rel='stylesheet' type="text/css" href="<?php echo(CSS . 'koffeestyle.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'reglogcss.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'commonstyle.css'); ?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'js-image-slider.css'); ?>">
         <script type='text/javascript' src="<?php echo(JS . 'js-image-slider.js'); ?>"></script>
         <script type='text/javascript' src="<?php echo(JS . 'jquery-1.7.1.min.js'); ?>"></script>
@@ -18,35 +18,6 @@
         <script src="<?php echo (JS . 'core.js'); ?>" type="text/javascript"></script>
         <!-- jQuery Form Validation code -->
         <script>
-=======
-        <link rel='stylesheet' type="text/css" href="<?php echo(CSS.'koffeestyle.css'); ?>">
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo(CSS.'js-image-slider.css'); ?>">
-        <script type='text/javascript' src="<?php echo(JS.'js-image-slider.js'); ?>"></script>
-        <script type='text/javascript' src="<?php echo(JS.'jquery-1.7.1.min.js'); ?>"></script>
-	  <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-	  <script src="<?php echo (JS.'core.js');?>" type="text/javascript"></script>
-	
-			
-          <!-- jQuery Form Validation code -->
-	  <script>
-	  
-	  // When the browser is ready...
-	  $(function() {
-	  
-		// Setup form validation on the #register-form element
-		$.validator.addMethod(
-			"regex",
-			function(value, element, regexp) {
-				var re = new RegExp(regexp);
-				return re.test(value);
-			},
-			"Please check your input."
-		);
->>>>>>> feb341b5e49b7cca941d85824a036864275639ef
-
             // When the browser is ready...
             $(function() {
 
@@ -194,16 +165,6 @@
                         ?>
                     </div>
 
-<<<<<<< HEAD
-                    <div class="contact">
-                        <div class="owner">Owner</div>
-                        <div class="ownername">Mr.Sahil</div>
-                        <div class="ownernum">8460089916</div>
-                    </div>
-                </div>
-            </div>
-            <div class="offerhead">What's cool today?</div>
-=======
 				<div class="contact">
 					<div class="owner">Contact Number</div>
 					<?php foreach ($outputNumber as $val) { ?>
@@ -214,7 +175,6 @@
 			</div>
 		</div>
 		<div class="offerhead">What's cool today?</div>
->>>>>>> ae2b8880b1c611976c97dfed01d7509224f3f152
             <div class="offers">
                 <div class="imgslide">
                     <div id="slider">
@@ -224,12 +184,6 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div class="menuhead"><i>Carte de menu..</i></div>
-            <?php include 'dynamicproduct.php'; ?>
-            <?php include 'reglog.php'; ?>
-
-=======
 			<div class="menuhead"><i>Carte de menu..</i></div>
 			<?php include 'dynamicproduct.php'; ?>
             
@@ -237,7 +191,5 @@
 	<?php include 'reglog.php'; ?>
 			<div id="feedback">Feedback</div>
 		<?php include 'feedback.php'; ?>
-                
->>>>>>> feb341b5e49b7cca941d85824a036864275639ef
-    </body>
+	</body>
 </html>
