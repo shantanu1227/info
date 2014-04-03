@@ -193,6 +193,7 @@
 			<li><a>STATIONERY</a>
 				<ul>
 					<li><?php echo anchor('/welcome/oxford', 'Oxford',$attr); ?></li>
+					<li><?php echo anchor('/welcome/crossword', 'Crossword',$attr); ?></li>
 				</ul>
 			</li>
 			<li><a>LAUNDRY</a>
