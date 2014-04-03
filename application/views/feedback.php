@@ -7,7 +7,7 @@
 		?>
 		<div id = "fhead">We need your Feedbacks!</div>
 		<div id = "feedbacktext" >Feedback<br>
-			<textarea rows="6" cols="50" name="comment"></textarea>
+			<textarea rows="6" cols="50" name="comment" placeholder="Enter your text here."></textarea>
 		</div>			
 		<div id = "submit"><br>			
 			<input type = "submit" value="Submit">
