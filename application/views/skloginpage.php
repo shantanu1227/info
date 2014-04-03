@@ -16,6 +16,7 @@
 	</head>
 	
 	<body>
+	
 	<div id="box">
 		<?php include 'header1.php'; ?>
 		<div class="shoploginhead">Shopkeeper Login</div>

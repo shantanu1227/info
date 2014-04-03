@@ -273,6 +273,14 @@ src: url(../fonts/stewartsans.ttf);
 	float:left;
 	height:30%;
 }
+.trendingseparate{
+	margin-left: 12.5%;
+	background-color:white;
+	margin-top:15%;
+	width:75%;
+	float:left;
+	
+}
 .todaymenu{
 	height:30%;
 	overflow:scroll;
@@ -393,7 +401,7 @@ src: url(../fonts/stewartsans.ttf);
 	background:#802E05;
 	color:white;
 }
-.shoploginhead{
+.shoploginhead,.adminloginhead{
 	margin-top:11.8%;
 	width:56%;
 	float:left;
@@ -618,14 +626,14 @@ opacity:0.8;
 
     
  
-.sklogindiv{
+.sklogindiv, .adminlogindiv{
 	margin-top:0%;
 	float:left;
 	width:60%;
 	margin-left:20%;
 	background:#361200;
 }
-.skforminput{
+.skforminput, .admininput{
 	margin-top: 2%;
 	position: relative;
 	float: left;
@@ -634,7 +642,7 @@ opacity:0.8;
 	margin-left: 10%;
 }
 
-.skforminput input{
+.skforminput input, .admininput input{
 	height:35px;
 	width: 100%;
 	border-radius: 5px;
@@ -642,7 +650,7 @@ opacity:0.8;
 	border: 1px solid #000000;
 }
 
-.skforminputsubmit{
+.skforminputsubmit, .admininputsubmit{
 	margin-left:10%;
 	margin-top:1%;
 	float:left;
@@ -663,4 +671,29 @@ opacity:0.8;
 .getimagelink{
 	display:none;
 }
+#cname{
+	background-color:#91634C;
+	display: inline-block;
+	padding: 30px;
+	letter-spacing:5px;
+	font-family:monofont;
+	font-size:55px;
+	font-weight:bold;
+	color:white;
+	margin-left:45px;
+	margin-top:-30px;
+	margin-bottom:10px;
+	border-radius: 10px;
+}
+.moreoffers{
+float:left;
+width:98%;
+padding:1%;
+cursor:pointer;
 
+font-family:textfont;
+}
+.moreoffers a{
+text-decoration:none;
+font-weight:bold;
+}

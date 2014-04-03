@@ -26,6 +26,14 @@ class Welcome extends CI_Controller {
 		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 	}
+	public function offers()
+	{
+	$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->model('model_products');
+			
+		$dataOffer=array('outputOffers' => $this->model_products->getOffersseparate());
+		$this->load->view('offers', $dataOffer+$errormsg);	
+	}
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
 	{
@@ -70,6 +78,11 @@ class Welcome extends CI_Controller {
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('skloginpage',$errormsg);
+	}
+	public function adminlogin()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('adminlogin',$errormsg);
 	}
 	public function bigbite()
 	{

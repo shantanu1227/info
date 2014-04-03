@@ -13,17 +13,8 @@
 	</head>
 	<body>
 		<div id="box">
-			<?php include 'header1.php'; ?>
-			<div class="offers">
-				<div class="imgslide">
-					<div id="slider">
-						<img src="<?php echo(IMG.'infocity1.jpg');?>"></img>
-						<img src="<?php echo(IMG.'infocity2.jpg');?>"></img>
-						<img src="<?php echo(IMG.'infocity3.jpg');?>"></img>
-					</div>
-				</div>
-			</div>
-			<div class="trending">
+				<?php include 'header1.php'; ?>
+<div class="trendingseparate">
 					<?php foreach ($outputOffers as $product) { ?>	
 					<div class="trendobject">		
 						<img src="<?php echo (IMG.$product->offerImageUrl); ?>"></img>
@@ -37,20 +28,7 @@
 					</div>
 					<?php } ?>
 			</div>
-			<div class="todaymenu">
-				<div class="todaymenuhead">TODAY'S MENU</div>
-				<?php foreach ($outputThalis as $tuple) { ?>
-					<div class="restdetail">
-						<div class="resthead"> <?php echo $tuple->name; ?> </div>
-						<div class="restmenu"><?php echo "Dinner: ".$tuple->dinner."<br>"."Lunch: ".$tuple->lunch."<br>"; ?></div>
-					</div>
-					<?php } ?>
+			
 			</div>
-			<div class="moreoffers"> <a href="welcome/offers"> Click here for more offers </a></div>
-			<?php include 'footer.php'; ?>
-		</div>
-		<?php include 'reglog.php'; ?>
-		<div id="feedback">Feedback</div>
-		<?php include 'feedback.php'; ?>
-	</body>
-</html>
+			</body>
+</html>			

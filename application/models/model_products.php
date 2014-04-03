@@ -20,6 +20,7 @@ class Model_products extends CI_Model {
 		$data = array('offerName' => $offerName, 
 			'OfferImageUrl' =>$offerImage,'shopId' => $shopId);
 		$this->db->insert('offers', $data);	
+		
 	}
 
 	public function getThali() {
@@ -34,8 +35,20 @@ class Model_products extends CI_Model {
 	}
 
 	public function getOffers() {
+		$this->db->order_by("offers.offerId", "desc");
 		$this->db->join('stores','offers.shopId=stores.shopId');
 		$this->db->from('offers');
+		$this->db->limit(4);
+		$results = $this->db->get();
+		#print_r ($results->result());#->result();
+		return $results->result();
+		#return $this->db->get('offers')->results();
+	}
+	public function getOffersseparate() {
+		$this->db->order_by("offers.offerId", "desc");
+		$this->db->join('stores','offers.shopId=stores.shopId');
+		$this->db->from('offers');
+		
 		$results = $this->db->get();
 		#print_r ($results->result());#->result();
 		return $results->result();
