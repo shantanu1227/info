@@ -10,6 +10,7 @@
         <link rel='stylesheet' type="text/css" href="<?php echo(CSS . 'koffeestyle.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'reglogcss.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'commonstyle.css'); ?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'footerstyle.css'); ?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'js-image-slider.css'); ?>">
         <script type='text/javascript' src="<?php echo(JS . 'js-image-slider.js'); ?>"></script>
@@ -191,5 +192,6 @@
 	<?php include 'reglog.php'; ?>
 			<div id="feedback">Feedback</div>
 		<?php include 'feedback.php'; ?>
+		<?php include 'footer.php'; ?>
 	</body>
 </html>
