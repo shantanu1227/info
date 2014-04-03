@@ -187,14 +187,25 @@ body {
 }
 .ques{
     font-weight: bold;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #B36666;
 }
-.ans{
+.ans{padding: 2%;
+    margin: 2%;
     display: none;
+    padding-top: 2%;
     padding-bottom: 2%;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
 }
-.ques:hover + .ans{
-    display: block;
-}
+
 #feedback{
     padding:8px;
     font-family:textfont;
