@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'subwaystyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
@@ -28,9 +29,10 @@
 				var subproductimg = $(this).find('img').first().attr('src');
 				var subproductname = $(this).find('div').first().text();
 				var subproductprice = $(this).find('div').last().text();
-				$('#formproductname').val(subproductname);
+				var trimprice =  parseInt(subproductprice.match(/[0-9]+/)[0], 10);
+				$('#formproductname').val(subproductname.trim());
 				$('#formproductid').val(subproductid);
-				$('#formproductprice').val(subproductprice);
+				$('#formproductprice').val(trimprice);
 				
  				 document.getElementById('subwayextraformfetch').innerHTML = '<div class="subextraname">'+subproductname+'</div>';
 				$('#subwayextraformfetch').append('<div class="subextraimg"> <img src="'+subproductimg+'"></div>');
@@ -116,7 +118,7 @@
 			<div class="addtosub">
 			<div><b>Choose your bread:</b></div>
 			
-			<input type="radio" name="bread" value="Regular" >Regular</br>
+			<input type="radio" name="bread" value="Regular" checked="checked" autocomplete="on">Regular</br>
 			<input type="radio" name="bread" value="9-grain-wheat" >9-grain-wheat</br>
 			<input type="radio" name="bread" value="Italian" >Italian</br>
 			<input type="radio" name="bread" value="Monterey Cheddar" >Monterey Cheddar</br>
@@ -126,40 +128,37 @@
 			<div class="addtosub">
 			<div><b>Choose bread size:</b></div>
 			
-			<input type="radio" name="size" value="6-inch" >6-inch</br>
-			<input type="radio" name="size" value="Footlong" >Footlong</br>
+			<input type="radio" name="size" value="1" checked="checked" autocomplete="off">6-inch</br>
+			<input type="radio" name="size" value="2" >Footlong</br>
 			
 			</div>
 			<div class="addtosub">
 			<div><b>Add veggies to your SUB </b></div>
 			
-			<input type="checkbox" name="veggie" value="Lettuce" >Lettuce</br>
-			<input type="checkbox" name="veggie" value="Tomatoes" >Tomatoes</br>
-			<input type="checkbox" name="veggie" value="Cucumbers" >Cucumbers</br>
-			<input type="checkbox" name="veggie" value="Pickles" >Pickles</br>
-			<input type="checkbox" name="veggie" value="Peppers" >Peppers</br>
-			<input type="checkbox" name="veggie" value="Onions" >Onions</br>
-			<input type="checkbox" name="veggie" value="Red Olives" >Red Olives</br>
-			<input type="checkbox" name="veggie" value="Jalapenos" >Jalapenos</br>
+			<input type="checkbox" name="veggie[]" value="Lettuce" >Lettuce</br>
+			<input type="checkbox" name="veggie[]" value="Tomatoes" >Tomatoes</br>
+			<input type="checkbox" name="veggie[]" value="Cucumbers" >Cucumbers</br>
+			<input type="checkbox" name="veggie[]" value="Pickles" >Pickles</br>
+			<input type="checkbox" name="veggie[]" value="Peppers" >Peppers</br>
+			<input type="checkbox" name="veggie[]" value="Onions" >Onions</br>
+			<input type="checkbox" name="veggie[]" value="Red Olives" >Red Olives</br>
+			<input type="checkbox" name="veggie[]" value="Jalapenos" >Jalapenos</br>
 			
 			</div>
 			<div class="addtosub">
 			<div><b>Add saucages to your SUB</b></div>
 			
-			<input type="checkbox" name="extra" value="Mayo" >Mayo</br>
-			<input type="checkbox" name="extra" value="Hot Sauce" >Hot Sauce</br>
-			<input type="checkbox" name="extra" value="Yellow Mustard" >Yellow Mustard</br>
-			<input type="checkbox" name="extra" value="Honey Mustard" >Honey Mustard</br>
-			<input type="checkbox" name="extra" value="Italian Dressing" >Italian Dressing</br>
-			<input type="checkbox" name="extra" value="BBQ Sauce" >BBQ Sauce</br>
-			<input type="checkbox" name="extra" value="Sweet Onion Sauce" >Sweet Onion Sauce</br>
+			<input type="checkbox" name="extra[]" value="Mayo" >Mayo</br>
+			<input type="checkbox" name="extra[]" value="Hot Sauce" >Hot Sauce</br>
+			<input type="checkbox" name="extra[]" value="Yellow Mustard" >Yellow Mustard</br>
+			<input type="checkbox" name="extra[]" value="Honey Mustard" >Honey Mustard</br>
+			<input type="checkbox" name="extra[]" value="Italian Dressing" >Italian Dressing</br>
+			<input type="checkbox" name="extra[]" value="BBQ Sauce" >BBQ Sauce</br>
+			<input type="checkbox" name="extra[]" value="Sweet Onion Sauce" >Sweet Onion Sauce</br>
 			
 			</div>
 			<div class="addtosubcomment">
-			<TEXTAREA name="comments" rows="3" cols="40">
-			
-			
-			</TEXTAREA>
+			<TEXTAREA name="comments" rows="3" cols="40"></TEXTAREA>
 			</div>
 			<div class="subaddtocart">
 			<div > <input class="subaddtocartbut"type="submit" value="add"></div>
@@ -170,5 +169,8 @@
 			</div>
 			
 			</div>
+			</div>
+			<div id="feedback">Feedback</div>
+		<?php include 'feedback.php'; ?>
 	</body>
 </html>

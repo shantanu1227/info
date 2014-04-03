@@ -8,8 +8,14 @@
         <title>About Us</title>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <link rel='stylesheet' type="text/css" href="<?php echo(CSS . 'aboutusstyle.css'); ?>">
+<<<<<<< HEAD
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'reglogcss.css'); ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'commonstyle.css'); ?>">
+=======
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+>>>>>>> feb341b5e49b7cca941d85824a036864275639ef
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'js-image-slider.css'); ?>">
         <script type='text/javascript' src="<?php echo(JS . 'js-image-slider.js'); ?>"></script>
         <script type='text/javascript' src="<?php echo(JS . 'jquery-1.7.1.min.js'); ?>"></script>
@@ -128,8 +134,15 @@
                 <p>We understand the students' needs and cater to them by providing them information about stationery, medicines, provision stores, food and much more. The shops included are Big Bite, Chatkazz, Kavya, Koffee++, Laundromart, Omega, Oxford, Qwiches and Subway among some others.</p>
             </div>
         </div>
+<<<<<<< HEAD
 
         <div id="feedback">Feedback</div>
 <?php include 'reglog.php'; ?>
+=======
+        
+		<div id="feedback">Feedback</div>
+		<?php include 'feedback.php'; ?>
+                <?php include 'reglog.php'; ?>
+>>>>>>> feb341b5e49b7cca941d85824a036864275639ef
     </body>
 </html>

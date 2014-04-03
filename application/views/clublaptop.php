@@ -1,10 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<title>Kavya</title>
+		<title>Club Laptops</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'clublaptopstyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
@@ -68,6 +69,9 @@
 		<div class="menuhead"><i>Products</i></div>
 		<?php include 'dynamicproduct.php'; ?>
 		<?php include 'reglog.php'; ?>
+		</div>
+		<div id="feedback">Feedback</div>
+		<?php include 'feedback.php'; ?>
 		
 	</body>
 </html>
