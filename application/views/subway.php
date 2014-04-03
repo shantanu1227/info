@@ -38,13 +38,18 @@
 				$('#subwayextraformfetch').append('<div class="subextraimg"> <img src="'+subproductimg+'"></div>');
 				$('#subwayextraformfetch').append('<div class="subextraprice">'+subproductprice+'</div>');
 				$("#subwayextraform").fadeIn(1000);
-				$("#box").css("opacity","0.2");
+				$("#box").css("visibility","hidden");
 								$(document).keyup(function(e) {
   if (e.keyCode == 27 ) {
 	  $("#subwayextraform").fadeOut(10);
-					$("#box").css('opacity',1);
+					$("#box").css("visibility","visible");
    }			}); 
 				}); 
+				$(document).on('click','#closebuttonrl',function(){
+		$("#subwayextraform").fadeOut(500);
+		$("#box").css('opacity',1);
+		$("#box").css("visibility","visible");
+    });
 				});
 	    </script>
 	<div id="box">
@@ -105,10 +110,14 @@
 		<?php include 'reglog.php'; ?>
 		</div>
 	<div id="subwayextraform">
+	<div id="closebuttonrl"><img src="<?php echo(IMG.'closebutton.png');?>" style="max-width:30px;
+    max-height:30px;"></img></div>
 			<div id="subwayextraformfetch">
 			
 			</div>
-			
+			<div id="closebuttonrl">
+		
+	</div>
 			<div class="addvegies">
 			<?php echo form_open('cart/addsubwaytocart'); ?>
 			<input name="productid" type="hidden" id ="formproductid" value=''>

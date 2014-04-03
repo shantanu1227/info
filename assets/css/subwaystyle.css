@@ -477,3 +477,8 @@ color:black;
 background:yellow;
 font-family:textfont;
 }
+#closebuttonrl{
+	height:auto;
+	width:auto;
+	float:right;
+}
