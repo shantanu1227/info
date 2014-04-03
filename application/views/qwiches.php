@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'footerstyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
@@ -57,9 +58,10 @@
 				</div>
 
 				<div class="contact">
-					<div class="owner">Owner</div>
-					<div class="ownername">Mr.Sahil</div>
-					<div class="ownernum">8460089916</div>
+					<div class="owner">Contact Number</div>
+					<?php foreach ($outputNumber as $val) { ?>
+					<div class="ownernum"> <?php echo $val->contactNo ?> </div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
@@ -79,6 +81,6 @@
 		<div id="feedback">Feedback</div>
 		<?php include 'feedback.php'; ?>
 	<?php include 'reglog.php'; ?>
-	
+	<?php include 'footer.php'; ?>
 	</body>
 </html>

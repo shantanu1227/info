@@ -127,9 +127,9 @@
 		if($this->session->userdata('userName')!= ''){?>
 		<button class="uploadbutton" type="button">Upload a file</button>
 			<?php 
-		}else{
-				echo "Please Login to add file for Photocopying";
-				}
+		}else{?>
+				<div class="login_error"> Please Login to add file for Photocopying </div>
+				<?php }
 			?> 
 		
 			
@@ -142,15 +142,15 @@
 				$attributes = array("id"=>"uploadform");
 				echo form_open_multipart('cart/addXeroxFile',$attributes);?>
 				<div class="colorselection">
-				Choose the colour quality of your pages<br>
-				<input type="radio" name="colour" value ="1"> COLOUR<br>
+				Choose the colour quality of your pages
+				<input type="radio" name="colour" value ="1"> COLOUR
 				<input type="radio" name="colour" value ="2" > BLACK
 				</div>
 
 				<div class="pagenumber">
-				Pages in your document<br>
-				from:<input type="input" name="from" required class="numberinput"></br></br>
-				to:<input type="input" name="to" required class="numberinput">
+				Pages in your document
+				from:<input type="input" name="from" required class="numberinput">
+				to:<input type="input" name="to" required class="numberinput" >
 				</div>
 
 

@@ -2,8 +2,7 @@
     Document   : aboutusstyle
     Created on : 25 Mar, 2014, 9:02:31 PM
     Author     : Ria
-    Description:
-        Purpose of the stylesheet follows.
+    Description: Style sheet of aboutus document
 */
 
 @font-face{
@@ -87,7 +86,6 @@ body {
     font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
     color:#FFFFFF;
 }
-
 .navigation{
     text-decoration:none;
     position:fixed;
@@ -162,9 +160,7 @@ body {
     width:100%;
     float:left;
 }
-
 .shopheading{
-    /*text-indent:-9999px;*/
     text-shadow:2px 2px 5px #361200;
     letter-spacing:4px;
     color:#361200;
@@ -189,26 +185,25 @@ body {
     font-family: sans-serif;
 
 }
-
 #feedback{
-	padding:8px;
-	font-family:textfont;
-	font-weight:bold;
-	font-size:18px;
-	color:white;
-	text-align:center;
-	border:1px solid #361200;
-	border-radius:5px;
-	box-shadow:7px 7px 5px #888888;
-	background-color:#361200;
-	height:16px;
-	position:fixed;
-	top:55%;
-	right:-3%;
-	width:90px;
-	writing-mode:tb-rl;
+    padding:8px;
+    font-family:textfont;
+    font-weight:bold;
+    font-size:18px;
+    color:white;
+    text-align:center;
+    border:1px solid #361200;
+    border-radius:5px;
+    box-shadow:7px 7px 5px #888888;
+    background-color:#361200;
+    height:16px;
+    position:fixed;
+    top:55%;
+    right:-3%;
+    width:90px;
+    writing-mode:tb-rl;
     -webkit-transform:rotate(90deg);
     -moz-transform:rotate(90deg);
     -o-transform: rotate(90deg);
-	cursor:pointer;
+    cursor:pointer;
 }

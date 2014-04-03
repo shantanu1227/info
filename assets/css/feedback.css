@@ -6,7 +6,7 @@
 	display:none;
 	position:fixed;
 	width:40%;
-	height:50%;
+	height:55%;
 	top:20%;
 	left:30%;
 	right:auto;
@@ -28,6 +28,10 @@
 	font-weight:bold;
 	text-align:center;
 }
+textarea{
+	max-height:100px;
+	max-width:300px;
+}
 #submit{
 	margin-left:45%;
 	margin-top:5%;
@@ -41,4 +45,14 @@
 	margin-top:5%;
 	font-weight:bold;
 	font-size:25px;
+}
+label.error,div.error{
+	font-size:15px;
+	padding:0;
+	margin-top:2px;
+    font-weight:bold;
+    color:#FFFFFF;
+}
+input.error{
+	border:2px solid #FF0000;
 }

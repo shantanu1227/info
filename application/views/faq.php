@@ -1,6 +1,6 @@
 <!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
+        Document: faq 
+        Purpose: Page containing frequently asked questions related to Virtual Infocity 
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -8,121 +8,122 @@ and open the template in the editor.
         <title>FAQ</title>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <link rel='stylesheet' type="text/css" href="<?php echo(CSS . 'faqstyle.css'); ?>">
+<<<<<<< HEAD
+        <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'reglogcss.css'); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'commonstyle.css'); ?>">
+=======
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+>>>>>>> feb341b5e49b7cca941d85824a036864275639ef
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'js-image-slider.css'); ?>">
         <script type='text/javascript' src="<?php echo(JS . 'js-image-slider.js'); ?>"></script>
         <script type='text/javascript' src="<?php echo(JS . 'jquery-1.7.1.min.js'); ?>"></script>
-	  <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-          <!-- jQuery Form Validation code -->
-	  <script>
-	  
-	  // When the browser is ready...
-	  $(function() {
-	  
-		// Setup form validation on the #register-form element
-		$.validator.addMethod(
-			"regex",
-			function(value, element, regexp) {
-				var re = new RegExp(regexp);
-				return re.test(value);
-			},
-			"Please check your input."
-		);
+        <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <!-- jQuery Form Validation code -->
+        <script>
 
-		$("#registerform").validate({
-			errorElement: "div",
-			// Specify the validation rules
-			rules: {
-				fullname: "required",
-				username: {
-					required: true,
-					number: true,
-					range: [201001001, 201499999]
-				},
-				password: {
-					required: true,
-					minlength: 5
-				},
-				roomno: {
-					required: true,
-					regex: '^[A-H]{1}-[1-3]{1}[0-2]{1}[0-9]{1}$'
-					},
-				mobileno: {
-					required: true,
-					minlength: 10
-				},
-			},
-			
-			// Specify the validation error messages
-			messages: {
-				fullname: "",
-				username: {
-					required:'',
-					maxlength: "Please enter a your DA-IICT ID.",
-					minlength: "Please enter a your DA-IICT ID.",
-					range: "Please enter a your DA-IICT ID."
-				},
-				password: {
-					required:'',
-					minlength: "Password must be at least 5 characters long."
-				},
-				roomno: {
-					required:'',
-					regex: "Please enter a valid roomno."
-					},
-				mobileno: {
-					required:'',
-					minlength: "Please enter a valid mobile number."
-					},
-			},
-			
-			submitHandler: function(form) {
-				form.submit();
-			}
-		});
-		$("#loginform").validate({
-			errorElement: "div",
-			// Specify the validation rules
-			rules: {
-				username: {
-					required: true,
-					number: true,
-					range: [201001001, 201499999]
-				},
-				password: {
-					required: true,
-					minlength: 5
-				}
-			},
-			
-			// Specify the validation error messages
-			messages: {
-				username: {
-					required:'',
-					maxlength: "Please enter a your DA-IICT ID.",
-					minlength: "Please enter a your DA-IICT ID.",
-					range: "Please enter a your DA-IICT ID."
-				},
-				password: {
-					required:'',
-					minlength: "Password must be at least 5 characters long."
-				}
-			},
-			
-			submitHandler: function(form) {
-				form.submit();
-			}
-		});
+            // When the browser is ready...
+            $(function() {
 
-	  });
-	  
-	  </script>
+                // Setup form validation on the #register-form element
+                $.validator.addMethod(
+                        "regex",
+                        function(value, element, regexp) {
+                            var re = new RegExp(regexp);
+                            return re.test(value);
+                        },
+                        "Please check your input."
+                        );
+
+                $("#registerform").validate({
+                    errorElement: "div",
+                    // Specify the validation rules
+                    rules: {
+                        fullname: "required",
+                        username: {
+                            required: true,
+                            number: true,
+                            range: [201001001, 201499999]
+                        },
+                        password: {
+                            required: true,
+                            minlength: 5
+                        },
+                        roomno: {
+                            required: true,
+                            regex: '^[A-H]{1}-[1-3]{1}[0-2]{1}[0-9]{1}$'
+                        },
+                        mobileno: {
+                            required: true,
+                            minlength: 10
+                        },
+                    },
+                    // Specify the validation error messages
+                    messages: {
+                        fullname: "",
+                        username: {
+                            required: '',
+                            maxlength: "Please enter a your DA-IICT ID.",
+                            minlength: "Please enter a your DA-IICT ID.",
+                            range: "Please enter a your DA-IICT ID."
+                        },
+                        password: {
+                            required: '',
+                            minlength: "Password must be at least 5 characters long."
+                        },
+                        roomno: {
+                            required: '',
+                            regex: "Please enter a valid roomno."
+                        },
+                        mobileno: {
+                            required: '',
+                            minlength: "Please enter a valid mobile number."
+                        },
+                    },
+                    submitHandler: function(form) {
+                        form.submit();
+                    }
+                });
+                $("#loginform").validate({
+                    errorElement: "div",
+                    // Specify the validation rules
+                    rules: {
+                        username: {
+                            required: true,
+                            number: true,
+                            range: [201001001, 201499999]
+                        },
+                        password: {
+                            required: true,
+                            minlength: 5
+                        }
+                    },
+                    // Specify the validation error messages
+                    messages: {
+                        username: {
+                            required: '',
+                            maxlength: "Please enter a your DA-IICT ID.",
+                            minlength: "Please enter a your DA-IICT ID.",
+                            range: "Please enter a your DA-IICT ID."
+                        },
+                        password: {
+                            required: '',
+                            minlength: "Password must be at least 5 characters long."
+                        }
+                    },
+                    submitHandler: function(form) {
+                        form.submit();
+                    }
+                });
+
+            });
+
+        </script>
     </head>
     <body>
         <div id="box">
-            <?php include 'header1.php'; ?>
+<?php include 'header1.php'; ?>
             <div class="shopheading">
                 Frequently Asked Questions
             </div>
@@ -153,9 +154,15 @@ and open the template in the editor.
 
             </div>
         </div>
+<<<<<<< HEAD
+
+        <div id="feedback">Feedback</div>
+<?php include 'reglog.php'; ?>
+=======
         
 		<div id="feedback">Feedback</div>
 		<?php include 'feedback.php'; ?>
                 <?php include 'reglog.php'; ?>
+>>>>>>> feb341b5e49b7cca941d85824a036864275639ef
     </body>
 </html>

@@ -34,7 +34,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('kavya') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('kavya'));
-		$this->load->view('kavya', $data+$errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('kavya'));
+		$this->load->view('kavya', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
 	}
 	public function skinterface()
 	{
@@ -50,7 +51,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('koffee') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('koffee'));
-		$this->load->view('koffee', $data+$errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('koffee'));
+		$this->load->view('koffee', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
 	}
 	public function cart_index()
 	{
@@ -76,19 +78,23 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('bigbite') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('bigbite'));
-		$this->load->view('bigbite', $data+$errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('bigbite'));
+		$this->load->view('bigbite', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
 	}
 	public function washexpress()
 	{
 		$this->load->model('model_shop');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
-		$this->load->view('washexpress', $errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
+		$this->load->view('washexpress', $errormsg+$dataTiming+$contactNumber, FALSE);
 	}
 	public function omega()
 	{
+		$this->load->model('model_shop');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('omega',$errormsg);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
+		$this->load->view('omega',$errormsg+$contactNumber);
 	}
 
 	public function subway()
@@ -99,7 +105,8 @@ class Welcome extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('subway'));
-		$this->load->view('subway', $data+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('subway'));
+		$this->load->view('subway', $data+$dataTiming+$contactNumber, FALSE);
 	}
 	public function apex()
 	{
@@ -113,7 +120,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('chatkazz') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('chatkazz'));
-		$this->load->view('chatkazz', $data+$errormsg+$dataTiming, FALSE);	
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('chatkazz'));
+		$this->load->view('chatkazz', $data+$errormsg+$dataTiming+$contactNumber, FALSE);	
 	}
 	public function qwiches()
 	{
@@ -122,7 +130,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('qwiches') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('qwiches'));
-		$this->load->view('qwiches', $data+$errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('qwiches'));
+		$this->load->view('qwiches', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
 	}
 
 
@@ -133,7 +142,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('oxford') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('oxford'));
-		$this->load->view('oxford', $data+$errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('oxford'));
+		$this->load->view('oxford', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
 		}
 		public function clublaptop()
 		{
@@ -142,7 +152,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('clublaptop') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('clublaptop'));
-		$this->load->view('clublaptop', $data+$errormsg+$dataTiming, FALSE);	
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('clublaptop'));
+		$this->load->view('clublaptop', $data+$errormsg+$dataTiming+$contactNumber, FALSE);	
 		}
 			public function ominfotech()
 			{
@@ -151,7 +162,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('ominfotech') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('ominfotech'));
-		$this->load->view('ominfotech', $data+$errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('kavya'));
+		$this->load->view('ominfotech', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
 			}
 			public function crossword()
 			{
@@ -160,7 +172,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('crossword') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('crossword'));
-		$this->load->view('crossword', $data+$errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('crossword'));
+		$this->load->view('crossword', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
 			}
 
 			public function faq()
@@ -180,7 +193,8 @@ class Welcome extends CI_Controller {
 		$data= array('output' => $this->model_products->getproducts('vstationery') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('vstationery'));
-		$this->load->view('vstationery', $data+$errormsg+$dataTiming, FALSE);
+		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('vstationery'));
+		$this->load->view('vstationery', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
 			}
 			public function feedback()
 			{	
