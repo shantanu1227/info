@@ -1,3 +1,10 @@
+/* 
+    Document   : koffeestyle
+    Created on : 25 Mar, 2014, 10:21:53 PM
+    Author     : Ria
+    Description: Style sheet of koffee document
+*/
+
 @font-face{
     font-family: monofont;
     src: url(../fonts/JandaCelebrationScript.ttf);
@@ -79,7 +86,6 @@ body {
     font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
     color:#FFFFFF;
 }
-
 .navigation{
     text-decoration:none;
     position:fixed;
@@ -142,7 +148,6 @@ body {
 .navbar ul li:hover > ul{
     display:block;
 }
-
 .navbar ul li li:hover{
     background-color:#498FA0;
     width:124%;
@@ -154,7 +159,6 @@ body {
     width:100%;
     float:left;
 }
-
 .shopheading{
     text-indent:-9999px;
     margin-top:128px;
@@ -195,7 +199,6 @@ body {
     font-family:textfont;
     font-weight:bold;
 }
-
 .offers{
     clear:left;
     margin-top:0.6%;
@@ -203,7 +206,6 @@ body {
     margin-right:auto;
     width:100%;
 }
-
 #feedback{
     padding:8px;
     font-family:textfont;
@@ -226,7 +228,6 @@ body {
     -o-transform: rotate(90deg);
     cursor:pointer;
 }
-
 .shopdetail{
     box-shadow:0px 0px 15px #541A19; 
     background-color:#541A19;
@@ -239,7 +240,6 @@ body {
     border-color: white;
     float: left;
 }
-
 .shoppic{
     display:inline-block;
     margin-left: 2%;
@@ -250,7 +250,6 @@ body {
 .shoppic img{
     border-radius:50px;
 }
-
 .details{
     font-weight:bold;
     font-family:textfont;
@@ -263,7 +262,6 @@ body {
     border-radius:5px;
     box-shadow:0px 0px 15px #541A19; 
 }
-
 .timing{
     display:inline;
     margin-top: 2.5%;
@@ -271,12 +269,9 @@ body {
     float: left;
     height: 30%;
     width: auto;
-    /*border-width: 1px;
-    border-style: solid;*/
     font-size: 150%;
     text-align: center;
 }
-
 .status{
     display:inline;
     background-color:#7C504F;
@@ -289,7 +284,6 @@ body {
     font-size: 140%;
     padding:1%;
 }
-
 .status img{
     float:left;
     display:inline;
@@ -307,16 +301,12 @@ body {
     display:inline;
     margin:auto;
     width:auto;
-    /*border-width: 1px;
-    border-style: solid;*/
 }
-
 .days ul{
     list-style-type: none;
     margin-left: 8%;
     padding: 0;
 }
-
 .days ul li{
     background-color: green;
     display: inline;
@@ -324,9 +314,6 @@ body {
     border-radius: 2px;
     font-size: 75%;
     font-weight: bold;
-    /*border-width: 2px;
-    border-style: solid;*/
-
 }
 .contact
 {
@@ -334,27 +321,21 @@ body {
     float:right;
     margin-right:6%;
     margin-top: 2%;
-    /*border-width: 1px;
-    border-style: solid;	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;*/
-
 }
 .owner{
     float:left;
     font-weight: bold;
     text-decoration: underline;
-
 }
 .ownername{
     font-size: 90%;
     font-weight: bold;
-
 }
 .ownernum{
     font-size: 90%;
     font-weight: bold;
     letter-spacing:1px;
 }
-
 .shopproducts{
     font-weight:bold;
     letter-spacing:0.5px;
@@ -365,13 +346,10 @@ body {
 .shopproductitem{
     border:1px solid #CC985F;
     border-radius:5px;
-    /*box-shadow:0px 0px 15px #CC985F;*/
     float:left;
     width:32%;
     height:250px;
     padding:0.45%;
-
-
 }
 .shopproductitem img{
     width:90%;

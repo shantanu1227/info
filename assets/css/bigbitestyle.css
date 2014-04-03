@@ -1,3 +1,10 @@
+/* 
+    Document   : bigbitestyle
+    Created on : 25 Mar, 2014, 9:32:31 PM
+    Author     : Ria
+    Description: Style sheet of bigbite document
+*/
+
 @font-face{
     font-family: monofont;
     src: url(../fonts/JandaCelebrationScript.ttf);
@@ -10,7 +17,6 @@ body {
     padding:0;
     margin:0;
 }
-
 #box{
     width:85%;
     margin-left:auto;
@@ -80,7 +86,6 @@ body {
     font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
     color:#FFFFFF;
 }
-
 .navigation{
     text-decoration: none;
     position:fixed;
@@ -143,7 +148,6 @@ body {
 .navbar ul li:hover > ul{
     display:block;
 }
-
 .navbar ul li li:hover{
     background-color:#498FA0;
     width:124%;
@@ -155,7 +159,6 @@ body {
     width:100%;
     float:left;
 }
-
 .shopheading{
     text-indent:-9999px;
     margin-top:120px;
@@ -167,7 +170,6 @@ body {
     font-family:textfont;
     font-weight:bold;
 }
-
 .offerhead{
     z-index:450;
     text-shadow:2px 2px 5px #361200;
@@ -200,7 +202,6 @@ body {
     font-family:textfont;
     font-weight:bold;
 }
-
 .offers{
     clear:left;
     margin-top:0.5%;
@@ -208,7 +209,6 @@ body {
     margin-right:auto;
     width:100%;
 }
-
 #feedback{
     padding:8px;
     font-family:textfont;
@@ -231,7 +231,6 @@ body {
     -o-transform: rotate(90deg);
     cursor:pointer;
 }
-
 .shopdetail{
     box-shadow:0px 0px 15px #F3E7BD; 
     background-color:#F3E7BD;
@@ -245,7 +244,6 @@ body {
     border-color: white;
     float: left;
 }
-
 .shoppic{
     display:inline-block;
     margin-left: 1.5%;
@@ -254,7 +252,6 @@ body {
     width: auto;
     float: left;
 }
-
 .details{
     font-weight:bold;
     font-family:textfont;
@@ -267,7 +264,6 @@ body {
     border-radius:5px;
     box-shadow:0px 0px 15px #DCB891; 
 }
-
 .timing{
     display:inline;
     margin-top: 1%;
@@ -276,12 +272,9 @@ body {
     float: left;
     height: 30%;
     width: auto;
-    /*border-width: 1px;
-    border-style: solid;*/
     font-size: 150%;
     text-align: center;
 }
-
 .status{
     display:inline;
     background-color:#DCB891;
@@ -317,13 +310,11 @@ body {
     margin:auto;
     width:auto;
 }
-
 .days ul{
     list-style-type: none;
     margin-left: 8%;
     padding: 0;
 }
-
 .days ul li{
     background-color: green;
     display: inline;
@@ -331,7 +322,6 @@ body {
     border-radius: 2px;
     font-size: 75%;
     font-weight: bold;
-
 }
 .contact
 {
@@ -344,19 +334,16 @@ body {
     float:left;
     font-weight: bold;
     text-decoration: underline;
-
 }
 .ownername{
     font-size: 90%;
     font-weight: bold;
-
 }
 .ownernum{
     font-size: 90%;
     font-weight: bold;
     letter-spacing:1px;
 }
-
 .shopproducts{
     font-weight:bold;
     letter-spacing:0.5px;
@@ -371,8 +358,6 @@ body {
     width:32%;
     height:250px;
     padding:0.45%;
-
-
 }
 .shopproductitem img{
     width:90%;

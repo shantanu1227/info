@@ -5,6 +5,7 @@ body{
 	margin:0;
 	background-color:white;
 }
+
 #box{
 	width:1147px;
 	margin-left:auto;
@@ -366,39 +367,64 @@ color:white;
 background:#361200;
 opacity:0.8;
 }
+input[type="submit"]{
+text-align:center;
+    font-family: textfont;
+    font-size: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
 .updatecartbut{
-float:left;
+    display: inline-block;
+/*padding-top: 5%;*/
 text-align:center;
 width:50%;
+margin-bottom: 1%;
+margin-left: 30%;
 
 }
 .emptycartbut{
-margin-top:1%;
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-left: 30%;
+    margin-top:1%;
+    color: white;
+    -webkit-appearance: button;
+    
 font-family:textfont;
-float:left;
+
 text-align:center;
 width:50%;
 
 }
 .emptycartbut a{
-font-weight:bold;
+    color: black;
+   /* background:#361200;
+/*font-weight:bold;*/
 text-decoration:none;
 }
-.emptycartbut a:hover{
-color:#361200;
-}
 .updateempty{
-
-float:left;
-width:100%;
-margin-top:2%;
+    display: inline-block;
+    float: left;
+    padding-top: 8%;
 }
-.checkoutbutton{
-margin-top: 6%;
-float: left;
+.chck{
+text-align:center;
+    display: inline-block;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 1%;
+    font-family:textfont;
+    /*background:#361200;
+    color: white;*/
+
+}
+/*.checkoutbutton{
+margin-top: 1%;
+float: right;
 width: auto;
-margin-left: 41%;
-font-family: textfont;
+/*margin-left: 41%;*/
+/*font-family: textfont;
 color: white;
 padding: 1%;
 border-style: solid;
@@ -411,10 +437,20 @@ cursor: pointer;
 .checkoutbutton:hover{
 background:#361200;
 opacity:0.8;
-}
-.checkoutbutton a{
+}*/
+.chck a{
 text-decoration:none;
-color:white;
+    -webkit-appearance: button;
+    padding: 1%;
+    padding-left: 26%;
+    padding-right: 26%;
+    color: black;
+}
+.chck a:link{
+   color: black;
+}
+.chck a:visited{
+    color: black;
 }
 
 .orderslots{
@@ -424,3 +460,126 @@ float: left;
 width: 10%;
 
 }
+#tabs{
+    padding-right: 8%;
+    padding-top: 5%;
+    display: inline-block;
+    float: right;
+}
+#tabs ul {
+padding: 20px;
+margin: 0px;
+margin-left: 10px;
+list-style-type: none;
+
+}
+
+#tabs ul li {
+display: inline-block;
+clear: none;
+float: left;
+height: 24px;
+color:blue;
+}
+
+#tabs ul li a {
+position: relative;
+margin-top: 16px;
+display: block;
+margin-left: 96px;
+line-height: 24px;
+padding-left: 10px;
+background: #f6f6f6;
+z-index: 9999;
+border: 1px solid #ccc;
+border-bottom: 0px;
+width: 130px;
+color: #000000;
+text-decoration: none;
+font-weight: bold;
+font-family: textfont;
+font-size: 120%;
+}
+
+#tabs ul li a:hover {
+text-decoration: underline; }
+
+#tabs ul li a[tabindex]:focus{
+    background: #361200;
+    color: white;
+}
+
+#tabs #content_area { 
+padding: 0 15px;
+clear:both;
+overflow:hidden;
+line-height:19px;
+position: relative;
+top: 20px;
+z-index: 5;
+height: 150px;
+overflow: hidden;
+}
+
+#content_area{
+padding-left:20px;
+}
+label {  
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;  
+    margin-right: 15px;  
+    font-size: 13px;  
+} 
+
+input[type=radio] {  
+        display: none;  
+}  
+
+    label:before {  
+        content: "";  
+        display: inline-block;  
+      
+        width: 16px;  
+        height: 16px;  
+      
+        margin-right: 10px;  
+        position: absolute;  
+        left: 0;  
+        bottombottom: 1px;  
+        background-color: #aaa;  
+        box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+    }  
+    .radio label:before {  
+        border-radius: 8px;  
+    }  
+
+    input[type=radio]:checked + label:before {  
+        content: "\2022";  
+        color: #f3f3f3;  
+        font-size: 30px;  
+        text-align: center;  
+        line-height: 18px;  
+    } 
+
+    .radio{
+        margin-top: 2%;
+    }
+    
+#li_tab1{
+ display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+      
+      
+    font-size: 13px;  
+} 
+#li_tab2{
+ display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+      
+      
+    font-size: 13px;  
+} 
