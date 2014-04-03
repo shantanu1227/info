@@ -42,11 +42,14 @@
 		$(".reglog").click(function(){
 			$("#reglogopen").fadeIn(1000);
 			$("#box").css("visibility","hidden");
+			$("body").css("background","url(<?php echo(IMG.'web_back.jpg' );?>) no-repeat center center fixed");
 			$("#feedback").css("visibility","hidden");
 			$(document).keyup(function(e) {
 				if (e.keyCode == 27 ) {
 					$("#reglogopen").fadeOut(10);
-					$("#box").css('opacity',1);
+					$("body").css("background","none");
+					$("#box").css("visibility","visible");
+					$("#feedback").css("visibility","visible");
 				}		
 			}); 
 		}); 
@@ -54,6 +57,7 @@
 	$(document).on('click','#closebuttonrl',function(){
 		$("#reglogopen").fadeOut(100);
 		$("#box").css("visibility","visible");
+		$("body").css("background","none");
 		$("#feedback").css("visibility","visible");
     });
 </script>
