@@ -61,6 +61,20 @@
             <td><strong>Total</strong></td>
             <td>Rs <?php echo $this->cart->format_number($this->cart->total()); ?></td>
         </tr>
+		
+		<tr>
+            <td></td>
+            <td></td>
+            <td><strong>Tax</strong></td>
+            <td>Rs </td>
+        </tr>
+		<tr>
+            <td></td>
+            <td></td>
+            <td><strong>Total with tax</strong></td>
+            <td>Rs </td>
+        </tr>
+		
     
 </table>
 

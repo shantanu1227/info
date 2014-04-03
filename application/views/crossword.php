@@ -68,8 +68,12 @@
 				</div>
 			</div>
 		</div>
-		</div>
-		<div id="feedback">Feedback</div>
+		<div class="menuhead"><i>Products</i></div>
+					<?php include 'dynamicproduct.php'; ?>
+	</div>
+	<div id="feedback">Feedback</div>
+	<?php include 'reglog.php'; ?>
 		<?php include 'feedback.php'; ?>
+
 	</body>
 </html>

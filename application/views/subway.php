@@ -161,7 +161,7 @@
 			<TEXTAREA name="comments" rows="3" cols="40"></TEXTAREA>
 			</div>
 			<div class="subaddtocart">
-			<div > <input class="subaddtocartbut"type="submit" value="add"></div>
+			<div > <input class="subaddtocartbut"type="submit" value="Add to Cart"></div>
 			
 			</div>
 			

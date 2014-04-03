@@ -16,6 +16,11 @@ class Model_products extends CI_Model {
 			'productImage' =>$productImage, 'inStock' => 'TRUE','shopId' => $shopId);
 		$this->db->insert('products', $data);	
 	}
+	public function addoffers($offerName,$offerImage,$shopId) {
+		$data = array('offerName' => $offerName, 
+			'OfferImageUrl' =>$offerImage,'shopId' => $shopId);
+		$this->db->insert('offers', $data);	
+	}
 
 	public function getThali() {
 		date_default_timezone_set('Asia/Kolkata');
