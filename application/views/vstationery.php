@@ -13,9 +13,7 @@
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
 		<script src="<?php echo(JS.'js-image-slider.js');?>" type="text/javascript"></script>
 		<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
-<<<<<<< HEAD
 		<script src="<?php echo (JS.'core.js');?>" type="text/javascript"></script>
-=======
 		 <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
           <!-- jQuery Form Validation code -->
 	  <script>
