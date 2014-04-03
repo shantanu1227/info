@@ -8,6 +8,7 @@ class Model_products extends CI_Model {
 		$row = $query->row();
 		$storeid = $row->shopId;
 		$this->db->where('shopId', $storeid);
+		$this->db->where('inStock','TRUE');
 		return $this->db->get('products')->result();
 	}
 

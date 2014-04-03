@@ -314,7 +314,7 @@ src: url(../fonts/stewartsans.ttf);
 	font-weight:bold;
 	float:left;
 	width:100%;
-	font-family:textfont;
+	font-family:calibri;
 }
 .restmenu{
 	padding:4px;
@@ -322,12 +322,12 @@ src: url(../fonts/stewartsans.ttf);
 	color:white;
 	float:left;
 	width:100%;
-	font-family:textfont;}
+	font-family:calibri;}
 
 .trendobject{
 	margin-left:2.6% !important ;
 	margin: 10px;
-	font-family: textfont;
+	font-family: calibri;
 	float: left;
 	width: 46%;
 }
@@ -348,7 +348,7 @@ src: url(../fonts/stewartsans.ttf);
 	opacity:0.8;
 	width: 53%;
 	color: white;
-	font-family:textfont;
+	font-family:calibri;
 }
 .shopname{
 	margin-top:5px;
@@ -373,7 +373,7 @@ src: url(../fonts/stewartsans.ttf);
 }
 #feedback{
 	padding:8px;
-	font-family:textfont;
+	font-family:calibri;
 	font-weight:bold;
 	font-size:18px;
 	color:white;
@@ -396,7 +396,7 @@ src: url(../fonts/stewartsans.ttf);
 .shophead{
 	width:100%;
 	font-size:30px;
-	font-family:textfont;
+	font-family:calibri;
 	padding:2%;
 	background:#802E05;
 	color:white;
@@ -407,7 +407,7 @@ src: url(../fonts/stewartsans.ttf);
 	float:left;
 	margin-left:20%;
 	font-size:30px;
-	font-family:textfont;
+	font-family:calibri;
 	padding:2%;
 	background:#802E05;
 	color:white;
@@ -451,7 +451,7 @@ color:white;
 	border-width:1px;
 	background:#802E05;
 	color:white;
-	font-family:textfont;
+	font-family:calibri;
 }
 .addofferbut{
 padding:1%;
@@ -472,7 +472,7 @@ font-family:textfont;
 	border-width:1px;
 	background:#802E05;
 	color:white;
-	font-family:textfont;
+	font-family:calibri;
 }
 .producttable{
 	float:left;
@@ -514,20 +514,20 @@ text-align:center;
 	margin-top:20%;
 }	
 .carttable th{
-	font-family:textfont;
+	font-family:calibri;
 	color:white;
 	background:#361200;
 }
 .carttable td{
 	text-align:center;
-	font-family:textfont;
+	font-family:calibri;
 	color:white;
 	background:#361200;
 	opacity:0.8;
 }
 input[type="submit"]{
 	text-align:center;
-    font-family: textfont;
+    font-family: calibri;
     font-size: 100%;
     padding-left: 6%;
     padding-right: 6%;
@@ -546,7 +546,7 @@ input[type="submit"]{
     margin-top:1%;
     color: white;
     -webkit-appearance: button;
-	font-family:textfont;
+	font-family:calibri;
 	text-align:center;
 	width:15%;
 	border-width: 1px;
@@ -580,7 +580,7 @@ input[type="submit"]{
     width: 50%;
     margin-left: 30%;
     margin-top: 1%;
-    font-family:textfont;
+    font-family:calibri;
     /*background:#361200;
     color: white;*/
 }
@@ -589,7 +589,7 @@ margin-top: 1%;
 float: right;
 width: auto;
 /*margin-left: 41%;*/
-/*font-family: textfont;
+/*font-family: calibri;
 color: white;
 padding: 1%;
 border-style: solid;
@@ -624,7 +624,43 @@ opacity:0.8;
 	width: 10%;
 }
 
-    
+/*#tabs{
+    padding-right: 8%;
+    padding-top: 5%;
+    display: inline-block;
+    float: right;
+}
+#tabs ul {
+	padding: 20px;
+	margin: 0px;
+	margin-left: 10px;
+	list-style-type: none;
+}
+#tabs ul li {
+	display: inline-block;
+	clear: none;
+	float: left;
+	height: 24px;
+	color:blue;
+}
+#tabs ul li a {
+	position: relative;
+	margin-top: 16px;
+	display: block;
+	margin-left: 96px;
+	line-height: 24px;
+	padding-left: 10px;
+	background: #f6f6f6;
+	z-index: 9999;
+	border: 1px solid #ccc;
+	border-bottom: 0px;
+	width: 130px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: calibri;
+	font-size: 120%;
+}*/
  
 .sklogindiv, .adminlogindiv{
 	margin-top:0%;

@@ -23,7 +23,7 @@ class Model_transaction extends CI_Model {
 		$this->db->where('userId',$userId);
 		$query=$this->db->get('users',1);
 		$result=$query->row();
-		$amountToDeduct = ($price*$quantity)*1.15;
+		$amountToDeduct = ($price*$quantity)*TAX;
 		$final_amount=$result->creditAmount-$amountToDeduct;
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
@@ -67,7 +67,7 @@ class Model_transaction extends CI_Model {
 		$this->db->where('userId',$userId);
 		$query=$this->db->get('users',1);
 		$result=$query->row();
-		$amountToDeduct = ($price*$quantity)*1.15;
+		$amountToDeduct = ($price*$quantity)*TAX;
 		$final_amount=$result->creditAmount-$amountToDeduct;
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
@@ -95,7 +95,7 @@ class Model_transaction extends CI_Model {
 		$this->db->where('userId',$userId);
 		$query=$this->db->get('users',1);
 		$result=$query->row();
-		$amountToDeduct = ($price*$quantity)*1.15;
+		$amountToDeduct = ($price*$quantity)*TAX;
 		$final_amount=$result->creditAmount-$amountToDeduct;
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
@@ -111,9 +111,41 @@ class Model_transaction extends CI_Model {
 		return $this->db->get()->result();
 	}
 
-	public function deleteTransaction($transactionId)
+	public function deleteTransaction($transactionId,$userId)
 	{
+		/*Error -1 Transaction Cancellation Time Over
+		  Error -2 Transaction Does Not Exist
+		*/
 		$this->db->where('transactionId',$transactionId);
+		$query = $this->db->get('transaction', 1);
+		if($query->num_rows()>0){
+			$row = $query->row();
+			date_default_timezone_set('Asia/Kolkata');
+			$orderDate = date("Y-m-d",$row->orderTimeStamp);
+			$currentdate = date("Y-m-d");
+			$currentTime = date("H:i");
+			if($orderDate==$currentdate){
+				$this->db->where('deliverySlot',$row->deliverySlot);
+				$query = $this->db->get('slots',1);
+				$slotrow = $query->row();
+				$slotstart=strtotime($slotrow->starttimings);
+				$slotend = strtotime($slotrow->endtimings);
+				$mean = ($slotstart+$slotend)/2;
+				$mean = date("H:i",$mean);
+				if($currentTime < $mean){
+					$amount = ($row->quantity*$row->price)*TAX;
+					$tables = array('subway', 'xerox', 'laundry','transaction');
+					$this->db->where('transactionId', $transactionId);
+					$this->db->delete($tables);
+					$this->updateAccountOnTransactionDelete($userId,$amount);
+					return 1;
+				}else{
+					return -1;
+				}
+			}
+		}else{
+			return -2;
+		}
 	}
 
 	public function getstoreName($productId)
@@ -136,6 +168,17 @@ class Model_transaction extends CI_Model {
 	public function getallSlots()
 	{
 		return $this->db->get('slots');
+	}
+	public function updateAccountOnTransactionDelete($userId,$amount)
+	{
+		$this->db->where('userId', $userId);
+		$query = $this->db->get('users',1);
+		$row = $query->row();
+		$previous_amount = $row->creditAmount;
+		$updatedAmount = $previous_amount+$amount;
+		$this->db->where('userId', $userId);
+		$data = array('creditAmount'=>$updatedAmount);
+		$this->db->update('users', $data);
 	}
 
 }
