@@ -3,31 +3,31 @@
 class Model_admin extends CI_Model {
 
     public function adduserBalance($userId,$balance){
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$addbalance_data= $this->db->get('users')->result();
 	//print_r($data[0]->creditAmount);
 	$addbalance_data[0]->creditAmount = $addbalance_data[0]->creditAmount + $balance;
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$this->db->update('users', $addbalance_data[0]); 
 	return;
 	}
 
     public function removeuserBalance($userId,$balance){
-    $this->db->where('userId', $userId);
+    $this->db->where('userName', $userId);
 	$removebalance_data = $this->db->get('users')->result();
 	//print_r($data[0]->creditAmount);
 	$removebalance_data[0]->creditAmount = $removebalance_data[0]->creditAmount - $balance;
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$this->db->update('users', $removebalance_data[0]); 
 	return;
 	}
 
     public function removeuser($userId) {
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$removeuser_data= $this->db->get('users')->result();
     $removeuser_data[0]->authToken = md5(rand(0,7)); //some bug ?? 
     $removeuser_data[0]->verified = "false";
-    $this->db->where('userId', $userId);
+    $this->db->where('userName', $userId);
 	$this->db->update('users',$removeuser_data[0]);	
 	return ;
     }
@@ -41,31 +41,31 @@ class Model_admin extends CI_Model {
     }
 
     public function addDeliveryguybalance($userId,$balance) {
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$del_data = $this->db->get('delivery_man')->result();
 	//print_r($data[0]->creditAmount);
 	$del_data[0]->creditLeft = $del_data[0]->creditLeft + $balance;
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$this->db->update('delivery_man', $del_data[0]); 
 	return;
 	}
 
 	public function removeDeliveryguybalance($userId,$balance) {
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$del_data = $this->db->get('delivery_man')->result();
 	//print_r($data[0]->creditAmount);
 	$del_data[0]->creditLeft = $del_data[0]->creditLeft - $balance;
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$this->db->update('delivery_man', $del_data[0]); 
 	return;
 	}
 
 	public function changeDeliveryguypass($userId,$pass) {
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$changedelpass_data = $this->db->get('delivery_man')->result();
 	//print_r($data[0]->creditAmount);
 	$changedelpass_data[0]->password = $this->encrypt->sha1($pass);
-	$this->db->where('userId', $userId);
+	$this->db->where('userName', $userId);
 	$this->db->update('delivery_man', $changedelpass_data[0]); 
 	return;
 	}
@@ -75,6 +75,15 @@ class Model_admin extends CI_Model {
 		$comment=$this->input->post('comment',TRUE);
 		$data=array('comment'=>$comment);
 		$this->db->insert('sitefeedback',$data);
+	}
+
+	public function getThaliStores()
+	{
+		$this->db->where('storetype.type', 'Thali');
+		$this->db->join('stores', 'stores.typeId = storetype.typeId');
+		$this->db->from('storetype');
+		$query = $this->db->get();
+		return $query->result();
 	}
 
 	public function login($username,$password)
