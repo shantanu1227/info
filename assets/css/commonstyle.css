@@ -396,6 +396,7 @@ color:white;
 }
 .itemname{
     font-family:calibri;
+	text-transform:lowercase;
 	text-transform:capitalize;
     float:left;
     width:100%;

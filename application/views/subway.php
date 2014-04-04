@@ -39,21 +39,28 @@
 				$('#subwayextraformfetch').append('<div class="subextraprice">'+subproductprice+'</div>');
 				$("#subwayextraform").fadeIn(1000);
 				$("#box").css("visibility","hidden");
-								$(document).keyup(function(e) {
+				$("#feedback").css("visibility","hidden");
+				$("body").css("background","url(<?php echo(IMG.'web_back.jpg' );?>) no-repeat center center fixed");
+				$(document).keyup(function(e) {
   if (e.keyCode == 27 ) {
 	  $("#subwayextraform").fadeOut(10);
 					$("#box").css("visibility","visible");
+					$("#feedback").css("visibility","visible");
+					$("body").css("background","none");
    }			}); 
 				}); 
 				$(document).on('click','#closebuttonrl',function(){
 		$("#subwayextraform").fadeOut(500);
 		$("#box").css('opacity',1);
 		$("#box").css("visibility","visible");
+		$("#feedback").css("visibility","visible");
+		$("body").css("background","none");
     });
 				});
 	    </script>
 	<div id="box">
 		<?php include 'header1.php'; ?>
+		
 		 <div class="shopheading">Subway</div> 
 		<div class="shopdetail">
 			<div class="shoppic">
@@ -106,9 +113,11 @@
 			</div>
 		</div>
 		<div class="menuhead"><i>Products</i></div>
+		
 		<?php include 'dynamicproductsubway.php'; ?>
-		<?php include 'reglog.php'; ?>
+		
 		</div>
+		<?php include 'reglog.php'; ?>
 	<div id="subwayextraform">
 	<div id="closebuttonrl"><img src="<?php echo(IMG.'closebutton.png');?>" style="max-width:30px;
     max-height:30px;"></img></div>
