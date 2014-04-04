@@ -16,7 +16,8 @@
 				$productName = $this->input->post('productname',TRUE);
 				$productPrice = $this->input->post('productprice',TRUE);
 				$shopId = $this->session->userdata('userId');
-				$directoryName = $name."/";
+				$storename = strtolower($name);
+				$directoryName = "/".$storename."/";
 				$config['upload_path'] = "./assets/img".$directoryName;
 
 				$config['allowed_types'] = 'jpg|png';
@@ -35,7 +36,7 @@
 				{
 					$this->load->model('model_products');
 					$output = $this->upload->data();
-					$productImage = $directoryName.$output['file_name'];
+					$productImage = $storename."/".$output['file_name'];
 					$this->model_products->addproducts($productName,$productImage,
 						$productPrice,$shopId);
 					redirect('/welcome/skinterface', 'refresh');
@@ -47,32 +48,32 @@
 			$isshopkeeper = $this->session->userdata('isShopKeeper');
 
 			if($name!='' && $isshopkeeper){
-			$offerName = $this->input->post('offername',TRUE);
-			$shopId = $this->session->userdata('userId');
-			$config['upload_path'] = "./assets/img";
+				$offerName = $this->input->post('offername',TRUE);
+				$shopId = $this->session->userdata('userId');
+				$config['upload_path'] = "./assets/img";
 
-			$config['allowed_types'] = 'jpg|png';
-			$config['max_size']	= '50000';
+				$config['allowed_types'] = 'jpg|png';
+				$config['max_size']	= '50000';
 			//$config['max_width']  = '1024';
 			//$config['max_height']  = '768';
 
-			$this->load->library('upload', $config);
+				$this->load->library('upload', $config);
 
-			if ( ! $this->upload->do_upload())
-			{
-				print_r($this->upload->display_errors());
-				print_r($config['upload_path']);
-			}
-			else
-			{
-				$this->load->model('model_products');
-				$output = $this->upload->data();
-				$offerImage = $output['file_name'];
-				$this->model_products->addoffers($offerName,$offerImage,$shopId);
-				redirect('/welcome/skinterface', 'refresh');
+				if ( ! $this->upload->do_upload())
+				{
+					print_r($this->upload->display_errors());
+					print_r($config['upload_path']);
+				}
+				else
+				{
+					$this->load->model('model_products');
+					$output = $this->upload->data();
+					$offerImage = $output['file_name'];
+					$this->model_products->addoffers($offerName,$offerImage,$shopId);
+					redirect('/welcome/skinterface', 'refresh');
+				}
 			}
 		}
-	}
 
 		public function editProducts(){
 			
@@ -86,7 +87,7 @@
 				$productPrice = $this->input->post('editedproductprice',TRUE);
 				$productInStock = $this->input->post('stock');
 				$shopId = $this->session->userdata('userId');
-				$storename = $name;
+				$storename = strtolower($name);
 				$directoryName = "/".$storename."/";
 				$config['upload_path'] = "./assets/img".$directoryName;
 
@@ -125,12 +126,16 @@
 		}
 		public function login()
 		{
-			$username = $this->input->post('username',TRUE);
-			$password = $this->input->post('password',TRUE);
-			$this->load->model('model_shop');
-			$output=$this->model_shop->login($username,$password);
-			if($output>0){
-				redirect('welcome/skinterface');
+			if($this->session->userdata('userName')==''){
+				$username = $this->input->post('username',TRUE);
+				$password = $this->input->post('password',TRUE);
+				$this->load->model('model_shop');
+				$output=$this->model_shop->login($username,$password);
+				if($output>0){
+					redirect('welcome/skinterface');
+				}else{
+					redirect('/');
+				}
 			}else{
 				redirect('/');
 			}
