@@ -6,7 +6,10 @@
 <html>
 	<head>
 		<title>My Cart</title>
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'Vinfostyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'cartstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'footerstyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<link href="<?php echo(CSS.'reglogcss.css');?>" rel="stylesheet" type="text/css" />
@@ -30,7 +33,7 @@
 <table class="carttable" border="1px" width="100%" cellpadding="0" cellspacing="0">
     
         <tr >
-            <th >Qty</th>
+            <th >Quantity</th>
             <th >Item Description</th>
             <th >Item Price</th>
             <th >Sub-Total</th>
@@ -78,18 +81,22 @@
     
 </table>
 
-<p class="updateempty"> <div class="updatecartbut"><?php echo form_submit('', 'Update your Cart');?></div> <div class="emptycartbut"> <?php echo anchor('cart/emptycart', 'Empty Cart');?> </div> </p>
+<p class="updateempty"> <div class="updatecartbut"><?php echo form_submit('', 'Update your Cart');?></div>
+<?php $attr1 = array('style'=>'display:block;');?>
+<div class="emptycartbut"> <?php echo anchor('cart/emptycart', 'Empty Cart', $attr1);?> </div> </p>
 <?php echo form_close();?>
 
 
 <?php echo form_open('/cart/checkout'); ?>
+<div id="slotselect">
 <select class="orderslots" name="slotId" >
   <?php foreach ($slots as $slot) {?>
   <option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
   <?php
   }?>
 </select>
-<!-- KOI YAHA DATE DALO -->
+Select Order Slot
+</div>
 <?php 
 
 $submit = array(
@@ -102,6 +109,10 @@ $submit = array(
 echo form_input($submit);
 echo form_close();
 }?>
+<?php include ('footer.php');?>
 </div>
+<?php include ('reglog.php');?>
+<div id="feedback">Feedback</div>
+<?php include ('feedback.php');?>
 </body>
 </html>

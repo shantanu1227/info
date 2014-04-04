@@ -27,10 +27,10 @@
 	<div class="adminloginhead">Admin Login</div>
 		<div class="adminlogindiv">
 		<?php
-		echo form_open('');
+		echo form_open('admin/login');
 			?>
-				<div class="admininput"><input type="text" name="username" placeholder="Enter Username"><br></div>
-				<div class="admininput"><input type="password" name="password" placeholder="Enter Password"><br></div>
+				<div class="admininput"><input type="text" name="adminUsername" placeholder="Enter Username"><br></div>
+				<div class="admininput"><input type="password" name="adminPassword" placeholder="Enter Password"><br></div>
 				<div class="admininputsubmit"><input type="submit" value="Login" /> </div>
 			<?php echo form_close();?>
 			</div>
