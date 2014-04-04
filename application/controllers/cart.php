@@ -105,21 +105,22 @@ class Cart extends CI_Controller {
 			$color = $this->input->post('colour',TRUE);
 			$startpage = $this->input->post('from',TRUE);
 			$endpage = $this->input->post('to',TRUE);
-			$quantity = 1;
+			$quantity = $this->input->post('qty',TRUE);
 			$price = $endpage-$startpage+1;
-			$slot = 1;
+			$slot = $this->input->post('slotId');
+			date_default_timezone_set('Asia/Kolkata');
 			$ordertime = time();
-			$deliverydate = $this->input->post('deliverydate');
+			$deliverydate = date("Y-m-d");
 
 
 			$this->load->model('model_users');
 			$current_amount = $this->model_users->getuserdetails()->creditAmount;
 			if($current_amount > ($quantity*$price*TAX)){
 
-				$directoryName = "/photocopyDocuments"."/";
-				$config['upload_path'] = "./assets/img".$directoryName;
+				$directoryName = "photocopyDocuments"."/";
+				$config['upload_path'] = "./assets/img/".$directoryName;
 
-				$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img';
+				$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img|docx';
 				$config['max_size']	= '4096';
 				$config['encrypt_name'] = TRUE;
 
@@ -143,16 +144,22 @@ class Cart extends CI_Controller {
 					$this->load->model('model_transaction');
 					$userId=$this->session->userdata('userId');
 					$this->model_transaction->addxerox($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
-					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
-					$this->load->view('omega',$errormsg);
+					$message= "Print details are:<br>Color:".$color."<br>Qty=".$quantity."<br>Pages:".$startpage."-".$endpage."<br>FileLocation: ".IMG.$directoryName.$uploaddata['file_name'];
+					$this->sendmail($slot,'PhotoCopy',$message);
+					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');					
+					$this->load->model('model_shop');
+					$slots = array('slots'=>$this->model_transaction->getSlots());
+					$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
+					$this->load->view('omega',$errormsg+$contactNumber+$slots);					
 					header( "refresh:3;url=".URL."welcome/omega" );		
 
 				}
 			}else{
 				$this->load->model('model_shop');
-				$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
+				$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('omega'));
+				$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
 				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
-				$this->load->view('omega',$errormsg+$dataTiming);
+				$this->load->view('omega',$errormsg+$dataTiming+$contactNumber);
 
 			}
 		}
@@ -173,16 +180,17 @@ class Cart extends CI_Controller {
 			$price = $this->input->post('billAmount');
 
 			$quantity=1;
-			$slot=1;
-			$deliverydate = $this->input->post('deliverydate');
+			$slot = $this->input->post('slotId');
+			date_default_timezone_set('Asia/Kolkata');
 			$ordertime = time();
+			$deliverydate = date("Y-m-d");
 
 			$this->load->model('model_users');
 			$current_amount = $this->model_users->getuserdetails()->creditAmount;
 			if($current_amount > ($quantity*$price*TAX)){
 
-				$directoryName = "/laundryImages"."/";
-				$config['upload_path'] = "./assets/img".$directoryName;
+				$directoryName = "laundryImages"."/";
+				$config['upload_path'] = "./assets/img/".$directoryName;
 
 				$config['allowed_types'] = 'jpg|png|jpeg';
 				$config['max_size']	= '4096';
@@ -201,17 +209,21 @@ class Cart extends CI_Controller {
 					$this->load->model('model_transaction');
 					$userId=$this->session->userdata('userId');
 					$this->model_transaction->addlaundry($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
+					$message= "Laundry details are:<br>Bill No:".$billNo."<br>Price=".$price."<br>Bill Image : ".IMG.$directoryName.$uploaddata['file_name'];
+					$this->sendmail($slot,'Laundry',$message);
 					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
 					$this->load->model('model_shop');
 					$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
-					$this->load->view('washexpress',$errormsg+$dataTiming);
+					$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
+					$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber);					
 					header( "refresh:3;url=".URL."welcome/washexpress" );		
 				}
 			}else{
 				$this->load->model('model_shop');
 				$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
+				$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
 				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
-				$this->load->view('washexpress',$errormsg+$dataTiming);
+				$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber);
 			}
 		}
 
@@ -305,6 +317,29 @@ class Cart extends CI_Controller {
 			$this->model_transaction->deleteTransaction($transactionId,$userId);
 		}
 		redirect('welcome/myaccount','refresh');
+	}
+	
+	public function sendmail($slot,$productname,$message)
+	{
+			$config = Array(
+					'protocol' => 'smtp',
+					'smtp_host' => 'ssl://smtp.googlemail.com',
+					'smtp_port' => 465,
+					'smtp_user' => ' virtualinfocity@gmail.com',
+					'smtp_pass' => ' virtualinfocity@daiict',
+					'mailtype'  => 'html', 
+					'charset'   => 'iso-8859-1'
+					);
+				$this->load->library('email',$config);
+				$this->email->set_newline("\r\n");
+				$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
+				$this->email->to("201101073@daiict.ac.in");
+
+				$this->email->subject('New Order');
+				$this->email->message('New order of '.$this->session->userdata('userName').'Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$productname.'<br>'.$message);
+				$this->email->send();
+
+
 	}
 
 }

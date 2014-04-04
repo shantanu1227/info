@@ -145,7 +145,7 @@
 				echo form_open_multipart('cart/addXeroxFile',$attributes);?>
 				<div class="colorselection">
 				Choose the colour quality of your pages
-				<input type="radio" name="colour" value ="1"> COLOUR
+				<input type="radio" name="colour" checked="checked" autocomplete="off" value ="1"> COLOUR
 				<input type="radio" name="colour" value ="2" > BLACK
 				</div>
 
@@ -162,7 +162,7 @@
 				</div>
 				<div class="copies">
 					Select the number of copies:-
-					<select>
+					<select name="qty">
 					  <option value="1">1</option>
 					  <option value="2">2</option>
 					  <option value="3">3</option>
@@ -180,8 +180,12 @@
 				</div>
 				<div class="slots">
 					Select the time slot
-					<select>
-						
+					<select name="slotId">
+						<?php 
+						foreach ($slots as $slot) {?>
+							<option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
+						<?php
+						}?>
 					</select>
 				</div>
 				
