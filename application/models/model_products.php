@@ -8,6 +8,7 @@ class Model_products extends CI_Model {
 		$row = $query->row();
 		$storeid = $row->shopId;
 		$this->db->where('shopId', $storeid);
+		$this->db->where('inStock','TRUE');
 		return $this->db->get('products')->result();
 	}
 
@@ -15,6 +16,12 @@ class Model_products extends CI_Model {
 		$data = array('productName' => $productName, 'price' => $productPrice, 
 			'productImage' =>$productImage, 'inStock' => 'TRUE','shopId' => $shopId);
 		$this->db->insert('products', $data);	
+	}
+	public function addoffers($offerName,$offerImage,$shopId) {
+		$data = array('offerName' => $offerName, 
+			'OfferImageUrl' =>$offerImage,'shopId' => $shopId);
+		$this->db->insert('offers', $data);	
+		
 	}
 
 	public function getThali() {
@@ -29,8 +36,20 @@ class Model_products extends CI_Model {
 	}
 
 	public function getOffers() {
+		$this->db->order_by("offers.offerId", "desc");
 		$this->db->join('stores','offers.shopId=stores.shopId');
 		$this->db->from('offers');
+		$this->db->limit(4);
+		$results = $this->db->get();
+		#print_r ($results->result());#->result();
+		return $results->result();
+		#return $this->db->get('offers')->results();
+	}
+	public function getOffersseparate() {
+		$this->db->order_by("offers.offerId", "desc");
+		$this->db->join('stores','offers.shopId=stores.shopId');
+		$this->db->from('offers');
+		
 		$results = $this->db->get();
 		#print_r ($results->result());#->result();
 		return $results->result();

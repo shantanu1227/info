@@ -37,6 +37,8 @@
 	</div>
 </div>
 
+
+
 <script>
 	$(document).ready(function(){
 		$(".reglog").click(function(){

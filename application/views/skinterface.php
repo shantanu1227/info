@@ -20,6 +20,17 @@
    }			}); 
 				}); 
 				});
+				$(document).ready(function(){
+				$(".addofferbut").click(function(){
+				$(".addoffertohome").fadeIn(1000);
+				
+								$(document).keyup(function(e) {
+  if (e.keyCode == 27 ) {
+	  $(".addoffertohome").fadeOut(10);
+					
+   }			}); 
+				}); 
+				});
 				
 				$(document).ready(function(){
 				$(".editproduct").click(function(){
@@ -57,7 +68,7 @@
 				}); 
 				});
 	    </script>
-<div class="shophead"> KAVYA </div>
+<div class="shophead"> <?php echo $this->session->userdata('name');?> </div>
 <div class="producttable">
 <table border="1" width="25%">
 <tr>
@@ -65,8 +76,7 @@
 <th> ID </th>
 <th> Price </th>
 <th> In Stock </th>
-<th> Tick </th>
-<th>  ..  </th>
+<th>  Option </th>
 <th class="getimagelink"> ... </th>
 </tr>
 
@@ -77,9 +87,6 @@
   		<td><?php echo $product->productId; ?> </td>
         <td><?php echo $product->price;?> </td>
 		<td><?php echo $product->inStock;?> </td>
-   		<td>
-		<input type="checkbox" name="" value=""> 
-		</td>
 		<td class="editproduct">
 		  Edit
 		</td>
@@ -90,6 +97,9 @@
 </div>
 <div class="addproduct">
 Add a product
+</div>
+<div class="addofferbut">
+Add an Offer
 </div>
 <div class="addproductform">
 <?php echo form_open_multipart('shop/addProducts/');?>
@@ -113,6 +123,15 @@ Add a product
 <input type="hidden" id="changeimage" name = "changeimage" value="false">
 <input type="hidden" name="productid" id="productid" value="">
 <div><?php echo form_submit('', 'Update Product');?></div>
+</form>
+</div>
+<div class="addoffertohome">
+<?php echo form_open_multipart('shop/addOffers/');?>
+
+<div class="productinput"><input type="text" name="offername" placeholder="Offer name"><br></div>
+
+<div class="productinput"><input type="file" name="userfile" placeholder="Offer image"><br></div>
+<div><?php echo form_submit('', 'Update this Offer');?></div>
 </form>
 </div>
 

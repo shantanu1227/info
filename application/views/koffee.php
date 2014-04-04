@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'js-image-slider.css'); ?>">
         <script type='text/javascript' src="<?php echo(JS . 'js-image-slider.js'); ?>"></script>
         <script type='text/javascript' src="<?php echo(JS . 'jquery-1.7.1.min.js'); ?>"></script>
-        <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src="<?php echo (JS.'jquery-validation-1.11.1/dist/jquery.validate.min.js');?>" type="text/javascript"></script>
         <script src="<?php echo (JS . 'core.js'); ?>" type="text/javascript"></script>
         <!-- jQuery Form Validation code -->
         <script>

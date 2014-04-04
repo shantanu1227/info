@@ -99,7 +99,8 @@ text-decoration:none;
 color:white;
 }
 .quantityask{
-font-family:textfont;
+font-weight:normal;
+font-family:calibri;
 float:left;
 width:48%;
 text-align:center;

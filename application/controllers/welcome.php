@@ -27,6 +27,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 	
 	}
+	public function offers()
+	{
+	$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->model('model_products');
+			
+		$dataOffer=array('outputOffers' => $this->model_products->getOffersseparate());
+		$this->load->view('offers', $dataOffer+$errormsg);	
+	}
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
 	{
@@ -40,10 +48,17 @@ class Welcome extends CI_Controller {
 	}
 	public function skinterface()
 	{
+		$name=$this->session->userdata('name');
+		$isshopkeeper = $this->session->userdata('isShopKeeper');
+		
+		if($name!='' && $isshopkeeper){
 		$this->load->helper(array('form'));
 		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts('kavya') );
+		$data= array('output' => $this->model_products->getproducts($name) );
 		$this->load->view('skinterface', $data, FALSE);
+		}else{
+		redirect('/','refresh');
+		}
 	}
 	public function koffee()
 	{
@@ -62,7 +77,8 @@ class Welcome extends CI_Controller {
 		$this->load->view('cart_index',$data+$errormsg);
 	}
 	public function cart()
-	{	$this->load->model('model_transaction');
+	{	
+		$this->load->model('model_transaction');
 		$slots = array('slots'=>$this->model_transaction->getSlots());
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('cart_show',$errormsg+$slots);
@@ -71,6 +87,11 @@ class Welcome extends CI_Controller {
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('skloginpage',$errormsg);
+	}
+	public function adminlogin()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('adminlogin',$errormsg);
 	}
 	public function bigbite()
 	{
@@ -136,80 +157,80 @@ class Welcome extends CI_Controller {
 	}
 
 
-		public function oxford()
-		{
-			$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+	public function oxford()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('oxford') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('oxford'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('oxford'));
 		$this->load->view('oxford', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
-		}
-		public function clublaptop()
-		{
-			$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+	}
+	public function clublaptop()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('clublaptop') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('clublaptop'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('clublaptop'));
 		$this->load->view('clublaptop', $data+$errormsg+$dataTiming+$contactNumber, FALSE);	
-		}
-			public function ominfotech()
-			{
-				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+	}
+	public function ominfotech()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('ominfotech') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('ominfotech'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('kavya'));
 		$this->load->view('ominfotech', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
-			}
-			public function crossword()
-			{
-				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+	}
+	public function crossword()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('crossword') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('crossword'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('crossword'));
 		$this->load->view('crossword', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
-			}
+	}
 
-			public function faq()
-			{
-				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-				$this->load->view('faq',$errormsg);
-			}
-			public function aboutus()
-			{
-				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-				$this->load->view('aboutus',$errormsg);
-			}
-			public function vstationery()
-			{
-				$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+	public function faq()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('faq',$errormsg);
+	}
+	public function aboutus()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('aboutus',$errormsg);
+	}
+	public function vstationery()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_products');		
 		$data= array('output' => $this->model_products->getproducts('vstationery') );
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('vstationery'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('vstationery'));
 		$this->load->view('vstationery', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
-			}
-			public function feedback()
-			{	
-				$this->load->model('model_admin');
-				$this->load->model('model_products');
-				$this->model_admin->insertFeedback();
-				$errormsg  = array('errorMessage'=>'Thank You For Your FeedBack','errorClose'=>'X','errorColor'=>'#00BB0C');
-				$dataThali= array('outputThalis' => $this->model_products->getThali());	
-				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
-				
-			}
-			public function myaccount()
-			{
+	}
+	public function feedback()
+	{	
+		$this->load->model('model_admin');
+		$this->load->model('model_products');
+		$this->model_admin->insertFeedback();
+		$errormsg  = array('errorMessage'=>'Thank You For Your FeedBack','errorClose'=>'X','errorColor'=>'#00BB0C');
+		$dataThali= array('outputThalis' => $this->model_products->getThali());	
+		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+
+	}
+	public function myaccount()
+	{
 		$this->load->model('model_users');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'rgb(214, 38, 38)');
 		$userdetails=$this->model_users->getuserdetails();
@@ -224,10 +245,10 @@ class Welcome extends CI_Controller {
 				$errorMessage = "Please Log In ";
 				$errormsg['errorMessage']=$errorMessage;
 				$errormsg['errorClose'] = "X";
-			$this->load->model('model_products');
-		$dataThali= array('outputThalis' => $this->model_products->getThali());	
-		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$this->load->model('model_products');
+				$dataThali= array('outputThalis' => $this->model_products->getThali());	
+				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 			}if ($userdetails == -2) {
 				$errorMessage = "Incorrect Session ";
 				$errormsg['errorMessage']=$errorMessage;
@@ -240,7 +261,7 @@ class Welcome extends CI_Controller {
 		}
 	}
 
-	
+
 
 	public function admin()
 	{

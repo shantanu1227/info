@@ -41,5 +41,7 @@ define('IMG',URL.'assets/img/');
 define('CSS',URL.'assets/css/');
 define('JS',URL.'assets/js/');
 
+define('TAX',1.15);
+
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

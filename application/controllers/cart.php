@@ -114,7 +114,7 @@ class Cart extends CI_Controller {
 
 			$this->load->model('model_users');
 			$current_amount = $this->model_users->getuserdetails()->creditAmount;
-			if($current_amount > ($quantity*$price*1.15)){
+			if($current_amount > ($quantity*$price*TAX)){
 
 				$directoryName = "/photocopyDocuments"."/";
 				$config['upload_path'] = "./assets/img".$directoryName;
@@ -179,7 +179,7 @@ class Cart extends CI_Controller {
 
 			$this->load->model('model_users');
 			$current_amount = $this->model_users->getuserdetails()->creditAmount;
-			if($current_amount > ($quantity*$price*1.15)){
+			if($current_amount > ($quantity*$price*TAX)){
 
 				$directoryName = "/laundryImages"."/";
 				$config['upload_path'] = "./assets/img".$directoryName;
@@ -243,7 +243,7 @@ class Cart extends CI_Controller {
 			foreach ($this->cart->contents() as $items) {
 				$total_amount=$total_amount+$items['price'];
 			}
-			$total_amount=$total_amount*1.15;
+			$total_amount=$total_amount*TAX;
 			$current_amount = $this->model_users->getuserdetails()->creditAmount ;
 			if($current_amount > $total_amount){
 
@@ -293,6 +293,17 @@ class Cart extends CI_Controller {
 				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 			}
 		}
+	}
+
+	public function deletetransaction()
+	{
+		if ($this->session->userdata('userName')!='' && $this->session->userdata('userId')!='') {
+			$transactionId=$this->input->post('transactionId');
+			$userId=$this->session->userdata('userId');
+			$this->load->model('model_transaction');
+			$this->model_transaction->deleteTransaction($transactionId,$userId);
+		}
+		redirect('welcome/myaccount','refresh');
 	}
 
 }
