@@ -1,0 +1,748 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	padding:0;
+	margin:0;
+	background-color:white;
+}
+#box{
+	width:1147px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.imgslide{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#fixed_head{
+	border: 1px solid black;
+	background-color:#361200;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+	width:85%;
+	height:83px;
+	padding:0;
+	opacity: 0.85;
+	position:fixed;
+	z-index:50;
+	top:0px;
+	margin-top:0px;
+}
+.cname{
+	display: inline-block;
+	padding: 0px;
+	letter-spacing:5px;
+	font-family:monofont;
+	font-size:50px;
+	font-weight:bold;
+	color:white;
+	margin-left:100px;
+	margin-top:2px;
+	margin-bottom:10px;
+}
+.loginaccount{
+	right:8%;
+	float:right;
+	display: inline-block;
+	position:fixed;
+	}
+.reglog{
+	text-decoration:none;
+	padding-left:10px;
+	float:right;
+	display: inline-block;
+	margin-right:20px;
+	cursor:pointer;
+	padding-top:10px;
+	font-size:12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+.reglog:hover{
+	text-shadow: 0.7px 0.49px #ffffff;
+}
+.myaccount:hover{
+	text-shadow: 0.7px 0.49px #ffffff;
+}
+.myaccount{
+	text-decoration:none;
+	float:right;
+	display: inline-block;
+	margin-right:10px;
+	cursor:pointer;
+	padding-top:10px;
+	font-size:12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color:#FFFFFF;
+}
+.navigation{
+	position:fixed;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:85px;
+	display: inline-block;
+	clear:left;
+	z-index:60;
+	width:95.1%;
+}
+.navigation ul{
+	width:100%;
+	margin:0;
+	padding-left: 0;
+	float:left;
+}
+.navigation ul li{
+	background-color:#361200;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	cursor:pointer;
+	padding:0.95%;
+	text-align:center;
+	width:8.05%;
+	float:left;
+	list-style:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	text-decoration:none;
+	font-size:13px;
+}
+.navigation ul li a{
+	text-decoration:none;
+	color:white;
+}
+.navigation ul li:hover{
+	opacity:0.9;
+}
+.navbar ul ul{
+	margin-top:12%;
+	padding: 0px;
+	margin-bottom: -13%;
+	border-style: none;
+	width: 100%;
+	display: none;
+	float: left;
+}
+.navbar ul ul li{
+	margin-left: -12%;
+	padding: 0px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	width: 122%;
+	float: left;
+}
+.navbar ul ul li a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.navbar ul li:hover > ul{
+	display:block;
+}
+.navbar ul li li:hover{
+	background-color:#498FA0;
+	width:124%;
+}	
+.navigation ul li li a{
+	padding:0px;
+}	
+.navbar{
+	width:100%;
+	float:left;
+}
+@media all and (max-width: 1500px) and (min-width: 700px) {
+	.navigationtemp{
+		display: none;
+	}
+	.navigationtemp ul{
+		display: none;
+	}
+	.navigationtemp ul li{
+		display: none;
+	}
+}
+@media all and (max-width: 700px) {
+	.navigation{
+		display:none;
+	}
+	.navigation ul{
+		display:none;
+	}
+	.navigation ul li{
+		display:none;
+	}
+}
+/*-----------------SMALLER NAVIGATION BAR-------------------*/
+.navigationtemp{
+	position:fixed;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:85px;
+	display: inline-block;
+	clear:left;
+	z-index:60;
+	width:85.6%;
+}
+.navigationtemp ul{
+	width:100%;
+	margin:0;
+	padding-left: 0;
+	float:left;
+}
+.navigationtemp ul li{
+	background-color:#361200;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	cursor:pointer;
+	padding:0.95%;
+	text-align:center;
+	width:8.05%;
+	float:left;
+	list-style:none;
+	color:#FFFFFF;
+	cursor:pointer;
+	text-decoration:none;
+	font-size:10px;
+}
+.navigationtemp ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+.navigationtemp ul li:hover{
+	opacity:0.9;
+}
+.navbartemp ul ul{
+	margin-top:12%;
+	padding: 0px;
+	margin-bottom: -13%;
+	border-style: none;
+	width: 100%;
+	display: none;
+	float: left;
+}
+.navbartemp ul ul li{
+	margin-left: -12%;
+	padding: 0px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	width: 122%;
+	float: left;
+}
+.navbartemp ul ul li a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.navbartemp ul li:hover > ul{
+	display:block;
+}
+
+.navbartemp ul li li:hover{
+	background-color:#498FA0;
+	width:124%;
+}	
+.navigationtemp ul li li a{
+	padding:0px;
+}	
+.navbartemp{
+	width:100%;
+	float:left;
+}
+@font-face
+{
+font-family: monofont;
+src: url(../fonts/JandaCelebrationScript.ttf);
+}
+@font-face
+{
+font-family: submonofont;
+src: url(../fonts/mickey.ttf);
+}
+@font-face
+{
+font-family: textfont;
+src: url(../fonts/stewartsans.ttf);
+}
+.offers{
+	margin-top:12%;
+	float:left;
+	width:100%;
+}
+.trending{
+	background-color:white;
+	margin-top:5px;
+	width:75%;
+	float:left;
+	height:30%;
+}
+.trendingseparate{
+	margin-left: 12.5%;
+	background-color:white;
+	margin-top:15%;
+	width:75%;
+	float:left;
+	
+}
+.todaymenu{
+	height:30%;
+	overflow:scroll;
+	margin-top:5px;
+	background-color:#361200;
+	margin-left:1%;
+	width:24%;
+	float:left;
+	opacity:0.8;
+		}
+.todaymenuhead{
+	padding:10px;
+	float:left;
+	width:100%;
+	text-align:center;
+	font-size:40px;
+	color:white;
+	font-family:submonofont;
+
+}
+.restdetail{
+	float:left;
+	width:100%;
+	background-color:#361200;
+	opacity:0.8;
+}
+.resthead{
+	padding:4px;
+	font-size:25px;
+	color:#A55730;
+	font-weight:bold;
+	float:left;
+	width:100%;
+	font-family:calibri;
+}
+.restmenu{
+	padding:4px;
+	font-size:18px;
+	color:white;
+	float:left;
+	width:100%;
+	font-family:calibri;}
+
+.trendobject{
+	margin-left:2.6% !important ;
+	margin: 10px;
+	font-family: calibri;
+	float: left;
+	width: 46%;
+}
+.trendobject img{
+	float:left;
+	margin-right:5px;
+	width:150px;
+	height:150px;
+}
+.trendtext{
+	padding: 8px;
+	border-style: solid;
+	border-radius: 5px;
+	border-width: 1px;
+	height: 135px;
+	background-color: #361200;
+	float: left;
+	opacity:0.8;
+	width: 53%;
+	color: white;
+	font-family:calibri;
+}
+.shopname{
+	margin-top:5px;
+	float:left;
+	color:white;
+}
+.trendshop{
+	margin-top:5px;
+	float:left;
+	width:100%;
+}
+.trendshophead{
+	font-weight:bold;
+	float:left;
+	color:#A55730;
+	width:50%;
+}
+.trendshopname{
+	padding:2px;
+	float:left;
+	width:47%;
+}
+#feedback{
+	padding:8px;
+	font-family:calibri;
+	font-weight:bold;
+	font-size:18px;
+	color:white;
+	text-align:center;
+	border:1px solid #361200;
+	border-radius:5px;
+	box-shadow:7px 7px 5px #888888;
+	background-color:#361200;
+	height:16px;
+	position:fixed;
+	top:50%;
+	right:-3%;
+	width:90px;
+	writing-mode:tb-rl;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform: rotate(90deg);
+	cursor:pointer;
+}
+.shophead{
+	width:100%;
+	font-size:30px;
+	font-family:calibri;
+	padding:2%;
+	background:#802E05;
+	color:white;
+}
+.shoploginhead,.adminloginhead{
+	margin-top:11.8%;
+	width:56%;
+	float:left;
+	margin-left:20%;
+	font-size:30px;
+	font-family:calibri;
+	padding:2%;
+	background:#802E05;
+	color:white;
+}
+.addproductform{
+	display:none;
+	position:fixed;
+	top:30%;
+	height:150px;
+	left:30%;
+	width:50%;
+	background:#361200;
+	color:white;
+}
+.addoffertohome{
+display:none;
+position:fixed;
+top:30%;
+height:150px;
+left:25%;
+width:50%;
+background:#361200;
+color:white;
+}
+.editproductform{
+	display:none;
+	position:fixed;
+	top:30%;
+	height:150px;
+	left:30%;
+	width:50%;
+	background:#361200;
+	color:white;
+}
+.addproduct{
+	padding:1%;
+	cursor:pointer;
+	float:left;
+	width:auto;
+	border-style:solid;
+	border-width:1px;
+	background:#802E05;
+	color:white;
+	font-family:calibri;
+}
+.addofferbut{
+padding:1%;
+cursor:pointer;
+float:left;
+width:auto;
+border-style:solid;
+border-width:1px;
+background:#802E05;
+color:white;
+font-family:textfont;
+}
+.editproduct{
+	text-align:center;
+	padding:1%;
+	cursor:pointer;
+	border-style:solid;
+	border-width:1px;
+	background:#802E05;
+	color:white;
+	font-family:calibri;
+}
+.producttable{
+	float:left;
+	width:100%;
+}
+.producttable th,td{
+width:40px;
+text-align:center;
+}
+.mycartbut{
+	text-indent: 25px;
+	background-size: 22px 22px;
+	background-image: url(../img/icon_cart.png);
+	background-repeat: no-repeat;
+	background-position:10px;
+	float: right;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+	font-size: 12px;
+	font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	margin-top: 40px;
+	margin-right:29px;
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	position:relative;
+}
+.mycartbut:hover{
+	text-shadow: 0.5px 0.49px #ffffff;
+	background-size: 25px 25px;
+	border-width: 2px;
+	border-color: #585858;
+}
+.carttable{
+	float:left;
+	width:100.2%;
+	margin-top:15%;
+}	
+.carttable th{
+	font-family:calibri;
+	color:white;
+	background:#361200;
+}
+.carttable td{
+	text-align:center;
+	font-family:calibri;
+	color:white;
+	background:#361200;
+	opacity:0.8;
+}
+
+input[type="submit"]{
+	font-size:20px;
+	text-align:center;
+    font-family: calibri;
+	font-weight:bold;
+    padding-left: 10%;
+    padding-right: 10%;
+	cursor:pointer;
+}
+.updatecartbut{
+    display: inline-block;
+	text-align:center;
+	width:auto;
+	margin-bottom: 1%;
+}
+.emptycartbut{
+    display: inline-block;
+    margin-bottom: 1%;
+    margin-top:1%;
+    color: white;
+    -webkit-appearance: button;
+	font-family:calibri;
+	text-align:center;
+	width:19%;
+	border: 1px solid black;
+	border-radius:2px;
+	background-color:#D8D8D8; 
+	background:linear-gradient(to bottom, #FAFAFA 30%, #E6E6E6 100%);
+	padding: 0.2%;
+}
+.emptycartbut:hover{
+	color:black;
+	background:linear-gradient(to bottom, #E6E6E6 30%,  #FAFAFA 100%);
+}
+
+.emptycartbut a{
+	font-size:20px;
+	color: black;
+	font-weight:bold;
+	text-decoration:none;
+}
+.emptycartbut a:hover{
+	color:black;
+	background:linear-gradient(to bottom, #E6E6E6 30%,  #FAFAFA 100%);
+}
+.updateempty{
+    display: inline-block;
+    float: left;
+    padding-top: 8%;
+}
+.chck{
+	text-align:center;
+    display: inline-block;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 1%;
+    font-family:calibri;
+    /*background:#361200;
+    color: white;*/
+}
+.checkoutbutton{
+margin-top: 1%;
+float: right;
+width: auto;
+font-family: calibri;
+color: white;
+padding: 1%;
+border-radius: 3px;
+background: #361200;
+cursor: pointer;
+opacity:0.9;
+}
+.checkoutbutton:hover{
+background:#361200;
+opacity:1;
+}
+.chck a{
+	text-decoration:none;
+    -webkit-appearance: button;
+    padding: 1%;
+    padding-left: 26%;
+    padding-right: 26%;
+    color: black;
+}
+.chck a:link{
+   color: black;
+}
+.chck a:visited{
+    color: black;
+}
+#slotselect{
+	font-family:calibri;
+	font-weight:bold;
+	font-size:17px;
+	width:auto;
+	text-indent:-280px;
+	padding:10px;
+}
+.orderslots{
+	font-weight:bold;
+	font-family:calibri;
+	margin-left: 11.5%;
+	letter-spacing:1.5px;
+	float: left;
+	width: 150px;
+}
+
+/*#tabs{
+    padding-right: 8%;
+    padding-top: 5%;
+    display: inline-block;
+    float: right;
+}
+#tabs ul {
+	padding: 20px;
+	margin: 0px;
+	margin-left: 10px;
+	list-style-type: none;
+}
+#tabs ul li {
+	display: inline-block;
+	clear: none;
+	float: left;
+	height: 24px;
+	color:blue;
+}
+#tabs ul li a {
+	position: relative;
+	margin-top: 16px;
+	display: block;
+	margin-left: 96px;
+	line-height: 24px;
+	padding-left: 10px;
+	background: #f6f6f6;
+	z-index: 9999;
+	border: 1px solid #ccc;
+	border-bottom: 0px;
+	width: 130px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: calibri;
+	font-size: 120%;
+}*/
+ 
+.sklogindiv, .adminlogindiv{
+	margin-top:0%;
+	float:left;
+	width:60%;
+	margin-left:20%;
+	background:#361200;
+}
+.skforminput, .admininput{
+	margin-top: 2%;
+	position: relative;
+	float: left;
+	height: 45px;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.skforminput input, .admininput input{
+	height:35px;
+	width: 100%;
+	border-radius: 5px;
+	margin-left: 0%;
+	border: 1px solid #000000;
+}
+
+.skforminputsubmit, .admininputsubmit{
+	margin-left:10%;
+	margin-top:1%;
+	float:left;
+	width:90%;
+}
+
+#yesimagechange{
+	display:none;
+	float:right;
+}
+
+#askimagechange{
+	float:right;
+	width:auto;
+	padding:2%;
+	cursor:pointer;
+}
+.getimagelink{
+	display:none;
+}
+#clogo{
+	position:fixed;
+	margin-right:5px;
+}
+#cname{
+	background-color:#91634C;
+	display: inline-block;
+	padding: 30px;
+	letter-spacing:5px;
+	font-family:monofont;
+	font-size:55px;
+	font-weight:bold;
+	color:white;
+	margin-left:45px;
+	margin-top:-30px;
+	margin-bottom:10px;
+	border-radius: 10px;
+}
+.moreoffers{
+float:left;
+width:98%;
+padding:1%;
+cursor:pointer;
+font-family:calibri;
+}
+.moreoffers a{
+text-decoration:none;
+font-weight:bold;
+color:#361200;
+}
