@@ -25,6 +25,7 @@ class Welcome extends CI_Controller {
 		$dataThali= array('outputThalis' => $this->model_products->getThali());	
 		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+	
 	}
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
