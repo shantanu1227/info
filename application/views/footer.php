@@ -1,8 +1,3 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="footer.css">
-	</head>
-	<body>
 		<div class="footer">
 			<div class="columns">
 			<ul>
@@ -83,5 +78,3 @@
 				$(this).attr("src", "<?php echo(IMG.'social_icons/yahoo_dark.png');?>");
 			});
 		</script>
-	</body>
-</html>

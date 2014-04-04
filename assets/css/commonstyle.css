@@ -206,7 +206,7 @@ color:white;
 		display: none;
 	}
 }
-@media all and (max-width: 700px) {
+/*@media all and (max-width: 700px) {
 	.navigation{
 		display:none;
 	}
@@ -218,8 +218,8 @@ color:white;
 	}
 }
 /*-----------------SMALLER NAVIGATION BAR-------------------*/
-.navigationtemp{
-	/*box-shadow:-7px 7px 5px #888888;*/
+/*.navigationtemp{
+	/*box-shadow:-7px 7px 5px #888888;
 	position:fixed;
 	margin-left:auto;
 	margin-right:auto;
@@ -291,7 +291,7 @@ color:white;
 .navbartemp{
 	width:100%;
 	float:left;
-}
+}*/
 
 .shopheading{
 	text-indent:-9999px;

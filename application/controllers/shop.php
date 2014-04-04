@@ -135,7 +135,7 @@
 		}
 		public function login()
 		{
-			if($this->session->userdata('userName')==''){
+			if($this->session->userdata('userId')==''){
 				$username = $this->input->post('username',TRUE);
 				$password = $this->input->post('password',TRUE);
 				$this->load->model('model_shop');

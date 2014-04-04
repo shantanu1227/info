@@ -84,13 +84,21 @@ class Welcome extends CI_Controller {
 		$this->load->view('cart_index',$data+$errormsg+$captcha);
 	}
 	public function cart()
-	{	
-		$this->load->model('model_products');
+	{
+		if(!$this->cart->contents()){
+		$errormsg  = array('errorMessage'=>'Your Cart Is Empty','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+					$this->load->model('model_products');
+					$dataThali= array('outputThalis' => $this->model_products->getThali());	
+					$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+					$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		}else{
 		$this->load->model('model_transaction');
+		$this->load->model('model_products');
 		$slots = array('slots'=>$this->model_transaction->getSlots());
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$captcha = array('image'=>$this->model_products->createCaptcha());
 		$this->load->view('cart_show',$errormsg+$slots+$captcha);
+		}
 	}
 	public function skloginpage()
 	{	$this->load->model('model_products');
@@ -121,17 +129,20 @@ class Welcome extends CI_Controller {
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
 		$captcha = array('image'=>$this->model_products->createCaptcha());
-		$this->load->view('washexpress', $errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
+		$this->load->model('model_transaction');
+		$slots = array('slots'=>$this->model_transaction->getSlots());
+		$this->load->view('washexpress', $errormsg+$dataTiming+$contactNumber+$slots+$captcha, FALSE);
 	}
 	public function omega()
 	{	$this->load->model('model_products');
 		$this->load->model('model_shop');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_transaction');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('omega'));
 		$slots = array('slots'=>$this->model_transaction->getSlots());
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
 		$captcha = array('image'=>$this->model_products->createCaptcha());
-		$this->load->view('omega',$errormsg+$contactNumber+$slots+$captcha);
+		$this->load->view('omega',$errormsg+$contactNumber+$slots+$captcha+$dataTiming);
 	}
 
 	public function subway()
