@@ -47,8 +47,8 @@ body {
 .copyright{
 	width: 85%;
 font-size: 71%;
-margin-left: 229%;
-margin-top: -5%;
+margin-left: 17%;
+margin-top: 46%;
 	}
 
 .footer ul{
@@ -58,10 +58,10 @@ margin-top: -5%;
 	list-style-type: none; 
 }
 .footer li{
-	margin-left: 20px;
+margin-left: 20px;
 float: left;
 display: inline;
-width: 29%;
+width: 23%;
 }
 
 .columns{
@@ -120,8 +120,8 @@ border-color: #151515;
  }
 
  .icons{
-margin-top: -40%;
-margin-left: 245%;
+margin-top: 6%;
+margin-left: 30%;
 float: left;
 width: 109%;
 	/*
