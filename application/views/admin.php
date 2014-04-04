@@ -10,67 +10,82 @@
 	</head>
 	<body>
             <div id="cname">Vinfocity</div>
-            <div id="box">
+            <div id="mainbox1">
+		<div id="wrapper">
 		<div id="box1">
-                    <div id="wrapper">
+                    
                         <div class="container">
                             <div class="heading">DELETE USER ACCOUNT</div>
                             <?php $attributes = array('id' => 'deleteuserform');
                             echo form_open('',$attributes);
                             ?>
-                            <div class="forminput"><input type="text" name="adminID" placeholder="AdminID"/><br></div>
-                            <div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
-						<div class="forminput"><input type="text" name="username" placeholder="Username e.g. '201101098'"><br></div>
+                            
                                            
                                                 <input type="submit" value="Delete User"/>
                             <?php echo form_close(); ?>
                         </div>
                     </div>
                 </div>
+				<div id="wrapper">
                 <div id="box2">
-			<div id="wrapper">
+			
 				<div class="container">
 					<div class="heading">RECHARGE USER ACCOUNT</div>
 					<?php $attributes = array('id' => 'rechargeform');
 					echo form_open('', $attributes);
 					?>
-						<div class="forminput"><input type="text" name="adminID" placeholder="Admin ID"><br></div>
-						<div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
-						<div class="forminput"><input type="text" name="username" placeholder="Username e.g. '201101098'"><br></div>
+						
 						<div class="forminput"><input type="text" name="recamount" placeholder="Recharge Amount"><br></div>
 						<input type="submit" value="Recharge" />
 					<?php echo form_close();?>
 				</div>
 			</div>
 		</div>
+		<div id="wrapper">
                 <div id="box3">
-			<div id="wrapper">
+			
 				<div class="container">
 					<div class="heading">DEDUCT FROM USER ACCOUNT</div>
 					<?php $attributes = array('id' => 'deductform');
 					echo form_open('', $attributes);
 					?>
-						<div class="forminput"><input type="text" name="adminID" placeholder="Admin ID"><br></div>
-						<div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
-						<div class="forminput"><input type="text" name="username" placeholder="Username e.g. '201101098'"><br></div>
+						
 						<div class="forminput"><input type="text" name="deductamount" placeholder="Amount to deduct"><br></div>
 						<input type="submit" value="Deduct Amount" />
 					<?php echo form_close();?>
 				</div>
 			</div>
 		</div>
+		</div>
+		
+		<div id="mainbox3">
+		<div id="wrapper">
                 <div id="box4">
-			<div id="wrapper">
+			
 				<div class="container">
 					<div class="heading">DELIVERY-MAN PASSWORD</div>
 					<?php $attributes = array('id' => 'passwordform');
 					echo form_open('', $attributes);
 					?>
-						<div class="forminput"><input type="text" name="adminID" placeholder="Admin ID"><br></div>
-						<div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
-						<div class="forminput"><input type="text" name="oldpwd" placeholder="Current Password"><br></div>
+						
 						<div class="forminput"><input type="text" name="newpwd" placeholder="New Password"><br></div>
 						<input type="submit" value="Change Password" />
+					<?php echo form_close();?>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper">
+		 <div id="box5">
+			
+				<div class="container">
+					<div class="heading">UPDATE THALI</div>
+					<?php $attributes = array('id' => 'passwordform');
+					echo form_open('', $attributes);
+					?>
+						<div class="forminput1"><input type="radio" name="lunchordinner">LUNCH<br></div>
+						<div class="forminput1"><input type="radio" name="lunchordinner">DINNER<br></div>
+						<div class="forminput"><input type="text" name="menu" placeholder="Enter Menu"><br></div>
+						<input type="submit" value="Submit Menu" />
 					<?php echo form_close();?>
 				</div>
 			</div>

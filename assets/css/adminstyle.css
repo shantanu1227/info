@@ -14,80 +14,46 @@ body {
 	background-size: cover;
 }
 
-#box{
-	margin-left:7%;
-	height:300px;
+#mainbox1,#mainbox2, #mainbox3{
+float:left;
+width:100%;
 }
-#box1{
-        display: inline-block;
-	font-family:monofont;
-	color:white;
-	background:#91634C;
-	border:2px solid #361200;
-	border-radius:10px;
-	width:23%;
-	height:180%;
-	/*padding-top: 3.5%;
-	/*left:25%;
-	right:auto;*/
+
+#box1,#box2, #box3, #box4, #box5{
+		float: left;
+margin-left: 20%;
+margin-right: 20%;
+display: inline-block;
+font-family: textfont;
+color: #FFF;
+background: none repeat scroll 0% 0% #91634C;
+border: 2px solid #361200;
+border-radius: 10px;
+width: 60%;
+height: 200px;
 }
-#box2{
-        display: inline-block;
-	font-family:monofont;
-	color:white;
-	background:#91634C;
-	border:2px solid #361200;
-	border-radius:10px;
-	width:23%;
-	height:80%;
-	/*top:21%;
-	left:25%;
-	right:auto;*/
-}
-#box3{
-        display: inline-block;
-	font-family:monofont;
-	color:white;
-	background:#91634C;
-	border:2px solid #361200;
-	border-radius:10px;
-	width:23%;
-	height:80%;
-	/*top:21%;
-	left:25%;
-	right:auto;*/
-}
-#box4{
-        display: inline-block;
-	font-family:monofont;
-	color:white;
-	background:#91634C;
-	border:2px solid #361200;
-	border-radius:10px;
-	width:23%;
-	height:80%;
-	/*top:21%;
-	left:25%;
-	right:auto;*/
-}
+
+
+
 #cname{
-	background-color:#91634C;
-	display: inline-block;
-	padding: 30px;
-	letter-spacing:5px;
-	font-family:monofont;
-	font-size:55px;
-	font-weight:bold;
-	color:white;
-	margin-left:45px;
-	margin-top:-30px;
-	margin-bottom:10px;
-	border-radius: 10px;
+	width: 16%;
+background-color: #91634C;
+display: inline-block;
+padding: 7px;
+letter-spacing: 5px;
+font-family: monofont;
+font-size: 38px;
+font-weight: bold;
+color: #FFF;
+margin-left: 42%;
+margin-top: -12px;
+margin-bottom: 10px;
+border-radius: 10px;
+text-align: center;
 }
-.wrapper{
+#wrapper{
 	float:left;
-	width:100%;
-	height:190%;
+	width:33.3%;
 }
 .heading{
 	font-weight:normal;
@@ -100,7 +66,7 @@ body {
 	font-size: 25px;
 }
 .container{
-	font-family:monofont;
+	font-family:textfont;
 	float: left;
 	text-align: center;
 	width: 98%;
@@ -132,9 +98,16 @@ body {
 	width:100%;
 	float:left;
 }
-.forminput{
+.forminput, .forminput1{
 	float: left;
 	height: 4px;
+	width: 80%;
+	margin-left: 10%;
+}
+.forminput1{
+	position:relative;
+	float: left;
+	height: 25px;
 	width: 80%;
 	margin-left: 10%;
 }
