@@ -160,7 +160,9 @@ class Cart extends CI_Controller {
 				$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('omega'));
 				$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
 				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
-				$this->load->view('omega',$errormsg+$dataTiming+$contactNumber);
+				$this->load->model('model_transaction');
+				$slots = array('slots'=>$this->model_transaction->getSlots());
+				$this->load->view('omega',$errormsg+$dataTiming+$contactNumber+$slots);
 
 			}
 		}
@@ -214,9 +216,11 @@ class Cart extends CI_Controller {
 					$this->sendmail('New Order',$slot,'Laundry',$message);
 					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
 					$this->load->model('model_shop');
+					$this->load->model('model_transaction');
+					$slots = array('slots'=>$this->model_transaction->getSlots());
 					$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
 					$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
-					$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber);					
+					$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber+$slots);					
 					header( "refresh:3;url=".URL."welcome/washexpress" );		
 				}
 			}else{
@@ -224,7 +228,9 @@ class Cart extends CI_Controller {
 				$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
 				$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
 				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
-				$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber);
+				$this->load->model('model_transaction');
+				$slots = array('slots'=>$this->model_transaction->getSlots());
+				$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber+$slots);
 			}
 		}
 

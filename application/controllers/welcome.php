@@ -108,7 +108,9 @@ class Welcome extends CI_Controller {
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
-		$this->load->view('washexpress', $errormsg+$dataTiming+$contactNumber, FALSE);
+		$this->load->model('model_transaction');
+		$slots = array('slots'=>$this->model_transaction->getSlots());
+		$this->load->view('washexpress', $errormsg+$dataTiming+$contactNumber+$slots, FALSE);
 	}
 	public function omega()
 	{
