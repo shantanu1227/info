@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Shopkeeper Login</title>
-		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'vinfostyle.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'Vinfostyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 		

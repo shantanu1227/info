@@ -52,10 +52,9 @@ class Welcome extends CI_Controller {
 		$isshopkeeper = $this->session->userdata('isShopKeeper');
 		
 		if($name!='' && $isshopkeeper){
-		$this->load->helper(array('form'));
 		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts($name) );
-		$this->load->view('skinterface', $data, FALSE);
+		$data= array('products' => $this->model_products->getAllproductsofStore($name) );
+		$this->load->view('skinterface', $data);
 		}else{
 		redirect('/','refresh');
 		}

@@ -80,7 +80,7 @@
 <th class="getimagelink"> ... </th>
 </tr>
 
- <?php foreach ($output as $product) {
+ <?php foreach ($products as $product) {
 	
 
    ?><tr> <td><?php echo $product->productName; ?> </td>
@@ -107,7 +107,7 @@ Add an Offer
 <div class="productinput"><input type="text" name="productname" placeholder="Product name"><br></div>
 <div class="productinput"><input type="text" name="productprice" placeholder="Product price"><br></div>
 <div class="productinput"><input type="file" name="userfile" placeholder="Product image"><br></div>
-<div><?php echo form_submit('', 'Update your Cart');?></div>
+<div><?php echo form_submit('', 'Add Product');?></div>
 </form>
 </div>
 
