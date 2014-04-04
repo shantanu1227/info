@@ -145,7 +145,7 @@ class Cart extends CI_Controller {
 					$userId=$this->session->userdata('userId');
 					$this->model_transaction->addxerox($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
 					$message= "Print details are:<br>Color:".$color."<br>Qty=".$quantity."<br>Pages:".$startpage."-".$endpage."<br>FileLocation: ".IMG.$directoryName.$uploaddata['file_name'];
-					$this->sendmail($slot,'PhotoCopy',$message);
+					$this->sendmail('New Order',$slot,'PhotoCopy',$message);
 					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');					
 					$this->load->model('model_shop');
 					$slots = array('slots'=>$this->model_transaction->getSlots());
@@ -210,7 +210,7 @@ class Cart extends CI_Controller {
 					$userId=$this->session->userdata('userId');
 					$this->model_transaction->addlaundry($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
 					$message= "Laundry details are:<br>Bill No:".$billNo."<br>Price=".$price."<br>Bill Image : ".IMG.$directoryName.$uploaddata['file_name'];
-					$this->sendmail($slot,'Laundry',$message);
+					$this->sendmail('New Order',$slot,'Laundry',$message);
 					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
 					$this->load->model('model_shop');
 					$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
@@ -314,12 +314,19 @@ class Cart extends CI_Controller {
 			$transactionId=$this->input->post('transactionId');
 			$userId=$this->session->userdata('userId');
 			$this->load->model('model_transaction');
-			$this->model_transaction->deleteTransaction($transactionId,$userId);
+			$transactionDetail=$this->model_transaction->getTransactionDetails($transactionId);
+			$output=$this->model_transaction->deleteTransaction($transactionId,$userId);
+			if($output>0){
+				$productName= $transactionDetail->productName;
+				$message = "Shop Name: ".$transactionDetail->name."<br> Qty: ".$transactionDetail->quantity."<br> Price".$transactionDetail->price;
+				$slot=$transactionDetail->deliverySlot;
+				$this->sendmail('Order Cancelled',$slot,$productName,$message);
+				}
 		}
 		redirect('welcome/myaccount','refresh');
 	}
 	
-	public function sendmail($slot,$productname,$message)
+	public function sendmail($orderType,$slot,$productname,$message)
 	{
 			$config = Array(
 					'protocol' => 'smtp',
@@ -335,8 +342,8 @@ class Cart extends CI_Controller {
 				$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
 				$this->email->to("201101073@daiict.ac.in");
 
-				$this->email->subject('New Order');
-				$this->email->message('New order of '.$this->session->userdata('userName').'Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$productname.'<br>'.$message);
+				$this->email->subject($orderType);
+				$this->email->message($orderType.' of '.$this->session->userdata('userName').'  Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$productname.'<br>'.$message);
 				$this->email->send();
 
 

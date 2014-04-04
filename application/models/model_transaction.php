@@ -180,6 +180,17 @@ class Model_transaction extends CI_Model {
 		$data = array('creditAmount'=>$updatedAmount);
 		$this->db->update('users', $data);
 	}
+	public function getTransactionDetails($transactionId)
+	{
+		$this->db->select('*,transaction.price');
+		$this->db->where('transactionId',$transactionId);
+		$this->db->from('transaction');
+		$this->db->join('products','products.productId=transaction.productId');
+		$this->db->join('stores', 'stores.shopId = products.shopId');
+		$query=$this->db->get();
+		return $query->row();
+
+	}
 
 }
 
