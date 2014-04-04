@@ -47,10 +47,17 @@ class Welcome extends CI_Controller {
 	}
 	public function skinterface()
 	{
+		$name=$this->session->userdata('name');
+		$isshopkeeper = $this->session->userdata('isShopKeeper');
+		
+		if($name!='' && $isshopkeeper){
 		$this->load->helper(array('form'));
 		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts('kavya') );
+		$data= array('output' => $this->model_products->getproducts($name) );
 		$this->load->view('skinterface', $data, FALSE);
+		}else{
+		redirect('/','refresh');
+		}
 	}
 	public function koffee()
 	{

@@ -68,7 +68,7 @@
 				}); 
 				});
 	    </script>
-<div class="shophead"> KAVYA </div>
+<div class="shophead"> <?php echo $this->session->userdata('name');?> </div>
 <div class="producttable">
 <table border="1" width="25%">
 <tr>
@@ -76,8 +76,7 @@
 <th> ID </th>
 <th> Price </th>
 <th> In Stock </th>
-<th> Tick </th>
-<th>  ..  </th>
+<th>  Option </th>
 <th class="getimagelink"> ... </th>
 </tr>
 
@@ -88,9 +87,6 @@
   		<td><?php echo $product->productId; ?> </td>
         <td><?php echo $product->price;?> </td>
 		<td><?php echo $product->inStock;?> </td>
-   		<td>
-		<input type="checkbox" name="" value=""> 
-		</td>
 		<td class="editproduct">
 		  Edit
 		</td>

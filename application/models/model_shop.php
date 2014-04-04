@@ -41,4 +41,33 @@ class Model_shop extends CI_Model {
 		$this->db->where('shopId',$storeid);
 		return $this->db->get('stores')->result();
 	 }
+	 
+	 public function login($username,$password)
+	 {
+		
+		/*
+		  Error -1  Incorrect Login Credentials 
+		*/
+		$this->db->where('userName',$username);
+		$this->db->where('password',$this->encrypt->sha1($password));
+		$result=$this->db->get('stores',1); //1 represents that limit is set to 1 in db query
+		if($result->num_rows()>0){
+			/*Set Session And User Is Loggedin*/
+			$rows = $result->row();
+                $newdata = array(
+                    'userId' => $rows->shopId,
+                    'name' => $rows->name,
+                    'userEmail' => $rows->email,
+                    'userMobile' => $rows->contactNo,
+					'isShopKeeper'=>TRUE,
+                    'loggedIn' => TRUE
+                );         
+            	$this->session->set_userdata($newdata);
+            	return 1;
+		}
+		else{
+			return -1;
+		}
+	}
+
 }
