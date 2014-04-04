@@ -111,7 +111,7 @@
 	<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;"><?php echo $errorClose ;?> </div>
 </div>
 <div id="fixed_head">
-	<img id="clogo" style ="max-height:82px;width:90px;opacity:0.8 "src="<?php echo (IMG.'Vinfocity_logo.jpg');?>">
+	<img id="clogo" style ="max-height:82px;width:90px;opacity:1 "src="<?php echo (IMG.'Vinfocity_logo.jpg');?>">
 	<div class="cname">Vinfocity</div>
 	<div class="loginaccount">
 		<?php if($this->session->userdata('userName') == ""){?>
