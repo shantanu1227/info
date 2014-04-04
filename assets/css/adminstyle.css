@@ -15,8 +15,8 @@ body {
 }
 
 #box{
-    margin-left: 4%;
-    margin-top: 3%;
+	margin-left:7%;
+	height:300px;
 }
 #box1{
         display: inline-block;
@@ -26,7 +26,7 @@ body {
 	border:2px solid #361200;
 	border-radius:10px;
 	width:23%;
-	height:60%;
+	height:180%;
 	/*padding-top: 3.5%;
 	/*left:25%;
 	right:auto;*/
@@ -39,7 +39,7 @@ body {
 	border:2px solid #361200;
 	border-radius:10px;
 	width:23%;
-	height:60%;
+	height:80%;
 	/*top:21%;
 	left:25%;
 	right:auto;*/
@@ -52,7 +52,7 @@ body {
 	border:2px solid #361200;
 	border-radius:10px;
 	width:23%;
-	height:60%;
+	height:80%;
 	/*top:21%;
 	left:25%;
 	right:auto;*/
@@ -65,7 +65,7 @@ body {
 	border:2px solid #361200;
 	border-radius:10px;
 	width:23%;
-	height:60%;
+	height:80%;
 	/*top:21%;
 	left:25%;
 	right:auto;*/
@@ -84,26 +84,27 @@ body {
 	margin-bottom:10px;
 	border-radius: 10px;
 }
-wrapper{
+.wrapper{
 	float:left;
 	width:100%;
-	height:auto;
+	height:190%;
 }
 .heading{
-	font-weight:bold;
+	font-weight:normal;
 	font-family:monofont;
 	margin-top: 5%;
-	font-family: textfont;
+	font-family: calibri;
 	float: left;
 	width: 100%;
 	text-align: center;
-	font-size: 35px;
+	font-size: 25px;
 }
 .container{
 	font-family:monofont;
 	float: left;
 	text-align: center;
 	width: 98%;
+	height:180%;
 	padding: 1%;
 	margin-top: auto;
 }
@@ -133,7 +134,7 @@ wrapper{
 }
 .forminput{
 	float: left;
-	height: 40px;
+	height: 4px;
 	width: 80%;
 	margin-left: 10%;
 }

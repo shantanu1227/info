@@ -187,11 +187,11 @@
             </div>
 			<div class="menuhead"><i>Carte de menu..</i></div>
 			<?php include 'dynamicproduct.php'; ?>
-            
+            <?php include 'footer.php'; ?>
 	</div>
 	<?php include 'reglog.php'; ?>
 			<div id="feedback">Feedback</div>
 		<?php include 'feedback.php'; ?>
-		<?php include 'footer.php'; ?>
+		
 	</body>
 </html>
