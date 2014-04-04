@@ -139,38 +139,46 @@
             </div>
             <div class="faq">
             <div id ="quesans1">
-                <div class="ques">What can I do if a product is not available?</div>
-                <div class="ans"> * Incase if the product is not available, then we suggest certain shops in 
-                    the near by area that might have that product. Besides, the customer can ask to be notified when that 
-                    product becomes available.</div>
+                <div class="ques">What is Virtual Infocity ?</div>
+                <div class="ans"> * Virtual Infocity will help the DA-IICT's students to buy the things from the Infocity's shops.
+                 They will just have to select the things and place the order.</div>
             </div>
-            <div id="quesans2">
+            <div id ="quesans2">
+                <div class="ques">Who will use Virtual Infocity ?</div>
+                <div class="ans"> * Currently, only DA-IICT's students can use Virtual Infocity. 
+                    But, we are planning to scale the project up in near future.</div>
+            </div>
+                
+            <div id="quesans3">
                 <div class="ques">Where will my orders be delivered?</div>
                 <div class="ans"> *The customer needs to collect his orders from the main gate of DA-IICT by the delivery person.</div>
             </div>
-            <div id="quesans3">
+            <div id="quesans4">
                 <div class="ques" >What is the mode of payment?</div>
                 <div class="ans"> *It is a credit based payment system in which the credit is deducted when 
                     the product has been purchased and sent for delivery. If the product is sold out or
                     in case the customer cancels the order within the allowed time, then the credit will not be deducted.</div>
             </div>
-            <div id="quesans4">
+            <div id="quesans5">
                 <div class="ques" >Till when can I cancel my order?</div>
-                <div class="ans"> *The order can be canceled one hour prior to the slot in which it has 
-                    been ordered. For example, if the customer has ordered for delivery at 3 pm, he can 
-                    cancel the order before 2 pm. If canceled after 2 pm there will be no refund.</div>
+                <div class="ans"> *According to our current policy, the order can be canceled before the time of the half of the duration of that perticular slot in which it has 
+                    been ordered. For example, if the customer has ordered for delivery in the slot of 2 PM to 4 PM, he can 
+                    cancel the order before 3 PM. If canceled after 3 PM, there will be no refund.</div>
             </div>
-            <div id="quesans5">    
+            <div id="quesans6">    
                 <div class="ques" >What are the benefits when I create an account?</div>
-                <div class="ans"> *When you create an account with VirtualInfocity, you get three free deliveries. For 
-                    the first three times that you order, you do not have to pay for any delivery charges.
-                    Holding an account will make shopping from Infocity economical and time saving. Also, loyal customers 
-                    are entitled to certain privileges.</div>
+                <div class="ans"> *As per our analysis, the students of DA-IICT will end up paying less 
+                    if they choose Virtual Infocity to buy the things as it will not include the extra overhead of travelling etc. 
+                    We are also planning to have some exciting offers for our loyal cutomers!</div>
            </div>
-           <div id="quesans6">
-                <div class="ques" >What are my privileges?</div>
-                <div class="ans">*We provide our loyal customers with extra credit for a purchase of above 
-                    Rs. 1000 in that month.</div>
+            <div id="quesans7">
+                <div class="ques" >What is the extra amount that I will endup paying if I place any order? </div>
+                <div class="ans">*You will have to pay  15% extra amount of the total amount. For example, if you buy a burger of 30 Rs. ,you </div>
+            </div>
+           <div id="quesans8">
+                <div class="ques" >What should I do when I have any errorneous transaction? </div>
+                <div class="ans">*You are supposed to contact admin as soon as possible. 
+                    You can reach to him on virtualinfocity@gmail.com</div>
             </div>
             </div>
         </div>
