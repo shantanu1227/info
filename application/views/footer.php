@@ -28,19 +28,18 @@
 				</li>
 
 				<li>
-					<dt class="headings1">Account</dt></br>
+					<dt class="headings1">Account</dt></br></br>
 					<dd class="subheadings"><?php echo anchor('/welcome/myaccount', 'MyAccount'); ?></dd>
-					<dd class="subheadings">Login</dd>
-					<dd class="subheadings">Sign up</dd>
+
 					<dd class="subheadings"><?php echo anchor('/welcome/cart' ,'Cart');?></dd>				
 				</li>
 
 				<li>
-					<dt class="headings1"> Virtual Infocity</dt>
-					<dd class="subheadings"><?php echo anchor('/welcome/aboutus', 'ABOUT US',$attr); ?></dd>
-					<dd class="subheadings"><?php echo anchor('/welcome/faq', 'FAQs',$attr); ?></dd>
-					<dd class="subheadings"><?php echo anchor ('welcome/privacy', 'Privacy',$attr);?></dd>
-					<dd class="subheadings"><?php echo anchor ('welcome/termsnconditions','Terms & Conditions',$attr);?></dd>
+					<dt class="vi-headings1" > Virtual Infocity</dt>
+					<dd class="subheadings1"><?php echo anchor('/welcome/aboutus', 'ABOUT US',$attr); ?></dd>
+					<dd class="subheadings1"><?php echo anchor('/welcome/faq', 'FAQs',$attr); ?></dd>
+					<dd class="subheadings1"><?php echo anchor ('welcome/privacy', 'Privacy',$attr);?></dd>
+					<dd class="subheadings1"><?php echo anchor ('welcome/termsnconditions','Terms & Conditions',$attr);?></dd>
 				</li>
 
 				<li>
@@ -50,7 +49,11 @@
 						<img class="twitter_icon" src="<?php echo(IMG.'social_icons/twitter02_dark.png');?>"></img>
 						<img class="yahoo_icon" src="<?php echo(IMG.'social_icons/yahoo_dark.png');?>"></img>
 					</div>
+					<div class="copyright">
+					© 2014 Vinfocity.com. All rights reserved
+					</div>
 				</li>
+
 			</ul>	
 			</div>
 		</div>

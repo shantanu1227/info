@@ -207,6 +207,20 @@ class Welcome extends CI_Controller {
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('aboutus',$errormsg);
 	}
+
+	public function privacy()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('privacy',$errormsg);
+	}
+
+	public function termsnconditions()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('termsnconditions',$errormsg);
+	}
+
+
 	public function vstationery()
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');

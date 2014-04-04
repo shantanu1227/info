@@ -44,6 +44,12 @@ body {
 	border-top-style: solid;
 	z-index: -40;
 }*/
+.copyright{
+	width: 85%;
+font-size: 71%;
+margin-left: 229%;
+margin-top: -5%;
+	}
 
 .footer ul{
 	/*float: left;*/
@@ -73,7 +79,7 @@ width: 29%;
 float: left;
 font-size: 150%;
 padding-top: 0%;
-margin-left: 40%;
+margin-left: 32%;
 border-width: 0px 0px 2px;
 -moz-border-top-colors: none;
 -moz-border-right-colors: none;
@@ -84,16 +90,38 @@ border-style: solid;
 border-color: #151515;
 }
 
+.vi-headings1{
+	.headings1;
+	font-size: 150%;
+	margin-left: 10%;
+	border-width: 0px 0px 2px;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+border-style: solid;
+border-color: #151515; 
+}
+
  .subheadings{
 	font-size: 80%;
 	padding: 2px;
 	margin-left: 30%;
 	text-decoration: none;
  }
+ .subheadings1{
+
+	font-size: 80%;
+	padding: 2px;
+	margin-left: 10%;
+	text-decoration: none;
+
+ }
 
  .icons{
-	margin-top: -55%;
-margin-left: 369%;
+margin-top: -40%;
+margin-left: 245%;
 float: left;
 width: 109%;
 	/*
