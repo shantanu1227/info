@@ -43,9 +43,11 @@ class Cart extends CI_Controller {
 		$bread = $this->input->post('bread');
 		$size = $this->input->post('size');
 		$veggies = $this->input->post('veggie');
-		$veggies=implode(',',$veggies);
+		if(!empty($veggies))
+			$veggies=implode(',',$veggies);
 		$sausages = $this->input->post('extra');
-		$sausages = implode(',', $sausages);
+		if(!empty($sausages))
+			$sausages = implode(',', $sausages);
 		$comments = $this->input->post('comments',TRUE);
 		$comments = trim($comments);
 		$price = $price*$size;
