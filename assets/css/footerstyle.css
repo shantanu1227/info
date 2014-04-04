@@ -18,7 +18,7 @@ body {
 .footer{
 	border:0px;
 	border-top:5px;
-	border-color: #361200;
+	border-color: #2A0A0A;
 	border-style: solid;
 	border-opacity:1.0;
 	border-radius:5px;
@@ -30,9 +30,10 @@ body {
 	padding-left: 0%;
 	opacity:0.9; 
 	z-index: 100;
-	/*-webkit-box-shadow: inset 0px 4px 39px 8px rgba(0,0,0,0.75);
-	-moz-box-shadow: inset 0px 4px 39px 8px rgba(0,0,0,0.75);
-	box-shadow: inset 0px 4px 39px 8px rgba(0,0,0,0.75);*/
+	/*
+	-webkit-box-shadow: inset 5px 4px 39px 8px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 5px 4px 39px 8px rgba(0,0,0,0.75);
+	box-shadow: inset 5px 4px 39px 8px rgba(0,0,0,0.75);*/
 }
 
 /*.shade{ 
