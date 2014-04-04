@@ -234,6 +234,7 @@ class Cart extends CI_Controller {
 		}else{
 			$slot=$this->input->post('slotId');
 			$delivery_date=$this->input->post('deliverydate');
+			date_default_timezone_set('Asia/Kolkata');
 			$ordertime = time();
 			$this->load->model('model_transaction');
 			$this->load->model('model_users');
