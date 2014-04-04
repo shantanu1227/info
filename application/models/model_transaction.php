@@ -124,7 +124,7 @@ class Model_transaction extends CI_Model {
 			$orderDate = date("Y-m-d",$row->orderTimeStamp);
 			$currentdate = date("Y-m-d");
 			$currentTime = date("H:i");
-			if($orderDate!=$currentdate){
+			if($orderDate==$currentdate){
 				$this->db->where('deliverySlot',$row->deliverySlot);
 				$query = $this->db->get('slots',1);
 				$slotrow = $query->row();

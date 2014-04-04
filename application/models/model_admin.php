@@ -32,6 +32,14 @@ class Model_admin extends CI_Model {
 	return ;
     }
 
+    public function addThali($shopId,$lunch,$dinner) {
+	date_default_timezone_set('Asia/Kolkata');
+	$currentDate=date("d-m-Y");
+	$currentdata = array('shopId' => $shopId ,'lunch' => $lunch ,'dinner' => $dinner, 'date' => $currentDate); 
+	$this->db->insert('thali', $currentdata); 
+	return ;
+    }
+
     public function addDeliveryguybalance($userId,$balance) {
 	$this->db->where('userId', $userId);
 	$del_data = $this->db->get('delivery_man')->result();

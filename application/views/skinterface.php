@@ -68,7 +68,7 @@
 				}); 
 				});
 	    </script>
-<div class="shophead"> KAVYA </div>
+<div class="shophead"> <?php echo $this->session->userdata('name');?> </div>
 <div class="producttable">
 <table border="1" width="25%">
 <tr>
@@ -76,21 +76,17 @@
 <th> ID </th>
 <th> Price </th>
 <th> In Stock </th>
-<th> Tick </th>
-<th>  ..  </th>
+<th>  Option </th>
 <th class="getimagelink"> ... </th>
 </tr>
 
- <?php foreach ($output as $product) {
+ <?php foreach ($products as $product) {
 	
 
    ?><tr> <td><?php echo $product->productName; ?> </td>
   		<td><?php echo $product->productId; ?> </td>
         <td><?php echo $product->price;?> </td>
 		<td><?php echo $product->inStock;?> </td>
-   		<td>
-		<input type="checkbox" name="" value=""> 
-		</td>
 		<td class="editproduct">
 		  Edit
 		</td>
@@ -111,7 +107,7 @@ Add an Offer
 <div class="productinput"><input type="text" name="productname" placeholder="Product name"><br></div>
 <div class="productinput"><input type="text" name="productprice" placeholder="Product price"><br></div>
 <div class="productinput"><input type="file" name="userfile" placeholder="Product image"><br></div>
-<div><?php echo form_submit('', 'Update your Cart');?></div>
+<div><?php echo form_submit('', 'Add Product');?></div>
 </form>
 </div>
 

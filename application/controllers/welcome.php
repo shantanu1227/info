@@ -25,6 +25,15 @@ class Welcome extends CI_Controller {
 		$dataThali= array('outputThalis' => $this->model_products->getThali());	
 		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+	
+	}
+	public function offers()
+	{
+	$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->model('model_products');
+			
+		$dataOffer=array('outputOffers' => $this->model_products->getOffersseparate());
+		$this->load->view('offers', $dataOffer+$errormsg);	
 	}
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
@@ -39,10 +48,16 @@ class Welcome extends CI_Controller {
 	}
 	public function skinterface()
 	{
-		$this->load->helper(array('form'));
+		$name=$this->session->userdata('name');
+		$isshopkeeper = $this->session->userdata('isShopKeeper');
+		
+		if($name!='' && $isshopkeeper){
 		$this->load->model('model_products');		
-		$data= array('output' => $this->model_products->getproducts('kavya') );
-		$this->load->view('skinterface', $data, FALSE);
+		$data= array('products' => $this->model_products->getAllproductsofStore($name) );
+		$this->load->view('skinterface', $data);
+		}else{
+		redirect('/','refresh');
+		}
 	}
 	public function koffee()
 	{
@@ -71,6 +86,11 @@ class Welcome extends CI_Controller {
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('skloginpage',$errormsg);
+	}
+	public function adminlogin()
+	{
+		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->view('adminlogin',$errormsg);
 	}
 	public function bigbite()
 	{
