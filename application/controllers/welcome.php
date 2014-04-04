@@ -24,7 +24,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_products');
 		$dataThali= array('outputThalis' => $this->model_products->getThali());	
 		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 	
 	}
 	public function offers()
@@ -44,7 +45,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('kavya'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('kavya'));
-		$this->load->view('kavya', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('kavya', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
 	}
 	public function skinterface()
 	{
@@ -54,6 +56,8 @@ class Welcome extends CI_Controller {
 		if($name!='' && $isshopkeeper){
 		$this->load->model('model_products');		
 		$data= array('products' => $this->model_products->getAllproductsofStore($name) );
+		$this->load->model('model_shop');		
+		
 		$this->load->view('skinterface', $data);
 		}else{
 		redirect('/','refresh');
@@ -67,13 +71,17 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('koffee'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('koffee'));
-		$this->load->view('koffee', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('koffee', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
+		
 	}
 	public function cart_index()
 	{
+		$this->load->model('model_products');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$data = array('content' => $this->cart->contents());
-		$this->load->view('cart_index',$data+$errormsg);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('cart_index',$data+$errormsg+$captcha);
 	}
 	public function cart()
 	{
@@ -85,15 +93,18 @@ class Welcome extends CI_Controller {
 					$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 		}else{
 		$this->load->model('model_transaction');
+		$this->load->model('model_products');
 		$slots = array('slots'=>$this->model_transaction->getSlots());
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('cart_show',$errormsg+$slots);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('cart_show',$errormsg+$slots+$captcha);
 		}
 	}
 	public function skloginpage()
-	{
+	{	$this->load->model('model_products');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('skloginpage',$errormsg);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('skloginpage',$errormsg+$captcha);
 	}
 	public function adminlogin()
 	{
@@ -108,26 +119,30 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('bigbite'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('bigbite'));
-		$this->load->view('bigbite', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('bigbite', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
 	}
 	public function washexpress()
-	{
+	{	$this->load->model('model_products');
 		$this->load->model('model_shop');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
+		$captcha = array('image'=>$this->model_products->createCaptcha());
 		$this->load->model('model_transaction');
 		$slots = array('slots'=>$this->model_transaction->getSlots());
-		$this->load->view('washexpress', $errormsg+$dataTiming+$contactNumber+$slots, FALSE);
+		$this->load->view('washexpress', $errormsg+$dataTiming+$contactNumber+$slots+$captcha, FALSE);
 	}
 	public function omega()
-	{
+	{	$this->load->model('model_products');
 		$this->load->model('model_shop');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->model('model_transaction');
+		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('omega'));
 		$slots = array('slots'=>$this->model_transaction->getSlots());
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
-		$this->load->view('omega',$errormsg+$contactNumber+$slots);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('omega',$errormsg+$contactNumber+$slots+$captcha+$dataTiming);
 	}
 
 	public function subway()
@@ -139,7 +154,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('subway'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('subway'));
-		$this->load->view('subway', $data+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('subway', $data+$dataTiming+$contactNumber+$captcha, FALSE);
 	}
 	public function apex()
 	{
@@ -154,7 +170,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('chatkazz'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('chatkazz'));
-		$this->load->view('chatkazz', $data+$errormsg+$dataTiming+$contactNumber, FALSE);	
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('chatkazz', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);	
 	}
 	public function qwiches()
 	{
@@ -164,7 +181,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('qwiches'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('qwiches'));
-		$this->load->view('qwiches', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('qwiches', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
 	}
 
 
@@ -176,7 +194,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('oxford'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('oxford'));
-		$this->load->view('oxford', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('oxford', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
 	}
 	public function clublaptop()
 	{
@@ -186,7 +205,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('clublaptop'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('clublaptop'));
-		$this->load->view('clublaptop', $data+$errormsg+$dataTiming+$contactNumber, FALSE);	
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('clublaptop', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);	
 	}
 	public function ominfotech()
 	{
@@ -196,7 +216,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('ominfotech'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('kavya'));
-		$this->load->view('ominfotech', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('ominfotech', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
 	}
 	public function crossword()
 	{
@@ -206,30 +227,37 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('crossword'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('crossword'));
-		$this->load->view('crossword', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('crossword', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
 	}
 
 	public function faq()
-	{
+	{	$this->load->model('model_products');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('faq',$errormsg);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('faq',$errormsg+$captcha);
 	}
 	public function aboutus()
-	{
+	{	$this->load->model('model_products');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('aboutus',$errormsg);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('aboutus',$errormsg+$captcha);
 	}
 
 	public function privacy()
-	{
+	{	
+		$this->load->model('model_products');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('privacy',$errormsg);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('privacy',$errormsg+$captcha);
 	}
 
 	public function termsnconditions()
-	{
+	{	
+		$this->load->model('model_products');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
-		$this->load->view('termsnconditions',$errormsg);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('termsnconditions',$errormsg+$captcha);
 	}
 
 
@@ -241,7 +269,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_shop');
 		$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('vstationery'));
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('vstationery'));
-		$this->load->view('vstationery', $data+$errormsg+$dataTiming+$contactNumber, FALSE);
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('vstationery', $data+$errormsg+$dataTiming+$contactNumber+$captcha, FALSE);
 	}
 	public function feedback()
 	{	
@@ -251,11 +280,12 @@ class Welcome extends CI_Controller {
 		$errormsg  = array('errorMessage'=>'Thank You For Your FeedBack','errorClose'=>'X','errorColor'=>'#00BB0C');
 		$dataThali= array('outputThalis' => $this->model_products->getThali());	
 		$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-		$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 
 	}
 	public function myaccount()
-	{
+	{	$this->load->model('model_products');
 		$this->load->model('model_users');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'rgb(214, 38, 38)');
 		$userdetails=$this->model_users->getuserdetails();
@@ -263,7 +293,8 @@ class Welcome extends CI_Controller {
 			$this->load->model('model_transaction');
 			$transactions=$this->model_transaction->getusertransaction($userdetails->userId);
 			$data=array('output' => $userdetails,'transactions'=>$transactions)+$errormsg;
-			$this->load->view('myaccount', $data);
+			$captcha = array('image'=>$this->model_products->createCaptcha());
+			$this->load->view('myaccount', $data+$captcha);
 		}
 		else{
 			if($userdetails == -1){
@@ -273,7 +304,8 @@ class Welcome extends CI_Controller {
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 			}if ($userdetails == -2) {
 				$errorMessage = "Incorrect Session ";
 				$errormsg['errorMessage']=$errorMessage;
@@ -281,7 +313,8 @@ class Welcome extends CI_Controller {
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 			}
 		}
 	}

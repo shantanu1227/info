@@ -14,6 +14,8 @@
 					<div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
 					<input type="submit" value="Login" />
 				<?php echo form_close();?>
+				<div class="loginline">x </div>
+				<div class="skregisterask"><?php echo anchor('/welcome/skloginpage', 'Login as Shopkeeper'); ?></div>
 			</div>
 		</div>
 		<div class="reglogline">
@@ -30,6 +32,8 @@
 					<div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
 					<div class="forminput"><input type="text" name="roomno" placeholder="e.g. 'B-108'"><br></div>
 					<div class="forminput"><input type="text" name="mobileno" placeholder="Mobile Number"><br></div>
+					<div class="forminput"> <?php echo $image;?> </div>
+					<div class="forminput"><input type="text" name="captcha" placeholder="Enter Capta"><br></div>
 					<input style ="font-family:calibri; font-size:100%;" type="submit" value="Register" />
 				<?php echo form_close();?>
 			</div>

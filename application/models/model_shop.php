@@ -41,6 +41,17 @@ class Model_shop extends CI_Model {
 		$this->db->where('shopId',$storeid);
 		return $this->db->get('stores')->result();
 	 }
+	 public function changeShopStatus ($shopstatus, $storeName) {
+		$this->db->where('name', $storeName);
+		$query=$this->db->get('stores', 1);
+		$row = $query->row();
+		#print_r($row);
+		$storeid = $row->shopId;
+		$data = array('currentStatus' => $shopstatus);
+			$this->db->where('shopId', $storeid);
+			$this->db->update('shoptimings', $data); 
+		
+	 }
 	 
 	 public function login($username,$password)
 	 {

@@ -14,7 +14,7 @@
 .vinfologin{
 	float:left;
 	width:49%;
-	height:400px;
+	height:460px;
 }
 #closebuttonrl{
 	height:auto;
@@ -24,10 +24,10 @@
 	border-radius:5px;
 }
 .reglogline{
-	margin-top:50px;
+	margin-top:14px;
 	float:left;
 	width:0.5%;
-	height:300px;
+	height:400px;
 	text-indent:-99999px;
 	background:#361200;
 }
@@ -51,10 +51,10 @@
 }
 .reglogleft, .reglogright{
 	float: left;
-	text-align: center;
-	width: 98%;
-	padding: 1%;
-	margin-top: 10%;
+text-align: center;
+width: 98%;
+padding: 1%;
+margin-top: -1%;
 }
 #loginform, #registerform{
 	margin-top:10%;
@@ -128,4 +128,24 @@ width:60%;
 border-style:solid;
 border-width:1px;
 border-color: #361200;
+}
+.skregisterask{
+float:left;
+margin-top:3%;
+width:100%;
+}
+.skregisterask a{
+text-decoration: none;
+color:white;
+font-family:calibri;
+}
+.loginline{
+margin-top:7%;
+margin-bottom:1%;
+float:left;
+width:60%;
+margin-left:20%;
+height:3px;
+text-indent:-99999px;
+	background:#361200;
 }

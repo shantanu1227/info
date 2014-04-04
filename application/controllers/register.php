@@ -10,6 +10,8 @@ class Register extends CI_Controller {
 	public function newuser()
 	{
 		$this->load->model('model_users');
+		$captcha=$this->input->post('captcha');
+		if($this->session->userdata('captchaword')== $captcha){
 		$a=$this->model_users->add_user();
 		if($a>0){
 				$errormsg  = array('errorMessage'=>'A link has been sent to your Email, please Confirm Your Email id.','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48);');
@@ -39,6 +41,13 @@ class Register extends CI_Controller {
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
 				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
 				}
+			}else{
+				$errormsg  = array('errorMessage'=>'Invalid Captcha.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+				$this->load->model('model_products');
+				$dataThali= array('outputThalis' => $this->model_products->getThali());	
+				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+			}
 	}
 
 	public function confirm_email(){

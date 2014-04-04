@@ -31,6 +31,17 @@
    }			}); 
 				}); 
 				});
+				$(document).ready(function(){
+				$(".changestatusbut").click(function(){
+				$(".changestatusform").fadeIn(1000);
+				
+								$(document).keyup(function(e) {
+  if (e.keyCode == 27 ) {
+	  $(".changestatusform").fadeOut(10);
+					
+   }			}); 
+				}); 
+				});
 				
 				$(document).ready(function(){
 				$(".editproduct").click(function(){
@@ -101,6 +112,9 @@ Add a product
 <div class="addofferbut">
 Add an Offer
 </div>
+<div class="changestatusbut">
+Change Shop Status
+</div>
 <div class="addproductform">
 <?php echo form_open_multipart('shop/addProducts/');?>
 
@@ -132,6 +146,14 @@ Add an Offer
 
 <div class="productinput"><input type="file" name="userfile" placeholder="Offer image"><br></div>
 <div><?php echo form_submit('', 'Update this Offer');?></div>
+</form>
+</div>
+<div class="changestatusform">
+<?php echo form_open_multipart('shop/changeStatus/');?>
+<div class="productinput"><input type="radio" name="status" value="OPEN" checked="checked">OPEN<br></div>
+<div class="productinput"><input type="radio" name="status" value="CLOSE">CLOSE<br></div>
+
+<div><?php echo form_submit('', 'Update Status');?></div>
 </form>
 </div>
 
