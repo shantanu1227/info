@@ -1,0 +1,203 @@
+@font-face{
+    font-family: monofont;
+    src: url(../fonts/JandaCelebrationScript.ttf);
+}
+@font-face{
+    font-family: textfont;
+    src: url(../fonts/stewartsans.ttf);
+}
+body { 
+    padding:0;
+    margin:0;
+}
+#box{
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.imgslide{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#fixed_head{
+    border: 1px solid black;
+    background-color:#361200;
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+    float:left;
+    width:85%;
+    height:83px;
+    padding:0;
+    opacity: 0.8;
+    position:fixed;
+    z-index:50;
+    top:0px;
+    margin-top:0px;
+}
+.cname{
+    display: inline-block;
+    padding: 0px;
+    letter-spacing:5px;
+    font-family:monofont;
+    font-size:50px;
+    font-weight:bold;
+    color:white;
+    margin-left:100px;
+    margin-top:2px;
+    margin-bottom:10px;
+}
+.loginaccount{
+    float:right;
+    display: inline-block;
+}
+.reglog{
+    padding-left:10px;
+    float:left;
+    display: inline-block;
+    margin-right:20px;
+    cursor:pointer;
+    padding-top:10px;
+    font-size:12px;
+    font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+    color:#FFFFFF;
+}
+.reglog:hover{
+    text-shadow: 0.7px 0.49px #ffffff;
+}
+.myaccount:hover{
+    text-shadow: 0.7px 0.49px #ffffff;
+}
+.myaccount{
+    float:right;
+    display: inline-block;
+    margin-right:10px;
+    cursor:pointer;
+    padding-top:10px;
+    font-size:12px;
+    font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+    color:#FFFFFF;
+}
+.navigation{
+    text-decoration:none;
+    position:fixed;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:85px;
+    display: inline-block;
+    clear:left;
+    z-index:60;
+    width:85.6%;
+}
+.navigation ul{
+    width:100%;
+    margin:0;
+    padding-left: 0;
+    float:left;
+}
+.navigation ul li{
+    background-color:#361200;
+    font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif;
+    cursor:pointer;
+    padding:0.95%;
+    text-align:center;
+    width:8.05%;
+    float:left;
+    list-style:none;
+    color:#FFFFFF;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:13px;
+}
+.navigation ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+.navigation ul li:hover{
+    opacity:0.9;
+}
+.navbar ul ul{
+    margin-top:12%;
+    padding: 0px;
+    margin-bottom: -13%;
+    border-style: none;
+    width: 100%;
+    display: none;
+    float: left;
+}
+.navbar ul ul li{
+    margin-left: -12%;
+    padding: 0px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 122%;
+    float: left;
+}
+.navbar ul ul li a{
+    text-decoration:none;
+    color:#FFFFFF;
+}
+.navbar ul li:hover > ul{
+    display:block;
+}
+
+.navbar ul li li:hover{
+    background-color:#498FA0;
+    width:124%;
+}	
+.navigation ul li li a{
+    padding:0px;
+}	
+.navbar{
+    width:100%;
+    float:left;
+}
+.shopheading{
+    text-shadow:2px 2px 5px #361200;
+    letter-spacing:4px;
+    color:#361200;
+    margin-top:180px;
+    margin-left:400px;
+    margin-right:auto;
+    float:left;
+    width:100%;
+    text-align:left;
+    font-size:35px;
+    padding-top:10px;
+    font-family:textfont;
+    font-weight:bold;
+}
+
+
+.about{
+    margin-left: auto;
+    margin-right: auto;
+    width:75%;
+    font-size:90%;
+    padding-top-top:15%;
+    font-family: sans-serif;
+    border:0px;
+}
+#feedback{
+    padding:8px;
+    font-family:textfont;
+    font-weight:bold;
+    font-size:18px;
+    color:white;
+    text-align:center;
+    border:1px solid #361200;
+    border-radius:5px;
+    box-shadow:7px 7px 5px #888888;
+    background-color:#361200;
+    height:16px;
+    position:fixed;
+    top:55%;
+    right:-3%;
+    width:90px;
+    writing-mode:tb-rl;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform: rotate(90deg);
+    cursor:pointer;
+}

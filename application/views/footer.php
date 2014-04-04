@@ -39,8 +39,8 @@
 					<dt class="headings1"> Virtual Infocity</dt>
 					<dd class="subheadings"><?php echo anchor('/welcome/aboutus', 'ABOUT US',$attr); ?></dd>
 					<dd class="subheadings"><?php echo anchor('/welcome/faq', 'FAQs',$attr); ?></dd>
-					<dd class="subheadings">Privacy</dd>
-					<dd class="subheadings">Terms & Conditions</dd>
+					<dd class="subheadings"><?php echo anchor ('welcome/privacy', 'Privacy',$attr);?></dd>
+					<dd class="subheadings"><?php echo anchor ('welcome/termsnconditions','Terms & Conditions',$attr);?></dd>
 				</li>
 
 				<li>
