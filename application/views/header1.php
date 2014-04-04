@@ -124,7 +124,7 @@
 	<?php $attr = array('style'=>'display:block;padding:8px');?>
 	<div class="mycartbut"><?php echo anchor('/welcome/cart' ,'Cart ('.$this->cart->total_items().')', $attr);?></div>
 	</div>
-	<div class="navigationtemp">
+	<!--div class="navigationtemp">
 		<div id="navbartemp">
 			<ul>
 				<li><?php echo anchor('', 'HOME'); ?></li>
@@ -170,7 +170,7 @@
 				</li>
 			</ul>
 		</div>
-	</div>
+	</div-->
 <div class="navigation">
 	<div class="navbar">
 		<ul>
