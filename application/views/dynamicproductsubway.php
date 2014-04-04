@@ -22,5 +22,15 @@
 		?>	
 			
 		</div>
+		<script type="text/javascript">  
+	$(document).ready(function(){  
+		$('.shopproductitem').mouseover(function() {  
+			$(this).css("border","2px solid #4A2A1A");  
+		});  
+		$('.shopproductitem').mouseout(function() {  
+			$(this).css("border","2px solid #FFFFFF");  
+		});  
+	});  
+</script> 
 		
 	

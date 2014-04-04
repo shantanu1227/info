@@ -389,6 +389,8 @@ font-family:textfont;
     margin-left:5%;
 }
 .itemname{
+	text-transform:lowercase;
+	text-transform:capitalize;
     font-family:textfont;
     float:left;
     width:100%;
@@ -403,37 +405,41 @@ font-family:textfont;
     width:100%;
 }
 #subwayextraform{
-border-radius: 7px;
+border-radius: 5px;
 position: fixed;
-top: 1%;
+top: 5%;
 left: 25%;
 width: 50%;
-height: auto;
+height: 90%;
 display: none;
 background: #802E05;
 color: white;
 }	
 
 .subextraname{
+text-transform:capitalize;
 float:left;
-width:100%;
-font-family:textfont;
-padding:10px;
+width:auto;
+font-family:calibri;
+padding-left:15px;
+padding-top:10px;
 font-size:30px;
 }
 
 .subextraprice{
 float:left;
+font-weight:bold;
 width:100%;
-font-family:textfont;
-padding:10px;
-font-size:15px;
+font-family:calibri;
+padding-left:15px;
+padding-top:10px;
+font-size:20px;
 
 }
 .subextraimg{
 float:left;
 width:100%;
-padding:10px;
+padding-left:15px;
 
 }
 .subextraimg img{
@@ -445,18 +451,19 @@ height: 200px;
 padding:10px;
 float:left;
 width:22%;
-font-family:textfont;
+font-family:calibri;
 color:white;
-font-size:13px;
+font-size:14px;
 }
 .addtosubcomment{
 float:left;
-padding:2%;
+padding-left:15px;
 width:46%;
 }
 .addtosubcomment textarea{
 border-radius:3px;
 background:#DD9977;
+max-height:75px;
 }
 
 .subaddtocart{
@@ -465,11 +472,13 @@ width:50%;
 
 }
 .subaddtocartbut{
-margin-top: 7%;
-margin-left: 27%;
+margin-top: 3%;
+margin-right: 5%;
 cursor: pointer;
+font-weight:bold;
+font-family:calibri;
 text-align: center;
-float: left;
+float: right;
 font-size: 120%;
 width: 32%;
 padding: 10px;
@@ -483,7 +492,6 @@ background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #b34
 	background:linear-gradient(to bottom, #FE9A2E 5%, #b34332 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b34332', endColorstr='#FE9A2E',GradientType=0);
 	background-color:#FE9A2E;
-font-family: textfont;
 }
 
 

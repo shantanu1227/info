@@ -183,19 +183,22 @@ body {
     text-align:left;
     font-size:20px;
     padding-top:10px;
-    font-family: sans-serif;
+    font-family: calibri;
 }
 .ques{
-    font-weight: bold;
+	text-indent:20px;
+	color:white;
+    font-weight: normal;
     border-width: 3px;
     border-style: solid;
     border-color: black;
     padding: 10px;
     margin: 10px;
-    border-radius: 15px;
-    background-color: #B36666;
+	border-radius: 15px;
+    background-color: #4a2a1a;
 }
-.ans{padding: 2%;
+.ans{
+	padding: 2%;
     margin: 2%;
     display: none;
     padding-top: 2%;

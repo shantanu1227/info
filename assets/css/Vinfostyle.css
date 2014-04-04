@@ -730,10 +730,10 @@ float:left;
 width:98%;
 padding:1%;
 cursor:pointer;
-
-font-family:textfont;
+font-family:calibri;
 }
 .moreoffers a{
 text-decoration:none;
 font-weight:bold;
+color:#361200;
 }

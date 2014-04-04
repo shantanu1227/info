@@ -30,7 +30,7 @@
 					<div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
 					<div class="forminput"><input type="text" name="roomno" placeholder="e.g. 'B-108'"><br></div>
 					<div class="forminput"><input type="text" name="mobileno" placeholder="Mobile Number"><br></div>
-					<input type="submit" value="Register" />
+					<input style ="font-family:calibri; font-size:100%;" type="submit" value="Register" />
 				<?php echo form_close();?>
 			</div>
 		</div>

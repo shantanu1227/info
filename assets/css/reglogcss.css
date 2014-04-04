@@ -20,6 +20,8 @@
 	height:auto;
 	width:auto;
 	float:right;
+	background:white;
+	border-radius:5px;
 }
 .reglogline{
 	margin-top:50px;
@@ -35,8 +37,8 @@
 	height:400px;
 }
 .loginhead, .registerhead{
-	margin-top: 3%;
-	font-family: textfont;
+	font-family:calibri;
+	margin-top: 3%; 	
 	float: left;
 	width: 100%;
 	text-align: center;
@@ -62,6 +64,7 @@
 
 }
 .forminput{
+	font-family:calibri;
 	float: left;
 	height: 40px;
 	width: 80%;
