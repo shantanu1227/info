@@ -75,6 +75,7 @@ class Cart extends CI_Controller {
 		$qty = $this->input->post('qty');
 		for($i=0; $i <count($item);$i++)
 		{
+			
 			$data = array(
 				'rowid' => $item[$i],
 				'qty'   => $qty[$i]
