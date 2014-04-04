@@ -77,4 +77,24 @@ class Model_admin extends CI_Model {
 		$this->db->insert('sitefeedback',$data);
 	}
 
+	public function login($username,$password)
+	{
+		$this->db->where('username',$username);
+		$this->db->where('password', $this->encrypt->sha1($password));
+		$query=$this->db->get('admin');
+		if($query->num_rows()>0){
+			$rows = $query->row();
+			$newdata = array(
+                    'AdminuserName' => $rows->username,
+                    'AdminName' => $rows->name,
+                    'isAdmin' => TRUE,
+                    'loggedIn' => TRUE,
+                );         
+            	$this->session->set_userdata($newdata);
+            	return 1;
+		}else{
+			return -1;
+		}
+	}
+
 }
