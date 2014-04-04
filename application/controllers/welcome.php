@@ -76,11 +76,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('cart_index',$data+$errormsg);
 	}
 	public function cart()
-	{	
+	{
+		if(!$this->cart->contents()){
+		$errormsg  = array('errorMessage'=>'Your Cart Is Empty','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
+					$this->load->model('model_products');
+					$dataThali= array('outputThalis' => $this->model_products->getThali());	
+					$dataOffer=array('outputOffers' => $this->model_products->getOffers());
+					$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+		}else{
 		$this->load->model('model_transaction');
 		$slots = array('slots'=>$this->model_transaction->getSlots());
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
 		$this->load->view('cart_show',$errormsg+$slots);
+		}
 	}
 	public function skloginpage()
 	{
