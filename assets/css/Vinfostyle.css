@@ -25,7 +25,7 @@ body{
 	width:85%;
 	height:83px;
 	padding:0;
-	opacity: 0.8;
+	opacity: 0.85;
 	position:fixed;
 	z-index:50;
 	top:0px;
@@ -706,6 +706,10 @@ opacity:0.8;
 }
 .getimagelink{
 	display:none;
+}
+#clogo{
+	position:fixed;
+	margin-right:5px;
 }
 #cname{
 	background-color:#91634C;

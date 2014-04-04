@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
+		<link rel="shortcut icon" href="<?php echo (IMG.'favicon.ico');?>" type="image/x-icon">
+		<link rel="icon" href="<?php echo (IMG.'favicon.ico');?>" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'Vinfostyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">

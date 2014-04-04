@@ -37,7 +37,7 @@ body {
 	width:85%;
 	height:83px;
 	padding:0;
-	opacity: 0.8;
+	opacity: 0.85;
 	position:fixed;
 	z-index:50;
 	top:0px;
@@ -81,6 +81,10 @@ body {
 	margin-left:100px;
 	margin-top:2px;
 	margin-bottom:10px;
+}
+#clogo{
+	position:fixed;
+	margin-right:5px;
 }
 .loginaccount{
 	right:8%;
