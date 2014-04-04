@@ -43,6 +43,15 @@
 				}
 			}
 		}
+		public function changeStatus(){
+		$name=$this->session->userdata('name');
+		$storename = strtolower($name);
+		$shopstatus = $this->input->post('status',TRUE);
+					$this->load->model('model_shop');
+					
+					$this->model_shop->changeShopStatus($shopstatus, $storename);
+					redirect('/welcome/skinterface', 'refresh');
+		}
 		public function addOffers(){
 			$name=$this->session->userdata('name');
 			$isshopkeeper = $this->session->userdata('isShopKeeper');
