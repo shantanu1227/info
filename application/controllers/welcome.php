@@ -114,8 +114,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->model('model_shop');
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
+		$this->load->model('model_transaction');
+		$slots = array('slots'=>$this->model_transaction->getSlots());
 		$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
-		$this->load->view('omega',$errormsg+$contactNumber);
+		$this->load->view('omega',$errormsg+$contactNumber+$slots);
 	}
 
 	public function subway()
