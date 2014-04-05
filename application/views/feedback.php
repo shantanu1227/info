@@ -38,7 +38,7 @@
 		
 		// Specify the validation error messages
 		messages: {
-			comment: "Haha! Was that even a feedback? :/"
+			comment: "Please Enter a Valid Feedback"
 		},
 			submitHandler: function(form) {
 			form.submit();
