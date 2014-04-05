@@ -758,3 +758,15 @@ text-decoration:none;
 font-weight:bold;
 color:#361200;
 }
+.sklogout{
+float:right;
+cursor:pointer;
+margin-right:3%;
+color:white;
+font-family:textfont;
+font-size:15px;
+}
+.sklogout a{
+text-decoration:none;
+color:white;
+}

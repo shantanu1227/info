@@ -101,7 +101,8 @@ class Cart extends CI_Controller {
 			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+			$captcha = array('image'=>$this->model_products->createCaptcha());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg+ $captcha);	
 		}else{
 			$color = $this->input->post('colour',TRUE);
 			$startpage = $this->input->post('from',TRUE);
@@ -149,9 +150,11 @@ class Cart extends CI_Controller {
 					$this->sendmail('New Order',$slot,'PhotoCopy',$message);
 					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');					
 					$this->load->model('model_shop');
+					$this->load->model('model_products');
 					$slots = array('slots'=>$this->model_transaction->getSlots());
 					$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
-					$this->load->view('omega',$errormsg+$contactNumber+$slots);					
+					$captcha = array('image'=>$this->model_products->createCaptcha());
+					$this->load->view('omega',$errormsg+$contactNumber+$slots+$captcha);					
 					header( "refresh:3;url=".URL."welcome/omega" );		
 
 				}
@@ -161,8 +164,10 @@ class Cart extends CI_Controller {
 				$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('omega'));
 				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_transaction');
+				$this->load->model('model_products');
 				$slots = array('slots'=>$this->model_transaction->getSlots());
-				$this->load->view('omega',$errormsg+$dataTiming+$contactNumber+$slots);
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('omega',$errormsg+$dataTiming+$contactNumber+$slots+$captcha);
 
 			}
 		}
@@ -177,7 +182,8 @@ class Cart extends CI_Controller {
 			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+			$captcha = array('image'=>$this->model_products->createCaptcha());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 		}else{
 			$billNo = $this->input->post('billno');
 			$price = $this->input->post('billAmount');
@@ -216,11 +222,13 @@ class Cart extends CI_Controller {
 					$this->sendmail('New Order',$slot,'Laundry',$message);
 					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
 					$this->load->model('model_shop');
+					$this->load->model('model_products');
 					$this->load->model('model_transaction');
 					$slots = array('slots'=>$this->model_transaction->getSlots());
 					$dataTiming= array('outputTimings' => $this->model_shop->getShopDetails('washexpress'));
 					$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
-					$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber+$slots);					
+					$captcha = array('image'=>$this->model_products->createCaptcha());
+					$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber+$slots+$captcha);					
 					header( "refresh:3;url=".URL."welcome/washexpress" );		
 				}
 			}else{
@@ -229,8 +237,10 @@ class Cart extends CI_Controller {
 				$contactNumber = array('outputNumber' => $this->model_shop->getShopNumber('washexpress'));
 				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_transaction');
+				$this->load->model('model_products');
 				$slots = array('slots'=>$this->model_transaction->getSlots());
-				$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber+$slots);
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('washexpress',$errormsg+$dataTiming+$contactNumber+$slots+$captcha);
 			}
 		}
 
@@ -244,12 +254,14 @@ class Cart extends CI_Controller {
 			$errormsg  = array('errorMessage'=>'Please Login To Checkout','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+			$captcha = array('image'=>$this->model_products->createCaptcha());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 		}elseif($this->cart->total_items()<=0){
 			$errormsg  = array('errorMessage'=>'There are no items in Your Cart','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 			$dataThali= array('outputThalis' => $this->model_products->getThali());	
 			$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-			$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+			$captcha = array('image'=>$this->model_products->createCaptcha());
+			$this->load->view('home', $dataThali+$dataOffer+$errormsg+ $captcha);	
 		}else{
 			$slot=$this->input->post('slotId');
 			$delivery_date=$this->input->post('deliverydate');
@@ -310,7 +322,9 @@ class Cart extends CI_Controller {
 				$errormsg  = array('errorMessage'=>'Insufficient Balance Please Recharge','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$this->load->model('model_products');
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 			}
 		}
 	}

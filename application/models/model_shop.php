@@ -66,7 +66,7 @@ class Model_shop extends CI_Model {
 			/*Set Session And User Is Loggedin*/
 			$rows = $result->row();
                 $newdata = array(
-                    'userId' => $rows->shopId,
+                    'ShopuserId' => $rows->shopId,
                     'name' => $rows->name,
                     'userEmail' => $rows->email,
                     'userMobile' => $rows->contactNo,
