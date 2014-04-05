@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'footerstyle.css');?>">
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
@@ -82,27 +83,29 @@
 			</div>
 			<div class="slipinfo">
 				<?php if($this->session->userdata('userName')!=''){?>
-				<div class="sliphead">Bill Details</div>
+				<div class="sliphead" style="font-family:calibri;">Bill Details</div>
 				<?php $attributes = array('id' => 'billdetailsform');
 				echo form_open_multipart('cart/addLaundry', $attributes);
 				?>
-				<div class="forminput"><input type="text" name="billno" placeholder="Bill Number'"><br></div>
-				<div class="forminput"><input type="text" name="billAmount" placeholder="Price"><br></div>
-				<div class="forminput">Select Slot<select name="slotId">
+				<div class="forminput"><input type="text" name="billno" required placeholder="Bill Number'"><br></div>
+				<div class="forminput"><input type="text" name="billAmount" required placeholder="Price"><br></div>
+				<div class="forminput">Select Slot: <select name="slotId">
 					<?php foreach ($slots as $slot) {?>
 					<option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
 					<?php
 				}?>
-			</select><br></div>
-			<div id="billimage"><input type="file" name="userfile" required /></div>
+			</select><br><p style="text-indent:-350px;">Bill Image</p></div>
+			<div id="billimage"> <input type="file" name="userfile" required /></div>
 			<div id = "submit"><input type="submit" value="Submit" /></div>
+			
 			<?php echo form_close();?>
 			<?php 
 		}
 		else {
-			echo "Please Login To add Laundry Details";
+			echo "Please Login To add Laundry Details!";
 		}?>
 	</div>
+	<?php include 'footer.php'; ?>
 </div>
 <div id="feedback">Feedback</div>
 <?php include 'reglog.php'; ?>

@@ -1,11 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<title>subway</title>
+		<title>Subway</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'subwaystyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'footerstyle.css');?>">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
 		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
@@ -115,7 +116,7 @@
 		<div class="menuhead"><i>Products</i></div>
 		
 		<?php include 'dynamicproductsubway.php'; ?>
-		
+		<?php include 'footer.php'; ?>
 		</div>
 		<?php include 'reglog.php'; ?>
 	<div id="subwayextraform">

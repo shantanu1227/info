@@ -38,7 +38,9 @@ input.error{
 	width:90%;
 	padding: 5%;
 	margin-top: 5%;
-	margin-bottom: 5%;
+	color:white;
+	font-family:calibri;
+	font-size:20px;
 }
 .sliphead{
 	font-family:textfont;
@@ -54,6 +56,7 @@ input.error{
 }
 #billimage{
 	margin-left:0%;
+	text-indent-top:100px;
 }
 @font-face{
 	font-family: monofont;
