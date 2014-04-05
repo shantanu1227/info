@@ -103,9 +103,6 @@
   });
   
 </script>
-<style type="text/css">
-	
-</style>
 <div id="wrapper">
 	<div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:<?php echo $errorColor ;?>; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-left:-7.5%;"> <?php echo $errorMessage; ?> 
 	<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;"><?php echo $errorClose ;?> </div>
