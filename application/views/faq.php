@@ -173,7 +173,8 @@
            </div>
             <div id="quesans7">
                 <div class="ques" >What is the extra amount that I will endup paying if I place any order? </div>
-                <div class="ans">*You will have to pay  15% extra amount of the total amount. For example, if you buy a burger of 30 Rs. ,you </div>
+                <div class="ans">*You will have to pay  15% extra amount of the total amount. For example, if 
+                    you buy a pizza and burger worth 100 Rs. ,you have to pay 100 + (100*0.15) = 115 Rs.</div>
             </div>
            <div id="quesans8">
                 <div class="ques" >What should I do when I have any errorneous transaction? </div>
