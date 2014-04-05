@@ -34,7 +34,8 @@ class Welcome extends CI_Controller {
 		$this->load->model('model_products');
 			
 		$dataOffer=array('outputOffers' => $this->model_products->getOffersseparate());
-		$this->load->view('offers', $dataOffer+$errormsg);	
+		$captcha = array('image'=>$this->model_products->createCaptcha());
+		$this->load->view('offers', $dataOffer+$errormsg+$captcha);	
 	}
 	/*Url=http://localhost/info/index.php/welcome/kavya*/
 	public function kavya()
@@ -90,7 +91,8 @@ class Welcome extends CI_Controller {
 					$this->load->model('model_products');
 					$dataThali= array('outputThalis' => $this->model_products->getThali());	
 					$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-					$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+					$captcha = array('image'=>$this->model_products->createCaptcha());
+					$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 		}else{
 		$this->load->model('model_transaction');
 		$this->load->model('model_products');

@@ -30,7 +30,8 @@ background: none repeat scroll 0% 0% #91634C;
 border: 2px solid #361200;
 border-radius: 10px;
 width: 60%;
-height: 200px;
+height: 224px;
+margin-bottom: 1%;
 }
 
 
@@ -136,4 +137,7 @@ label.error,div.error{
 }
 input.error{
 	border:2px solid #FF0000;
+}
+.thalisubmit{
+margin-top:5%;
 }

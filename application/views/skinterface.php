@@ -5,7 +5,12 @@
 <link rel="stylesheet" type="text/css" href="<?php echo(CSS.'Vinfostyle.css');?>">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-<title>Kavya - Shopkeeper Interface</title>
+<title>Shopkeeper Interface</title>
+<style>
+body{
+overflow-x: hidden;
+}
+</style>
 </head>
 <body>
 <script>
@@ -79,7 +84,9 @@
 				}); 
 				});
 	    </script>
-<div class="shophead"> <?php echo $this->session->userdata('name');?> </div>
+<div class="shophead"> <?php echo $this->session->userdata('name');?> 
+<div class="sklogout"><?php echo anchor('/shop/logout', 'Logout');?> </div>
+</div>
 <div class="producttable">
 <table border="1" width="25%">
 <tr>

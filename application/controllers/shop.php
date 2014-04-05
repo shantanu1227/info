@@ -148,7 +148,14 @@
 			}else{
 				redirect('/');
 			}
-		}	
+		}
+			
+		public function logout()
+		{
+			$this->session->sess_destroy();
+			redirect('/');
+			
+		}
 	}
 
 	/* End of file shop.php */

@@ -75,8 +75,11 @@
 							<?php
 						}?>
 					</select></div>
+					<div class="thalisubmit">
 					<input type="submit" value="Submit Menu" />
+					</div>
 					<?php echo form_close();?>
+					
 				</div>
 			</div>
 		</div>

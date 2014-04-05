@@ -48,7 +48,7 @@
 					</div>
 					<?php } ?>
 			</div>
-			<div class="moreoffers"> <a class="offerlink" href="welcome/offers">Click here for more offers!</a></div>
+			<div class="moreoffers"> <?php echo anchor('/welcome/offers', 'Click here for more offers') ?></div>
 			<?php include 'footer.php'; ?>
 		</div>
 		<?php include 'reglog.php'; ?>
