@@ -16,7 +16,12 @@
 		<div class="quantborder">
 		<div class="quantityask"><label> Quantity: </label>
 		 <?php
-		 echo form_input('quantity', '1', 'maxlength="2"');?> </div>
+		 $attr = array(   
+			  'name'        => 'quantity',
+              'value'       => '1',
+              'maxlength'   => '1',
+			  'required' => 'true');
+		 echo form_input($attr);?> </div>
 		  <?php
 		  echo form_hidden('product_id', $product->productId);
 		  echo form_hidden('product_name', $product->productName);
