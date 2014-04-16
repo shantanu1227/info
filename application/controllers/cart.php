@@ -266,9 +266,9 @@ class Cart extends CI_Controller {
 			$this->load->view('home', $dataThali+$dataOffer+$errormsg+ $captcha);	
 		}else{
 			$slot=$this->input->post('slotId');
-			$delivery_date=$this->input->post('deliverydate');
 			date_default_timezone_set('Asia/Kolkata');
 			$ordertime = time();
+			$delivery_date = date("Y-m-d");
 			$this->load->model('model_transaction');
 			$this->load->model('model_users');
 			$total_amount=0;
@@ -367,7 +367,7 @@ class Cart extends CI_Controller {
 
 				$this->email->subject($orderType);
 				$this->email->message($orderType.' of '.$this->session->userdata('userName').'  Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$productname.'<br>'.$message);
-				$this->email->send();
+				//$this->email->send();
 
 
 	}

@@ -134,9 +134,9 @@ class Model_transaction extends CI_Model {
 				$mean = date("H:i",$mean);
 				if($currentTime < $mean){
 					$amount = ($row->quantity*$row->price)*TAX;
-					$tables = array('subway', 'xerox', 'laundry','transaction');
 					$this->db->where('transactionId', $transactionId);
-					$this->db->delete($tables);
+					$data = array('cancelled'=>'true');
+					$this->db->update('transaction', $data);
 					$this->updateAccountOnTransactionDelete($userId,$amount);
 					return 1;
 				}else{
