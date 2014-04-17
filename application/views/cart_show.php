@@ -77,15 +77,20 @@
 			<?php echo form_close();?>
 			<?php echo form_open('/cart/checkout'); ?>
 			<div id="slotselect">
+			<?php 
+				if(count($slots)>0){?>
 			<select class="orderslots" name="slotId" >
 			  <?php foreach ($slots as $slot) {?>
 			  <option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
 			  <?php
 			  }?>
 			</select>
+
 			Select Order Slot
+			<?php }?>
 			</div>
 			<?php 
+				if(count($slots)>0){
 			$submit = array(
 					  'name'=> 'checkout',
 					  'id'  => 'checkout',
@@ -95,7 +100,9 @@
 					);
 			echo form_input($submit);
 			echo form_close();
-			}?>
+			}
+		}
+			?>
 			<?php include ('footer.php');?>
 			</div>
 		</div>

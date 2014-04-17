@@ -72,6 +72,7 @@ class Model_transaction extends CI_Model {
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
 		$query=$this->db->update('users', $data2);
+		return $transaction_id;
 	}
 
 	public function addlaundry($userId,$quantity,$price,$slot,$deliveryDate,$orderTime,$laundryarray)
