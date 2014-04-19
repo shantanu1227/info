@@ -308,11 +308,11 @@ class Cart extends CI_Controller {
 				$this->load->library('email',$config);
 				$this->email->set_newline("\r\n");
 				$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
-				$this->email->to("punit9462@gmail.com");
+				$this->email->to("201101061@daiict.ac.in");
 
 				$this->email->subject('New Order');
 				$this->email->message('New order of '.$this->session->userdata('userName').'Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$mailproductname);
-				//$this->email->send();
+				$this->email->send();
 
 
 				$this->cart->destroy();
@@ -363,7 +363,7 @@ class Cart extends CI_Controller {
 				$this->load->library('email',$config);
 				$this->email->set_newline("\r\n");
 				$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
-				$this->email->to("201101073@daiict.ac.in");
+				$this->email->to("201101061@daiict.ac.in");
 
 				$this->email->subject($orderType);
 				$this->email->message($orderType.' of '.$this->session->userdata('userName').'  Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$productname.'<br>'.$message);

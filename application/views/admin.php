@@ -46,7 +46,7 @@
 				<div class="container">
 					<div class="heading">DEDUCT FROM USER ACCOUNT</div>
 					<?php $attributes = array('id' => 'deductform');
-					echo form_open('', $attributes);
+					echo form_open('admin/deductAmount', $attributes);
 					?>
 					<div class="forminput"><input type="text" name="username" placeholder="Username e.g. '201101098'"><br></div>
 					<div class="forminput"><input type="text" name="deductamount" placeholder="Amount to deduct"><br></div>

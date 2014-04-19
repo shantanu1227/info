@@ -18,35 +18,40 @@ class Register extends CI_Controller {
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 				}
 		else if($a == -1){
 				$errormsg  = array('errorMessage'=>'Username already exists.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 				}
 		else if($a == -2){
 				$errormsg  = array('errorMessage'=>'Inserting into database failed.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 				}
 		else if($a == -3){
 				$errormsg  = array('errorMessage'=>'Email sending failed.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 				}
 			}else{
 				$errormsg  = array('errorMessage'=>'Invalid Captcha.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 			}
 	}
 
@@ -58,21 +63,24 @@ class Register extends CI_Controller {
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 				}
 		else if($a == -1){
 				$errormsg  = array('errorMessage'=>'Your email has already been confirmed.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 				}
 		else if($a == -2){
 				$errormsg  = array('errorMessage'=>'Your account is no longer available. Please, contact the admin.','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 				$this->load->model('model_products');
 				$dataThali= array('outputThalis' => $this->model_products->getThali());	
 				$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-				$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+				$captcha = array('image'=>$this->model_products->createCaptcha());
+				$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 				}
 	}
 

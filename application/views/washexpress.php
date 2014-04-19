@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'footerstyle.css');?>">
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<link href="<?php echo(CSS.'js-image-slider.css');?>" rel="stylesheet" type="text/css" />
@@ -94,7 +93,7 @@
 					<option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
 					<?php
 				}?>
-			</select><br><p style="text-indent:-350px;">Bill Image</p></div>
+			</select><br></div>
 			<div id="billimage"> <input type="file" name="userfile" required /></div>
 			<div id = "submit"><input type="submit" value="Submit" /></div>
 			
@@ -105,7 +104,6 @@
 			echo "Please Login To add Laundry Details!";
 		}?>
 	</div>
-	<?php include 'footer.php'; ?>
 </div>
 <div id="feedback">Feedback</div>
 <?php include 'reglog.php'; ?>

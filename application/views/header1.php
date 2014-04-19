@@ -29,11 +29,11 @@
 				required: true,
 				minlength: 5
 			},
-			roomno: {
+			address: {
 				required: true,
 				regex: '^[A-H]{1}-[1-3]{1}[0-2]{1}[0-9]{1}$'
 				},
-			mobileno: {
+			phone: {
 				required: true,
 				minlength: 10
 			},
@@ -52,11 +52,11 @@
 				required:'',
 				minlength: "Password must be at least 5 characters long."
 			},
-			roomno: {
+			address: {
 				required:'',
 				regex: "Please enter a valid roomno."
 				},
-			mobileno: {
+			phone: {
 				required:'',
 				minlength: "Please enter a valid mobile number."
 				},

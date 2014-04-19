@@ -44,8 +44,8 @@
 						<img class="twitter_icon" src="<?php echo(IMG.'social_icons/twitter02_dark.png');?>"></img>
 						<img class="yahoo_icon" src="<?php echo(IMG.'social_icons/yahoo_dark.png');?>"></img>
 					</div>
-					<div class="copyright">
-					© 2014 Vinfocity.com. All rights reserved
+					<div class="copyright" >
+				
 					</div>
 				</li>
 
