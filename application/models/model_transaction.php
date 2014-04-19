@@ -72,6 +72,7 @@ class Model_transaction extends CI_Model {
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
 		$query=$this->db->update('users', $data2);
+		return $transaction_id;
 	}
 
 	public function addlaundry($userId,$quantity,$price,$slot,$deliveryDate,$orderTime,$laundryarray)
@@ -134,9 +135,9 @@ class Model_transaction extends CI_Model {
 				$mean = date("H:i",$mean);
 				if($currentTime < $mean){
 					$amount = ($row->quantity*$row->price)*TAX;
-					$tables = array('subway', 'xerox', 'laundry','transaction');
 					$this->db->where('transactionId', $transactionId);
-					$this->db->delete($tables);
+					$data = array('cancelled'=>'true');
+					$this->db->update('transaction', $data);
 					$this->updateAccountOnTransactionDelete($userId,$amount);
 					return 1;
 				}else{

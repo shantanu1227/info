@@ -27,3 +27,7 @@ proguard/
 *.ipr
 *.iws
 .idea/
+
+assets/captcha/*.jpg
+assets/img/laundryImages/
+assets/img/photocopyDocuments/
