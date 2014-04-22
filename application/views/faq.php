@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'reglogcss.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'commonstyle.css');?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'feedback.css');?>">
+		<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'footerstyle.css');?>">
         <link rel="stylesheet" type="text/css" href="<?php echo(CSS . 'js-image-slider.css'); ?>">
         <script type='text/javascript' src="<?php echo(JS . 'js-image-slider.js'); ?>"></script>
         <script type='text/javascript' src="<?php echo(JS . 'jquery-1.7.1.min.js'); ?>"></script>
@@ -161,7 +162,7 @@
             </div>
             <div id="quesans5">
                 <div class="ques" >Till when can I cancel my order?</div>
-                <div class="ans"> *According to our current policy, the order can be canceled before the time of the half of the duration of that perticular slot in which it has 
+                <div class="ans"> *According to our current policy, the order can be canceled before the time of the half of the duration of that particular slot in which it has 
                     been ordered. For example, if the customer has ordered for delivery in the slot of 2 PM to 4 PM, he can 
                     cancel the order before 3 PM. If canceled after 3 PM, there will be no refund.</div>
             </div>
@@ -182,6 +183,7 @@
                     You can reach to him on virtualinfocity@gmail.com</div>
             </div>
             </div>
+			<?php include 'footer.php'; ?>
         </div>
 		<div id="feedback">Feedback</div>
 		<?php include 'feedback.php'; ?>

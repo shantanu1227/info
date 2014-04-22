@@ -72,10 +72,10 @@
 		<div class="menuhead"><i>Products</i></div>
 		<?php include 'dynamicproduct.php'; ?>
 		<?php include 'footer.php'; ?>
-		<?php include 'reglog.php'; ?>
+		
 		</div>
 		<div id="feedback">Feedback</div>
 		<?php include 'feedback.php'; ?>
-		
+		<?php include 'reglog.php'; ?>
 	</body>
 </html>

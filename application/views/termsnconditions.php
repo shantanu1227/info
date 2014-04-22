@@ -44,7 +44,9 @@ b) Use of the Website is offered to you conditioned on acceptance without modifi
 <p>
 2. User Account, Password, and Security:
 
-You will receive a password and account designation upon completing the Website's registration process. You are responsible for maintaining the confidentiality of the password and account, and are fully responsible for all activities that occur under your password or account. You agree to 
+You will receive a confirmation link on your webmail account upon completing the Website's registration process. You are 
+responsible for maintaining the confidentiality of the password and account, and are fully responsible for all 
+activities that occur under your password or account. You agree to 
 </br>(a) immediately notify virtualinfocity.com of any unauthorized use of your password or account or any other breach of security.
 </br> (b) ensure that you exit from your account at the end of each session. virtualinfocity.com cannot and will not be liable for any loss or damage arising from your failure to comply with this Section 2.
 </p>
@@ -99,7 +101,7 @@ d)  You shall be liable to pay for any Service or product that you have already 
 </p><p>
 8. Governing Law:
 
-These terms shall be governed by and constructed in accordance with the laws of India without reference to conflict of laws principles and disputes arising in relation hereto shall be subject to the exclusive jurisdiction of the courts at Bangalore.
+These terms shall be governed by and constructed in accordance with the laws of India without reference to conflict of laws principles and disputes arising in relation hereto shall be subject to the exclusive jurisdiction of the courts at Gandhinagar.
 </p><p>
 9. Severability:
 

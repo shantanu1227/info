@@ -59,7 +59,7 @@
 				<tr>
 					<td></td>
 					<td></td>
-					<td><strong>Tax</strong></td>
+					<td><strong>Service Tax</strong></td>
 					<td>Rs. <?php echo $this->cart->format_number((TAX-1)*$this->cart->total());?></td>
 				</tr>
 				<tr>
