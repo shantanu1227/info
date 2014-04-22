@@ -171,10 +171,11 @@
 <div class="navigation">
 	<div class="navbar">
 		<ul>
-			<li><?php echo anchor('', 'HOME'); ?></li>
+		<?php $attr = array('style'=>'display:block');?>
+			<li><?php echo anchor('', 'HOME', $attr); ?></li>
 			<li>FOOD
 				<ul>
-				<?php $attr = array('style'=>'display:block');?>
+				
 					<li><?php echo anchor('/welcome/subway', 'Subway',$attr); ?></li>
 					<li><?php echo anchor('/welcome/qwiches', 'Qwiches',$attr); ?></li>
 					<li><?php echo anchor('/welcome/chatkazz', 'Chatkazz',$attr); ?></li>

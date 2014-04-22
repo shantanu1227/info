@@ -510,7 +510,7 @@ text-align:center;
 }
 .carttable{
 	float:left;
-	width:100.2%;
+	width:101.2%;
 	margin-top:15%;
 }	
 .carttable th{
@@ -587,6 +587,7 @@ input[type="submit"]{
     color: white;*/
 }
 .checkoutbutton{
+margin-right:-1%;
 margin-top: 1%;
 float: right;
 width: auto;

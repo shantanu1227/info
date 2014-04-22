@@ -5,10 +5,47 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'adminstyle.css');?>">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
-	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+	<script src="<?php echo (JS.'jquery-validation-1.11.1/dist/jquery.validate.min.js');?>" type="text/javascript"></script>
 </head>
 <body>
+<script type="text/javascript">
+$(function() {
+	$("#deleteuserform").validate({
+		errorElement: "div",
+		// Specify the validation rules
+		rules: {
+			recamount: {
+				required: true,
+				number: true,
+				range: [1, 9999999]
+			},
+			username: {
+				required: true,
+				number: true,
+				range: [201001001, 201499999]
+			}
+		},
+		
+		// Specify the validation error messages
+		messages: {
+			recamount:{
+				required:'Please enter the recharge amount!',
+				number:"Invalid Amount!",
+				range: "Recharge amount between [1, 9999999]"
+			},
+			username: {
+				required:'Field cannot be empty.',
+				number:"Please enter a your DA-IICT ID."
+				range: "Please enter a your DA-IICT ID."
+			}
+		},
+		
+		submitHandler: function(form) {
+			form.submit();
+		}
+	});
+	});
+	</script>
 	<div id="cname">Vinfocity</div>
 	<div id="mainbox1">
 		<div id="wrapper">
