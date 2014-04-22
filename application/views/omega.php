@@ -17,74 +17,7 @@
 
 <body>
 	<script src="<?php echo (JS.'jquery-validation-1.11.1/dist/jquery.validate.min.js');?>" type="text/javascript"></script>
-	<!-- jQuery Form Validation code -->
-	<script>
-		
-  // When the browser is ready...
-  $(function() {
-  	
-	// Setup form validation on the #register-form element
-	$.validator.addMethod(
-		"regex",
-		function(value, element, regexp) {
-			var re = new RegExp(regexp);
-			return re.test(value);
-		},
-		"Please check your input."
-		);
 
-	$("#registerform").validate({
-		errorElement: "div",
-		// Specify the validation rules
-		rules: {
-			fullname: "required",
-			username: {
-				required: true,
-				number: true,
-				range: [201001001, 201499999]
-			},
-			password: {
-				required: true,
-				minlength: 5
-			},
-			roomno: {
-				required: true,
-				regex: '^[A-H]{1}-[1-3]{1}[0-2]{1}[0-9]{1}$'
-			},
-			mobileno: {
-				required: true,
-				minlength: 10
-			},
-		},
-		
-		// Specify the validation error messages
-		messages: {
-			fullname: "",
-			username: {
-				required:'',
-				maxlength: "Please enter a your DA-IICT ID.",
-				minlength: "Please enter a your DA-IICT ID.",
-				range: "Please enter a your DA-IICT ID."
-			},
-			password: {
-				required:'',
-				minlength: "Password must be at least 5 characters long."
-			},
-			roomno: {
-				required:'',
-				regex: "Please enter a valid roomno."
-			},
-			mobileno: {
-				required:'',
-				minlength: "Please enter a valid mobile number."
-			},
-		},
-		
-		submitHandler: function(form) {
-			form.submit();
-		}
-	});	
-</script>
 <script>
 	$(document).ready(function(){
 		$(".reloadonadd").click(function(){
