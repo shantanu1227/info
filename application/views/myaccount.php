@@ -82,7 +82,9 @@
 						<?php echo $output->address;?>	
 					</div>
 				</div>
+				<?php if(count($transactions)>0){?>
 				<button id="transbutton" type="">My Past Transactions</button>
+				<?php }?>
 			</div>
 		</div>
 		<?php include 'footer.php';?>
@@ -114,7 +116,10 @@
 						echo form_submit('deletetransaction', 'Cancel Transaction');
 						echo form_close();
 						}else{
-							echo "Unable To Cancel";
+							if($transaction->delivered == 'false')
+								echo "Pending";
+							else
+								echo "Delivered";
 						}
 					}else{
 						echo "Cancelled";

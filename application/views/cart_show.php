@@ -100,7 +100,9 @@
 					);
 			echo form_input($submit);
 			echo form_close();
-			}}
+
+			}
+		}
 			?>
 			<!--?php include ('footer.php');?-->
 			</div>
