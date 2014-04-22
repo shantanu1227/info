@@ -370,7 +370,7 @@ class Cart extends CI_Controller {
 
 				$this->email->subject($orderType);
 				$this->email->message($orderType.' of '.$this->session->userdata('userName').'  Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$productname.'<br>'.$message);
-				$this->email->send();
+				//$this->email->send();
 
 
 	}
