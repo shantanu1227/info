@@ -170,13 +170,15 @@ body {
 }
 
 .about{
+    text-align: justify;
     margin-left: auto;
     margin-right: auto;
     width:75%;
     font-size:90%;
     padding-top-top:15%;
-    font-family: sans-serif;
+    font-family: calibri;
     border:0px;
+    margin-top:15%;
     /*border-left: 2px;
     border-top: 2px;
     border-right: 2px;

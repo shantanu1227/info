@@ -67,8 +67,9 @@ class Admin extends CI_Controller {
 		if($this->session->userdata('AdminuserName')!='' && $this->session->userdata('userName')==''){
 		$userId=$this->input->post('username');
 		$deductAmount=$this->input->post('deductamount');
+		$transactionid = $this->input->post('transactionid');
 		$this->load->model('model_admin');	
-		$this->model_admin->removeuserBalance($userId,$deductAmount);	
+		$this->model_admin->removeuserBalance($userId,$deductAmount,$transactionid);	
 		redirect('/admin/adminfunctions','refresh');
 		}else{
 			redirect('/','refresh');
