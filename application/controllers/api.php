@@ -1,11 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/*
+	Android App api's are written here.
+	getPending - gives you the json data of the pending products to be purchased in a particular slot.
+	getTransaction - gives you the json data for a particular transaction .
+	Update Purchased - Updates the purchased flag for a transaction
+	getpurchasedusers - Gives the json data of the users who made the transaction in a slot and 
+						their products were purchased
+	getpurchasedproductsforuser - Gives the	json data of the a users transaction in a particular slot.
+	updateDelivered - Update the transaction that has been delivered.
 
+*/
 class Api extends CI_Controller {
 
-	public function index()
-	{
-		
-	}
 
 	public function getPending()
 	{

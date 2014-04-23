@@ -1,5 +1,18 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/*
+Admin Pages Are Controlled here
+Index - Shows the login page for admin if you are already logged in as user
+		then you would be redirected to home page.
+Login - When Admin enters user credentials login function checks the correct credential or not
+Adminfunctions - Page where all admin functions are loaded.
+BanAccount - Ban a particular user.
+Recharge Account - Recharge a account's credit
+Deduct Amount  - To deduct credit from a account on a particular transaction if anything extra to
+				 be brought.
+UpdateThali - To update the daily thalis.
+*/
+
 class Admin extends CI_Controller {
 
 	public function index()

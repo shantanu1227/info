@@ -1,11 +1,19 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/*
+addtocart - Adding a product to you cart
+addsubwaytocart - Adding a subway Product to your cart
+updatecart - to change quantity in cart
+emptycart - destroy the cart
+addxeroxfile - add a photocopy document in transaction
+addlaundry - add a Laundry bill reciept
+checkout - Make the final transaction for products in cart
+Deletetransaction - To delete a transaction for a user
+sendmail - To send a mail
+*/
+
 class Cart extends CI_Controller {
 
-	public function index()
-	{
-		
-	}
 	public function addtocart()
 	{
 		$id=$this->input->post('product_id');
