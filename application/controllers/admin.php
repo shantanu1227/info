@@ -57,8 +57,12 @@ class Admin extends CI_Controller {
 		if($this->session->userdata('AdminuserName')!='' && $this->session->userdata('userName')==''){
 		$userId=$this->input->post('username');
 		$this->load->model('model_admin');	
-		$this->model_admin->removeuser($userId);
-		redirect('/admin/adminfunctions','refresh');
+			if($this->model_admin->removeuser($userId)>0){
+				redirect('/admin/adminfunctions','refresh');
+			}else {
+				/*Show Error*/
+
+			}
 		}else{
 			redirect('/','refresh');
 		}
@@ -69,8 +73,11 @@ class Admin extends CI_Controller {
 		$userId=$this->input->post('username');
 		$rechargeAmount=$this->input->post('recamount');
 		$this->load->model('model_admin');	
-		$this->model_admin->adduserBalance($userId,$rechargeAmount);	
-		redirect('/admin/adminfunctions','refresh');
+			if($this->model_admin->adduserBalance($userId,$rechargeAmount)>0){	
+				redirect('/admin/adminfunctions','refresh');
+			}else{
+				/*Show error*/
+			}
 		}else{
 			redirect('/','refresh');
 		}
@@ -78,12 +85,15 @@ class Admin extends CI_Controller {
 	public function deductAmount()
 	{
 		if($this->session->userdata('AdminuserName')!='' && $this->session->userdata('userName')==''){
-		$userId=$this->input->post('username');
-		$deductAmount=$this->input->post('deductamount');
-		$transactionid = $this->input->post('transactionid');
-		$this->load->model('model_admin');	
-		$this->model_admin->removeuserBalance($userId,$deductAmount,$transactionid);	
-		redirect('/admin/adminfunctions','refresh');
+			$userId=$this->input->post('username');
+			$deductAmount=$this->input->post('deductamount');
+			$transactionid = $this->input->post('transactionid');
+			$this->load->model('model_admin');	
+			if($this->model_admin->removeuserBalance($userId,$deductAmount,$transactionid)>0){
+				redirect('/admin/adminfunctions','refresh');	
+			}else{
+				/*Show Error*/
+			}			
 		}else{
 			redirect('/','refresh');
 		}

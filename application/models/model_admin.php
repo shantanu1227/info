@@ -4,17 +4,24 @@ class Model_admin extends CI_Model {
 
 	public function adduserBalance($userId,$balance)
 	{
+		/*Error -1 usernot found*/
 		$this->db->where('userName', $userId);
-		$addbalance_data= $this->db->get('users')->result();
-		$addbalance_data[0]->creditAmount = $addbalance_data[0]->creditAmount + $balance;
-		$this->db->where('userName', $userId);
-		$this->db->update('users', $addbalance_data[0]); 
-		return;
+		$query = $this->db->get('users');
+		if($query->num_rows()>0){
+			$addbalance_data= $query->result();
+			$addbalance_data[0]->creditAmount = $addbalance_data[0]->creditAmount + $balance;
+			$this->db->where('userName', $userId);
+			$this->db->update('users', $addbalance_data[0]); 
+			$count = $this->db->affected_rows();
+			return $count;
+		}else{
+			return -1;
+		}
 	}
 
 	public function removeuserBalance($userId,$balance,$transactionid)
 	{
-
+		/*Error -1 Incorrect Transaction Id*/
 		$this->db->where('transactionId',$transactionid);
 		$query=$this->db->get('transaction');   
 
@@ -31,19 +38,26 @@ class Model_admin extends CI_Model {
 			$removebalance_data[0]->creditAmount = $removebalance_data[0]->creditAmount - $balance;
 			$this->db->where('userName', $userId);
 			$this->db->update('users', $removebalance_data[0]); 
+			return 1;
 		}
-		return;
+		return -1;
 	}
 
 	public function removeuser($userId) 
 	{
+		/*Error -1 User not found*/
 		$this->db->where('userName', $userId);
-		$removeuser_data= $this->db->get('users')->result();
+		$query = $this->db->get('users');
+		if($query->num_rows()>0){
+		$removeuser_data= $query->result();
 	    $removeuser_data[0]->authToken = md5(rand(0,7));
 	    $removeuser_data[0]->verified = "false";
 	    $this->db->where('userName', $userId);
 	    $this->db->update('users',$removeuser_data[0]);	
-	    return ;
+	    $count = $this->db->affected_rows();
+	    return $count;
+		}
+		return -1;
 	}
 
 	public function addThali($shopId,$lunch,$dinner) 
