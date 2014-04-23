@@ -111,7 +111,7 @@
 				</div>
 			</div>
 			
-			<div class="offerhead">What's cool today?</div>
+			<!--div class="offerhead">What's cool today?</div>
 			<div class="offers">
 				<div class="imgslide">
 					<div id="slider">
@@ -120,7 +120,7 @@
 						<img src="<?php echo(IMG.'oemga/omegaslider3.jpg');?>"></img>
 					</div>
 				</div>
-			</div>
+			</div-->
 			
 			<div class="printform">
 				<div class =" information">

@@ -177,8 +177,9 @@
 			<label><input type="checkbox" name="extra[]" value="Sweet Onion Sauce" >Sweet Onion Sauce</label></br>
 			
 			</div>
-			<div class="addtosubcomment">
+			<div class="addtosubcomment" style="font-size:13px;">
 			<TEXTAREA name="comments" rows="3" cols="40"></TEXTAREA>
+			*Extra cheese or the likes will incur additional charges!
 			</div>
 			<div class="subaddtocart">
 			<div > <input class="subaddtocartbut"type="submit" value="Add to Cart"></div>
