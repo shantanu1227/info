@@ -26,7 +26,7 @@
 
             <p>Vinfocity.com is the first of its kind e-commerce portal for students at DA-IICT to order things from Infocity. It provides the students at DA-IICT a hassle free and enjoyable shopping experience also saving a lot of their time. Shopping at VirtualInfocity.com is an economical alternative because it saves transportation cost, and it also saves time.</p>
             <p>Vinfocity.com provides all products which are needed in the day-to-day life of every student. The student can order from a wide variety of products ranging from a pen to a shampoo to a Sub sandwhich. By providing time slots we are providing students the flexibility to decide the time when they want to get their product delivered. You can even place your order in the evening and get it delivered next day morning.</p> 
-            <p>We understand the students' needs and cater to them by providing them information about stationery, medicines, provision stores, food and much more. The shops included are Big Bite, Chatkazz, Kavya, Koffee++, Laundromart, Omega, Oxford, Qwiches and Subway among some others.</p>
+            <p>We understand the students' needs and cater to them by providing them information about stationery, medicines, provision stores, food and much more. The shops included are Big Bite, Chatkazz, Kavya, Koffee++, WashExpress, Omega, Oxford, Qwiches and Subway among some others.</p>
         </div>
 		<?php include 'footer.php'; ?>
     </div>

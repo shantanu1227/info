@@ -1,6 +1,6 @@
 <!--
-        Document: aboutus
-        Purpose: Page containing information related to Virtual Infocity 
+        Document: Terms and Conditions
+        Purpose: Page containing information related to Terms and Conditions of Virtual Infocity 
     -->
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <html>
@@ -18,14 +18,12 @@
 <body>
     <div id="box">
         <?php include 'header1.php'; ?>
-        <div class="shopheading">
-            Terms and conditions
-        </div>
+      .
 
 
                 <div class="about">
                 <p>
-            Please read the following terms and conditions very carefully as your use of service is subject to your acceptance of and compliance with the following terms and conditions ("Terms").
+            Please read the following terms and conditions very carefully as your use of service is subject to your acceptance of and compliance with the following terms and conditions:
             <p>
 
             By subscribing to or using any of our services you agree that you have read, understood and are bound by the Terms, regardless of how you subscribe to or use the services. If you do not want to be bound by the Terms, you must not subscribe to or use our services. 

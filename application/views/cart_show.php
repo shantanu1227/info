@@ -52,20 +52,20 @@
 				<tr>
 					<td></td>
 					<td></td>
-					<td><strong>Total</strong></td>
+					<td><strong>Sub-Total</strong></td>
 					<td>Rs. <?php echo $this->cart->format_number($this->cart->total()); ?></td>
 				</tr>
 				
 				<tr>
 					<td></td>
 					<td></td>
-					<td><strong>Service Tax</strong></td>
+					<td><strong>Service Charge</strong></td>
 					<td>Rs. <?php echo $this->cart->format_number((TAX-1)*$this->cart->total());?></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
-					<td><strong>Total with tax</strong></td>
+					<td><strong>Total</strong></td>
 					<td>Rs. <?php echo $this->cart->format_number((TAX)*$this->cart->total());?> </td>
 				</tr>
 			</table>

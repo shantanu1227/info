@@ -86,6 +86,7 @@ $(function() {
 					echo form_open('admin/deductAmount', $attributes);
 					?>
 					<div class="forminput"><input type="text" name="username" placeholder="Username e.g. '201101098'"><br></div>
+					<div class="forminput"><input type="text" name="transactionid" placeholder="Transaction Id e.g. '98'"><br></div>
 					<div class="forminput"><input type="text" name="deductamount" placeholder="Amount to deduct"><br></div>
 					<input type="submit" value="Deduct Amount" />
 					<?php echo form_close();?>

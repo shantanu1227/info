@@ -12,7 +12,7 @@
 }
 
 #slider {
-	background:#fff url(loading.gif) no-repeat 50% 50%;
+	background:#fff no-repeat 50% 50%;
 	position:relative;
 	margin:0 auto; /*center-aligned*/
     transform: translate3d(0,0,0);
@@ -80,7 +80,7 @@
 {
     width:11px; height:11px;
     font-size:0;color:White;/*hide the index number in the bullet element*/
-    background:transparent url(bullet.png) no-repeat 0 0;
+    background:transparent  no-repeat 0 0;
     display:inline-block; *display:inline; zoom:1;
     overflow:hidden;cursor:pointer;
     margin:0 6px;/* set distance between each bullet*/
