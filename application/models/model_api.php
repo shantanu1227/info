@@ -1,5 +1,16 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/*
+This file deals with the android api 
 
+getpending - Fetch the pending items from the database as per the slot
+gettransactiondetails - get the transaction details of a product
+updatepurchased  - update the purchased flag if the product is purchased
+updatedelivered - update the delivered flag if the product is delivered
+getpurchased - get all the users who purchased for a slot
+getpurchasedusersproducts - get all the purchased product as per user as per slot
+checkpassword - check the password of the delivery guy
+
+*/
 class Model_api extends CI_Model {
 
 	public function getpending($slotid)

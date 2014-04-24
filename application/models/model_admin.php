@@ -1,5 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/*
+Models deal with the database functioning 
+This model deals with admin functionalities
 
+adduserbalance - to add credit to a student
+removeuserbalance - to deduct amount from students balance if anything extra was ordered like 
+					extra cheese in subway
+removeuser - To ban a particular user if any mischievious activity was found
+addthali - To add the daily thali available in infocity
+insertfeedback - Customers to add feedback to the website
+getthalistores - get the stores which gives thali service
+login - login for admin 
+*/ 
 class Model_admin extends CI_Model {
 
 	public function adduserBalance($userId,$balance)
@@ -76,39 +88,6 @@ class Model_admin extends CI_Model {
 		$currentdata = array('shopId' => $shopId ,'lunch' => $lunch ,'dinner' => $dinner, 'date' => $currentDate); 
 		$this->db->insert('thali', $currentdata); 
 		return ;
-	}
-
-	public function addDeliveryguybalance($userId,$balance) 
-	{
-		$this->db->where('userName', $userId);
-		$del_data = $this->db->get('delivery_man')->result();
-		//print_r($data[0]->creditAmount);
-		$del_data[0]->creditLeft = $del_data[0]->creditLeft + $balance;
-		$this->db->where('userName', $userId);
-		$this->db->update('delivery_man', $del_data[0]); 
-		return;
-	}
-
-	public function removeDeliveryguybalance($userId,$balance) 
-	{
-		$this->db->where('userName', $userId);
-		$del_data = $this->db->get('delivery_man')->result();
-		//print_r($data[0]->creditAmount);
-		$del_data[0]->creditLeft = $del_data[0]->creditLeft - $balance;
-		$this->db->where('userName', $userId);
-		$this->db->update('delivery_man', $del_data[0]); 
-		return;
-	}
-
-	public function changeDeliveryguypass($userId,$pass) 
-	{
-		$this->db->where('userName', $userId);
-		$changedelpass_data = $this->db->get('delivery_man')->result();
-		//print_r($data[0]->creditAmount);
-		$changedelpass_data[0]->password = $this->encrypt->sha1($pass);
-		$this->db->where('userName', $userId);
-		$this->db->update('delivery_man', $changedelpass_data[0]); 
-		return;
 	}
 
 	public function insertFeedback()
