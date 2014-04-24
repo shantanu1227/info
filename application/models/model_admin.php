@@ -21,26 +21,35 @@ class Model_admin extends CI_Model {
 
 	public function removeuserBalance($userId,$balance,$transactionid)
 	{
-		/*Error -1 Incorrect Transaction Id*/
+		/*Error -1 Incorrect UserId Id
+		  Error -2 Incorrect Transaction Id
+		*/
 		$this->db->where('transactionId',$transactionid);
 		$query=$this->db->get('transaction');   
 
 		if($query->num_rows()>0){
 			$row=$query->row();
 			$amount = $row->price;
-			$newamount = $amount+$balance;
-			$this->db->where('transactionId',$transactionid);
-			$data = array('price'=>$newamount);
-			$this->db->update('transaction', $data);
 
 			$this->db->where('userName', $userId);
-			$removebalance_data = $this->db->get('users')->result();
-			$removebalance_data[0]->creditAmount = $removebalance_data[0]->creditAmount - $balance;
-			$this->db->where('userName', $userId);
-			$this->db->update('users', $removebalance_data[0]); 
-			return 1;
+			$query = $this->db->get('users');
+			if($query->num_rows()>0){
+				$newamount = $amount+$balance;
+				$this->db->where('transactionId',$transactionid);
+				$data = array('price'=>$newamount);
+				$this->db->update('transaction', $data);
+
+				$this->db->where('userName', $userId);
+				$removebalance_data =$query->result();
+				$removebalance_data[0]->creditAmount = $removebalance_data[0]->creditAmount - $balance;
+				$this->db->where('userName', $userId);
+				$this->db->update('users', $removebalance_data[0]); 
+				$count = $this->db->affected_rows();
+				return $count;
+			}
+			return -1;
 		}
-		return -1;
+		return -2;
 	}
 
 	public function removeuser($userId) 

@@ -55,8 +55,8 @@ $(function() {
 </script>  
 
 	<div id="cname">Vinfocity</div>
-	<div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:#363600; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-left:-8px; margin-top:-80px;">
-		<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;">X </div>
+	<div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:<?php echo $errorColor ;?>; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-left:-8px; margin-top:-80px;"><?php echo $errorMessage; ?>
+		<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;"><?php echo $errorClose ;?> </div>
 	</div>
 	<!--div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:#312600; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-top:0;margin-left:-8px;"> error</div-->
 	<div id="mainbox1">
