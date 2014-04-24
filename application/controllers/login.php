@@ -1,5 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/*
+index - Login of users if correct then redirect to home page else show error messages
+logout - Logout currently logged in user
+*/
+
 class Login extends CI_Controller
  {
 

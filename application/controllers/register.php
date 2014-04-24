@@ -1,11 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+/*
+	Newuser - The registration on new user.
+	Confirm_email - When registration is done then mail is sent to email id and when the 
+					user clicks on the link on mail confirmation is done here.
+*/
 class Register extends CI_Controller {
-
-	public function index()
-	{
-		$this->load->view('home');
-	}
 
 	public function newuser()
 	{

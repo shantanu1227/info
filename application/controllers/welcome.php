@@ -1,5 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/*
+Index - Home page is loaded
+Offers - Offers page is loaded
+skloginpage - shopkeeper login page
+skinterface - shopkeeper interface page
+*/
+
 class Welcome extends CI_Controller {
 
 	public function index()
