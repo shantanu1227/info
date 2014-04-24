@@ -1,8 +1,24 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/*
+This deals with the products database and offers
 
+getproducts - get products according to storename
+addproducts - add product from skinterface
+addoffer - add offer from skinterface
+getthali  - gives the thali based on current date
+getoffers - gives the current 4 offers available
+getoffersseperate -gives all the offers
+editproducts - edit a given product details
+getAllproductsofStore - gives all the products of a store whether they are 
+						available or not
+getAlloffersofStore - gives all the offers of a particular store
+deleteoffer - delete an offer
+createCaptcha - creating captcha
+*/
 class Model_products extends CI_Model {
 
-	public function getproducts($storeName){
+	public function getproducts($storeName)
+	{
 		$this->db->where('name', $storeName);
 		$query=$this->db->get('stores', 1);
 		$row = $query->row();
@@ -12,19 +28,22 @@ class Model_products extends CI_Model {
 		return $this->db->get('products')->result();
 	}
 
-	public function addproducts($productName,$productImage,$productPrice,$shopId) {
+	public function addproducts($productName,$productImage,$productPrice,$shopId) 
+	{
 		$data = array('productName' => $productName, 'price' => $productPrice, 
 			'productImage' =>$productImage, 'inStock' => 'TRUE','shopId' => $shopId);
 		$this->db->insert('products', $data);	
 	}
-	public function addoffers($offerName,$offerImage,$shopId) {
+	public function addoffers($offerName,$offerImage,$shopId) 
+	{
 		$data = array('offerName' => $offerName, 
 			'OfferImageUrl' =>$offerImage,'shopId' => $shopId);
 		$this->db->insert('offers', $data);	
 		
 	}
 
-	public function getThali() {
+	public function getThali() 
+	{
 		date_default_timezone_set('Asia/Kolkata');
 		$currentDate=date("d-m-Y");
 		$this->db->where('date',$currentDate);
@@ -35,7 +54,8 @@ class Model_products extends CI_Model {
 		//print_r($results); #$results;
 	}
 
-	public function getOffers() {
+	public function getOffers()
+	 {
 		$this->db->order_by("offers.offerId", "desc");
 		$this->db->join('stores','offers.shopId=stores.shopId');
 		$this->db->from('offers');
@@ -45,7 +65,8 @@ class Model_products extends CI_Model {
 		return $results->result();
 		#return $this->db->get('offers')->results();
 	}
-	public function getOffersseparate() {
+	public function getOffersseparate() 
+	{
 		$this->db->order_by("offers.offerId", "desc");
 		$this->db->join('stores','offers.shopId=stores.shopId');
 		$this->db->from('offers');
@@ -65,14 +86,14 @@ class Model_products extends CI_Model {
 	}
 	
 	public function editproducts($productName,$productImage,
-		$productPrice,$shopId, $productId, $productInStock) {
+		$productPrice,$shopId, $productId, $productInStock) 
+	{
 		if($productImage == ""){
 			$data = array('productName' => $productName, 'price' => $productPrice, 'inStock' => $productInStock,'shopId' => $shopId);
 			$this->db->where('productId', $productId);
 			$this->db->update('products', $data); 
 			
-		}
-		else{
+		}else{
 			$data = array('productName' => $productName, 'price' => $productPrice, 
 				'productImage' =>$productImage, 'inStock' => $productInStock,'shopId' => $shopId);
 			$this->db->where('productId', $productId);
@@ -80,7 +101,8 @@ class Model_products extends CI_Model {
 		}
 	}
 	
-	public function getAllproductsofStore($storeName){
+	public function getAllproductsofStore($storeName)
+	{
 		$this->db->where('name', $storeName);
 		$query=$this->db->get('stores', 1);
 		$row = $query->row();
@@ -88,7 +110,8 @@ class Model_products extends CI_Model {
 		$this->db->where('shopId', $storeid);
 		return $this->db->get('products')->result();
 	}
-	public function getAlloffersofStore($storeName){
+	public function getAlloffersofStore($storeName)
+	{
 		$this->db->where('name', $storeName);
 		$query=$this->db->get('stores', 1);
 		$row = $query->row();
@@ -96,7 +119,8 @@ class Model_products extends CI_Model {
 		$this->db->where('shopId', $storeid);
 		return $this->db->get('offers')->result();
 	}
-	public function deleteoffer($offerid){
+	public function deleteoffer($offerid)
+	{
 		$this->db->where('offerId',$offerid);
 		$this->db->delete('offers'); 	
 	}

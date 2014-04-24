@@ -42,6 +42,7 @@ define('CSS',URL.'assets/css/');
 define('JS',URL.'assets/js/');
 
 define('TAX',1.15);
+define('DELIVERY_EMAILID','punit9462@gmail.com');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

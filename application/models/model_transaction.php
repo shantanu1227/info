@@ -1,5 +1,19 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/*
+getstoreid - gives the storeid corresponding to storename
+addtransaction - add the user transaction to database
+addsubwaytransaction - add subway transaction details to database
+addxerox - add photocopy transaction to database
+addlaundry - add washexpress transaction to database
+getusertransaction - gives all the transaction for a user
+deletetransaction - update the cancelled flag in a transaction
+getstorename - gives the storename for a product
+getslots  - gives the next available slots
+getallslots - gives all the slots
+updateAccountOnTransactionDelete - credit added back to the user when transaction is cancelled
+gettransactiondetails - gives the transaction detail corresponding to transaction id
 
+*/
 class Model_transaction extends CI_Model {
 
 
