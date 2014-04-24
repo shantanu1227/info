@@ -31,6 +31,13 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('kavya', $this->getadditionaldetails('kavya'), FALSE);
 	}
+	public function deleteoffer()
+	{
+		$name=$this->session->userdata('name');
+		$this->load->model('model_products');
+		$data= array('offers' => $this->model_products->getAlloffersofStore($name) );
+		$this->load->view('deleteoffer', $data);
+	}
 	public function koffee()
 	{
 		$this->load->view('koffee', $this->getadditionaldetails('koffee'), FALSE);	

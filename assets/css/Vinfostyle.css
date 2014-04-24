@@ -463,7 +463,7 @@ color:white;
 	color:white;
 	font-family:calibri;
 }
-.addofferbut{
+.addofferbut, .deleteofferbut{
 padding:1%;
 cursor:pointer;
 float:left;
@@ -485,7 +485,7 @@ background:#802E05;
 color:white;
 font-family:textfont;
 }
-.editproduct{
+.editproduct, .deleteoffer{
 	text-align:center;
 	padding:1%;
 	cursor:pointer;
@@ -495,11 +495,11 @@ font-family:textfont;
 	color:white;
 	font-family:calibri;
 }
-.producttable{
+.producttable, .offertable{
 	float:left;
 	width:100%;
 }
-.producttable th,td{
+.producttable th,td, .offertable th,td{
 width:40px;
 text-align:center;
 }
@@ -769,4 +769,55 @@ font-size:15px;
 .sklogout a{
 text-decoration:none;
 color:white;
+}
+
+.deleteofferconfirmpage{
+position:absolute;
+display:none;
+top:30%;
+width:40%;
+left:30%;
+background:#802E05;
+color:white;
+}
+.confirmofferdeletehead{
+text-align:center;
+float:left;
+width:96%;
+padding:2%;
+font-family:textfont;
+font-size:15px;
+}
+.deleteyesno{
+float:left;
+width:100%;
+}
+.deleteyes, .deleteno{
+float:left;
+width:48%;
+padding:1%;
+text-align:center;
+cursor:pointer;
+font-family:textfont;
+font-size:13px;
+}
+.deleteofferbut a{
+text-decoration:none;
+color:white;
+}
+.backbut{
+float:left;
+width:100%;
+}
+.backbut a{
+padding:1%;
+cursor:pointer;
+float:left;
+text-decoration:none;
+width:auto;
+border-style:solid;
+border-width:1px;
+background:#802E05;
+color:white;
+font-family:textfont;
 }

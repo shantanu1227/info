@@ -88,6 +88,18 @@ class Model_products extends CI_Model {
 		$this->db->where('shopId', $storeid);
 		return $this->db->get('products')->result();
 	}
+	public function getAlloffersofStore($storeName){
+		$this->db->where('name', $storeName);
+		$query=$this->db->get('stores', 1);
+		$row = $query->row();
+		$storeid = $row->shopId;
+		$this->db->where('shopId', $storeid);
+		return $this->db->get('offers')->result();
+	}
+	public function deleteoffer($offerid){
+		$this->db->where('offerId',$offerid);
+		$this->db->delete('offers'); 	
+	}
 	
 }
 

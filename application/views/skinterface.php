@@ -1,3 +1,9 @@
+<! Skinterface.php is the view of the shop keeper interface.
+The view loads the details of the shop dynamically and grants the shop owner to 
+make changes in what shop provides like adding,changing and deleting products,
+changing and deleting offers etc. This page cannot be accessed by anyone accept
+ the shopkeeper of the particular shop as it cannot be accessed without logging in
+ through the shop ID which only shopkeeper has to know.>
 <!DOCTYPE html>
 <html>
 <head>
@@ -119,6 +125,9 @@ Add a product
 <div class="addofferbut">
 Add an Offer
 </div>
+<div class="deleteofferbut">
+<?php echo anchor('/welcome/deleteoffer', 'Delete an Offer'); ?>
+</div>
 <div class="changestatusbut">
 Change Shop Status
 </div>
@@ -155,6 +164,7 @@ Change Shop Status
 <div><?php echo form_submit('', 'Update this Offer');?></div>
 </form>
 </div>
+
 <div class="changestatusform">
 <?php echo form_open_multipart('shop/changeStatus/');?>
 <div class="productinput"><input type="radio" name="status" value="OPEN" checked="checked">OPEN<br></div>
