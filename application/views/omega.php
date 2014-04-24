@@ -191,6 +191,9 @@
 							<?php
 						}?>
 					</select>
+					<br>
+					<br>
+					<b>Note: Max file size allowed is 4Mb! </b>
 				</div>
 				
 

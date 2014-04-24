@@ -98,9 +98,12 @@
 				}?>
 			</select>
 			<br><p style="text-indent:-350px;">Bill Image</p></div>
-			<div id="billimage"> <input type="file" name="userfile" required /></div>
+			<div id="billimage"> <input type="file" name="userfile" required/></div>
+			<p>
+			<b style="float:center">Note: Max file size allowed is 4Mb! </b>
+			</p>
 			<div id = "submit"><input type="submit" value="Submit" /></div>
-			
+
 			<?php echo form_close();
 			}else{
 				echo "No slots available now Please come back later";
