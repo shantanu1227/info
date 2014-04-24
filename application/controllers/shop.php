@@ -15,7 +15,7 @@
 			if($name!='' && $isshopkeeper){
 				$productName = $this->input->post('productname',TRUE);
 				$productPrice = $this->input->post('productprice',TRUE);
-				$shopId = $this->session->userdata('userId');
+				$shopId = $this->session->userdata('ShopuserId');
 				$storename = strtolower($name);
 				$directoryName = "/".$storename."/";
 				$config['upload_path'] = "./assets/img".$directoryName;
@@ -58,7 +58,7 @@
 
 			if($name!='' && $isshopkeeper){
 				$offerName = $this->input->post('offername',TRUE);
-				$shopId = $this->session->userdata('userId');
+				$shopId = $this->session->userdata('ShopuserId');
 				$config['upload_path'] = "./assets/img";
 
 				$config['allowed_types'] = 'jpg|png';
@@ -95,7 +95,7 @@
 				$productName = $this->input->post('editedproductname',TRUE);
 				$productPrice = $this->input->post('editedproductprice',TRUE);
 				$productInStock = $this->input->post('stock');
-				$shopId = $this->session->userdata('userId');
+				$shopId = $this->session->userdata('ShopuserId');
 				$storename = strtolower($name);
 				$directoryName = "/".$storename."/";
 				$config['upload_path'] = "./assets/img".$directoryName;
@@ -133,6 +133,21 @@
 				}
 			}
 		}
+		
+		public function removeoffer()
+		{
+			$name=$this->session->userdata('name');
+			$isshopkeeper = $this->session->userdata('isShopKeeper');
+			if($name!='' && $isshopkeeper){
+			$offerid = $this->input->post('offerid');
+			$this->load->model('model_products');
+			$this->model_products->deleteoffer($offerid);
+			redirect('/welcome/deleteoffer','refresh');
+			}else{
+			redirect('/','refresh');
+			}
+		}
+		
 		public function login()
 		{
 			if($this->session->userdata('userId')==''){

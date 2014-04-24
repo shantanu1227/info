@@ -64,6 +64,13 @@ class Welcome extends CI_Controller {
 		redirect('/','refresh');
 		}
 	}
+	public function deleteoffer()
+	{
+		$name=$this->session->userdata('name');
+		$this->load->model('model_products');
+		$data= array('offers' => $this->model_products->getAlloffersofStore($name) );
+		$this->load->view('deleteoffer', $data);
+	}
 	public function koffee()
 	{
 		$errormsg  = array('errorMessage'=>'','errorClose'=>'','errorColor'=>'#B10COC');
