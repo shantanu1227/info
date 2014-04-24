@@ -28,6 +28,6 @@ proguard/
 *.iws
 .idea/
 
-assets/captcha/*.jpg
+assets/captcha/
 assets/img/laundryImages/
 assets/img/photocopyDocuments/

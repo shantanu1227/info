@@ -138,47 +138,48 @@
 			<div class="addtosub">
 			<div><b>Choose your bread:</b></div>
 			
-			<input type="radio" name="bread" value="Regular" checked="checked" autocomplete="on">Regular</br>
-			<input type="radio" name="bread" value="9-grain-wheat" >9-grain-wheat</br>
-			<input type="radio" name="bread" value="Italian" >Italian</br>
-			<input type="radio" name="bread" value="Monterey Cheddar" >Monterey Cheddar</br>
-			<input type="radio" name="bread" value="Flat Bread" >Flat Bread</br>
+			<label><input type="radio" name="bread" value="Regular" checked="checked" autocomplete="on">Regular</label></br>
+			<label><input type="radio" name="bread" value="9-grain-wheat" >9-grain-wheat</label></br>
+			<label><input type="radio" name="bread" value="Italian" >Italian</label></br>
+			<label><input type="radio" name="bread" value="Monterey Cheddar" >Monterey Cheddar</label></br>
+			<label><input type="radio" name="bread" value="Flat Bread" >Flat Bread</label></br>
 			
 			</div>
 			<div class="addtosub">
 			<div><b>Choose bread size:</b></div>
 			
-			<input type="radio" name="size" value="1" checked="checked" autocomplete="off">6-inch</br>
-			<input type="radio" name="size" value="2" >Footlong</br>
+			<label><input type="radio" name="size" value="1" checked="checked" autocomplete="off">6-inch</label></br>
+			<label><input type="radio" name="size" value="2" >Footlong</label></br>
 			
 			</div>
 			<div class="addtosub">
 			<div><b>Add veggies to your SUB </b></div>
 			
-			<input type="checkbox" name="veggie[]" value="Lettuce" >Lettuce</br>
-			<input type="checkbox" name="veggie[]" value="Tomatoes" >Tomatoes</br>
-			<input type="checkbox" name="veggie[]" value="Cucumbers" >Cucumbers</br>
-			<input type="checkbox" name="veggie[]" value="Pickles" >Pickles</br>
-			<input type="checkbox" name="veggie[]" value="Peppers" >Peppers</br>
-			<input type="checkbox" name="veggie[]" value="Onions" >Onions</br>
-			<input type="checkbox" name="veggie[]" value="Red Olives" >Red Olives</br>
-			<input type="checkbox" name="veggie[]" value="Jalapenos" >Jalapenos</br>
+			<label><input type="checkbox" name="veggie[]" value="Lettuce" >Lettuce</label></br>
+			<label><input type="checkbox" name="veggie[]" value="Tomatoes" >Tomatoes</label></br>
+			<label><input type="checkbox" name="veggie[]" value="Cucumbers" >Cucumbers</label></br>
+			<label><input type="checkbox" name="veggie[]" value="Pickles" >Pickles</label></br>
+			<label><input type="checkbox" name="veggie[]" value="Peppers" >Peppers</label></br>
+			<label><input type="checkbox" name="veggie[]" value="Onions" >Onions</label></br>
+			<label><input type="checkbox" name="veggie[]" value="Red Olives" >Red Olives</label></br>
+			<label><input type="checkbox" name="veggie[]" value="Jalapenos" >Jalapenos</label></br>
 			
 			</div>
 			<div class="addtosub">
 			<div><b>Add saucages to your SUB</b></div>
 			
-			<input type="checkbox" name="extra[]" value="Mayo" >Mayo</br>
-			<input type="checkbox" name="extra[]" value="Hot Sauce" >Hot Sauce</br>
-			<input type="checkbox" name="extra[]" value="Yellow Mustard" >Yellow Mustard</br>
-			<input type="checkbox" name="extra[]" value="Honey Mustard" >Honey Mustard</br>
-			<input type="checkbox" name="extra[]" value="Italian Dressing" >Italian Dressing</br>
-			<input type="checkbox" name="extra[]" value="BBQ Sauce" >BBQ Sauce</br>
-			<input type="checkbox" name="extra[]" value="Sweet Onion Sauce" >Sweet Onion Sauce</br>
+			<label><input type="checkbox" name="extra[]" value="Mayo" >Mayo</label></br>
+			<label><input type="checkbox" name="extra[]" value="Hot Sauce" >Hot Sauce</label></br>
+			<label><input type="checkbox" name="extra[]" value="Yellow Mustard" >Yellow Mustard</label></br>
+			<label><input type="checkbox" name="extra[]" value="Honey Mustard" >Honey Mustard</label></br>
+			<label><input type="checkbox" name="extra[]" value="Italian Dressing" >Italian Dressing</label></br>
+			<label><input type="checkbox" name="extra[]" value="BBQ Sauce" >BBQ Sauce</label></br>
+			<label><input type="checkbox" name="extra[]" value="Sweet Onion Sauce" >Sweet Onion Sauce</label></br>
 			
 			</div>
-			<div class="addtosubcomment">
+			<div class="addtosubcomment" style="font-size:13px;">
 			<TEXTAREA name="comments" rows="3" cols="40"></TEXTAREA>
+			*Extra cheese or the likes will incur additional charges!
 			</div>
 			<div class="subaddtocart">
 			<div > <input class="subaddtocartbut"type="submit" value="Add to Cart"></div>

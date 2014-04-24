@@ -30,7 +30,7 @@
 			$emailaddress=$username.'@daiict.ac.in';
 			$password=$this->input->post('password');
 			$phone=$this->input->post('phone',TRUE);
-			$address=$this->input->post('address',TRUE);
+			$address=$this->input->post('address');
 			$generated_token=md5(rand(0,7));
 			$hashed_password=$this->encrypt->sha1($password);
 			$data=array('userName' => $username, 'fullName' => $name,'password' =>$hashed_password,

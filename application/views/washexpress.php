@@ -83,6 +83,8 @@
 			</div>
 			<div class="slipinfo">
 				<?php if($this->session->userdata('userName')!=''){?>
+								<?php if(count($slots)>0){?>
+
 				<div class="sliphead" style="font-family:calibri;">Bill Details</div>
 				<?php $attributes = array('id' => 'billdetailsform');
 				echo form_open_multipart('cart/addLaundry', $attributes);
@@ -94,11 +96,16 @@
 					<option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
 					<?php
 				}?>
-			</select><br><p style="text-indent:-350px;">Bill Image</p></div>
+			</select>
+			<br><p style="text-indent:-350px;">Bill Image</p></div>
 			<div id="billimage"> <input type="file" name="userfile" required /></div>
 			<div id = "submit"><input type="submit" value="Submit" /></div>
 			
-			<?php echo form_close();?>
+			<?php echo form_close();
+			}else{
+				echo "No slots available now Please come back later";
+			}
+			?>
 			<?php 
 		}
 		else {

@@ -30,8 +30,8 @@
 					<div class="forminput"><input type="text" name="username" placeholder="e.g. '201101098'"><br></div>
 					<div class="forminput"><input type="text" name="fullname" placeholder="Full Name"><br></div>
 					<div class="forminput"><input type="password" name="password" placeholder="Password"><br></div>
-					<div class="forminput"><input type="text" name="roomno" placeholder="e.g. 'B-108'"><br></div>
-					<div class="forminput"><input type="text" name="mobileno" placeholder="Mobile Number"><br></div>
+					<div class="forminput"><input type="text" name="address" placeholder="e.g. 'B-108'"><br></div>
+					<div class="forminput"><input type="text" name="phone" placeholder="Mobile Number"><br></div>
 					<div class="forminput"> <?php echo $image;?> </div>
 					<div class="forminput"><input type="text" name="captcha" placeholder="Enter Capta"><br></div>
 					<input style ="font-family:calibri; font-size:100%;" type="submit" value="Register" />

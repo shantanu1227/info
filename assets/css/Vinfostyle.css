@@ -283,8 +283,7 @@ src: url(../fonts/stewartsans.ttf);
 }
 .todaymenu{
 	height:30%;
-	overflow:scroll;
-	margin-top:5px;
+	margin-top:15px;
 	background-color:#361200;
 	margin-left:1%;
 	width:24%;
@@ -294,7 +293,7 @@ src: url(../fonts/stewartsans.ttf);
 .todaymenuhead{
 	padding:10px;
 	float:left;
-	width:100%;
+	width:90%;
 	text-align:center;
 	font-size:40px;
 	color:white;
@@ -303,11 +302,12 @@ src: url(../fonts/stewartsans.ttf);
 }
 .restdetail{
 	float:left;
-	width:100%;
+	width:10%;
 	background-color:#361200;
 	opacity:0.8;
 }
 .resthead{
+	text-transform:capitalize;
 	padding:4px;
 	font-size:25px;
 	color:#A55730;

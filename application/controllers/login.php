@@ -14,15 +14,17 @@ class Login extends CI_Controller
 					$errormsg  = array('errorMessage'=>'Please Confirm Your Email id','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 					$this->load->model('model_products');
 					$dataThali= array('outputThalis' => $this->model_products->getThali());	
-					$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-					$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+					$dataOffer=array('outputOffers' => $this->model_products->getOffers());		
+					$captcha = array('image'=>$this->model_products->createCaptcha());
+					$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 					}
 		else if($a == -2){
 					$errormsg  = array('errorMessage'=>'Incorrect Username or Password','errorClose'=>'X','errorColor'=>'rgb(214, 38, 38);');
 					$this->load->model('model_products');
 					$dataThali= array('outputThalis' => $this->model_products->getThali());	
 					$dataOffer=array('outputOffers' => $this->model_products->getOffers());
-					$this->load->view('home', $dataThali+$dataOffer+$errormsg);	
+					$captcha = array('image'=>$this->model_products->createCaptcha());
+					$this->load->view('home', $dataThali+$dataOffer+$errormsg+$captcha);	
 					}			
 	}
 	public function logout()

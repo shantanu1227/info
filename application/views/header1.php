@@ -1,10 +1,10 @@
 <script src="<?php echo (JS.'jquery-validation-1.11.1/dist/jquery.validate.min.js');?>" type="text/javascript"></script>
-  <!-- jQuery Form Validation code -->
-  <script>
-  
+<!-- jQuery Form Validation code -->
+<script>
+
   // When the browser is ready...
   $(function() {
-  
+
 	// Setup form validation on the #register-form element
 	$.validator.addMethod(
 		"regex",
@@ -13,7 +13,7 @@
 			return re.test(value);
 		},
 		"Please check your input."
-	);
+		);
 
 	$("#registerform").validate({
 		errorElement: "div",
@@ -29,11 +29,11 @@
 				required: true,
 				minlength: 5
 			},
-			roomno: {
+			address: {
 				required: true,
 				regex: '^[A-H]{1}-[1-3]{1}[0-2]{1}[0-9]{1}$'
-				},
-			mobileno: {
+			},
+			phone: {
 				required: true,
 				minlength: 10
 			},
@@ -52,14 +52,14 @@
 				required:'',
 				minlength: "Password must be at least 5 characters long."
 			},
-			roomno: {
+			address: {
 				required:'',
 				regex: "Please enter a valid roomno."
-				},
-			mobileno: {
+			},
+			phone: {
 				required:'',
 				minlength: "Please enter a valid mobile number."
-				},
+			},
 		},
 		
 		submitHandler: function(form) {
@@ -100,121 +100,74 @@
 		}
 	});
 
-  });
-  
+});
+
 </script>
 <div id="wrapper">
 	<div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:<?php echo $errorColor ;?>; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-left:-7.5%;"> <?php echo $errorMessage; ?> 
-	<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;"><?php echo $errorClose ;?> </div>
-</div>
-<div id="fixed_head">
-	<img id="clogo" style ="max-height:82px;width:90px;opacity:1 "src="<?php echo (IMG.'Vinfocity_logo.jpg');?>">
-	<div class="cname">Vinfocity</div>
-	<div class="loginaccount">
-		<?php if($this->session->userdata('userName') == ""){?>
-		<div class="reglog">Login/Register</div>
-		<?php }else{
-			echo anchor('/login/logout', 'Logout ('.$this->session->userdata('userName').')',array('class' => 'reglog') );
-			echo anchor('/welcome/myaccount', 'My Account', array('class' => 'myaccount'));
-		}?>
+		<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;"><?php echo $errorClose ;?> </div>
 	</div>
-	<?php $attr = array('style'=>'display:block;padding:8px');?>
-	<div class="mycartbut"><?php echo anchor('/welcome/cart' ,'Cart ('.$this->cart->total_items().')', $attr);?></div>
+	<div id="fixed_head">
+		<img id="clogo" style ="max-height:82px;width:90px;opacity:1 "src="<?php echo (IMG.'Vinfocity_logo.jpg');?>">
+		<div class="cname">Vinfocity</div>
+		<div class="loginaccount">
+			<?php if($this->session->userdata('userName') == ""){?>
+			<div class="reglog">Login/Register</div>
+			<?php }else{
+				echo anchor('/login/logout', 'Logout ('.$this->session->userdata('userName').')',array('class' => 'reglog') );
+				echo anchor('/welcome/myaccount', 'My Account', array('class' => 'myaccount'));
+			}?>
+		</div>
+		<?php $attr = array('style'=>'display:block;padding:8px');?>
+		<div class="mycartbut"><?php echo anchor('/welcome/cart' ,'Cart ('.$this->cart->total_items().')', $attr);?></div>
 	</div>
-	<!--div class="navigationtemp">
-		<div id="navbartemp">
+	<div class="navigation">
+		<div class="navbar">
 			<ul>
-				<li><?php echo anchor('', 'HOME'); ?></li>
+				<?php $attr = array('style'=>'display:block');?>
+				<li><?php echo anchor('', 'HOME',$attr); ?></li>
 				<li>FOOD
 					<ul>
-						<li><?php echo anchor('/welcome/subway', 'Subway'); ?></li>
-						<li><?php echo anchor('/welcome/shivas', 'Shivas'); ?></li>
-						<li><?php echo anchor('/welcome/coolpoint', 'Cool Point'); ?></li>
-						<li><?php echo anchor('/welcome/qwiches', 'Qwiches'); ?></li>
-						<li><?php echo anchor('/welcome/chatkazz', 'Chatkazz'); ?></li>
-						<li><?php echo anchor('/welcome/koffee', 'Koffee++'); ?></li>
-						<li><?php echo anchor('/welcome/bigbite', 'Bigbite'); ?></li>
+						<li><?php echo anchor('/welcome/subway', 'Subway',$attr); ?></li>
+						<li><?php echo anchor('/welcome/qwiches', 'Qwiches',$attr); ?></li>
+						<li><?php echo anchor('/welcome/chatkazz', 'Chatkazz',$attr); ?></li>
+						<li><?php echo anchor('/welcome/koffee', 'Koffee++',$attr); ?></li>
+						<li><?php echo anchor('/welcome/bigbite', 'Bigbite',$attr); ?></li>
 					</ul>
 				</li>
 				<li><a>PROVISION</a>
 					<ul>
-						<li><?php echo anchor('/welcome/kavya', 'Kavya'); ?></li>
+						<li><?php echo anchor('/welcome/kavya', 'Kavya',$attr); ?></li>
 					</ul>
 				</li>
 				<li><a>STATIONERY</a>
 					<ul>
-						<li><?php echo anchor('/welcome/oxford', 'Oxford'); ?></li>
-						<li><?php echo anchor('/welcome/vs', 'VS'); ?></li>
-						<li><?php echo anchor('/welcome/crossword', 'Crossword'); ?></li>
+						<li><?php echo anchor('/welcome/oxford', 'Oxford',$attr); ?></li>
+						<li><?php echo anchor('/welcome/crossword', 'Crossword',$attr); ?></li>
 					</ul>
 				</li>
 				<li><a>LAUNDRY</a>
 					<ul>
-						<li><?php echo anchor('/welcome/washexpress', 'Washexpress'); ?></li>
+						<li><?php echo anchor('/welcome/washexpress', 'Washexpress',$attr); ?></li>
 					</ul>
 				</li>
 				<li><a>TECH</a>
 					<ul>
-						<li><?php echo anchor('/welcome/ominfotech', 'OM Infotech'); ?></li>
-						<li><?php echo anchor('/welcome/clublaptop', 'Club Laptop'); ?></li>
+						<li><?php echo anchor('/welcome/ominfotech', 'OM Infotech',$attr); ?></li>
+						<li><?php echo anchor('/welcome/clublaptop', 'Club Laptop',$attr); ?></li>
 					</ul>
 				</li>
-				<li><a>XEROX</a>
+				<li><a>PRINT/COPY</a>
 					<ul>
-						<li><?php echo anchor('/welcome/omega', 'Omega'); ?></li>
-						<li><?php echo anchor('/welcome/apex', 'Apex'); ?></li>
+						<li><?php echo anchor('/welcome/omega', 'Omega',$attr); ?></li>
 					</ul>
 				</li>
+				<li><?php echo anchor('/welcome/aboutus', 'ABOUT US',$attr); ?></li>
+				<li><?php echo anchor('/welcome/faq', 'FAQs',$attr); ?></li>
 			</ul>
-		</div>
-	</div-->
-<div class="navigation">
-	<div class="navbar">
-		<ul>
-			<li><?php echo anchor('', 'HOME'); ?></li>
-			<li>FOOD
-				<ul>
-				<?php $attr = array('style'=>'display:block');?>
-					<li><?php echo anchor('/welcome/subway', 'Subway',$attr); ?></li>
-					<li><?php echo anchor('/welcome/qwiches', 'Qwiches',$attr); ?></li>
-					<li><?php echo anchor('/welcome/chatkazz', 'Chatkazz',$attr); ?></li>
-					<li><?php echo anchor('/welcome/koffee', 'Koffee++',$attr); ?></li>
-					<li><?php echo anchor('/welcome/bigbite', 'Bigbite',$attr); ?></li>
-				</ul>
-			</li>
-			<li><a>PROVISION</a>
-				<ul>
-					<li><?php echo anchor('/welcome/kavya', 'Kavya',$attr); ?></li>
-				</ul>
-			</li>
-			<li><a>STATIONERY</a>
-				<ul>
-					<li><?php echo anchor('/welcome/oxford', 'Oxford',$attr); ?></li>
-					<li><?php echo anchor('/welcome/crossword', 'Crossword',$attr); ?></li>
-				</ul>
-			</li>
-			<li><a>LAUNDRY</a>
-				<ul>
-					<li><?php echo anchor('/welcome/washexpress', 'Washexpress',$attr); ?></li>
-				</ul>
-			</li>
-			<li><a>TECH</a>
-				<ul>
-					<li><?php echo anchor('/welcome/ominfotech', 'OM Infotech',$attr); ?></li>
-					<li><?php echo anchor('/welcome/clublaptop', 'Club Laptop',$attr); ?></li>
-				</ul>
-			</li>
-			<li><a>PRINT/COPY</a>
-				<ul>
-					<li><?php echo anchor('/welcome/omega', 'Omega',$attr); ?></li>
-				</ul>
-			</li>
-			<li><?php echo anchor('/welcome/aboutus', 'ABOUT US',$attr); ?></li>
-			<li><?php echo anchor('/welcome/faq', 'FAQs',$attr); ?></li>
-		</ul>
 
+		</div>
 	</div>
-</div>
 </div>
 <script type="text/javascript">  
 	$(function() {  

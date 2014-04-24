@@ -5,13 +5,63 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo(CSS.'adminstyle.css');?>">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<script src="<?php echo (JS.'jquery-1.7.1.min.js');?>" type="text/javascript"></script>
-	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
-	<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+	<script src="<?php echo (JS.'jquery-validation-1.11.1/dist/jquery.validate.min.js');?>" type="text/javascript"></script>
 </head>
 <body>
+<script type="text/javascript">
+$(function() {
+	$("#deleteuserform").validate({
+		errorElement: "div",
+		// Specify the validation rules
+		rules: {
+			recamount: {
+				required: true,
+				number: true,
+				range: [1, 9999999]
+			},
+			username: {
+				required: true,
+				number: true,
+				range: [201001001, 201499999]
+			}
+		},
+		
+		// Specify the validation error messages
+		messages: {
+			recamount:{
+				required:'Please enter the recharge amount!',
+				number:"Invalid Amount!",
+				range: "Recharge amount between [1, 9999999]"
+			},
+			username: {
+				required:'Field cannot be empty.',
+				number:"Please enter a your DA-IICT ID."
+				range: "Please enter a your DA-IICT ID."
+			}
+		},
+		
+		submitHandler: function(form) {
+			form.submit();
+		}
+	});
+	});
+	</script>
+	<script type="text/javascript">  
+	$(function() {  
+		$('#closebutton').click(function() {  
+			$('#errorDisplay').remove();  
+		});  
+	});  
+</script>  
+
 	<div id="cname">Vinfocity</div>
+	<div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:<?php echo $errorColor ;?>; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-left:-8px; margin-top:-80px;"><?php echo $errorMessage; ?>
+		<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;"><?php echo $errorClose ;?> </div>
+	</div>
+	<!--div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:#312600; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-top:0;margin-left:-8px;"> error</div-->
 	<div id="mainbox1">
 		<div id="wrapper">
+
 			<div id="box1">
 
 				<div class="container">
@@ -46,9 +96,10 @@
 				<div class="container">
 					<div class="heading">DEDUCT FROM USER ACCOUNT</div>
 					<?php $attributes = array('id' => 'deductform');
-					echo form_open('', $attributes);
+					echo form_open('admin/deductAmount', $attributes);
 					?>
 					<div class="forminput"><input type="text" name="username" placeholder="Username e.g. '201101098'"><br></div>
+					<div class="forminput"><input type="text" name="transactionid" placeholder="Transaction Id e.g. '98'"><br></div>
 					<div class="forminput"><input type="text" name="deductamount" placeholder="Amount to deduct"><br></div>
 					<input type="submit" value="Deduct Amount" />
 					<?php echo form_close();?>

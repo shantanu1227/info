@@ -30,7 +30,8 @@ background: none repeat scroll 0% 0% #91634C;
 border: 2px solid #361200;
 border-radius: 10px;
 width: 60%;
-height: 224px;
+min-height: 224px;
+height: auto;
 margin-bottom: 1%;
 }
 

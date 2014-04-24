@@ -1,11 +1,19 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/*
+addtocart - Adding a product to you cart
+addsubwaytocart - Adding a subway Product to your cart
+updatecart - to change quantity in cart
+emptycart - destroy the cart
+addxeroxfile - add a photocopy document in transaction
+addlaundry - add a Laundry bill reciept
+checkout - Make the final transaction for products in cart
+Deletetransaction - To delete a transaction for a user
+sendmail - To send a mail
+*/
+
 class Cart extends CI_Controller {
 
-	public function index()
-	{
-		
-	}
 	public function addtocart()
 	{
 		$id=$this->input->post('product_id');
@@ -124,7 +132,8 @@ class Cart extends CI_Controller {
 				$directoryName = "photocopyDocuments"."/";
 				$config['upload_path'] = "./assets/img/".$directoryName;
 
-				$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img|docx';
+				//$config['allowed_types'] = 'jpg|png|pdf|doc|odt|docx|xls|img|docx|txt|jpeg|html|xlsx';
+				$config['allowed_types'] ='*';
 				$config['max_size']	= '4096';
 				$config['encrypt_name'] = TRUE;
 
@@ -147,9 +156,9 @@ class Cart extends CI_Controller {
 						'endpage'=>$endpage,'color'=>$color);
 					$this->load->model('model_transaction');
 					$userId=$this->session->userdata('userId');
-					$this->model_transaction->addxerox($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
-					$message= "Print details are:<br>Color:".$color."<br>Qty=".$quantity."<br>Pages:".$startpage."-".$endpage."<br>FileLocation: ".IMG.$directoryName.$uploaddata['file_name'];
-					$this->sendmail('New Order',$slot,'PhotoCopy',$message);
+					$transactionId=$this->model_transaction->addxerox($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
+					$message= "Transaction Id:".$transactionId."<br>Print details are:<br>Color:".$color."<br>Qty=".$quantity."<br>Pages:".$startpage."-".$endpage."<br>FileLocation: ".IMG.$directoryName.$uploaddata['file_name'];
+					$this->sendmail('New Order',$slot,'PhotoCopy',$message,$this->session->userdata('userEmail'));
 					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');					
 					$this->load->model('model_shop');
 					$this->load->model('model_products');
@@ -221,7 +230,7 @@ class Cart extends CI_Controller {
 					$userId=$this->session->userdata('userId');
 					$this->model_transaction->addlaundry($userId,$quantity,$price,$slot,$deliverydate,$ordertime,$data1);
 					$message= "Laundry details are:<br>Bill No:".$billNo."<br>Price=".$price."<br>Bill Image : ".IMG.$directoryName.$uploaddata['file_name'];
-					$this->sendmail('New Order',$slot,'Laundry',$message);
+					$this->sendmail('New Order',$slot,'Laundry',$message,'');
 					$errormsg  = array('errorMessage'=>'Order Placed Successfully','errorClose'=>'X','errorColor'=>'rgb(24, 175, 48)');
 					$this->load->model('model_shop');
 					$this->load->model('model_products');
@@ -308,7 +317,7 @@ class Cart extends CI_Controller {
 				$this->load->library('email',$config);
 				$this->email->set_newline("\r\n");
 				$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
-				$this->email->to("punit9462@gmail.com");
+				$this->email->to("201101061@daiict.ac.in");
 
 				$this->email->subject('New Order');
 				$this->email->message('New order of '.$this->session->userdata('userName').'Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$mailproductname);
@@ -343,13 +352,13 @@ class Cart extends CI_Controller {
 				$productName= $transactionDetail->productName;
 				$message = "Shop Name: ".$transactionDetail->name."<br> Qty: ".$transactionDetail->quantity."<br> Price".$transactionDetail->price;
 				$slot=$transactionDetail->deliverySlot;
-				$this->sendmail('Order Cancelled',$slot,$productName,$message);
+				$this->sendmail('Order Cancelled',$slot,$productName,$message,'');
 				}
 		}
 		redirect('welcome/myaccount','refresh');
 	}
 	
-	public function sendmail($orderType,$slot,$productname,$message)
+	public function sendmail($orderType,$slot,$productname,$message,$cc)
 	{
 			$config = Array(
 					'protocol' => 'smtp',
@@ -363,7 +372,9 @@ class Cart extends CI_Controller {
 				$this->load->library('email',$config);
 				$this->email->set_newline("\r\n");
 				$this->email->from('virtualinfocity@gmail.com', 'Virtual Infocity');
-				$this->email->to("201101073@daiict.ac.in");
+				$this->email->to("punit9462@gmail.com");
+				if(!empty($cc))
+					$this->email->cc($cc);
 
 				$this->email->subject($orderType);
 				$this->email->message($orderType.' of '.$this->session->userdata('userName').'  Contact '.$this->session->userdata('userMobile').' Slot '.$slot.'<br>'.$productname.'<br>'.$message);

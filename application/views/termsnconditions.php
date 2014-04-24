@@ -1,6 +1,6 @@
 <!--
-        Document: aboutus
-        Purpose: Page containing information related to Virtual Infocity 
+        Document: Terms and Conditions
+        Purpose: Page containing information related to Terms and Conditions of Virtual Infocity 
     -->
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <html>
@@ -18,14 +18,12 @@
 <body>
     <div id="box">
         <?php include 'header1.php'; ?>
-        <div class="shopheading">
-            Terms and conditions
-        </div>
+      .
 
 
                 <div class="about">
                 <p>
-            Please read the following terms and conditions very carefully as your use of service is subject to your acceptance of and compliance with the following terms and conditions ("Terms").
+            Please read the following terms and conditions very carefully as your use of service is subject to your acceptance of and compliance with the following terms and conditions:
             <p>
 
             By subscribing to or using any of our services you agree that you have read, understood and are bound by the Terms, regardless of how you subscribe to or use the services. If you do not want to be bound by the Terms, you must not subscribe to or use our services. 
@@ -44,7 +42,9 @@ b) Use of the Website is offered to you conditioned on acceptance without modifi
 <p>
 2. User Account, Password, and Security:
 
-You will receive a password and account designation upon completing the Website's registration process. You are responsible for maintaining the confidentiality of the password and account, and are fully responsible for all activities that occur under your password or account. You agree to 
+You will receive a confirmation link on your webmail account upon completing the Website's registration process. You are 
+responsible for maintaining the confidentiality of the password and account, and are fully responsible for all 
+activities that occur under your password or account. You agree to 
 </br>(a) immediately notify virtualinfocity.com of any unauthorized use of your password or account or any other breach of security.
 </br> (b) ensure that you exit from your account at the end of each session. virtualinfocity.com cannot and will not be liable for any loss or damage arising from your failure to comply with this Section 2.
 </p>
@@ -99,7 +99,7 @@ d)  You shall be liable to pay for any Service or product that you have already 
 </p><p>
 8. Governing Law:
 
-These terms shall be governed by and constructed in accordance with the laws of India without reference to conflict of laws principles and disputes arising in relation hereto shall be subject to the exclusive jurisdiction of the courts at Bangalore.
+These terms shall be governed by and constructed in accordance with the laws of India without reference to conflict of laws principles and disputes arising in relation hereto shall be subject to the exclusive jurisdiction of the courts at Gandhinagar.
 </p><p>
 9. Severability:
 

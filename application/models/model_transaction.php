@@ -72,6 +72,7 @@ class Model_transaction extends CI_Model {
 		$data2 = array('creditAmount'=>$final_amount);
 		$this->db->where('userId',$userId);
 		$query=$this->db->update('users', $data2);
+		return $transaction_id;
 	}
 
 	public function addlaundry($userId,$quantity,$price,$slot,$deliveryDate,$orderTime,$laundryarray)
@@ -114,85 +115,90 @@ class Model_transaction extends CI_Model {
 	public function deleteTransaction($transactionId,$userId)
 	{
 		/*Error -1 Transaction Cancellation Time Over
-		  Error -2 Transaction Does Not Exist
+		  Error -2 Transaction Already Cancelled
+		  Error -3 Transaction Does Not Exist
 		*/
-		$this->db->where('transactionId',$transactionId);
-		$query = $this->db->get('transaction', 1);
-		if($query->num_rows()>0){
-			$row = $query->row();
-			date_default_timezone_set('Asia/Kolkata');
-			$orderDate = date("Y-m-d",$row->orderTimeStamp);
-			$currentdate = date("Y-m-d");
-			$currentTime = date("H:i");
-			if($orderDate==$currentdate){
-				$this->db->where('deliverySlot',$row->deliverySlot);
-				$query = $this->db->get('slots',1);
-				$slotrow = $query->row();
-				$slotstart=strtotime($slotrow->starttimings);
-				$slotend = strtotime($slotrow->endtimings);
-				$mean = ($slotstart+$slotend)/2;
-				$mean = date("H:i",$mean);
-				if($currentTime < $mean){
-					$amount = ($row->quantity*$row->price)*TAX;
-					$this->db->where('transactionId', $transactionId);
-					$data = array('cancelled'=>'true');
-					$this->db->update('transaction', $data);
-					$this->updateAccountOnTransactionDelete($userId,$amount);
-					return 1;
-				}else{
-					return -1;
-				}
-			}
-		}else{
-			return -2;
+		  $this->db->where('transactionId',$transactionId);
+		  $query = $this->db->get('transaction', 1);
+		  if($query->num_rows()>0){
+		  	$row = $query->row();
+		  	if($row->cancelled == 'false'){
+		  		date_default_timezone_set('Asia/Kolkata');
+		  		$orderDate = date("Y-m-d",$row->orderTimeStamp);
+		  		$currentdate = date("Y-m-d");
+		  		$currentTime = date("H:i");
+		  		if($orderDate==$currentdate){
+		  			$this->db->where('deliverySlot',$row->deliverySlot);
+		  			$query = $this->db->get('slots',1);
+		  			$slotrow = $query->row();
+		  			$slotstart=strtotime($slotrow->starttimings);
+		  			$slotend = strtotime($slotrow->endtimings);
+		  			$mean = ($slotstart+$slotend)/2;
+		  			$mean = date("H:i",$mean);
+		  			if($currentTime < $mean){
+		  				$amount = ($row->quantity*$row->price)*TAX;
+		  				$this->db->where('transactionId', $transactionId);
+		  				$data = array('cancelled'=>'true');
+		  				$this->db->update('transaction', $data);
+		  				$this->updateAccountOnTransactionDelete($userId,$amount);
+		  				return 1;
+		  			}else{
+		  				return -1;
+		  			}
+		  		}
+		  	}else{
+		  		return -2;
+		  	}
+		  }else{
+		  	return -3;
+		  }
 		}
+
+		public function getstoreName($productId)
+		{
+			$this->db->where('productId',$productId);
+			$this->db->from('products');
+			$this->db->join('stores', 'stores.shopId = products.shopId');
+			$this->db->limit(1);
+			$query = $this->db->get();
+			return $query->row()->name;
+		}
+		public function getSlots()
+		{
+			date_default_timezone_set('Asia/Kolkata');
+			$time = date("H:i");
+			$this->db->where('starttimings >',$time);
+			return $this->db->get('slots')->result();
+
+		}	
+		public function getallSlots()
+		{
+			return $this->db->get('slots');
+		}
+		public function updateAccountOnTransactionDelete($userId,$amount)
+		{
+			$this->db->where('userId', $userId);
+			$query = $this->db->get('users',1);
+			$row = $query->row();
+			$previous_amount = $row->creditAmount;
+			$updatedAmount = $previous_amount+$amount;
+			$this->db->where('userId', $userId);
+			$data = array('creditAmount'=>$updatedAmount);
+			$this->db->update('users', $data);
+		}
+		public function getTransactionDetails($transactionId)
+		{
+			$this->db->select('*,transaction.price');
+			$this->db->where('transactionId',$transactionId);
+			$this->db->from('transaction');
+			$this->db->join('products','products.productId=transaction.productId');
+			$this->db->join('stores', 'stores.shopId = products.shopId');
+			$query=$this->db->get();
+			return $query->row();
+
+		}
+
 	}
 
-	public function getstoreName($productId)
-	{
-		$this->db->where('productId',$productId);
-		$this->db->from('products');
-		$this->db->join('stores', 'stores.shopId = products.shopId');
-		$this->db->limit(1);
-		$query = $this->db->get();
-		return $query->row()->name;
-	}
-	public function getSlots()
-	{
-		date_default_timezone_set('Asia/Kolkata');
-		$time = date("H:i");
-		$this->db->where('starttimings >',$time);
-		return $this->db->get('slots')->result();
-		
-	}	
-	public function getallSlots()
-	{
-		return $this->db->get('slots');
-	}
-	public function updateAccountOnTransactionDelete($userId,$amount)
-	{
-		$this->db->where('userId', $userId);
-		$query = $this->db->get('users',1);
-		$row = $query->row();
-		$previous_amount = $row->creditAmount;
-		$updatedAmount = $previous_amount+$amount;
-		$this->db->where('userId', $userId);
-		$data = array('creditAmount'=>$updatedAmount);
-		$this->db->update('users', $data);
-	}
-	public function getTransactionDetails($transactionId)
-	{
-		$this->db->select('*,transaction.price');
-		$this->db->where('transactionId',$transactionId);
-		$this->db->from('transaction');
-		$this->db->join('products','products.productId=transaction.productId');
-		$this->db->join('stores', 'stores.shopId = products.shopId');
-		$query=$this->db->get();
-		return $query->row();
-
-	}
-
-}
-
-/* End of file model_transaction.php */
+	/* End of file model_transaction.php */
 /* Location: ./application/models/model_transaction.php */

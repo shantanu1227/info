@@ -52,20 +52,20 @@
 				<tr>
 					<td></td>
 					<td></td>
-					<td><strong>Total</strong></td>
+					<td><strong>Sub-Total</strong></td>
 					<td>Rs. <?php echo $this->cart->format_number($this->cart->total()); ?></td>
 				</tr>
 				
 				<tr>
 					<td></td>
 					<td></td>
-					<td><strong>Tax</strong></td>
+					<td><strong>Service Charge</strong></td>
 					<td>Rs. <?php echo $this->cart->format_number((TAX-1)*$this->cart->total());?></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
-					<td><strong>Total with tax</strong></td>
+					<td><strong>Total</strong></td>
 					<td>Rs. <?php echo $this->cart->format_number((TAX)*$this->cart->total());?> </td>
 				</tr>
 			</table>
@@ -77,15 +77,20 @@
 			<?php echo form_close();?>
 			<?php echo form_open('/cart/checkout'); ?>
 			<div id="slotselect">
+			<?php 
+				if(count($slots)>0){?>
 			<select class="orderslots" name="slotId" >
 			  <?php foreach ($slots as $slot) {?>
 			  <option value="<?php echo $slot->deliverySlot ; ?>"><?php echo $slot->starttimings;?>-<?php echo $slot->endtimings;?></option>  
 			  <?php
 			  }?>
 			</select>
+
 			Select Order Slot
+			<?php }?>
 			</div>
 			<?php 
+				if(count($slots)>0){
 			$submit = array(
 					  'name'=> 'checkout',
 					  'id'  => 'checkout',
@@ -95,8 +100,11 @@
 					);
 			echo form_input($submit);
 			echo form_close();
-			}?>
-			<?php include ('footer.php');?>
+
+			}
+		}
+			?>
+			<!--?php include ('footer.php');?-->
 			</div>
 		</div>
 		<?php include ('reglog.php');?>
