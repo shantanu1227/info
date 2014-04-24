@@ -46,9 +46,22 @@ $(function() {
 	});
 	});
 	</script>
+	<script type="text/javascript">  
+	$(function() {  
+		$('#closebutton').click(function() {  
+			$('#errorDisplay').remove();  
+		});  
+	});  
+</script>  
+
 	<div id="cname">Vinfocity</div>
+	<div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:#363600; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-left:-8px; margin-top:-80px;">
+		<div id="closebutton" style="height:auto;width:auto;margin-right:10px;float:right;">X </div>
+	</div>
+	<!--div id="errorDisplay" style="float:left;position:fixed;width:100%;height:auto;background-color:#312600; color:#FFFFFF; font-size:30px;text-align:center;z-index:1000;margin-top:0;margin-left:-8px;"> error</div-->
 	<div id="mainbox1">
 		<div id="wrapper">
+
 			<div id="box1">
 
 				<div class="container">
